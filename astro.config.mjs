@@ -1,3 +1,4 @@
+import i18n from "astro-i18n"
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import robotsTxt from 'astro-robots-txt';
@@ -9,6 +10,7 @@ import preact from '@astrojs/preact';
 export default defineConfig({
   site: 'https://kyons.vn',
   integrations: [
+    i18n(),
     tailwind(),
     sitemap({
       i18n: {

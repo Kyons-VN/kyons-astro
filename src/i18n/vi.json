@@ -1,0 +1,81 @@
+{
+  "lang": "VI",
+  "languageCode": "vi",
+  "btn": {
+    "studyNow": "Học ngay thôi"
+  },
+  "menu": {
+    "aboutUs": "Về chúng tôi",
+    "forStudents": "Cho người học",
+    "forSchools": "Cho trường học",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "whyNotSmarter": "Tại sao không học thông minh hơn?",
+    "kyons": "Kyons, nền tảng giáo dục hiện đại sử dụng trí tuệ nhân tạo (AI), là trợ thủ đắc lực giúp học sinh đạt điểm số mong muốn trong thời gian ngắn nhất với lộ trình học được cá nhân hóa",
+    "scrollToView": "Kéo xuống để bắt đầu khám phá"
+  },
+  "features": {
+    "ourFeatures": "Các tính năng nổi bật",
+    "youDontKnow": "Không biết ôn luyện như thế nào?<br />Hãy để AI giúp bạn!",
+    "detectKnowledgeHoles": "Xác định lỗ hổng kiến thức nhanh chóng",
+    "detectKnowledgeHolesDesc": "Bài kiểm tra thử thông minh đầu vào giúp bạn phát hiện những kiến thức chưa vững và tập trung ôn tập.",
+    "learningPath": "Ôn luyện với lộ trình học cá nhân hoá",
+    "learningPathDesc": "Các bài học được thiết kế tương thích với mục tiêu và trình độ của bạn nhằm tối đa hiệu quả ôn tập",
+    "practiceWith": "Thực hành cùng kho bài tập không giới hạn",
+    "practiceWithDesc": "Vô số bài tập với đa dạng độ khó được tạo bởi AI đảm bảo bạn sẽ không gặp 1 câu hỏi 2 lần tại Kyons"
+  },
+  "students": {
+    "forStudents": "Dành cho người học",
+    "completeLearning": "Hoàn thành mục tiêu học tập trong 4 bước với Kyons",
+    "step1": "Bước 1:<br />Chọn mục tiêu học tập",
+    "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. ",
+    "step2": "Bước 1:<br />Chọn mục tiêu học tập",
+    "step2Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. ",
+    "step3": "Bước 1:<br />Chọn mục tiêu học tập",
+    "step3Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. "
+  },
+  "aboutUs": {
+    "kyons": "Về Kyons",
+    "text1": "Được xây dựng từ những người học giàu nhiệt huyết nhưng cũng rất thực tế, Kyons mang sứ mệnh xây dựng một giải pháp học tập từ góc nhìn của chính người học và giải quyết vấn đề thực chất của người học.",
+    "text2": "Chúng tôi tin rằng học tập là một hành trình phải đủ vui để có thể bắt đầu và đủ ngắn để giúp mỗi người đi tới giấc mơ riêng của mình một cách nhanh chóng và hiệu quả nhất.",
+    "ethos": "Tăng tốc khởi nghiệp bởi Ngân hàng Thế giới và SUNY-Korea",
+    "antler": "Cấp vốn bởi quỹ đầu tư Antler Việt Nam",
+    "bssc": "Ươm tạo bởi BSSC"
+  },
+  "creator": {
+    "kyonsCreatorDesc": "Bạn là giáo viên và muốn có thêm thu nhập bằng cách đóng góp vào kho câu hỏi của Kyons? Nhấn vào nút \"Tham gia\" để tìm hiểu thêm!",
+    "joinUs": "Tham gia"
+  },
+  "contact": {
+    "contact": "Liên hệ với chúng tôi",
+    "contactDesc": "Nếu bạn quan tâm đến Kyons, xin vui lòng để lại thông tin. Kyons sẽ liên hệ với bạn",
+    "youAre": "Bạn là *",
+    "parents": "Phụ huynh",
+    "teachers": "Giáo viên",
+    "educators": "Chuyên viên giáo dục",
+    "investors": "Nhà đầu tư",
+    "presses": "Báo chí",
+    "potentialTeamates": "Đồng đội tiềm năng",
+    "email": "Email/Điện thoại *",
+    "name": "Tên của bạn",
+    "message": "Lời nhắn *",
+    "send": "Gửi tin nhắn",
+    "success": "Kyons đã ghi nhận lời nhắn của bạn và sẽ liên hệ lại trong thời gian sớm nhất.",
+    "error": "Có lỗi",
+    "thankYou": "Cảm ơn bạn rất nhiều!"
+  },
+  "close": "Đóng",
+  "footer": {
+    "company": "Công ty TNHH Kyons ",
+    "address": "L17-11, Vincom Center, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TP.HCM ",
+    "phone": "090.664.1611",
+    "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
+  },
+  "signUp": "Đăng ký",
+  "popup": {
+    "title": "Dừng khoảng chừng là 2 giây",
+    "content": "Phiên bản chính thức của Kyons với những nâng cấp thú vị và vô cùng hữu ích sắp được ra mắt. Để nhận được thông báo và trải nghiệm sớm nhất, cũng như giành lấy những món quà bất ngờ, bạn hãy cùng tham gia “Danh sách chờ” của Kyons nhé!"
+  },
+  "register": "Đăng ký"
+}

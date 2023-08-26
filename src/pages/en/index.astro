@@ -1,12 +1,12 @@
 ---
 import MainContent from '@components/MainContent.astro';
 import Menu from '@components/menu/Menu';
-import l from '@data/vi.json';
+import label from '@data/en.json';
 import Layout from '@layouts/Layout.astro';
 import '@styles/global.scss';
 ---
 
-<Layout lang='vi'>
-  <Menu l={l} client:only />
-  <MainContent l={l} />
+<Layout lang='en'>
+  <Menu l={label.menu} client:only />
+  <MainContent l={label} />
 </Layout>

@@ -1,0 +1,33 @@
+---
+import './home.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+const APP_URL = process.env.APP_URL;
+---
+
+<div id="home">
+  <div class="w-[782px] flex flex-col gap-6 items-center">
+    <h1 class="">{l.home.whyNotSmarter}</h1>
+    <p>{l.home.kyons}</p>
+    <a href={APP_URL} class="btn large w-[280px]">{l.btn.studyNow}</a>
+  </div>
+  <div class="h-[50vh] flex items-end">
+    <div id="home-next" class="gap-1 cursor-pointer p-4 flex items-center text-lightBlue-5">
+      <i class="icon-ArrowDownward text-2xl"></i>
+      <span>{l.home.scrollToView}</span>
+    </div>
+  </div>
+</div>
+<script>
+  function handleClick () {
+    const homeEl = document.getElementById("home");
+    window.scrollTo({
+      top: homeEl?.offsetHeight,
+      behavior: "smooth"
+    });
+  }
+  document.getElementById("home-next")!.addEventListener("click", handleClick);
+</script>

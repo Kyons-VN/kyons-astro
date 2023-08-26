@@ -1,0 +1,6 @@
+#students {
+  @apply w-full h-screen flex flex-col justify-center items-center relative bg-[url('/images/students-bg.svg')] bg-no-repeat bg-bottom bg-cover text-white text-center p-16 gap-2;
+}
+.dot-shadow {
+  filter: drop-shadow(0px 9px 22px rgba(251, 146, 60, 1));
+}

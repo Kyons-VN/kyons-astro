@@ -1,0 +1,9 @@
+.menu {
+  @apply flex flex-row w-full absolute z-10 text-white px-11 pt-6 h-[82px];
+  .menu-items {
+    @apply flex flex-row flex-1 gap-8 py-3;
+    li {
+      @apply flex flex-row items-center gap-2;
+    }
+  }
+}

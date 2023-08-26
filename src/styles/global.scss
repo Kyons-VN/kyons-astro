@@ -1,0 +1,233 @@
+@import 'fonts.scss';
+html {
+  @apply h-full;
+  scroll-behavior: smooth;
+}
+body {
+  @apply m-0 p-0 text-sm bg-white flex flex-col;
+  scroll-behavior: smooth;
+
+  font-family: 'Montserrat', sans-serif;
+}
+.btn {
+  @apply flex items-center justify-center gap-4 px-[16px] py-[6px]  text-white font-[600] text-center h-10 rounded bg-orangeGradient;
+
+  &.large {
+    @apply h-12;
+  }
+}
+.indicators {
+  @apply list-none flex flex-row justify-center md:justify-start gap-2 md:gap-8 mb-14 p-6;
+  > li {
+    @apply bg-blueGrey-400 cursor-pointer;
+
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    &.active {
+      @apply bg-orange;
+    }
+  }
+}
+.inner {
+  @apply w-full h-full relative;
+  > li {
+    @apply flex w-full h-full items-center justify-center absolute top-0 left-0;
+
+    &:not(.active) {
+      @apply opacity-0;
+    }
+    &.active {
+      @apply opacity-100;
+    }
+  }
+}
+h1 {
+  @apply text-[40px] text-center;
+  &.extra-large {
+    @apply text-2xl md:text-4xl;
+  }
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 100%;
+}
+h6 {
+  font-size: 1.25rem;
+}
+.h7 {
+  font-size: 1rem;
+}
+.h8 {
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+h1,
+h2,
+h3,
+h4,
+h6,
+.h7 {
+  @apply m-0;
+  font-weight: 700;
+  line-height: 150%;
+}
+select,
+input,
+textarea {
+  @apply border border-blueGrey-400 rounded-md bg-white;
+}
+textarea {
+  @apply p-[10px];
+}
+select,
+input {
+  @apply h-[40px] p-[10px];
+}
+select {
+  @apply py-[10px] pl-[10px] pr-10;
+
+  /* Arrow */
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.29289 6.29289C1.68342 5.90237 2.31658 5.90237 2.70711 6.29289L12 15.5858L21.2929 6.29289C21.6834 5.90237 22.3166 5.90237 22.7071 6.29289C23.0976 6.68342 23.0976 7.31658 22.7071 7.70711L12.7071 17.7071C12.5196 17.8946 12.2652 18 12 18C11.7348 18 11.4804 17.8946 11.2929 17.7071L1.29289 7.70711C0.902369 7.31658 0.902369 6.68342 1.29289 6.29289Z' fill='%2394A3B8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+select:required:invalid {
+  @apply text-blueGrey-400;
+}
+option[value=''][disabled] {
+  display: none;
+}
+option {
+  color: #000;
+}
+.custom-transition-1 {
+  transition: opacity ease-out 0.1s;
+}
+.custom-transition {
+  transition: all ease-out 0.8s;
+  &.delay {
+    transition-delay: 1s;
+  }
+  &.delay-1 {
+    transition-delay: 0.1s;
+  }
+  &.delay-2 {
+    transition-delay: 0.2s;
+  }
+  &.delay-3 {
+    transition-delay: 0.3s;
+  }
+  &.delay-4 {
+    transition-delay: 0.4s;
+  }
+  &.delay-5 {
+    transition-delay: 0.5s;
+  }
+  &.delay-6 {
+    transition-delay: 0.6s;
+  }
+}
+.bg-footer {
+  background: url('/images/Contacts/left.svg') left bottom no-repeat,
+    url('/images/Contacts/right.svg') right bottom no-repeat, #1e293b;
+}
+@keyframes fadeOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.z-0 {
+  z-index: 0 !important;
+}
+
+@media (max-width: 767px) {
+  svg {
+    max-width: 100%;
+  }
+  body {
+    padding-top: 56px;
+    height: 100vh;
+  }
+  .menu {
+    margin-top: -56px;
+  }
+  .bg-footer {
+    background-image: none;
+  }
+  .bg-contact {
+    background-image: url('/images/Contacts/Contacts.svg');
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .bg-home {
+    background-image: url('/images/Home.svg');
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .bg-about-us {
+    background-image: url('/images/About-us.svg');
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .custom-transition {
+    transition: all ease-out 0.5s;
+  }
+}
+.col {
+  @apply flex flex-col;
+}
+.text-balance {
+  text-wrap: balance;
+}

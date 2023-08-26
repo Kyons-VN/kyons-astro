@@ -1,0 +1,17 @@
+---
+import Solutions from '@components/features/Features.astro';
+import Home from '@components/home/Home.astro';
+import Schools from '@components/schools/Schools.astro';
+import Students from '@components/students/Students.astro';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<Home l={l} />
+<Solutions l={l} />
+<Students l={l} />
+<Schools l={l} />
+<!-- <ContactContent l={l} /> -->
