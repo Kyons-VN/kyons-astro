@@ -2,6 +2,7 @@ import { activeMenu, isMenuOpen, setActive, toggleMenu } from '@app/app';
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
 import './menu.scss';
+const APP_URL = import.meta.env.APP_URL ?? 'https://student.kyons.vn';
 
 type Props = {
   l: any;
@@ -66,7 +67,7 @@ export default function Menu({ l }: Props) {
                 setActiveMenu(1);
               }}
             >
-              {menuLabel.aboutUs}
+              {menuLabel.features}
             </a>
           </li>
           <li className={$activeMenu == 2 ? 'active' : ''}>
@@ -104,7 +105,7 @@ export default function Menu({ l }: Props) {
           </li>
           <li>
             <div
-              class='flex flex-row relative h-10 md:px-4 md:py-[10px] items-center justify-between text-sm md:w-24'
+              class='flex flex-row relative h-10 md:px-4 md:py-[10px] items-center justify-between text-sm md:w-24 cursor-pointer'
               onClick={() => setIsHover(!isHover)}
               tabIndex={0}
             >
@@ -152,7 +153,7 @@ export default function Menu({ l }: Props) {
           </li>
         </ul>
 
-        <a class='btn' href='https://student.kyons.vn'>
+        <a class='btn' href={APP_URL}>
           {l.btn.studyNow}
         </a>
       </div>

@@ -1,13 +1,13 @@
 import { activeMenu } from '@app/app';
-import Footer from '@components/Footer';
 import { useStore } from '@nanostores/preact';
 import { useState } from 'preact/hooks';
+import './contact.scss';
 
 type Props = {
   l: any;
 };
 
-export function ContactContent({ l }: Props, state: any) {
+export function Contact({ l }: Props, state: any) {
   const [sended, setSended] = useState(0);
   const [type, setType] = useState('');
   const [name, setName] = useState('');
@@ -56,33 +56,32 @@ export function ContactContent({ l }: Props, state: any) {
   const $activeMenu = useStore(activeMenu);
 
   return (
-    <div class='flex flex-col w-full h-screen'>
-      <div id='contact' class='absolute mt-[-56px]'></div>
-      <div class='flex-1 flex flex-col gap-6 items-center justify-center p-6 bg-contact'>
-        <div class='w-full flex flex-col gap-6 items-center'>
-          <h5
-            class='text-orange custom-transition'
-            style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
-          >
-            {l.contact.contact}
-          </h5>
-          <span
-            class='text-center custom-transition delay-1'
-            style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
-          >
-            {l.contact.contactDesc}
-          </span>
-        </div>
-        <form id='form' onSubmit={handleSubmit} class='w-full md:w-[600px] flex flex-col gap-6'>
+    <div id='contact'>
+      <img src='/images/Planet 3.svg' alt='' class='absolute left-[100px] bottom-[30px] z-0' />
+      <div
+        class='flex flex-col flex-1 gap-2 max-w-[420px]'
+        // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+      >
+        <strong class='text-lightBlue-1'>{l.contact.contact}</strong>
+        <h5
+          class='custom-transition delay-1 leading-10'
+          // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+          dangerouslySetInnerHTML={{
+            __html: l.contact.contactDesc,
+          }}
+        ></h5>
+      </div>
+      <div class='flex-1 flex flex-col gap-6 items-center justify-center px-6 bg-contact'>
+        <form id='form' onSubmit={handleSubmit} class='w-full md:w-[600px] flex flex-col gap-6 z-10'>
           <div class='flex flex-col gap-2'>
             <select
               class='control custom-transition delay-2'
-              style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+              // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
               name='type'
               id=''
               required
               value={type}
-              onChange={(event: any) => setType(event.target.value)}
+              onChange={(event) => setType(event.currentTarget.value)}
             >
               <option value='' disabled selected hidden>
                 {l.contact.youAre}
@@ -100,18 +99,18 @@ export function ContactContent({ l }: Props, state: any) {
               placeholder={l.contact.email}
               required
               value={email}
-              onChange={(event: any) => setEmail(event.target.value)}
+              onChange={(event) => setEmail(event.currentTarget.value)}
               class='custom-transition delay-3'
-              style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+              // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
             />
             <input
               name='name'
               type='text'
               placeholder={l.contact.name}
               value={name}
-              onChange={(event: any) => setName(event.target.value)}
+              onChange={(event) => setName(event.currentTarget.value)}
               class='custom-transition delay-4'
-              style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+              // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
             />
             <textarea
               name='message'
@@ -119,10 +118,10 @@ export function ContactContent({ l }: Props, state: any) {
               placeholder={l.contact.message}
               required
               value={message}
-              onChange={(event: any) => setMessage(event.target.value)}
+              onChange={(event) => setMessage(event.currentTarget.value)}
               rows={3}
               class='custom-transition delay-5'
-              style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+              // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
             ></textarea>
           </div>
           <div
@@ -144,7 +143,7 @@ export function ContactContent({ l }: Props, state: any) {
                       <button
                         type='button'
                         class='btn w-full md:w-auto flex md:inline-block justify-center'
-                        onClick={(event: any) => {
+                        onClick={() => {
                           preventScroll(false);
                           setSended(0);
                         }}
@@ -161,16 +160,15 @@ export function ContactContent({ l }: Props, state: any) {
             <div class='h-20 md:h-32'></div>
           </div>
           <div
-            class='w-full flex justify-center items-center custom-transition delay-6'
-            style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+            class='w-full flex justify-start items-center custom-transition delay-6'
+            // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
           >
-            <button class='btn w-full md:w-auto flex md:inline-block justify-center' type='submit'>
-              {l.contact.send}
+            <button class='btn md:w-[230px] flex  justify-center' type='submit'>
+              {l.btn.send}
             </button>
           </div>
         </form>
       </div>
-      <Footer l={l} />
     </div>
   );
 }

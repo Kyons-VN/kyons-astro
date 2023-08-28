@@ -1,0 +1,54 @@
+---
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='md:h-auto w-full bg-blueGrey-800 flex flex-col text-blueGrey-200 bg-footer px-14 py-5 z-10'>
+  <div class='w-full md:h-[124px]'>
+    <div class='flex flex-col md:flex-row justify-start items-start gap-10 w-full'>
+      <div class='w-[180px] md:block'>
+        <img src='/images/logo.svg' alt='' />
+      </div>
+      <div class='flex flex-col gap-2 w-auto md:w-[218px]'>
+        <div class='flex flex-row gap-2'>
+          <i class='icon-Location'></i>
+          <span>
+            <strong>{l.footer.company}</strong>
+            <br />
+            <span>{l.footer.address}</span>
+          </span>
+        </div>
+        <div class='flex flex-row gap-2'>
+          <i class='icon-Phone'></i>
+          <span>{l.footer.phone}</span>
+        </div>
+      </div>
+      <div class='flex flex-col gap-3'>
+        <a href='#features' class='font-bold'>
+          {l.menu.features}
+        </a>
+        <a href='#features' class='font-bold'>
+          {l.menu.forStudents}
+        </a>
+        <a href='#features' class='font-bold'>
+          {l.menu.forSchools}
+        </a>
+        <a href='#features' class='font-bold'>
+          {l.menu.contact}
+        </a>
+      </div>
+      <div class='flex flex-row gap-2 md:w-[214px]'>
+        <i class='icon-linkedin'></i>
+        <a class='flex' href='https://www.facebook.com/groups/605349140894461' title='Kyons Community'>
+          <i class='icon-facebook'></i>
+        </a>
+        <i class='icon-youtube'></i>
+        <i class='icon-zalo'></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='flex flex-col gap-2 w-full pt-6 px-14 py-5 bg-blueGrey-900 text-white'>{l.footer.copy}</div>

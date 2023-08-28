@@ -2,9 +2,14 @@
   "lang": "VI",
   "languageCode": "vi",
   "btn": {
-    "studyNow": "Học ngay thôi"
+    "studyNow": "Học ngay thôi",
+    "forStudents": "Dành cho người học",
+    "forSchools": "Dành cho trường học",
+    "trial": "Liên hệ dùng thử",
+    "send": "Gửi tin nhắn"
   },
   "menu": {
+    "features": "Tính năng nổi bật",
     "aboutUs": "Về chúng tôi",
     "forStudents": "Cho người học",
     "forSchools": "Cho trường học",
@@ -29,11 +34,25 @@
     "forStudents": "Dành cho người học",
     "completeLearning": "Hoàn thành mục tiêu học tập trong 4 bước với Kyons",
     "step1": "Bước 1:<br />Chọn mục tiêu học tập",
-    "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. ",
-    "step2": "Bước 1:<br />Chọn mục tiêu học tập",
-    "step2Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. ",
-    "step3": "Bước 1:<br />Chọn mục tiêu học tập",
-    "step3Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn. "
+    "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn.",
+    "step2": "Bước 2:<br />Làm bài kiểm tra thử thông minh",
+    "step2Desc": "Bước tiếp theo là thực hiện bài kiểm tra đầu vào, giúp bạn hiểu rõ hơn về trình độ hiện tại. Kết quả sẽ được hệ thống ghi nhận và phân tích năng lực của bạn.",
+    "step3": "Bước 3:<br />Luyện tập theo lộ trình học được tạo bởi AI",
+    "step3Desc": "Dựa vào kết quả bài kiểm tra thử, AI sẽ tạo ra một lộ trình được cập nhật liên tục để bám sát năng lực và tiến độ của bạn. Mọi thứ cứ để Kyons lo!"
+  },
+  "schools": {
+    "forSchools": "Dành cho nhà trường",
+    "usefulTool": "Công cụ tiện lợi giúp theo dõi và quản lý tiến độ học tập của học sinh",
+    "kyonsSchool": "Kyons School, sự kết hợp đặc biệt giữa Kyons và Cerebry - đối tác giáo dục từ Singapore, là một nền tảng quản lý lớp học thông minh. Với Kyons School, giáo viên có thể theo sát tiến độ học tập của học sinh để tinh chỉnh phương pháp giảng dạy nhằm đạt hiệu quả tốt nhất.",
+    "whatKyonsHave": "Ứng dụng này có gì?",
+    "have1": "Nền tảng tự học thông minh với sự hỗ trợ của AI",
+    "have1Desc": "Lộ trình học cá nhân hóa, phù hợp với năng lực và khả năng tiếp thu của từng học sinh.",
+    "have2": "Số lượng bài tập không giới hạn được tạo bởi AI",
+    "have2Desc": "Các dạng bài tập mới luôn được cập nhật với vô vàn câu hỏi do AI tạo ra phù hợp với từng nhu cầu học tập.",
+    "have3": "Quản lý bài tập về nhà của học sinh",
+    "have3Desc": "Giáo viên có thể nhanh chóng giao và kiểm tra tiến độ bài tập về nhà của lớp học.",
+    "have4": "Quản lý các bài kiểm tra trong năm học",
+    "have4Desc": "Kyons sẽ giúp thầy cô tạo bài kiểm tra và đặt thời gian làm bài cho học sinh một cách đơn giản."
   },
   "aboutUs": {
     "kyons": "Về Kyons",
@@ -48,8 +67,8 @@
     "joinUs": "Tham gia"
   },
   "contact": {
-    "contact": "Liên hệ với chúng tôi",
-    "contactDesc": "Nếu bạn quan tâm đến Kyons, xin vui lòng để lại thông tin. Kyons sẽ liên hệ với bạn",
+    "contact": "Liên hệ",
+    "contactDesc": "Hứng thú với sản phẩm của chúng tôi? Gửi tin nhắn ngay",
     "youAre": "Bạn là *",
     "parents": "Phụ huynh",
     "teachers": "Giáo viên",
@@ -60,7 +79,6 @@
     "email": "Email/Điện thoại *",
     "name": "Tên của bạn",
     "message": "Lời nhắn *",
-    "send": "Gửi tin nhắn",
     "success": "Kyons đã ghi nhận lời nhắn của bạn và sẽ liên hệ lại trong thời gian sớm nhất.",
     "error": "Có lỗi",
     "thankYou": "Cảm ơn bạn rất nhiều!"
@@ -69,7 +87,7 @@
   "footer": {
     "company": "Công ty TNHH Kyons ",
     "address": "L17-11, Vincom Center, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TP.HCM ",
-    "phone": "090.664.1611",
+    "phone": "(028) 6270 6820",
     "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
   },
   "signUp": "Đăng ký",

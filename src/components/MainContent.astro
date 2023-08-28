@@ -1,4 +1,6 @@
 ---
+import Footer from '@components/Footer.astro';
+import { Contact } from '@components/contact/Contact';
 import Solutions from '@components/features/Features.astro';
 import Home from '@components/home/Home.astro';
 import Schools from '@components/schools/Schools.astro';
@@ -14,4 +16,5 @@ const { l } = Astro.props;
 <Solutions l={l} />
 <Students l={l} />
 <Schools l={l} />
-<!-- <ContactContent l={l} /> -->
+<Contact l={l} />
+<Footer l={l} />

@@ -1,3 +1,10 @@
 #home {
-  @apply w-full h-screen flex flex-col justify-end items-center relative bg-[url('/images/home-bg.svg')] bg-no-repeat bg-bottom bg-cover text-white text-center p-11;
+  @apply w-full h-screen flex flex-col justify-start items-center relative bg-[url('/images/home-bg.svg')] bg-no-repeat bg-bottom bg-cover text-white text-center p-11 gap-6;
+}
+.imgShow {
+  z-index: 1;
+}
+.imgHide {
+  z-index: 0;
+  filter: brightness(50%);
 }

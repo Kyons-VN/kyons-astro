@@ -10,10 +10,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .btn {
-  @apply flex items-center justify-center gap-4 px-[16px] py-[6px]  text-white font-[600] text-center h-10 rounded bg-orangeGradient;
+  @apply flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded bg-orangeGradient shadow-orange1;
 
   &.large {
     @apply h-12;
+  }
+  &.green {
+    @apply bg-greenGradient shadow-green1;
   }
 }
 .indicators {
@@ -141,10 +144,6 @@ option {
     transition-delay: 0.6s;
   }
 }
-.bg-footer {
-  background: url('/images/Contacts/left.svg') left bottom no-repeat,
-    url('/images/Contacts/right.svg') right bottom no-repeat, #1e293b;
-}
 @keyframes fadeOutLeft {
   0% {
     transform: translateX(0);
@@ -204,19 +203,16 @@ option {
     background-image: none;
   }
   .bg-contact {
-    background-image: url('/images/Contacts/Contacts.svg');
     background-position: bottom center;
     background-size: contain;
     background-repeat: no-repeat;
   }
   .bg-home {
-    background-image: url('/images/Home.svg');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
   }
   .bg-about-us {
-    background-image: url('/images/About-us.svg');
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;

@@ -1,4 +1,4 @@
 #features {
-  @apply w-full h-screen flex flex-col justify-center items-center relative text-center p-11 pb-36 gap-11;
+  @apply w-full min-h-screen flex flex-col justify-center items-center relative text-center p-10 gap-11;
   background: url('/images/galaxy-1.svg') no-repeat 757px -110px, url('/images/galaxy-2.svg') no-repeat -289px 338px;
 }
