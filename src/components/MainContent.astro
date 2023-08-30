@@ -4,7 +4,7 @@ import { Contact } from '@components/contact/Contact';
 import Solutions from '@components/features/Features.astro';
 import Home from '@components/home/Home.astro';
 import Schools from '@components/schools/Schools.astro';
-import Students from '@components/students/Students.astro';
+import { Students } from './students/Students';
 export interface Props {
   l: any;
 }
@@ -14,7 +14,9 @@ const { l } = Astro.props;
 
 <Home l={l} />
 <Solutions l={l} />
-<Students l={l} />
+<Students l={l} client:only />
+
 <Schools l={l} />
 <Contact l={l} />
 <Footer l={l} />
+./students/Students

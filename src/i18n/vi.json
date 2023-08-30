@@ -9,6 +9,8 @@
     "send": "Gửi tin nhắn"
   },
   "menu": {
+    "lang": "VI",
+    "languageCode": "vi",
     "features": "Tính năng nổi bật",
     "aboutUs": "Về chúng tôi",
     "forStudents": "Cho người học",
@@ -38,7 +40,9 @@
     "step2": "Bước 2:<br />Làm bài kiểm tra thử thông minh",
     "step2Desc": "Bước tiếp theo là thực hiện bài kiểm tra đầu vào, giúp bạn hiểu rõ hơn về trình độ hiện tại. Kết quả sẽ được hệ thống ghi nhận và phân tích năng lực của bạn.",
     "step3": "Bước 3:<br />Luyện tập theo lộ trình học được tạo bởi AI",
-    "step3Desc": "Dựa vào kết quả bài kiểm tra thử, AI sẽ tạo ra một lộ trình được cập nhật liên tục để bám sát năng lực và tiến độ của bạn. Mọi thứ cứ để Kyons lo!"
+    "step3Desc": "Dựa vào kết quả bài kiểm tra thử, AI sẽ tạo ra một lộ trình được cập nhật liên tục để bám sát năng lực và tiến độ của bạn. Mọi thứ cứ để Kyons lo!",
+    "step4": "Bước 4:<br />Luyện tập cá nhân hóa với hỗ trợ xuyên suốt để nắm chắc bài",
+    "step4Desc": "Mỗi câu hỏi được tạo riêng bám sát với tiến độ của bạn. Lỡ không biết làm? Kyons sẽ có lời giải chi tiết, chế độ phân nhỏ kiến thức để tìm lỗ hổng, kèm hỗ trợ 1-1 để đảm bảo bạn vượt qua mọi điều chưa hiểu!"
   },
   "schools": {
     "forSchools": "Dành cho nhà trường",
@@ -86,7 +90,7 @@
   "close": "Đóng",
   "footer": {
     "company": "Công ty TNHH Kyons ",
-    "address": "L17-11, Vincom Center, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, TP.HCM ",
+    "address": "L17-11, Vincom Center, 72 Lê Thánh Tôn,<br />Phường Bến Nghé, Quận 1, TP.HCM ",
     "phone": "(028) 6270 6820",
     "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
   },
@@ -95,5 +99,16 @@
     "title": "Dừng khoảng chừng là 2 giây",
     "content": "Phiên bản chính thức của Kyons với những nâng cấp thú vị và vô cùng hữu ích sắp được ra mắt. Để nhận được thông báo và trải nghiệm sớm nhất, cũng như giành lấy những món quà bất ngờ, bạn hãy cùng tham gia “Danh sách chờ” của Kyons nhé!"
   },
-  "register": "Đăng ký"
+  "register": "Đăng ký",
+  "solution": {
+    "ourSolution": "Giải pháp của chúng tôi",
+    "mockTest": "Làm bài kiểm tra thử",
+    "mockTestDesc": "Sau khi bạn đặt ra mục tiêu của mình, chúng tôi sẽ đưa ra một bài kiểm tra thông minh giúp bạn nhận ra mình đang thiếu sót những kiến thức gì.",
+    "registerNow": "Cảm thấy thú vị?<br />Đăng ký để trải nghiệm ngay!",
+    "createAccount": "Tạo tài khoản cho học sinh",
+    "yourLearningPath": "Lộ trình học dành riêng cho bạn",
+    "yourLearningPathDesc": "Dựa vào kết quả bài kiểm tra và qua quá trình học, AI của Kyons sẽ tính toán và gợi ý kiến thức cần học tiếp theo. Từ đó, bạn sẽ có một lộ trình học tập được cá nhân hoá, giúp việc học trở nên hiệu quả hơn bao giờ hết.",
+    "tutor": "Gia sư",
+    "tutorDesc": "Khi gặp khó khăn trong lúc học, bạn có thể gọi gia sư để giúp bạn giải đáp thắc mắc mọi lúc mọi nơi, vô cùng tiện lợi."
+  }
 }

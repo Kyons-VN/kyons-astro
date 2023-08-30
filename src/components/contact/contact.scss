@@ -1,3 +1,3 @@
 #contact {
-  @apply bg-[url('/images/contact-bg.svg')] bg-no-repeat bg-bottom bg-cover w-full h-screen flex flex-row justify-start items-start relative text-white px-24 py-28;
+  @apply bg-[url('/images/contact-bg.svg')] bg-no-repeat bg-bottom bg-cover w-full lg:h-[calc(100vh_-_300px)] flex justify-center p-6 lg:px-24 lg:py-28 overflow-hidden;
 }

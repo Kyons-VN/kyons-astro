@@ -1,9 +1,21 @@
 .menu {
-  @apply flex flex-row w-full absolute z-10 text-white px-11 pt-6 h-[82px];
+  @apply flex flex-row w-full fixed z-20 text-white px-4 lg:px-11 h-[82px] bg-[#101625];
   .menu-items {
-    @apply flex flex-row flex-1 gap-8 py-3;
+    @apply flex flex-col lg:flex-row flex-1 gap-0 lg:gap-8 fixed top-[82px] left-0 w-full lg:static bg-[#101625];
     li {
-      @apply flex flex-row items-center gap-2;
+      // @apply flex flex-row items-center justify-center;
+      a {
+        @apply font-bold text-[16px] p-6 lg:p-2 w-full text-center h-full flex items-center justify-center;
+      }
     }
+  }
+}
+@media (max-width: 1024px) {
+  .menu-items.show {
+    height: auto;
+  }
+  .menu-items.hide {
+    height: 0;
+    overflow: hidden;
   }
 }

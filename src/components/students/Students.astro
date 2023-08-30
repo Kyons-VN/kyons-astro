@@ -15,13 +15,13 @@ const APP_URL = process.env.APP_URL;
   </div>
   <div class='w-full max-w-[664px] flex flex-row justify-between relative'>
     <div class='absolute w-[calc(100%_-_90px)] h-1 bg-secondaryBlue bottom-[50px] left-[45px]'></div>
-    <div><img src='/images/location.svg' alt='' class='dot-shadow' /></div>
-    <div><img src='/images/location.svg' alt='' class='dot-shadow' /></div>
-    <div><img src='/images/dot.svg' alt='' class='dot-shadow' /></div>
-    <div><img src='/images/dot.svg' alt='' class='dot-shadow' /></div>
+    <div><img src='/images/location.svg' alt='location' class='dot-shadow' /></div>
+    <div><img src='/images/location.svg' alt='location' class='dot-shadow' /></div>
+    <div><img src='/images/dot.svg' alt='dot' class='dot-shadow' /></div>
+    <div><img src='/images/dot.svg' alt='dot' class='dot-shadow' /></div>
   </div>
   <div class='flex w-full max-w-[870px] max-h-[60vh]'>
-    <div class='flex-1'><img src='/images/step-1.png' alt='' class='h-[90%]' /></div>
+    <div class='flex-1'><img src='/images/step-1.png' alt={l.students.step1} class='h-[90%]' /></div>
     <div class='flex flex-col w-full max-w-[435px] py-10 px-6 text-left items-start justify-start gap-6'>
       <h4 set:html={l.students.step1} />
       <p>{l.students.step1Desc}</p>

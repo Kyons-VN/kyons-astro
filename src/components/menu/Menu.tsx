@@ -16,7 +16,7 @@ export default function Menu({ l }: Props) {
   const language = l.lang;
 
   const defaultClass =
-    'md:absolute z-10 flex flex-col gap-2 py-[6px] px-4 rounded-lg shadow-2 bg-white text-black w-full md:left-0';
+    'absolute z-10 flex flex-col gap-2 py-[6px] px-4 rounded-lg shadow-2 bg-white text-black w-full w-screen lg:w-full left-[calc(50%_-_50vw)] lg:left-0 top-12';
 
   function setActiveMenu(index: number) {
     setActive(index, true);
@@ -39,9 +39,19 @@ export default function Menu({ l }: Props) {
     setIsOpen(!isOpen);
   }
 
+  for (const elm of window.document.getElementsByClassName('close-menu')) {
+    if (elm.hasAttribute('data-close-menu')) break;
+    elm.setAttribute('data-close-menu', 'true');
+    elm.addEventListener('click', () => {
+      console.log('close-menu');
+
+      toggle();
+    });
+  }
+
   return (
     <nav id='menu' className={`menu ${!isOpen ? 'hide' : 'show'}`}>
-      <div className='flex flex-row items-center'>
+      <div className='flex flex-row items-center justify-between w-full lg:w-auto'>
         <a href='#home'>
           <img
             class='w-[100px] cursor-pointer'
@@ -52,17 +62,17 @@ export default function Menu({ l }: Props) {
             }}
           />
         </a>
-        <button class='md:hidden text-[24px]' onClick={toggle}>
-          <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHambuger'}></i>
+        <button class='lg:hidden text-[24px]' onClick={toggle}>
+          <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
         </button>
       </div>
-      <span class='hidden md:flex flex-1'></span>
+      <span class='hidden lg:flex flex-1'></span>
       <div class='flex gap-10 items-center'>
-        <ul class='menu-items'>
+        <ul className={isMenuOpen.get() ? 'menu-items show' : 'menu-items hide'}>
           <li className={$activeMenu == 1 ? 'active' : ''}>
             <a
-              class='cursor-pointer'
-              href='#about-us'
+              class='close-menu'
+              href='#features'
               onClick={() => {
                 setActiveMenu(1);
               }}
@@ -72,7 +82,7 @@ export default function Menu({ l }: Props) {
           </li>
           <li className={$activeMenu == 2 ? 'active' : ''}>
             <a
-              class='cursor-pointer'
+              class='close-menu'
               href='#students'
               onClick={() => {
                 setActiveMenu(2);
@@ -83,8 +93,8 @@ export default function Menu({ l }: Props) {
           </li>
           <li className={$activeMenu == 3 ? 'active' : ''}>
             <a
-              class='cursor-pointer'
-              href='#for-school'
+              class='close-menu'
+              href='#schools'
               onClick={() => {
                 setActiveMenu(3);
               }}
@@ -94,7 +104,7 @@ export default function Menu({ l }: Props) {
           </li>
           <li className={$activeMenu == 4 ? 'active' : ''}>
             <a
-              class='cursor-pointer'
+              class='close-menu'
               href='#contact'
               onClick={() => {
                 setActiveMenu(4);
@@ -103,37 +113,31 @@ export default function Menu({ l }: Props) {
               {menuLabel.contact}
             </a>
           </li>
-          <li>
+          <li class='flex justify-center relative'>
             <div
-              class='flex flex-row relative h-10 md:px-4 md:py-[10px] items-center justify-between text-sm md:w-24 cursor-pointer'
+              class='flex flex-row relative h-10 p-6 items-center justify-between text-sm w-24 cursor-pointer'
               onClick={() => setIsHover(!isHover)}
               tabIndex={0}
             >
-              <span>{language}</span>
+              <span class='font-bold text-[16px]'>{language}</span>
               <i className={isHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
               <div
                 className={isHover ? `${defaultClass} hidden md:flex` : `${defaultClass} hidden`}
-                style='bottom: calc(-100% - 30px);'
+                // style='bottom: calc(-100% - 30px);'
                 onClick={() => setIsHover(false)}
               >
-                <div
-                  className={language == 'VI' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
-                  onClick={() => setLanguage('VI')}
-                >
+                <a className={language == 'VI' ? 'text-orange' : ''} onClick={() => setLanguage('VI')}>
                   VI
-                </div>
+                </a>
                 <hr class='text-blueGrey-300' />
-                <div
-                  className={language == 'EN' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
-                  onClick={() => setLanguage('EN')}
-                >
+                <a className={language == 'EN' ? 'text-orange' : ''} onClick={() => setLanguage('EN')}>
                   EN
-                </div>
+                </a>
               </div>
             </div>
             <div
               className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
-              style='bottom: calc(-100% - 30px);'
+              // style='bottom: calc(-100% - 30px);'
               onClick={() => setIsHover(false)}
             >
               <div
@@ -152,10 +156,6 @@ export default function Menu({ l }: Props) {
             </div>
           </li>
         </ul>
-
-        <a class='btn' href={APP_URL}>
-          {l.btn.studyNow}
-        </a>
       </div>
     </nav>
   );

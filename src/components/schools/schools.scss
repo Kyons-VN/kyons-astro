@@ -1,5 +1,4 @@
 #schools {
-  @apply w-full flex flex-col justify-start items-start relative text-center px-11 py-10 gap-11;
-  background: url('/images/galaxy-3.svg') no-repeat bottom -400px left 0,
-    url('/images/school-2.png') no-repeat 100% 5% / 50%;
+  @apply w-full flex flex-col justify-start items-center relative text-center lg:px-11 p-4 lg:py-10;
+  background: url('/images/galaxy-3.svg') no-repeat bottom -400px left 0;
 }

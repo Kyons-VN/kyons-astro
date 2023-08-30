@@ -6,47 +6,54 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<div class='md:h-auto w-full bg-blueGrey-800 flex flex-col text-blueGrey-200 bg-footer px-14 py-5 z-10'>
-  <div class='w-full md:h-[124px]'>
-    <div class='flex flex-col md:flex-row justify-start items-start gap-10 w-full'>
-      <div class='w-[180px] md:block'>
-        <img src='/images/logo.svg' alt='' />
+<div class='lg:h-auto w-full bg-blueGrey-800 flex flex-col text-blueGrey-200 bg-footer p-4 lg:px-14 lg:py-5 z-10'>
+  <div class='w-full lg:h-[124px]'>
+    <div class='flex flex-col lg:flex-row justify-stretch gap-10 w-full items-stretch'>
+      <div class='lg:w-auto w-full flex justify-center items-start'>
+        <img src='/images/logo.svg' alt='Logo Kyons' class='w-[180px]' />
       </div>
-      <div class='flex flex-col gap-2 w-auto md:w-[218px]'>
-        <div class='flex flex-row gap-2'>
+      <div class='flex flex-col gap-2 w-auto items-center lg:items-start'>
+        <div class='lg:flex flex-row gap-2 text-center lg:text-left'>
           <i class='icon-Location'></i>
           <span>
             <strong>{l.footer.company}</strong>
             <br />
-            <span>{l.footer.address}</span>
+            <span set:html={l.footer.address} />
           </span>
         </div>
-        <div class='flex flex-row gap-2'>
+        <div class='lg:flex flex-row gap-2'>
           <i class='icon-Phone'></i>
           <span>{l.footer.phone}</span>
         </div>
       </div>
-      <div class='flex flex-col gap-3'>
+      <div class='flex flex-col gap-3 items-center lg:items-start whitespace-nowrap'>
         <a href='#features' class='font-bold'>
           {l.menu.features}
         </a>
-        <a href='#features' class='font-bold'>
+        <a href='#students' class='font-bold'>
           {l.menu.forStudents}
         </a>
-        <a href='#features' class='font-bold'>
+        <a href='#schools' class='font-bold'>
           {l.menu.forSchools}
         </a>
-        <a href='#features' class='font-bold'>
+        <a href='#contact' class='font-bold'>
           {l.menu.contact}
         </a>
       </div>
-      <div class='flex flex-row gap-2 md:w-[214px]'>
-        <i class='icon-linkedin'></i>
-        <a class='flex' href='https://www.facebook.com/groups/605349140894461' title='Kyons Community'>
-          <i class='icon-facebook'></i>
-        </a>
-        <i class='icon-youtube'></i>
-        <i class='icon-zalo'></i>
+      <div class='lg:flex-1 hidden lg:flex'></div>
+      <div class='flex flex-col justify-between lg:w-[214px]'>
+        <div class='flex flex-row gap-2 items-center w-full justify-center lg:justify-end'>
+          <a href='https://www.linkedin.com/company/kyons'><img src='/images/Linkedin.svg' alt='Linkedin Kyons' /></a>
+          <a href='https://www.facebook.com/KyonsVN'><img src='/images/Facebook.svg' alt='Facebook Kyons' /></a>
+          <a href='https://www.tiktok.com/@kyons.vn'><img src='/images/Tiktok.svg' alt='Tiktok Kyons' /></a>
+          <a href='https://zalo.me/2819583938819205206'><img src='/images/Zalo.svg' alt='Zalo Kyons' /></a>
+        </div>
+        <div class='h-4 lg:h-0'></div>
+        <div class='text-center'>
+          <a href='#' class='text-center'
+            ><img src='/images/bct.png' alt='Đã thông báo Bộ Công Thương' class='inline-block' /></a
+          >
+        </div>
       </div>
     </div>
   </div>

@@ -8,28 +8,28 @@ const { l } = Astro.props;
 const APP_URL = process.env.APP_URL;
 ---
 
-<div id="features">
-  <div class="flex flex-col gap-2 w-full max-w-[656px]">
-    <strong class="flex flex-col text-lightBlue-1">{l.features.ourFeatures}</strong>
-    <h2 set:html={l.features.youDontKnow} class='leading-10'></h2>
+<div id='features'>
+  <div class='flex flex-col gap-2 w-full max-w-[656px]'>
+    <strong class='flex flex-col text-lightBlue-1'>{l.features.ourFeatures}</strong>
+    <h2 set:html={l.features.youDontKnow} class='leading-10 text-xl lg:text-3xl' />
   </div>
-  <div class="grid grid-cols-3 w-full max-w-[1122px] gap-10">
+  <div class='grid lg:grid-cols-3 w-full max-w-[360px] lg:max-w-[1122px] gap-6 lg:gap-10'>
     <div class='flex flex-col gap-8 items-center bg-white rounded-lg shadow-4 py-12 px-8'>
-      <img src='/images/feature-1.svg' width='108px' height='108px'/>
+      <img src='/images/feature-1.svg' width='108px' height='108px' />
       <div class='flex flex-col gap-2'>
         <h5 class='leading-8'>{l.features.detectKnowledgeHoles}</h5>
         <p>{l.features.detectKnowledgeHolesDesc}</p>
       </div>
     </div>
     <div class='flex flex-col gap-8 items-center bg-white rounded-lg shadow-4 py-12 px-8'>
-      <img src='/images/feature-2.svg' width='108px' height='108px'/>
+      <img src='/images/feature-2.svg' width='108px' height='108px' />
       <div class='flex flex-col gap-2'>
         <h5 class='leading-8'>{l.features.learningPath}</h5>
         <p>{l.features.learningPathDesc}</p>
       </div>
     </div>
     <div class='flex flex-col gap-8 items-center bg-white rounded-lg shadow-4 py-12 px-8'>
-      <img src='/images/feature-3.svg' width='108px' height='108px'/>
+      <img src='/images/feature-3.svg' width='108px' height='108px' />
       <div class='flex flex-col gap-2'>
         <h5 class='leading-8'>{l.features.practiceWith}</h5>
         <p>{l.features.practiceWithDesc}</p>

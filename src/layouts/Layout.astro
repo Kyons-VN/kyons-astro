@@ -52,5 +52,12 @@ const { lang } = Astro.props;
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <slot />
+    <script>
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const params = Object.fromEntries(urlSearchParams.entries());
+      if(params['outline']){
+        window.document.body.classList.add('outline');
+      }
+    </script>
   </body>
 </html>

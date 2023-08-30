@@ -25,11 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ArrowDownward {
-  &:before {
-    content: $icon-ArrowDownward;
-  }
-}
 .icon-Add {
   &:before {
     content: $icon-Add;
@@ -115,6 +110,11 @@
     content: $icon-ArrowUpStop;
   }
 }
+.icon-BankTransfer {
+  &:before {
+    content: $icon-BankTransfer;
+  }
+}
 .icon-Birthday {
   &:before {
     content: $icon-Birthday;
@@ -145,6 +145,21 @@
     content: $icon-Calendar;
   }
 }
+.icon-CalendarViewDay {
+  &:before {
+    content: $icon-CalendarViewDay;
+  }
+}
+.icon-CalendarViewMonth {
+  &:before {
+    content: $icon-CalendarViewMonth;
+  }
+}
+.icon-CalendarViewWeek {
+  &:before {
+    content: $icon-CalendarViewWeek;
+  }
+}
 .icon-Call {
   &:before {
     content: $icon-Call;
@@ -160,9 +175,19 @@
     content: $icon-Cancel;
   }
 }
+.icon-Card {
+  &:before {
+    content: $icon-Card;
+  }
+}
 .icon-Carousel {
   &:before {
     content: $icon-Carousel;
+  }
+}
+.icon-Cash {
+  &:before {
+    content: $icon-Cash;
   }
 }
 .icon-Chat {
@@ -230,6 +255,11 @@
     content: $icon-Error;
   }
 }
+.icon-Facebook {
+  &:before {
+    content: $icon-Facebook;
+  }
+}
 .icon-Filter {
   &:before {
     content: $icon-Filter;
@@ -243,6 +273,11 @@
 .icon-FolderOpen {
   &:before {
     content: $icon-FolderOpen;
+  }
+}
+.icon-Google {
+  &:before {
+    content: $icon-Google;
   }
 }
 .icon-GoogleMeet {
@@ -325,6 +360,11 @@
     content: $icon-LineWeight;
   }
 }
+.icon-Linkedin {
+  &:before {
+    content: $icon-Linkedin;
+  }
+}
 .icon-Location {
   &:before {
     content: $icon-Location;
@@ -360,9 +400,29 @@
     content: $icon-Minimize;
   }
 }
+.icon-Momo {
+  &:before {
+    content: $icon-Momo;
+  }
+}
 .icon-More {
   &:before {
     content: $icon-More;
+  }
+}
+.icon-NewFolder {
+  &:before {
+    content: $icon-NewFolder;
+  }
+}
+.icon-NewLabel {
+  &:before {
+    content: $icon-NewLabel;
+  }
+}
+.icon-NoteManagement {
+  &:before {
+    content: $icon-NoteManagement;
   }
 }
 .icon-Notification {
@@ -373,6 +433,11 @@
 .icon-OpenNew {
   &:before {
     content: $icon-OpenNew;
+  }
+}
+.icon-Paypal {
+  &:before {
+    content: $icon-Paypal;
   }
 }
 .icon-Phone {
@@ -495,6 +560,11 @@
     content: $icon-Thumbnail;
   }
 }
+.icon-Tiktok {
+  &:before {
+    content: $icon-Tiktok;
+  }
+}
 .icon-Time {
   &:before {
     content: $icon-Time;
@@ -528,5 +598,10 @@
 .icon-Work {
   &:before {
     content: $icon-Work;
+  }
+}
+.icon-ZaloPay {
+  &:before {
+    content: $icon-ZaloPay;
   }
 }
