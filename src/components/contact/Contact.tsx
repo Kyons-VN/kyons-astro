@@ -62,7 +62,7 @@ export function Contact({ l }: Props, state: any) {
         <img
           src='/images/Planet 3.svg'
           alt='Planet'
-          class='absolute lg:left-0 right-0 lg:top-[10vh] z-0 lg:w-[332px]'
+          class='absolute lg:left-0 right-0 lg:top-[10vh] z-0 w-[215px] lg:w-[332px]'
         />
         <div
           class='flex flex-col lg:flex-1 gap-2 lg:max-w-[420px] relative z-10'

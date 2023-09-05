@@ -23,7 +23,7 @@ export default defineConfig({
       },
     }),
     robotsTxt(),
-    preact(),
+    preact({ compat: true }),
   ],
 });
 

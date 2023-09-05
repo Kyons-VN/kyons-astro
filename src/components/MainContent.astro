@@ -14,8 +14,7 @@ const { l } = Astro.props;
 
 <Home l={l} />
 <Solutions l={l} />
-<Students l={l} client:only />
-
+<Students l={l} client:only='preact' />
 <Schools l={l} />
-<Contact l={l} client:only />
+<Contact l={l} client:only='preact' />
 <Footer l={l} />

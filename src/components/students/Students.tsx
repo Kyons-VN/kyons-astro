@@ -1,7 +1,6 @@
 import { activeSolution, setActiveSolution, setNextSolution, setPreviousSolution } from '@app/app';
 import { useStore } from '@nanostores/preact';
 import { Component } from 'preact';
-import { isMobile } from 'react-device-detect';
 import { useSwipeable } from 'react-swipeable';
 import './students.scss';
 
@@ -11,7 +10,6 @@ type Props = {
 
 export class Students extends Component<Props> {
   s: NodeListOf<Element>[] = [];
-  handlers = {};
   fade = (elms: NodeListOf<Element>, isIn = true, isLeft = true) => {
     elms.forEach((e) => {
       e.setAttribute('style', `animation: fade${isIn ? 'In' : 'Out'}${isLeft ? 'Left' : 'Right'} 1s forwards;`);
@@ -31,19 +29,6 @@ export class Students extends Component<Props> {
     // isInSolution.subscribe((value) => {
     //   $isInSolution = value;
     // });
-    if (isMobile) {
-      this.handlers = useSwipeable({
-        // onSwipedLeft: () => setActiveMenu($activeMenu + 1),
-        // onSwipedRight: () => setActiveMenu($activeMenu - 1),
-        // onSwipedDown: () => setActiveMenu($activeMenu-1),
-        // onSwipedUp: () => setActiveMenu($activeMenu+1),
-        onSwipedLeft: () => setNextSolution(),
-        onSwipedRight: () => setPreviousSolution(),
-        swipeDuration: 500,
-        preventScrollOnSwipe: true,
-        trackMouse: true,
-      });
-    }
   }
   // componentWillUnmount() {
   //   activeSolution.off();
@@ -52,15 +37,26 @@ export class Students extends Component<Props> {
     const l = props.l;
     // state === this.state
     const $activeSolution = useStore(activeSolution);
+    const handlers = useSwipeable({
+      // onSwipedLeft: () => setActiveMenu($activeMenu + 1),
+      // onSwipedRight: () => setActiveMenu($activeMenu - 1),
+      // onSwipedDown: () => setActiveMenu($activeMenu-1),
+      // onSwipedUp: () => setActiveMenu($activeMenu+1),
+      onSwipedLeft: () => setNextSolution(),
+      onSwipedRight: () => setPreviousSolution(),
+      swipeDuration: 500,
+      preventScrollOnSwipe: true,
+      trackMouse: true,
+    });
 
     return (
-      <div class='students'>
+      <div class='students' {...handlers!}>
         <div id='students' class='absolute top-[-82px]'></div>
         <div class='w-full max-w-[505px] flex flex-col gap-2 text-center'>
           <strong class='flex flex-col text-lightBlue-1'>{l.students.forStudents}</strong>
           <h2 class='text-xl lg:text-3xl'>{l.students.completeLearning}</h2>
         </div>
-        <div class='w-full max-w-[664px] flex flex-row justify-between relative'>
+        <div class='w-full h-[96px] max-w-[664px] flex flex-row justify-between relative'>
           <div class='absolute w-[calc(100%_-_90px)] h-1 bg-secondaryBlue bottom-[calc(50%_+_2px)] left-[45px]'>
             <div class='w-full bg-orange h-full' style={'width: ' + Math.ceil(($activeSolution / 3) * 100) + '%'}></div>
           </div>
@@ -97,7 +93,7 @@ export class Students extends Component<Props> {
             />
           </div>
         </div>
-        <div class='flex flex-col-reverse lg:flex-row w-full max-w-[870px] lg:max-h-[60vh] gap-6'>
+        <div class='flex flex-col-reverse lg:flex-row w-full max-w-[870px] lg:max-h-[60vh] gap-6 items-center'>
           <div class='flex-1 relative flex flex-col items-center gap-4 lg:h-full'>
             <img
               onClick={() => setPreviousSolution()}
