@@ -1,9 +1,9 @@
-#features {
+.features {
   @apply w-full min-h-[calc(100vh_-_82px)] flex flex-col justify-center items-center relative text-center p-4 py-10 lg:p-10 gap-6 lg:gap-11;
   background: url('/images/galaxy-1.svg') no-repeat 757px -110px, url('/images/galaxy-2.svg') no-repeat -289px 338px;
 }
 @media (max-width: 1024px) {
-  #features {
+  .features {
     background: url('/images/galaxy-1.svg') no-repeat 140% 0px / 60%, url('/images/galaxy-2.svg') no-repeat 100% 100%;
   }
 }

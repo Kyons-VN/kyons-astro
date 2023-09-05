@@ -64,12 +64,12 @@ export function setActive(index: number, force: boolean = false) {
 }
 
 export function setNextSolution() {
-  if (activeSolution.get() == 2) return;
+  if (activeSolution.get() > 2) return;
   activeSolution.set(activeSolution.get() + 1);
 }
 
 export function setPreviousSolution() {
-  if (activeSolution.get() == 0) return;
+  if (activeSolution.get() < 1) return;
   activeSolution.set(activeSolution.get() - 1);
 }
 

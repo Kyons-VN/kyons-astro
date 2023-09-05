@@ -9,7 +9,7 @@
     "send": "Send"
   },
   "menu": {
-    "features": "Features",
+    "features": "Salient features",
     "aboutUs": "About us",
     "forStudents": "Kyons Students",
     "forSchools": "Kyons Schools",
@@ -21,7 +21,7 @@
     "scrollToView": "Scroll down to start exploring"
   },
   "features": {
-    "ourFeatures": "Features",
+    "ourFeatures": "Salient features",
     "youDontKnow": "Don’t know where to start?<br />Let AI help you!",
     "detectKnowledgeHoles": "Knowledge gaps detection",
     "detectKnowledgeHolesDesc": "Smart Mock Tests help to detect your weaknesses and focus on reviewing them.",

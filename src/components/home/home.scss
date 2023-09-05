@@ -1,4 +1,4 @@
-#home {
+.home {
   @apply w-full min-h-screen flex flex-col justify-center lg:justify-start items-center relative 
   lg:bg-[url('/images/home-bg.svg')]
   bg-no-repeat bg-bottom bg-cover text-white text-center p-4 lg:p-11 gap-16 lg:gap-6;
@@ -11,7 +11,7 @@
   filter: brightness(50%);
 }
 @media (max-width: 1024px) {
-  #home {
+  .home {
     @apply bg-cover;
     background: url('/images/Mascot.svg') left -30px top 360px no-repeat,
       url('/images/home-planet-1.svg') left -40px top 80px no-repeat,

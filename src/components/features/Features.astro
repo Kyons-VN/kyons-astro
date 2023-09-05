@@ -8,7 +8,8 @@ const { l } = Astro.props;
 const APP_URL = process.env.APP_URL;
 ---
 
-<div id='features'>
+<div class='features'>
+  <div id='features' class='absolute top-[-82px]'></div>
   <div class='flex flex-col gap-2 w-full max-w-[656px]'>
     <strong class='flex flex-col text-lightBlue-1'>{l.features.ourFeatures}</strong>
     <h2 set:html={l.features.youDontKnow} class='leading-10 text-xl lg:text-3xl' />

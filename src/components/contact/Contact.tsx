@@ -56,9 +56,14 @@ export function Contact({ l }: Props, state: any) {
   const $activeMenu = useStore(activeMenu);
 
   return (
-    <div id='contact'>
-      <div class='max-w-[1122px] flex flex-col lg:flex-row justify-start items-start relative gap-10'>
-        <img src='/images/Planet 3.svg' alt='Planet' class='absolute lg:left-0 right-0 lg:top-[10vh] z-0 lg:w-[332]' />
+    <div class='contact'>
+      <div id='contact' class='absolute top-[-82px]'></div>
+      <div class='w-full max-w-[1122px] flex flex-col lg:flex-row justify-start items-start relative gap-10'>
+        <img
+          src='/images/Planet 3.svg'
+          alt='Planet'
+          class='absolute lg:left-0 right-0 lg:top-[10vh] z-0 lg:w-[332px]'
+        />
         <div
           class='flex flex-col lg:flex-1 gap-2 lg:max-w-[420px] relative z-10'
           // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
