@@ -1,10 +1,13 @@
 ---
 import Footer from '@components/Footer.astro';
+import AboutUs from '@components/about-us/index.astro';
 import { Contact } from '@components/contact/Contact';
-import Solutions from '@components/features/Features.astro';
-import Home from '@components/home/Home.astro';
-import Schools from '@components/schools/Schools.astro';
-import { Students } from './students/Students';
+import Home from '@components/home2/index.astro';
+import Price from '@components/price/index.astro';
+import Problem from '@components/problem/index.astro';
+import Schools from '@components/schools2/index.astro';
+import Solutions from '@components/solutions/index.astro';
+import Students from '@components/students2/index.astro';
 export interface Props {
   l: any;
 }
@@ -13,8 +16,11 @@ const { l } = Astro.props;
 ---
 
 <Home l={l} />
+<AboutUs l={l} />
+<Problem l={l} />
 <Solutions l={l} />
-<Students l={l} client:only='preact' />
+<Students l={l} />
 <Schools l={l} />
+<Price l={l} />
 <Contact l={l} client:only='preact' />
 <Footer l={l} />

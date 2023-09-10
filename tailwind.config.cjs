@@ -54,6 +54,15 @@ module.exports = {
         },
         black: '#000000',
         white: '#ffffff',
+        yellow: {
+          0: '#FCD400',
+          1: '#FFE765',
+          2: '#FFF2B0',
+        },
+        darkYellow: {
+          1: '#EDAB03',
+          2: '#BD8000',
+        },
       },
       boxShadow: {
         1: '0px 3px 5px rgba(0, 0, 0, 0.1)',
@@ -62,6 +71,7 @@ module.exports = {
         4: '0px 15px 15px 0px rgba(30, 41, 59, 0.08)',
         green1: '0px 9px 36px 0px rgba(52, 211, 153, 0.40)',
         orange1: '0px 9px 36px 0px rgba(253, 186, 116, 0.40)',
+        blue1: '0px 9px 22px 1px rgba(6, 165, 255, 0.70);',
       },
       backgroundImage: {
         orangeGradient: 'radial-gradient(184.96% 124.02% at 33.08% -22.92%, #FDBA74 0%, #FB7200 67.30%)',

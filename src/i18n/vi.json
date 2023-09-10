@@ -6,21 +6,32 @@
     "forStudents": "Dành cho người học",
     "forSchools": "Dành cho trường học",
     "trial": "Liên hệ dùng thử",
-    "send": "Gửi tin nhắn"
+    "send": "Gửi tin nhắn",
+    "bookNow": "Đặt trước ngay"
   },
   "menu": {
     "lang": "VI",
     "languageCode": "vi",
     "features": "Tính năng nổi bật",
-    "aboutUs": "Về chúng tôi",
+    "aboutUs": "Về Kyons",
+    "problems": "Vấn đề",
+    "solutions": "Giải pháp",
     "forStudents": "Cho người học",
     "forSchools": "Cho trường học",
+    "price": "Bảng giá",
     "contact": "Liên hệ"
   },
   "home": {
     "whyNotSmarter": "Tại sao không học thông minh hơn?",
     "kyons": "Kyons, nền tảng giáo dục hiện đại sử dụng trí tuệ nhân tạo (AI), là trợ thủ đắc lực giúp học sinh đạt điểm số mong muốn trong thời gian ngắn nhất với lộ trình học được cá nhân hóa",
-    "scrollToView": "Kéo xuống để bắt đầu khám phá"
+    "scrollToView": "Kéo xuống để bắt đầu khám phá",
+    "fourty": "40,000+",
+    "users": "người dùng",
+    "promotionEnd": "Ưu đãi kết thúc trong",
+    "days": "ngày",
+    "hours": "giờ",
+    "minutes": "phút",
+    "seconds": "giây"
   },
   "features": {
     "ourFeatures": "Các tính năng nổi bật",
@@ -33,15 +44,15 @@
     "practiceWithDesc": "Vô số bài tập với đa dạng độ khó được tạo bởi AI đảm bảo bạn sẽ không gặp 1 câu hỏi 2 lần tại Kyons"
   },
   "students": {
-    "forStudents": "Dành cho người học",
+    "forStudents": "Cho người học",
     "completeLearning": "Hoàn thành mục tiêu học tập trong 4 bước với Kyons",
-    "step1": "Bước 1:<br />Chọn mục tiêu học tập",
+    "step1": "Bước 1: Chọn mục tiêu học tập",
     "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn.",
-    "step2": "Bước 2:<br />Làm bài kiểm tra thử thông minh",
+    "step2": "Bước 2: Làm bài kiểm tra thử thông minh",
     "step2Desc": "Bước tiếp theo là thực hiện bài kiểm tra đầu vào, giúp bạn hiểu rõ hơn về trình độ hiện tại. Kết quả sẽ được hệ thống ghi nhận và phân tích năng lực của bạn.",
-    "step3": "Bước 3:<br />Luyện tập theo lộ trình học được tạo bởi AI",
+    "step3": "Bước 3: Luyện tập theo lộ trình học được tạo bởi AI",
     "step3Desc": "Dựa vào kết quả bài kiểm tra thử, AI sẽ tạo ra một lộ trình được cập nhật liên tục để bám sát năng lực và tiến độ của bạn. Mọi thứ cứ để Kyons lo!",
-    "step4": "Bước 4:<br />Luyện tập cá nhân hóa với hỗ trợ xuyên suốt để nắm chắc bài",
+    "step4": "Bước 4: Luyện tập cá nhân hóa với hỗ trợ xuyên suốt để nắm chắc bài",
     "step4Desc": "Mỗi câu hỏi được tạo riêng bám sát với tiến độ của bạn. Lỡ không biết làm? Kyons sẽ có lời giải chi tiết, chế độ phân nhỏ kiến thức để tìm lỗ hổng, kèm hỗ trợ 1-1 để đảm bảo bạn vượt qua mọi điều chưa hiểu!"
   },
   "schools": {
@@ -58,13 +69,45 @@
     "have4": "Quản lý các bài kiểm tra trong năm học",
     "have4Desc": "Kyons sẽ giúp thầy cô tạo bài kiểm tra và đặt thời gian làm bài cho học sinh một cách đơn giản."
   },
+  "compare": {
+    "compare": "So sánh",
+    "why": "Tại sao bạn nên dùng Kyons?",
+    "other": "Nền tảng khác",
+    "why1": "Bài kiểm tra thử và câu hỏi ôn tập được AI tạo ra một cách nhanh chóng và tự động",
+    "why2": "Lộ trình học cá nhân hoá phù hợp với trình độ và mục tiêu của từng bạn học sinh",
+    "why3": "Giải đáp thắc mắc của người học từ xa một cách nhanh chóng",
+    "why4": "Tự động đánh giá, cân bằng giữa năng lực và thời gian biểu cho từng người học",
+    "why5": "Các gói thanh toán rõ ràng và linh hoạt, phù hợp với nhu cầu mỗi người",
+    "why6": "Tích hợp các tính năng bổ ích giúp việc ôn tập trở nên dễ dàng hơn",
+    "why7": "(Ghi chú nhanh, Đồng hồ đếm thời gian, Cài đặt thời khóa biểu, Nhắc nhở ôn tập,...)",
+    "others": "Các nền tảng khác",
+    "others1": "Bài kiểm tra và ôn luyện được soạn thủ công tốn nhiều thời gian hơn",
+    "others2": "Lộ trình học duy nhất cho tất cả học sinh nên không tối ưu cho trình độ khác nhau",
+    "others3": "Câu hỏi của người học phải mất thời gian để gặp mặt và giải đáp từ giáo viên",
+    "others4": "Học viên cần trao đổi với giáo viên thường xuyên để điều chỉnh khối lượng bài tập",
+    "others5": "Học viên cần đến tận nơi để thanh toán và hay gặp phiền phức khi nghe tư vấn thêm",
+    "others6": "Không có nhiều tính năng khác hỗ trợ người học"
+  },
   "aboutUs": {
-    "kyons": "Về Kyons",
+    "kyons": "Kyons - Ứng dụng giúp bạn đạt được điểm số ưng ý trong thời gian ngắn nhất",
     "text1": "Được xây dựng từ những người học giàu nhiệt huyết nhưng cũng rất thực tế, Kyons mang sứ mệnh xây dựng một giải pháp học tập từ góc nhìn của chính người học và giải quyết vấn đề thực chất của người học.",
     "text2": "Chúng tôi tin rằng học tập là một hành trình phải đủ vui để có thể bắt đầu và đủ ngắn để giúp mỗi người đi tới giấc mơ riêng của mình một cách nhanh chóng và hiệu quả nhất.",
     "ethos": "Tăng tốc khởi nghiệp bởi Ngân hàng Thế giới và SUNY-Korea",
     "antler": "Cấp vốn bởi quỹ đầu tư Antler Việt Nam",
     "bssc": "Ươm tạo bởi BSSC"
+  },
+  "problems": {
+    "problems": "Vấn đề",
+    "why": "Tại sao học mãi mà không hiệu quả? Trải bài thử xem",
+    "explain": "Giải nghĩa",
+    "explain1": "Chi phí cao khi học gia sư để được giảng dạy đúng với trình độ và nhu cầu",
+    "explain2": "Khó khăn trong việc xác định lỗ hổng kiến thức để ổn tập",
+    "explain3": "Quá tải với nhiều công thức và lý thuyết toán phức tạp",
+    "explain4": "Không có những hỗ trợ ngay tức thì sau khi làm bài"
+  },
+  "solutions": {
+    "solutions": "Giải pháp",
+    "letKyonsShow": "Hãy để Kyons đưa cho bạn lời giải đáp"
   },
   "creator": {
     "kyonsCreatorDesc": "Bạn là giáo viên và muốn có thêm thu nhập bằng cách đóng góp vào kho câu hỏi của Kyons? Nhấn vào nút \"Tham gia\" để tìm hiểu thêm!",
@@ -110,5 +153,30 @@
     "yourLearningPathDesc": "Dựa vào kết quả bài kiểm tra và qua quá trình học, AI của Kyons sẽ tính toán và gợi ý kiến thức cần học tiếp theo. Từ đó, bạn sẽ có một lộ trình học tập được cá nhân hoá, giúp việc học trở nên hiệu quả hơn bao giờ hết.",
     "tutor": "Gia sư",
     "tutorDesc": "Khi gặp khó khăn trong lúc học, bạn có thể gọi gia sư để giúp bạn giải đáp thắc mắc mọi lúc mọi nơi, vô cùng tiện lợi."
+  },
+  "price": {
+    "priceTable": "Bảng giá",
+    "promotion": "Khuyến mãi",
+    "title": "Khuyến mãi đặc biệt mùa tựu trường 2023",
+    "select": "Khuyến mãi đặc biệt mùa tựu trường 2023",
+    "freePackage": "Gói Phờ ri",
+    "free": "Miễn phí",
+    "useFree": "Sử dụng miễn phí ngay",
+    "freeInclude": "Bao gồm các <strong>tính năng cơ bản</strong>",
+    "free1": "Làm bài kiểm tra thử thông minh",
+    "free2": "Lộ trình học được cá nhân hoá",
+    "free3": "Đồng hồ Pomodoro",
+    "free4": "Ghi chú (giới hạn 30MB)",
+    "recommended": "Khuyên dùng",
+    "package1": "Gói đặt trước ưu đãi (1 tháng)",
+    "package1Include": "Bao gồm <strong>Tính năng của gói Miễn phí, và:</strong>",
+    "package11": "Ghi chú (giới hạn 200MB)",
+    "package12": "Chia nhiệm vụ học tập hằng ngày",
+    "package13": "Trợ giảng AI và đội ngũ gia sư từ Kyons",
+    "package14": "Kyons Pioneer (Giảm giá 10% vĩnh viễn)",
+    "package2": "Gói đặt trước ưu đãi (3 tháng)",
+    "package2Include": "Bao gồm <strong>Tính năng của gói 1 tháng, và:</strong>",
+    "package21": "Quyền truy cập sớm Chương trình tiếng Anh/TOEIC sắp ra mắt vào cuối năm 2023 (Miễn phí 1 tháng)",
+    "detailsAndCompare": "Xem chi tiết và so sánh"
   }
 }

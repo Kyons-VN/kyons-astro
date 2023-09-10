@@ -1,0 +1,62 @@
+.problem {
+  @apply w-full flex flex-col justify-center lg:justify-start items-center relative text-center px-4 py-10 lg:p-11 gap-6 rounded-tl-lg rounded-tr-lg overflow-hidden;
+  z-index: 1;
+  &::before {
+    content: '';
+    @apply absolute w-[835px] h-[1837px] left-0;
+    background: #bcdefe;
+    filter: blur(250px);
+    z-index: -1;
+  }
+}
+.typewriters {
+  @apply text-center;
+}
+.flip-card {
+  aspect-ratio: 77/121;
+  @apply w-[calc((100%_-_36px)_/_4)] relative transform;
+  .inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    @apply w-full h-full relative rounded-[8px];
+    .front,
+    .back {
+      @apply w-full h-full absolute top-0 left-0;
+    }
+    .front {
+      @apply shadow-lg rounded-[8px] overflow-hidden;
+      .img {
+        @apply w-full h-[calc((100%_-_36px)_/_4)] rounded-t-lg;
+      }
+    }
+    .back {
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
+      @apply rounded-lg shadow-lg;
+      .img {
+        @apply w-full h-[calc((100%_-_36px)_/_4)] rounded-t-lg;
+      }
+    }
+  }
+}
+.flip-card.flipped .inner {
+  @apply shadow-blue1;
+  transform: rotateY(0);
+}
+.blinking-cursor {
+  margin-left: 5px;
+  background-color: #fff;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.1%,
+  100% {
+    opacity: 0;
+  }
+}

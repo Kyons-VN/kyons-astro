@@ -72,42 +72,75 @@ export default function Menu({ l }: Props) {
           <li className={$activeMenu == 1 ? 'active' : ''}>
             <a
               class='close-menu'
-              href='#features'
+              href='#about-us'
               onClick={() => {
                 setActiveMenu(1);
               }}
             >
-              {menuLabel.features}
+              {menuLabel.aboutUs}
             </a>
           </li>
           <li className={$activeMenu == 2 ? 'active' : ''}>
             <a
               class='close-menu'
-              href='#students'
+              href='#problem'
               onClick={() => {
-                setActiveMenu(2);
+                setActiveMenu(1);
               }}
             >
-              {menuLabel.forStudents}
+              {menuLabel.problems}
             </a>
           </li>
           <li className={$activeMenu == 3 ? 'active' : ''}>
             <a
               class='close-menu'
-              href='#schools'
+              href='#solutions'
+              onClick={() => {
+                setActiveMenu(2);
+              }}
+            >
+              {menuLabel.solutions}
+            </a>
+          </li>
+          <li className={$activeMenu == 3 ? 'active' : ''}>
+            <a
+              class='close-menu'
+              href='#students'
               onClick={() => {
                 setActiveMenu(3);
               }}
             >
-              {menuLabel.forSchools}
+              {menuLabel.forStudents}
             </a>
           </li>
           <li className={$activeMenu == 4 ? 'active' : ''}>
             <a
               class='close-menu'
-              href='#contact'
+              href='#schools'
               onClick={() => {
                 setActiveMenu(4);
+              }}
+            >
+              {menuLabel.forSchools}
+            </a>
+          </li>
+          <li className={$activeMenu == 5 ? 'active' : ''}>
+            <a
+              class='close-menu'
+              href='#price'
+              onClick={() => {
+                setActiveMenu(5);
+              }}
+            >
+              {menuLabel.price}
+            </a>
+          </li>
+          <li className={$activeMenu == 6 ? 'active' : ''}>
+            <a
+              class='close-menu'
+              href='#contact'
+              onClick={() => {
+                setActiveMenu(6);
               }}
             >
               {menuLabel.contact}

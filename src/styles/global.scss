@@ -10,13 +10,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .btn {
-  @apply flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded bg-orangeGradient shadow-orange1;
+  @apply flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded;
 
   &.large {
     @apply h-12;
   }
   &.green {
     @apply bg-greenGradient shadow-green1;
+  }
+  &.blue {
+    @apply bg-lightBlue-1;
+  }
+  &.orange {
+    @apply bg-orangeGradient shadow-orange1;
+  }
+  &.outlined {
+    @apply bg-white border border-orange text-orange;
   }
 }
 .indicators {
@@ -229,4 +238,8 @@ option {
 }
 body.outline * {
   outline: darkseagreen solid 1px;
+}
+
+.title {
+  @apply px-3 py-[2px] bg-lightBlue-1 rounded-3xl text-white whitespace-nowrap;
 }

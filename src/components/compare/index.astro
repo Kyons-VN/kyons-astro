@@ -1,0 +1,25 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='compare'>
+  <div id='compare' class='absolute top-[-82px]'></div>
+  <div class='flex flex-col items-center'>
+    <strong class='title'>{l.compare.compare}</strong>
+    <div class='h-2'></div>
+    <h2 class='text-2xl'>{l.compare.why}</h2>
+    <div class='h-4'></div>
+    <div class='grid grid-cols-2 bg-primaryBlue p-2 gap-4 rounded-lg'>
+      <div class='btn blue flex items-center justify-center'>Kyons</div>
+      <div class='btn flex items-center justify-center'>{l.compare.other}</div>
+    </div>
+    <div class='h-3'></div>
+  </div>
+</div>
+
+<script></script>

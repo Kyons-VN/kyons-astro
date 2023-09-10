@@ -6,7 +6,8 @@
     "forStudents": "For students",
     "forSchools": "For schools",
     "trial": "Contact for trial",
-    "send": "Send"
+    "send": "Send",
+    "bookNow": "Reserve immediately"
   },
   "menu": {
     "features": "Salient features",
@@ -18,7 +19,14 @@
   "home": {
     "whyNotSmarter": "Why not learn smarter?",
     "kyons": "Kyons, a modern education platform using artificial intelligence (AI), is an effective assistant to help students achieve the desired score in the shortest time with a personalized learning path.",
-    "scrollToView": "Scroll down to start exploring"
+    "scrollToView": "Scroll down to start exploring",
+    "fourty": "40.000+",
+    "users": "users",
+    "promotionEnd": "The offer ends in",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds"
   },
   "features": {
     "ourFeatures": "Salient features",
@@ -56,13 +64,45 @@
     "have4": "Assessment Management",
     "have4Desc": "Kyons will help educators effortlessly generate exams, along with setting completion timeframes for student."
   },
+  "compare": {
+    "compare": "Compare",
+    "why": "Why should you use Kyons?",
+    "other": "Other platform",
+    "why1": "The test test and review questions are created by anyone quickly and automatically",
+    "why2": "Personalized learning schedule is suitable to the level and goals of each student",
+    "why3": "Answering questions from remote learners quickly",
+    "why4": "Automatically evaluate and balance the capacity and time for each learner",
+    "why5": "Clear and flexible payment packages, suitable for each person's needs",
+    "why6": "Integrating useful features makes review easier",
+    "why7": "(Quick notes, time counting clock, schedule settings, revision reminders, ...)",
+    "others": "Other platforms",
+    "others1": "The test and review is more time -consuming",
+    "others2": "The only study roadmap for all students should not be optimal for different qualifications",
+    "others3": "The question of the learners takes time to meet and answer from the teacher",
+    "others4": "Students need to talk to teachers regularly to adjust the amount of exercise",
+    "others5": "Students need to take place to pay and often have trouble listening to more advice",
+    "others6": "There are not many other features to support learners"
+  },
   "aboutUs": {
-    "kyons": "About Kyons",
+    "kyons": "Kyons - Ứng dụng giúp bạn đạt được điểm số ưng ý trong thời gian ngắn nhất",
     "text1": "Built by passionate yet practical learners, Kyons is on a mission to create a learning solution from learners' perspective to solve learners' problems.",
     "text2": "We believe learning is a journey that should be fun enough to be on and short enough for one to realise their ultimate dream in the quickest and most efficient way.",
     "ethos": "Accelerated by World Bank and SUNY-Korea",
     "antler": "Invested by Antler Vietnam Venture Capital",
     "bssc": "Incubated by BSSC"
+  },
+  "problems": {
+    "problems": "Problem",
+    "why": "Why not work forever?Spread the test",
+    "explain": "Explain",
+    "explain1": "High cost when studying tutors to be taught in accordance with the qualifications and needs",
+    "explain2": "Difficulties in identifying knowledge gaps to be okay",
+    "explain3": "Overload with many complex math formulas and theory",
+    "explain4": "There are no immediate support after doing the homework"
+  },
+  "solutions": {
+    "solutions": "Solution",
+    "letKyonsShow": "Let Kyons give you the answer"
   },
   "solution": {
     "ourSolution": "Our solutions",
@@ -108,5 +148,29 @@
     "title": "Stop! Wait a minute",
     "content": "The official version of Kyons will be released soon with more exciting and innovative improvements. Join the Kyons Waiting List to receive the first notifications and win surprising gifts!"
   },
-  "register": "Sign me up!"
+  "register": "Sign me up!",
+  "price": {
+    "priceTable": "Price list",
+    "promotion": "Promotion",
+    "title": "Special promotion in school season 2023",
+    "select": "Special promotion in school season 2023",
+    "freePackage": "Package",
+    "free": "Free of charge",
+    "useFree": "Use free now",
+    "freeInclude": "Including <strong> basic features </strong>",
+    "free1": "Take a smart test test",
+    "free2": "The learning roadmap is personalized",
+    "free3": "Pomodoro watches",
+    "free4": "Notes (30MB limit)",
+    "recommended": "Recommended",
+    "package1": "Pre-order package (1 month)",
+    "package1Include": "Includes <strong> features of the free package, and: </strong>",
+    "package11": "Notes (200MB limit)",
+    "package12": "Divide daily learning missions",
+    "package13": "AI teaching assistant and tutoring team from Kyons",
+    "package14": "Kyons Pioneer (10% discount permanently)",
+    "package2": "Pre -order package (3 months)",
+    "package2Include": "Early access to the English/TOEIC program is about to be released in late 2023 (free 1 month)",
+    "detailsAndCompare": "See details and comparisons"
+  }
 }

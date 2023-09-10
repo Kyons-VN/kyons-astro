@@ -1,0 +1,16 @@
+.price {
+  background-image: url('/images/price-planet-1.svg'), url('/images/price-planet-2.svg'),
+    var(--Linear, linear-gradient(199deg, #1061c3 0.17%, #2c3d5b 88.79%));
+  background-repeat: no-repeat;
+  background-position: top 81px right -63px, top 1000px left -54px, center;
+  @apply pb-20;
+  ul li {
+    @apply pl-8;
+    &:nth-child(2n + 1) {
+      background: url('/images/blue-check.svg') no-repeat left 0px;
+    }
+    &:nth-child(2n) {
+      background: url('/images/green-check.svg') no-repeat left 0px;
+    }
+  }
+}

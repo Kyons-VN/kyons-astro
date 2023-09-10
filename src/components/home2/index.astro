@@ -1,0 +1,72 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='home'>
+  <div id='home' class='absolute top-[-82px]'></div>
+  <div class='h-10'></div>
+  <h1 class='text-2xl'>{l.home.whyNotSmarter}</h1>
+  <div class='relative'>
+    <img src='/images/iphone.png' />
+    <div class='absolute top-0 left-0 p-2 bg-white rounded-lg flex'>
+      <div class='flex gap-2'>
+        <div class='w-10 h-10 flex items-center justify-center bg-emerald-0'>
+          <i class='icon-Profile text-[24px]'></i>
+        </div>
+        <div class='flex flex-col text-primaryBlue font-bold items-start'>
+          <div class='text-base'>{l.home.fourty}</div>
+          <div class='text-xs'></div>{l.home.users}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='bg-white flex flex-col rounded-lg gap-3 w-full p-4 items-start'>
+    <strong class='text-primaryBlue'>{l.home.promotionEnd}</strong>
+    <div class='flex gap-1 w-full items-center justify-center'>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+        <strong id='day' class='text-3xl'>10</strong>{l.home.days}
+      </div>
+      <span class='text-3xl text-primaryBlue'>:</span>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+        <strong id='hour' class='text-3xl'>27</strong>{l.home.hours}
+      </div>
+      <span class='text-3xl text-primaryBlue'>:</span>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+        <strong id='minute' class='text-3xl'>30</strong>{l.home.minutes}
+      </div>
+      <span class='text-3xl text-primaryBlue'>:</span>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+        <strong id='second' class='text-3xl'>12</strong>{l.home.seconds}
+      </div>
+    </div>
+    <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
+  </div>
+</div>
+
+<script>
+  const targetDate = new Date('2023-09-23T00:00:00+07:00');
+  let countdown = setInterval(() => {
+    const now = new Date();
+    const diff = targetDate.getTime() - now.getTime();
+    const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const second = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('day')!.innerText = day.toString().padStart(2, '0');
+    document.getElementById('hour')!.innerText = hour.toString().padStart(2, '0');
+    document.getElementById('minute')!.innerText = minute.toString().padStart(2, '0');
+    document.getElementById('second')!.innerText = second.toString().padStart(2, '0');
+    if (diff < 0) {
+      clearInterval(countdown);
+      document.getElementById('day')!.innerText = '00';
+      document.getElementById('hour')!.innerText = '00';
+      document.getElementById('minute')!.innerText = '00';
+      document.getElementById('second')!.innerText = '00';
+    }
+  }, 1000);
+</script>

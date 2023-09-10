@@ -1,0 +1,19 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='solutions'>
+  <div id='solutions' class='absolute top-[-82px]'></div>
+  <div class='absolute w-full flex flex-col justify-center items-center top-10 left-0 gap-2 p-4'>
+    <div class='title'>{l.solutions.solutions}</div>
+    <h3 class='text-white text-center text-2xl'>{l.solutions.letKyonsShow}</h3>
+  </div>
+  <img src='/images/solutions-xs.svg' alt='' class='w-full' />
+</div>
+
+<script></script>

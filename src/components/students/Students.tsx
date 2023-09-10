@@ -94,7 +94,7 @@ export class Students extends Component<Props> {
           </div>
         </div>
         <div class='flex flex-col-reverse lg:flex-row w-full max-w-[870px] lg:max-h-[60vh] gap-6 items-center'>
-          <div class='flex-1 relative flex flex-col items-center gap-4 lg:h-full'>
+          <div class='flex-1 relative flex flex-col gap-4 lg:h-full'>
             <img
               onClick={() => setPreviousSolution()}
               src='/images/arrow-left.svg'

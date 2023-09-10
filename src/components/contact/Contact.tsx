@@ -169,7 +169,7 @@ export function Contact({ l }: Props, state: any) {
               class='w-full flex justify-start items-center custom-transition delay-6'
               // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
             >
-              <button class='btn large w-full lg:w-[230px] flex  justify-center' type='submit'>
+              <button class='btn orange large w-full lg:w-[230px] flex  justify-center' type='submit'>
                 {l.btn.send}
               </button>
             </div>

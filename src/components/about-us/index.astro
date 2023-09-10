@@ -1,0 +1,27 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='about-us'>
+  <div id='about-us' class='absolute top-[-82px]'></div>
+  <div class='title'>{l.menu.aboutUs}</div>
+  <div class='h-3'></div>
+  <h2 class='text-2xl'>{l.aboutUs.kyons}</h2>
+  <div class='h-6'></div>
+  <img src='/images/student-app.png' alt='' />
+  <div class='h-6'></div>
+  <p>{l.aboutUs.text1}</p>
+  <div class='h-3'></div>
+  <p>{l.aboutUs.text2}</p>
+  <div class='h-4'></div>
+  <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
+</div>
+
+<script></script>
+<script></script>
+<script></script>
