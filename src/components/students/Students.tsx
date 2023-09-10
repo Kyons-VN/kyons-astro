@@ -104,11 +104,7 @@ export class Students extends Component<Props> {
                 ($activeSolution == 0 ? ' cursor-not-allowed opacity-20' : '')
               }
             />
-            <img
-              src={'/images/step-' + $activeSolution + '.png'}
-              alt={l.students['step' + ($activeSolution + 1)]}
-              class='h-[90%]'
-            />
+            <img src={'/images/step-' + $activeSolution + '.png'} alt={l.students['step' + ($activeSolution + 1)]} />
             <a
               href='https://student.kyons.vn'
               class='gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded bg-orangeGradient shadow-orange1 items-center justify-center flex w-full lg:hidden'
