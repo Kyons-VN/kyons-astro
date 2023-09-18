@@ -7,7 +7,10 @@
     "forSchools": "Dành cho trường học",
     "trial": "Liên hệ dùng thử",
     "send": "Gửi tin nhắn",
-    "bookNow": "Đặt trước ngay"
+    "bookNow": "Đặt trước ngay",
+    "continue": "Tiếp tục",
+    "alreadyTransfer": "Mình đã chuyển khoản",
+    "back": "Quay lại"
   },
   "menu": {
     "lang": "VI",
@@ -16,10 +19,13 @@
     "aboutUs": "Về Kyons",
     "problems": "Vấn đề",
     "solutions": "Giải pháp",
-    "forStudents": "Cho người học",
+    "problemsAndSolution": "Vấn đề và giải pháp",
+    "forStudents": "Dành cho người học",
     "forSchools": "Cho trường học",
     "price": "Bảng giá",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "promotion": "KM!",
+    "how": "Hướng dẫn"
   },
   "home": {
     "whyNotSmarter": "Tại sao không học thông minh hơn?",
@@ -177,6 +183,42 @@
     "package2": "Gói đặt trước ưu đãi (3 tháng)",
     "package2Include": "Bao gồm <strong>Tính năng của gói 1 tháng, và:</strong>",
     "package21": "Quyền truy cập sớm Chương trình tiếng Anh/TOEIC sắp ra mắt vào cuối năm 2023 (Miễn phí 1 tháng)",
-    "detailsAndCompare": "Xem chi tiết và so sánh"
+    "detailsAndCompare": "Xem chi tiết và so sánh",
+    "more": "Thêm tính năng, thêm trải nghiệm, thêm khả năng đạt điểm cao!",
+    "canChange": "Bạn có thể đổi giữa các gói dễ dàng sau khi mua",
+    "compare": "So sánh các gói",
+    "phoRi": "Phờ ri",
+    "month": "tháng",
+    "months": "tháng",
+    "day": "ngày",
+    "days": "ngày",
+    "note": "Ghi chú",
+    "newProgram": "Truy cập sớm các chương trình sắp ra mắt",
+    "full": "Xem đầy đủ gói",
+    "short": "Thu gọn"
+  },
+  "preorder": {
+    "title": "Bạn đang đăng ký",
+    "desc": "Đăng ký trước để có cơ hội có được nhiều ưu đãi và phần quà từ Kyons. Nhanh tay kẻo hết!",
+    "step1": "Buớc 1:",
+    "step1Desc": "Bạn điền đủ thông tin dưới đây để bắt đầu đặt hàng nhé!",
+    "name": "Họ tên đầy đủ:",
+    "nameExp": "Vd: Nguyễn Văn A",
+    "email": "Email của bạn:",
+    "emailExp": "Vd: nguyenvana@gmail.com",
+    "phone": "Số điện thoại của bạn:",
+    "phoneExp": "Vd: 0943633333333",
+    "orderCode": "Mã đặt hàng",
+    "notice": "<strong class=\"text-red\">Lưu ý:</strong><ul><li>Nếu gặp vấn đề, bạn hãy nhắn <a href=\"https://www.facebook.com/KyonsVN\" class>Kyons fanpage</a></li></ul>",
+    "step2": "Bước 2:",
+    "step2Desc": "<strong>Quét mã QR</strong> bằng ứng dụng Internet Banking hoặc <strong>sao chép thông tin chuyển khoản</strong> dưới đây:",
+    "amount": "Số tiền:",
+    "change": "Chuyển sang gói [tên gói]",
+    "content": "Nội dung chuyển khoản",
+    "bank": "Ngân hàng",
+    "accountNumber": "Số tài khoản",
+    "accountName": "Tên chủ tài khoản",
+    "thank": "Cảm ơn bạn đã đăng ký trước [tên gói]!",
+    "processing": "<p>Kyons đã nhận được thông tin đăng ký của bạn và sẽ xử lí đơn hàng của bạn trong 24h. Bạn chịu khó đợi chút nhé!</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi mã đặt hàng kèm hoá đơn chuyển khoản cho <a href=\"https://www.facebook.com/KyonsVN\" class>Kyons fanpage</a> để được hỗ trợ nhé!</p>"
   }
 }

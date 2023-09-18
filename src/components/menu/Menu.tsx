@@ -52,15 +52,8 @@ export default function Menu({ l }: Props) {
   return (
     <nav id='menu' className={`menu ${!isOpen ? 'hide' : 'show'}`}>
       <div className='flex flex-row items-center justify-between w-full lg:w-auto'>
-        <a href='#home'>
-          <img
-            class='w-[100px] cursor-pointer'
-            src='/images/logo.svg'
-            alt='Logo'
-            onClick={() => {
-              setActiveMenu(0);
-            }}
-          />
+        <a href='/#home'>
+          <img class='w-[100px] cursor-pointer' src='/images/logo.svg' alt='Logo' />
         </a>
         <button class='lg:hidden text-[24px]' onClick={toggle}>
           <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
@@ -69,6 +62,80 @@ export default function Menu({ l }: Props) {
       <span class='hidden lg:flex flex-1'></span>
       <div class='flex gap-10 items-center'>
         <ul className={isMenuOpen.get() ? 'menu-items show' : 'menu-items hide'}>
+          <li class='p-4'>
+            <ul>
+              <li class='flex justify-center relative'>
+                <div className='flex justify-between w-full'>
+                  <div
+                    class='flex flex-row relative h-10 p-6 items-center justify-between text-sm w-24 cursor-pointer'
+                    onClick={() => setIsHover(!isHover)}
+                    tabIndex={0}
+                  >
+                    <span class='font-bold text-[16px]'>{language}</span>
+                    <i className={isHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
+                    <div
+                      className={isHover ? `${defaultClass} hidden md:flex` : `${defaultClass} hidden`}
+                      // style='bottom: calc(-100% - 30px);'
+                      onClick={() => setIsHover(false)}
+                    >
+                      <a className={language == 'VI' ? 'text-orange' : ''} onClick={() => setLanguage('VI')}>
+                        VI
+                      </a>
+                      <hr class='text-blueGrey-300' />
+                      <a className={language == 'EN' ? 'text-orange' : ''} onClick={() => setLanguage('EN')}>
+                        EN
+                      </a>
+                    </div>
+                  </div>
+                  <button class='lg:hidden text-[24px]' onClick={toggle}>
+                    <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
+                  </button>
+                </div>
+                <div
+                  className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
+                  // style='bottom: calc(-100% - 30px);'
+                  onClick={() => setIsHover(false)}
+                >
+                  <div
+                    className={language == 'VI' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+                    onClick={() => setLanguage('VI')}
+                  >
+                    VI
+                  </div>
+                  <hr class='text-blueGrey-300' />
+                  <div
+                    className={language == 'EN' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+                    onClick={() => setLanguage('EN')}
+                  >
+                    EN
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class='p-6 flex flex-col gap-6'>
+            <span>{l.menu.forStudents}</span>
+            <ul class='pl-[34px] vertical-line flex flex-col gap-7 items-start'>
+              <li>
+                <a href='/#about-us'>{l.menu.aboutUs}</a>
+              </li>
+              <li>
+                <a href='/#solution'>{l.menu.problemsAndSolution}</a>
+              </li>
+              <li>
+                <a href='/#solution'>{l.menu.how}</a>
+              </li>
+              <li>
+                <a href='/#solution'>
+                  {l.menu.price}
+                  &nbsp;
+                  <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
+                    {l.price.promotion}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li className={$activeMenu == 1 ? 'active' : ''}>
             <a
               class='close-menu'
@@ -127,7 +194,7 @@ export default function Menu({ l }: Props) {
           <li className={$activeMenu == 5 ? 'active' : ''}>
             <a
               class='close-menu'
-              href='#price'
+              href={language == 'VI' ? '/pricing' : '/en/pricing'}
               onClick={() => {
                 setActiveMenu(5);
               }}

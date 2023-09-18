@@ -1,7 +1,7 @@
 .menu {
   @apply flex flex-row w-full fixed z-20 text-white px-4 lg:px-11 h-[82px] bg-[#101625];
   .menu-items {
-    @apply flex flex-col lg:flex-row flex-1 gap-0 lg:gap-8 fixed top-[82px] left-0 w-full lg:static bg-[#101625];
+    @apply flex flex-col lg:flex-row flex-1 gap-0 lg:gap-8 fixed top-0 left-0 w-full lg:static bg-[#101625];
     li {
       // @apply flex flex-row items-center justify-center;
       a {
@@ -9,6 +9,11 @@
       }
     }
   }
+}
+.vertical-line::before {
+  content: '';
+  position: absolute;
+  @apply top-0 left-3;
 }
 @media (max-width: 1024px) {
   .menu-items.show {

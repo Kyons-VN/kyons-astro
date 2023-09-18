@@ -1,0 +1,200 @@
+---
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
+  <div class='flex flex-col p-3 bg-[#E4E4E4] rounded-lg gap-1.5'>
+    <div class='flex gap-2 items-center justify-start'>
+      <img src='/images/free-package.svg' alt='' />
+      <strong>{l.price.freePackage}</strong>
+    </div>
+    <h5>{l.price.free}</h5>
+  </div>
+  <div class='h-3'></div>
+  <a href='https://student.kyons.vn' class='btn orange'>{l.price.useFree}</a>
+  <div class='h-4'></div>
+  <p set:html={l.price.freeInclude} />
+  <div class='h-3'></div>
+  <ul class='star'>
+    <li class='flex items-center'>
+      {l.price.free1}
+    </li>
+    <li class='flex items-center'>
+      {l.price.free2}
+    </li>
+    <li class='flex items-center'>
+      {l.price.free3}
+    </li>
+    <li class='flex items-center'>
+      {l.price.free4}
+    </li>
+  </ul>
+</div>
+<div class='flex flex-col rounded-lg p-4 bg-white items-start shadow-2'>
+  <div class='flex flex-col w-full items-start'>
+    <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold'>{l.price.recommended}</div>
+    <div class='h-3'></div>
+    <div class='flex flex-col p-3 bg-[#DAEFFF] rounded-lg w-full'>
+      <div class='flex gap-2 items-center justify-start'>
+        <img src='/images/recommended-package.svg' alt='' />
+        <strong class='text-secondaryBlue'>{l.price.package1}</strong>
+      </div>
+      <div class='h-8 flex items-center gap-1.5'>
+        <strong class='text-sm'>VND</strong>
+        <strong class='text-secondaryBlue text-2xl'>69.000</strong>
+        <strong class='text-sm'>/ 30 {l.home.days}</strong>
+      </div>
+      <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
+        <span>VND</span>
+        <s>240.000</s>
+        <span>/</span>
+        <span>30 {l.home.days}</span>
+      </div>
+    </div>
+    <div class='h-3'></div>
+    <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
+    <div class='h-4'></div>
+    <p id='include1' set:html={l.price.package1Include} />
+    <div class='h-3'></div>
+    <ul class='star'>
+      <li class='flex items-center view1 hidden'>
+        {l.price.free1}
+      </li>
+      <li class='flex items-center view1 hidden'>
+        {l.price.free2}
+      </li>
+      <li class='flex items-center view1 hidden'>
+        {l.price.free3}
+      </li>
+      <li class='flex items-center'>
+        {l.price.package11}
+      </li>
+      <li class='flex items-center'>
+        {l.price.package12}
+      </li>
+      <li class='flex items-center'>
+        {l.price.package13}
+      </li>
+      <li class='flex items-center'>
+        {l.price.package14}
+      </li>
+    </ul>
+    <div class='h-3'></div>
+    <button id='viewFull1' class='text-orange font-bold w-full flex justify-between'>
+      <span>{l.price.full}</span>
+      <i class='icon-ArrowDown'></i>
+    </button>
+    <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hidden'>
+      <span>{l.price.short}</span>
+      <i class='icon-ArrowUp'></i>
+    </button>
+  </div>
+</div>
+<div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
+  <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
+    <div class='flex gap-2 items-center justify-start'>
+      <img src='/images/recommended-package.svg' alt='' />
+      <strong class='text-secondaryBlue'>{l.price.package2}</strong>
+    </div>
+    <div class='h-8 flex items-center gap-1.5'>
+      <strong class='text-sm'>VND</strong>
+      <strong class='text-secondaryBlue text-2xl'>69.000</strong>
+      <strong class='text-sm'>/ 30 {l.home.days}</strong>
+    </div>
+    <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
+      <span>VND</span>
+      <s>240.000</s>
+      <span>/</span>
+      <span>30 {l.home.days}</span>
+    </div>
+  </div>
+  <div class='h-3'></div>
+  <a href='#contact' class='btn orange'>{l.btn.bookNow}</a>
+  <div class='h-4'></div>
+  <p id='include2' set:html={l.price.package2Include} />
+  <div class='h-3'></div>
+  <ul class='star'>
+    <li class='flex items-center view2 hidden'>
+      {l.price.free1}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.free2}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.free3}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.package11}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.package12}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.package13}
+    </li>
+    <li class='flex items-center view2 hidden'>
+      {l.price.package14}
+    </li>
+    <li class='flex items-center'>
+      {l.price.package21}
+    </li>
+  </ul>
+  <div class='h-3'></div>
+  <button id='viewFull2' class='text-orange font-bold w-full flex justify-between'>
+    <span>{l.price.full}</span>
+    <i class='icon-ArrowDown'></i>
+  </button>
+  <button id='viewShort2' class='text-orange font-bold w-full flex justify-between hidden'>
+    <span>{l.price.short}</span>
+    <i class='icon-ArrowUp'></i>
+  </button>
+</div>
+<style lang='scss'>
+  ul.star {
+    @apply flex flex-col gap-3 pb-2;
+    li {
+      @apply pl-8;
+      &:nth-child(2n + 1) {
+        background: url('/images/blue-check.svg') no-repeat left 0px;
+      }
+      &:nth-child(2n) {
+        background: url('/images/green-check.svg') no-repeat left 0px;
+      }
+    }
+  }
+</style>
+<script>
+  const viewFull1 = document.getElementById('viewFull1')!;
+  const viewShort1 = document.getElementById('viewShort1')!;
+  const view1Elms = document.getElementsByClassName('view1');
+  const include1 = document.getElementById('include1')!;
+  viewFull1.addEventListener('click', () => toggleView1());
+  viewShort1.addEventListener('click', () => toggleView1());
+  function toggleView1() {
+    for (let i = 0; i < view1Elms.length; i++) {
+      view1Elms[i].classList.toggle('hidden');
+    }
+    include1.classList.toggle('hidden');
+    viewFull1.classList.toggle('hidden');
+    viewShort1.classList.toggle('hidden');
+  }
+
+  const viewFull2 = document.getElementById('viewFull2')!;
+  const viewShort2 = document.getElementById('viewShort2')!;
+  const view2Elms = document.getElementsByClassName('view2');
+  const include2 = document.getElementById('include2')!;
+  viewFull2.addEventListener('click', () => toggleView2());
+  viewShort2.addEventListener('click', () => toggleView2());
+  function toggleView2() {
+    for (let i = 0; i < view2Elms.length; i++) {
+      view2Elms[i].classList.toggle('hidden');
+    }
+    include2.classList.toggle('hidden');
+    viewFull2.classList.toggle('hidden');
+    viewShort2.classList.toggle('hidden');
+  }
+</script>

@@ -1,4 +1,5 @@
 ---
+import PriceTable from './priceTable.astro';
 import './style.scss';
 export interface Props {
   l: any;
@@ -19,105 +20,7 @@ const { l } = Astro.props;
       <p>{l.price.select}</p>
     </div>
     <div class='flex flex-col gap-3 items-stretch w-full'>
-      <div class='flex flex-col rounded-lg p-4 bg-white'>
-        <div class='flex flex-col p-3 bg-[#E4E4E4] rounded-lg gap-1.5'>
-          <div class='flex gap-2 items-center justify-start'>
-            <img src='/images/free-package.svg' alt='' />
-            <strong>{l.price.freePackage}</strong>
-          </div>
-          <h5>{l.price.free}</h5>
-        </div>
-        <div class='h-3'></div>
-        <a href='https://student.kyons.vn' class='btn orange'>{l.price.useFree}</a>
-        <div class='h-4'></div>
-        <p set:html={l.price.freeInclude} />
-        <div class='h-3'></div>
-        <ul class='flex flex-col gap-3 pb-2'>
-          <li class='flex items-center'>
-            {l.price.free1}
-          </li>
-          <li class='flex items-center'>
-            {l.price.free2}
-          </li>
-          <li class='flex items-center'>
-            {l.price.free3}
-          </li>
-          <li class='flex items-center'>
-            {l.price.free4}
-          </li>
-        </ul>
-      </div>
-      <div class='flex flex-col rounded-lg p-4 bg-white items-start'>
-        <div class='flex flex-col w-full items-start'>
-          <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold'>{l.price.recommended}</div>
-          <div class='h-3'></div>
-          <div class='flex flex-col p-3 bg-[#DAEFFF] rounded-lg w-full'>
-            <div class='flex gap-2 items-center justify-start'>
-              <img src='/images/recommended-package.svg' alt='' />
-              <strong class='text-secondaryBlue'>{l.price.package1}</strong>
-            </div>
-            <div class='h-8 flex items-center gap-1.5'>
-              <strong class='text-sm'>VND</strong>
-              <strong class='text-secondaryBlue text-2xl'>69.000</strong>
-              <strong class='text-sm'>/ 30 {l.home.days}</strong>
-            </div>
-            <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
-              <span>VND</span>
-              <s>240.000</s>
-              <span>/</span>
-              <span>30 {l.home.days}</span>
-            </div>
-          </div>
-          <div class='h-3'></div>
-          <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
-          <div class='h-4'></div>
-          <p set:html={l.price.package1Include} />
-          <div class='h-3'></div>
-          <ul class='flex flex-col gap-3 pb-2'>
-            <li class='flex items-center'>
-              {l.price.package11}
-            </li>
-            <li class='flex items-center'>
-              {l.price.package12}
-            </li>
-            <li class='flex items-center'>
-              {l.price.package13}
-            </li>
-            <li class='flex items-center'>
-              {l.price.package14}
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class='flex flex-col rounded-lg p-4 bg-white'>
-        <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
-          <div class='flex gap-2 items-center justify-start'>
-            <img src='/images/recommended-package.svg' alt='' />
-            <strong class='text-secondaryBlue'>{l.price.package2}</strong>
-          </div>
-          <div class='h-8 flex items-center gap-1.5'>
-            <strong class='text-sm'>VND</strong>
-            <strong class='text-secondaryBlue text-2xl'>69.000</strong>
-            <strong class='text-sm'>/ 30 {l.home.days}</strong>
-          </div>
-          <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
-            <span>VND</span>
-            <s>240.000</s>
-            <span>/</span>
-            <span>30 {l.home.days}</span>
-          </div>
-        </div>
-        <div class='h-3'></div>
-        <a href='#contact' class='btn orange'>{l.btn.bookNow}</a>
-        <div class='h-4'></div>
-        <p set:html={l.price.package2Include} />
-        <div class='h-3'></div>
-        <ul class='flex flex-col gap-3 pb-2'>
-          <li class='flex items-center'>
-            {l.price.package21}
-          </li>
-        </ul>
-      </div>
+      <PriceTable l={l} />
       <a href='/price' class='btn outlined'>{l.price.detailsAndCompare}</a>
     </div>
   </div>

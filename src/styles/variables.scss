@@ -1,3 +1,20 @@
+@import 'tailwindcss/base';
+@layer base {
+  :root,
+  ::after {
+    --color-primaryBlue: theme('colors.primaryBlue');
+    --color-orange: theme('colors.orange');
+    --color-lightBlue-1: theme('colors.lightBlue.1');
+    --color-lightOrange-1: theme('colors.lightOrange.1');
+    --color-blueGrey-50: theme('colors.blueGrey.50');
+    --color-blueGrey-300: theme('colors.blueGrey.300');
+    --color-blueGrey-400: theme('colors.blueGrey.400');
+    --color-blueGrey-500: theme('colors.blueGrey.500');
+    --color-blueGrey-700: theme('colors.blueGrey.700');
+    --color-white: theme('colors.white');
+  }
+}
+
 $icomoon-font-family: 'Kyons-Icon-Fonts' !default;
 $icomoon-font-path: '/fonts' !default;
 

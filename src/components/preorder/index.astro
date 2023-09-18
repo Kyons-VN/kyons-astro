@@ -1,0 +1,22 @@
+---
+import './style.scss';
+import Footer from '@components/Footer.astro';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='preorder'>
+  <div id='preorder' class='absolute top-[-82px]'></div>
+  <div class='h-20'></div>
+  <div class='flex flex-col gap-3 items-stretch w-full'>
+    <div class='flex flex-col text-white gap-4 text-center'>
+      <h1 class='text-2xl'>{l.price.more}</h1>
+      <p>{l.price.canChange}</p>
+    </div>
+  </div>
+</div>
+<Footer l={l} />
+<script></script>

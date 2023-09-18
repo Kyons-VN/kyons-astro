@@ -1,0 +1,14 @@
+---
+import Footer from '@components/Footer.astro';
+import Menu from '@components/menu/Menu';
+import Pricing1 from '@components/pricing/index.astro';
+import l from '@data/en.json';
+import Layout from '@layouts/Layout.astro';
+import '@styles/global.scss';
+---
+
+<Layout lang='en'>
+  <Menu l={l} client:only='preact' />
+  <Pricing1 l={l} />
+  <Footer l={l} />
+</Layout>

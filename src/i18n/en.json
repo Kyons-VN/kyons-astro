@@ -10,11 +10,19 @@
     "bookNow": "Reserve immediately"
   },
   "menu": {
+    "lang": "EN",
+    "languageCode": "en",
     "features": "Salient features",
     "aboutUs": "About us",
+    "problems": "Vấn đề",
+    "solutions": "Giải pháp",
+    "problemsAndSolution": "Vấn đề và giải pháp",
     "forStudents": "Kyons Students",
     "forSchools": "Kyons Schools",
-    "contact": "Contact"
+    "price": "Pricings",
+    "contact": "Contact",
+    "promotion": "PROMO!",
+    "how": "How to use"
   },
   "home": {
     "whyNotSmarter": "Why not learn smarter?",
@@ -171,6 +179,14 @@
     "package14": "Kyons Pioneer (10% discount permanently)",
     "package2": "Pre -order package (3 months)",
     "package2Include": "Early access to the English/TOEIC program is about to be released in late 2023 (free 1 month)",
-    "detailsAndCompare": "See details and comparisons"
+    "detailsAndCompare": "See details and comparisons",
+    "more": "Thêm tính năng, thêm trải nghiệm, thêm khả năng đạt điểm cao!",
+    "canChange": "Bạn có thể đổi giữa các gói dễ dàng sau khi mua",
+    "compare": "So sánh các gói",
+    "phoRi": "Phờ ri",
+    "month": "tháng",
+    "months": "tháng",
+    "note": "Ghi chú",
+    "newProgram": "Truy cập sớm các chương trình sắp ra mắt"
   }
 }
