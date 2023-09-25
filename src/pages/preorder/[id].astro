@@ -2,13 +2,18 @@
 import Footer from '@components/Footer.astro';
 import Menu from '@components/menu/Menu';
 import Preorder1 from '@components/preorder/index.astro';
-import l from '@data/en.json';
+import l from '@data/vi.json';
 import Layout from '@layouts/Layout.astro';
 import '@styles/global.scss';
+export function getStaticPaths() {
+  return [{ params: { id: 'package1' } }, { params: { id: 'package2' } }];
+}
+
+const { id } = Astro.params;
 ---
 
-<Layout lang='en'>
+<Layout lang='vi'>
   <Menu l={l} client:only='preact' />
-  <Preorder1 l={l} />
+  <Preorder1 l={l} id={id} />
   <Footer l={l} />
 </Layout>

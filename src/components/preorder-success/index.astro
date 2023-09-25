@@ -1,0 +1,23 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+  id: string | undefined;
+}
+
+const { l, id } = Astro.props;
+---
+
+<div class='preorder'>
+  <div id='preorder' class='absolute top-[-82px]'></div>
+  <div class='h-14'></div>
+  <h1 class='text-2xl text-white'>{id}</h1>
+</div>
+
+<script define:vars={{ l }} type='text/javascript'>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+if (params['outline']) {
+  window.document.body.classList.add('outline');
+}
+</script>

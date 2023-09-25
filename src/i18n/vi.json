@@ -10,7 +10,8 @@
     "bookNow": "Đặt trước ngay",
     "continue": "Tiếp tục",
     "alreadyTransfer": "Mình đã chuyển khoản",
-    "back": "Quay lại"
+    "back": "Quay lại",
+    "retry": "Thử lại"
   },
   "menu": {
     "lang": "VI",
@@ -21,7 +22,7 @@
     "solutions": "Giải pháp",
     "problemsAndSolution": "Vấn đề và giải pháp",
     "forStudents": "Dành cho người học",
-    "forSchools": "Cho trường học",
+    "forSchools": "Dành cho trường học",
     "price": "Bảng giá",
     "contact": "Liên hệ",
     "promotion": "KM!",
@@ -115,10 +116,6 @@
     "solutions": "Giải pháp",
     "letKyonsShow": "Hãy để Kyons đưa cho bạn lời giải đáp"
   },
-  "creator": {
-    "kyonsCreatorDesc": "Bạn là giáo viên và muốn có thêm thu nhập bằng cách đóng góp vào kho câu hỏi của Kyons? Nhấn vào nút \"Tham gia\" để tìm hiểu thêm!",
-    "joinUs": "Tham gia"
-  },
   "contact": {
     "contact": "Liên hệ",
     "contactDesc": "Hứng thú với sản phẩm của chúng tôi? Gửi tin nhắn ngay",
@@ -136,19 +133,12 @@
     "error": "Có lỗi",
     "thankYou": "Cảm ơn bạn rất nhiều!"
   },
-  "close": "Đóng",
   "footer": {
     "company": "Công ty TNHH Kyons ",
     "address": "L17-11, Vincom Center, 72 Lê Thánh Tôn,<br />Phường Bến Nghé, Quận 1, TP.HCM ",
     "phone": "(028) 6270 6820",
     "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
   },
-  "signUp": "Đăng ký",
-  "popup": {
-    "title": "Dừng khoảng chừng là 2 giây",
-    "content": "Phiên bản chính thức của Kyons với những nâng cấp thú vị và vô cùng hữu ích sắp được ra mắt. Để nhận được thông báo và trải nghiệm sớm nhất, cũng như giành lấy những món quà bất ngờ, bạn hãy cùng tham gia “Danh sách chờ” của Kyons nhé!"
-  },
-  "register": "Đăng ký",
   "solution": {
     "ourSolution": "Giải pháp của chúng tôi",
     "mockTest": "Làm bài kiểm tra thử",
@@ -199,26 +189,32 @@
   },
   "preorder": {
     "title": "Bạn đang đăng ký",
-    "desc": "Đăng ký trước để có cơ hội có được nhiều ưu đãi và phần quà từ Kyons. Nhanh tay kẻo hết!",
     "step1": "Buớc 1:",
     "step1Desc": "Bạn điền đủ thông tin dưới đây để bắt đầu đặt hàng nhé!",
-    "name": "Họ tên đầy đủ:",
+    "name": "Họ tên đầy đủ",
     "nameExp": "Vd: Nguyễn Văn A",
-    "email": "Email của bạn:",
+    "email": "Email của bạn",
     "emailExp": "Vd: nguyenvana@gmail.com",
-    "phone": "Số điện thoại của bạn:",
+    "phone": "Số điện thoại của bạn",
     "phoneExp": "Vd: 0943633333333",
     "orderCode": "Mã đặt hàng",
-    "notice": "<strong class=\"text-red\">Lưu ý:</strong><ul><li>Nếu gặp vấn đề, bạn hãy nhắn <a href=\"https://www.facebook.com/KyonsVN\" class>Kyons fanpage</a></li></ul>",
+    "notice": "<strong class=\"text-red-0\">Lưu ý:</strong><ul class='list-disc pl-5'><li>Bạn hãy liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc và hỗ trợ kịp thời nhé!</li><li>Nếu đã có tài khoản trên Kyons, bạn hãy sử dụng <strong>email đã đăng ký</strong> với Kyons.</li><li>Nếu chưa có tài khoản, Kyons sẽ <strong>tạo tài khoản</strong> và gửi mật khẩu về địa chỉ email này. Nên hãy chắc chắn là điền đúng thông tin nhé :3</li></ul>",
     "step2": "Bước 2:",
     "step2Desc": "<strong>Quét mã QR</strong> bằng ứng dụng Internet Banking hoặc <strong>sao chép thông tin chuyển khoản</strong> dưới đây:",
     "amount": "Số tiền:",
-    "change": "Chuyển sang gói [tên gói]",
+    "change": "Chuyển sang gói [pk]",
     "content": "Nội dung chuyển khoản",
     "bank": "Ngân hàng",
     "accountNumber": "Số tài khoản",
     "accountName": "Tên chủ tài khoản",
-    "thank": "Cảm ơn bạn đã đăng ký trước [tên gói]!",
-    "processing": "<p>Kyons đã nhận được thông tin đăng ký của bạn và sẽ xử lí đơn hàng của bạn trong 24h. Bạn chịu khó đợi chút nhé!</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi mã đặt hàng kèm hoá đơn chuyển khoản cho <a href=\"https://www.facebook.com/KyonsVN\" class>Kyons fanpage</a> để được hỗ trợ nhé!</p>"
-  }
+    "thank": "Cảm ơn bạn đã đăng ký trước [pk]!",
+    "processing": "<p>Kyons đã nhận được thông tin đăng ký của bạn và sẽ xử lí đơn hàng của bạn trong 24h. Bạn chịu khó đợi chút nhé!</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi mã đặt hàng kèm hoá đơn chuyển khoản cho <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được hỗ trợ nhé!</p>"
+  },
+  "retry": " Có lỗi xảy ra, vui lòng thử lại sau!",
+  "invalidEmail": "Email không hợp lệ!",
+  "invalidPhone": "Số điện thoại không hợp lệ!",
+  "alreadyPreorder": "Bạn đã đăng kí gói học tập trước đó rồi",
+  "alreadyPreorderDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc.",
+  "alreadyTransfer": "Bạn chắc chắn đã chuyển khoản rồi đúng hông?",
+  "alreadyTransferDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc."
 }

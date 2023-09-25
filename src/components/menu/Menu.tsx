@@ -25,9 +25,9 @@ export default function Menu({ l }: Props) {
   function setLanguage(lang: string) {
     if (lang != language) {
       if (lang == 'VI') {
-        window.location.href = window.location.origin;
+        window.location.href = window.location.href.replace('/en', '');
       } else {
-        window.location.href = window.location.origin + '/en/';
+        window.location.href = window.location.href.replace(window.location.origin, window.location.origin + '/en');
       }
     } else {
       setIsHover(false);
@@ -114,8 +114,10 @@ export default function Menu({ l }: Props) {
             </ul>
           </li>
           <li class='p-6 flex flex-col gap-6'>
-            <span>{l.menu.forStudents}</span>
-            <ul class='pl-[34px] vertical-line flex flex-col gap-7 items-start'>
+            <span class='font-bold text-[16px] flex gap-3 items-center'>
+              <img src='/images/menu-students.svg' alt='' /> <span>{l.menu.forStudents}</span>
+            </span>
+            <ul class='pl-4 vertical-line flex flex-col items-start'>
               <li>
                 <a href='/#about-us'>{l.menu.aboutUs}</a>
               </li>
@@ -136,7 +138,20 @@ export default function Menu({ l }: Props) {
               </li>
             </ul>
           </li>
-          <li className={$activeMenu == 1 ? 'active' : ''}>
+          <li className={$activeMenu == 4 ? 'active' : ''}>
+            <a
+              class='close-menu'
+              href='#schools'
+              onClick={() => {
+                setActiveMenu(4);
+              }}
+            >
+              <span class='font-bold text-[16px] flex gap-3 items-center'>
+                <img src='/images/menu-schools.svg' alt='' /> <span>{l.menu.forSchools}</span>
+              </span>
+            </a>
+          </li>
+          {/* <li className={$activeMenu == 1 ? 'active' : ''}>
             <a
               class='close-menu'
               href='#about-us'
@@ -180,17 +195,6 @@ export default function Menu({ l }: Props) {
               {menuLabel.forStudents}
             </a>
           </li>
-          <li className={$activeMenu == 4 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href='#schools'
-              onClick={() => {
-                setActiveMenu(4);
-              }}
-            >
-              {menuLabel.forSchools}
-            </a>
-          </li>
           <li className={$activeMenu == 5 ? 'active' : ''}>
             <a
               class='close-menu'
@@ -201,7 +205,7 @@ export default function Menu({ l }: Props) {
             >
               {menuLabel.price}
             </a>
-          </li>
+          </li> */}
           <li className={$activeMenu == 6 ? 'active' : ''}>
             <a
               class='close-menu'
@@ -210,10 +214,12 @@ export default function Menu({ l }: Props) {
                 setActiveMenu(6);
               }}
             >
-              {menuLabel.contact}
+              <span class='font-bold text-[16px] flex gap-3 items-center'>
+                <img src='/images/menu-contact.svg' alt='' /> <span>{menuLabel.contact}</span>
+              </span>
             </a>
           </li>
-          <li class='flex justify-center relative'>
+          {/* <li class='flex justify-center relative'>
             <div
               class='flex flex-row relative h-10 p-6 items-center justify-between text-sm w-24 cursor-pointer'
               onClick={() => setIsHover(!isHover)}
@@ -254,7 +260,7 @@ export default function Menu({ l }: Props) {
                 EN
               </div>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

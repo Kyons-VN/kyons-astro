@@ -1,22 +1,182 @@
 ---
 import './style.scss';
-import Footer from '@components/Footer.astro';
 export interface Props {
   l: any;
+  id: string | undefined;
 }
 
-const { l } = Astro.props;
+const { l, id } = Astro.props;
+const packageName = l['price'][id ?? 'free'];
+let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.package2 : l.price.package1);
 ---
 
+<ul class='list-disc pl-5'></ul>
 <div class='preorder'>
   <div id='preorder' class='absolute top-[-82px]'></div>
-  <div class='h-20'></div>
-  <div class='flex flex-col gap-3 items-stretch w-full'>
-    <div class='flex flex-col text-white gap-4 text-center'>
-      <h1 class='text-2xl'>{l.price.more}</h1>
-      <p>{l.price.canChange}</p>
-    </div>
+  <div class='h-14'></div>
+  <h1 class='text-2xl text-white'>{l.preorder.title} {packageName}</h1>
+  <div class='flex flex-col gap-4 w-full items-stretch bg-white p-4 rounded-lg shadow-2'>
+    <form name='step1' id='step1' class='flex flex-col'>
+      <h3 class='text-lightBlue-1 text-base'>{l.preorder.step1}</h3>
+      <div class='h-2'></div>
+      <p>{l.preorder.step1Desc}</p>
+      <div class='h-3'></div>
+      <span><span class='text-red-0'>*</span>{l.preorder.name}</span>
+      <div class='h-1'></div>
+      <input name='name' id='name' type='text' placeholder={l.preorder.nameExp} required />
+      <div class='h-3'></div>
+      <span><span class='text-red-0'>*</span>{l.preorder.email}</span>
+      <div class='h-1'></div>
+      <input name='email' id='email' type='text' placeholder={l.preorder.emailExp} required />
+      <div class='h-3'></div>
+      <span><span class='text-red-0'>*</span>{l.preorder.phone}</span>
+      <div class='h-1'></div>
+      <input name='mobile' id='mobile' type='text' placeholder={l.preorder.phoneExp} required />
+      <div class='h-4'></div>
+      <p set:html={l.preorder.notice} />
+      <div class='h-4'></div>
+      <input type='hidden' name='order_package' value={packageName} />
+      <button id='submit1' class='btn orange' type='button'>{l.btn.continue}</button>
+    </form>
+    <form id='step2' class='flex flex-col hidden'>
+      <h3 class='text-lightBlue-1 text-base'>{l.preorder.step2}</h3>
+      <div class='h-2'></div>
+      <p set:html={l.preorder.step2Desc} />
+      <div class='h-3'></div>
+      <div class='flex flex-col items-center'>
+        <img src='' alt='' />
+        <div class='h-3'></div>
+        <h2 class='text-lg font-bold'>{l.preorder.amount} 159.000đ</h2>
+        <div class='h-3'></div>
+        <a href='' class='text-orange underline'>{change}</a>
+        <div class='h-6'></div>
+        <div class='flex flex-col p-4 border border-blueGrey-300 rounded-lg w-full'>
+          <div class='flex flex-col gap-1.5'>
+            <span>{l.preorder.content}</span>
+            <span id='copyCode' class='flex justify-between cursor-pointer'>
+              <strong class='text-orange'>DT G3T <span id='code'>[order_code]</span></strong>
+              <i class='icon-Duplicate text-orange text-base'></i>
+            </span>
+          </div>
+          <div class='h-2'></div>
+          <div class='flex flex-row justify-between'>
+            <span>{l.preorder.email}</span>
+            <span> </span>
+            <div class='h-6'></div>
+          </div>
+          <button class='btn orange'>{l.btn.alreadyTransfer}</button>
+          <div class='h-2'></div>
+          <button class='btn outlined'>{l.btn.back}</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
-<Footer l={l} />
-<script></script>
+
+<div
+  id='alreadyPreordered'
+  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hidden'
+>
+  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[700px] items-center justify-center'>
+    <img src='/images/already-preorder.svg' alt='' />
+    <div class='col w-full gap-2'>
+      <h6>{l.alreadyPreorder}</h6>
+      <div class='flex flex-col gap-1' set:html={l.alreadyPreorderDesc} />
+    </div>
+    <button id='retry' class='btn orange w-full'>{l.btn.retry}</button>
+  </div>
+</div>
+<div
+  id='alreadyTransfered'
+  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hidden'
+>
+  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[700px] items-center justify-center'>
+    <img src='/images/already-transfer.svg' alt='' />
+    <div class='col w-full gap-2'>
+      <h6>{l.alreadyPreorder}</h6>
+      <div class='flex flex-col gap-1' set:html={l.alreadyPreorderDesc} />
+    </div>
+    <button id='confirmTransfer' class='btn orange w-full'>{l.btn.alreadyTransfer}</button>
+    <button id='back' class='btn outlined w-full'>{l.btn.back}</button>
+  </div>
+</div>
+<script define:vars={{ l }} type='text/javascript'>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+if (params['outline']) {
+  window.document.body.classList.add('outline');
+}
+
+const text = {};
+const form1 = document.getElementById('step1');
+const submit1 = document.getElementById('submit1');
+const email = document.getElementById('email');
+const mobile = document.getElementById('mobile');
+const retry = document.getElementById('retry');
+const back = document.getElementById('back');
+
+back.addEventListener('click', () => {
+  document.getElementById('alreadyTransfered').classList.add('hidden');
+  document.body.removeAttribute('style');
+});
+
+retry.addEventListener('click', () => {
+  document.getElementById('alreadyPreordered').classList.add('hidden');
+  document.body.removeAttribute('style');
+});
+
+email.addEventListener('keyup', (value) => {
+  email.setCustomValidity('');
+});
+mobile.addEventListener('keyup', (value) => {
+  mobile.setCustomValidity('');
+});
+submit1.addEventListener('click', async (e) => {
+  // e.preventDefault();
+  if (!form1.checkValidity()) {
+    form1.reportValidity();
+    return false;
+  }
+  for (let i = 0; i < form1.length; i++) {
+    if (form1.elements[i].name) text[form1.elements[i].name] = form1.elements[i].value;
+  }
+  // e.preventDefault();
+  const response = await fetch('https://student-api-dev.kyons.vn/pre_order/users', {
+    method: 'POST',
+    body: JSON.stringify(text),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  console.log(response);
+  if (response.status == 200) {
+    const order = await response.json();
+    if (order.order_code != 'created_preorder') return;
+    const form2 = document.getElementById('step2');
+    const code = document.getElementById('code');
+    code.innerHtml = order.order_code;
+    form2.classList.remove('hidden');
+    form1.classList.add('hidden');
+  } else {
+    if (response.status == 400) {
+      const error = await response.json();
+      if (error.error_code == 'InvalidParam') {
+        if (error.invalid_param == 'email') {
+          email.setCustomValidity(l.invalidEmail);
+          email.reportValidity();
+        } else if (error.invalid_param == 'mobile') {
+          mobile.setCustomValidity(l.invalidPhone);
+          mobile.reportValidity();
+        }
+      }
+    } else if (response.status == 409) {
+      showDialog();
+    } else {
+      alert('Có lỗi xảy ra, vui lòng thử lại sau');
+    }
+  }
+  return false;
+});
+
+function showDialog() { }
+</script>

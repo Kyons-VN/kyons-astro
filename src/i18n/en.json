@@ -7,7 +7,11 @@
     "forSchools": "For schools",
     "trial": "Contact for trial",
     "send": "Send",
-    "bookNow": "Reserve immediately"
+    "bookNow": "Reserve immediately",
+    "continue": "Continue",
+    "alreadyTransfer": "I have transferred",
+    "back": "Back",
+    "retry": "Retry"
   },
   "menu": {
     "lang": "EN",
@@ -112,21 +116,6 @@
     "solutions": "Solution",
     "letKyonsShow": "Let Kyons give you the answer"
   },
-  "solution": {
-    "ourSolution": "Our solutions",
-    "mockTest": "Mock tests",
-    "mockTestDesc": "Once you have defined your goals, we will provide a test to identify any gaps in your knowledge.",
-    "registerNow": "Feeling interested?<br />Create an account right now!",
-    "createAccount": "Create a student account",
-    "yourLearningPath": "Your personal learning path",
-    "yourLearningPathDesc": "Based on your test results and learning progress, Kyons proprietary AI will determine what you should learn next, giving you a personalised curriculum that makes your learning more efficient than ever.",
-    "tutor": "Tutor",
-    "tutorDesc": "If you get stuck anywhere on your learning journey, an on-demand tutor is always a click away to come to your assistance."
-  },
-  "creator": {
-    "kyonsCreatorDesc": "You are a teacher and want to earn more income by contributing to Kyons' question bank? Click the \"Join us\" button to learn more!",
-    "joinUs": "Join us"
-  },
   "contact": {
     "contact": "Contact Us",
     "contactDesc": "Feel interested?<br />Contact us now",
@@ -144,19 +133,12 @@
     "error": "Error",
     "thankYou": "Thank you!"
   },
-  "close": "Close",
   "footer": {
     "company": "Kyons LLC",
     "address": "L17-11, Vincom Center, 72 Le Thanh Ton,<br />Ben Nghe Ward, District 1, HCMC",
     "phone": "(028) 6270 6820",
     "copy": "Copyrighted © by Kyons LLC."
   },
-  "signUp": "Sign Up",
-  "popup": {
-    "title": "Stop! Wait a minute",
-    "content": "The official version of Kyons will be released soon with more exciting and innovative improvements. Join the Kyons Waiting List to receive the first notifications and win surprising gifts!"
-  },
-  "register": "Sign me up!",
   "price": {
     "priceTable": "Price list",
     "promotion": "Promotion",
@@ -180,13 +162,47 @@
     "package2": "Pre -order package (3 months)",
     "package2Include": "Early access to the English/TOEIC program is about to be released in late 2023 (free 1 month)",
     "detailsAndCompare": "See details and comparisons",
-    "more": "Thêm tính năng, thêm trải nghiệm, thêm khả năng đạt điểm cao!",
-    "canChange": "Bạn có thể đổi giữa các gói dễ dàng sau khi mua",
-    "compare": "So sánh các gói",
-    "phoRi": "Phờ ri",
-    "month": "tháng",
-    "months": "tháng",
-    "note": "Ghi chú",
-    "newProgram": "Truy cập sớm các chương trình sắp ra mắt"
-  }
+    "more": "More features, more experiences, more chances to get high scores!",
+    "canChange": "(You can shift among these plans anytime)",
+    "compare": "Compare",
+    "phoRi": "FREE",
+    "month": "month",
+    "months": "months",
+    "day": "day",
+    "days": "days",
+    "note": "Note storage",
+    "newProgram": "Early access to upcoming features",
+    "full": "More details",
+    "short": "Less"
+  },
+  "preorder": {
+    "title": "You are registering",
+    "step1": "Step 1:",
+    "step1Desc": "Please fill in your information correctly in the form below:",
+    "name": "Full name",
+    "nameExp": "Vd: Nguyễn Văn A",
+    "email": "Email",
+    "emailExp": "Ex: nguyenvana@gmail.com",
+    "phone": "Phone number",
+    "phoneExp": "Vd: 0943633333333",
+    "orderCode": "Mã đặt hàng",
+    "notice": "<strong class=\"text-red-0\">Note:</strong><ul><li>If you have any problems, please hit <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> a message with your pre-order code for support.</li><li>If you already have Kyons account, use the <strong>email that you registered</strong>.</li><li>If not, Kyons will <strong>create one</strong> for you with the above email and send a password to your email So please check your information carefully before submitting it :3</li></ul>",
+    "step2": "Step 2:",
+    "step2Desc": "<strong>Scan the QR code</strong> or copy <strong>banking information</strong> below to transfer",
+    "amount": "Amount:",
+    "change": "Change to [pk]",
+    "content": "Message",
+    "bank": "Bank name",
+    "accountNumber": "Account number",
+    "accountName": "Account name",
+    "thank": "Your pre-order has been placed [pk]!",
+    "processing": "<p>Kyons has received your pre-order request. We will proceed your order and send you a confirmation email within 24 hours.</p><p>If you do not receive any email from us after that time, please send the pre-order code and your transaction receipt to <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for support!</p>"
+  },
+  "retry": "Error, please try again later!",
+  "invalidEmail": "Invalid email!",
+  "invalidPhone": "Invalid phone number!",
+  "alreadyPreorder": "You have registered the previous learning package",
+  "alreadyPreorderDesc": "<p>Your information has been used to register the learning package.</p><p>Please try again with other information or contact <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for questions.",
+  "alreadyTransfer": "You have registered the previous learning package",
+  "alreadyTransferDesc": "<p>Your information has been used to register the learning package.</p><p>Please try again with other information or contact <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for questions."
 }
