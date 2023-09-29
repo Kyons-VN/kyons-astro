@@ -3,15 +3,16 @@
   "languageCode": "vi",
   "btn": {
     "studyNow": "Học ngay thôi",
-    "forStudents": "Dành cho người học",
-    "forSchools": "Dành cho trường học",
     "trial": "Liên hệ dùng thử",
     "send": "Gửi tin nhắn",
     "bookNow": "Đặt trước ngay",
     "continue": "Tiếp tục",
     "alreadyTransfer": "Mình đã chuyển khoản",
     "back": "Quay lại",
-    "retry": "Thử lại"
+    "retry": "Thử lại",
+    "completed": "Đã hoàn thành",
+    "uncompleted": "Chưa nha",
+    "backToHome": "Về trang chủ"
   },
   "menu": {
     "lang": "VI",
@@ -21,12 +22,12 @@
     "problems": "Vấn đề",
     "solutions": "Giải pháp",
     "problemsAndSolution": "Vấn đề và giải pháp",
+    "guild": "Hướng dẫn",
     "forStudents": "Dành cho người học",
     "forSchools": "Dành cho trường học",
     "price": "Bảng giá",
     "contact": "Liên hệ",
-    "promotion": "KM!",
-    "how": "Hướng dẫn"
+    "promotion": "KM!"
   },
   "home": {
     "whyNotSmarter": "Tại sao không học thông minh hơn?",
@@ -50,8 +51,8 @@
     "practiceWith": "Thực hành cùng kho bài tập không giới hạn",
     "practiceWithDesc": "Vô số bài tập với đa dạng độ khó được tạo bởi AI đảm bảo bạn sẽ không gặp 1 câu hỏi 2 lần tại Kyons"
   },
-  "students": {
-    "forStudents": "Cho người học",
+  "guild": {
+    "guild": "Hướng dẫn",
     "completeLearning": "Hoàn thành mục tiêu học tập trong 4 bước với Kyons",
     "step1": "Bước 1: Chọn mục tiêu học tập",
     "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn.",
@@ -165,7 +166,7 @@
     "free4": "Ghi chú (giới hạn 30MB)",
     "recommended": "Khuyên dùng",
     "package1": "Gói đặt trước ưu đãi (1 tháng)",
-    "package1Include": "Bao gồm <strong>Tính năng của gói Miễn phí, và:</strong>",
+    "package1Include": "Bao gồm <strong>Tính năng của gói Miễn phí, và</strong>",
     "package11": "Ghi chú (giới hạn 200MB)",
     "package12": "Chia nhiệm vụ học tập hằng ngày",
     "package13": "Trợ giảng AI và đội ngũ gia sư từ Kyons",
@@ -206,9 +207,7 @@
     "content": "Nội dung chuyển khoản",
     "bank": "Ngân hàng",
     "accountNumber": "Số tài khoản",
-    "accountName": "Tên chủ tài khoản",
-    "thank": "Cảm ơn bạn đã đăng ký trước [pk]!",
-    "processing": "<p>Kyons đã nhận được thông tin đăng ký của bạn và sẽ xử lí đơn hàng của bạn trong 24h. Bạn chịu khó đợi chút nhé!</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi mã đặt hàng kèm hoá đơn chuyển khoản cho <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được hỗ trợ nhé!</p>"
+    "accountName": "Tên chủ tài khoản"
   },
   "retry": " Có lỗi xảy ra, vui lòng thử lại sau!",
   "invalidEmail": "Email không hợp lệ!",
@@ -216,5 +215,10 @@
   "alreadyPreorder": "Bạn đã đăng kí gói học tập trước đó rồi",
   "alreadyPreorderDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc.",
   "alreadyTransfer": "Bạn chắc chắn đã chuyển khoản rồi đúng hông?",
-  "alreadyTransferDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc."
+  "alreadyTransferDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc.",
+  "orderSuccess": {
+    "thank": "Cảm ơn bạn đã đăng ký trước [pk]!",
+    "code": "Mã đặt hàng của bạn",
+    "desc": "<p>Kyons đã nhận được thông tin và đang tiến hành xử lí.</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi <strong>hình chụp giao dịch chuyển khoản</strong> đến <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được hỗ trợ nhé!</p>"
+  }
 }

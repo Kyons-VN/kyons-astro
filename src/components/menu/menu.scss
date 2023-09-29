@@ -5,7 +5,7 @@
     li {
       // @apply flex flex-row items-center justify-center;
       a {
-        @apply font-bold text-[16px] p-6 lg:p-2 w-full text-center h-full flex items-center justify-start;
+        @apply font-bold text-[16px] p-6 sm:p-3 lg:p-2 w-full text-center h-full flex items-center justify-start cursor-pointer;
       }
     }
   }

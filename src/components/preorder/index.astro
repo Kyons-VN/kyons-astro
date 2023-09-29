@@ -35,39 +35,66 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
       <div class='h-4'></div>
       <p set:html={l.preorder.notice} />
       <div class='h-4'></div>
-      <input type='hidden' name='order_package' value={packageName} />
+      <input
+        type='hidden'
+        name='order_package'
+        value={id == 'package1' ? 'Gói đặt trước ưu đãi (1 tháng)' : 'Gói đặt trước ưu đãi (3 tháng)'}
+      />
       <button id='submit1' class='btn orange' type='button'>{l.btn.continue}</button>
     </form>
     <form id='step2' class='flex flex-col hidden'>
       <h3 class='text-lightBlue-1 text-base'>{l.preorder.step2}</h3>
       <div class='h-2'></div>
-      <p set:html={l.preorder.step2Desc} />
+      <p set:html={`${l.preorder.step2Desc}:`} />
       <div class='h-3'></div>
       <div class='flex flex-col items-center'>
-        <img src='' alt='' />
+        <img
+          id='image'
+          src='https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=159000&addInfo=<DESCRIPTION>&accountName=Công ty TNHH Kyons'
+          alt=''
+        />
         <div class='h-3'></div>
         <h2 class='text-lg font-bold'>{l.preorder.amount} 159.000đ</h2>
         <div class='h-3'></div>
-        <a href='' class='text-orange underline'>{change}</a>
+        <a
+          href={`/${l.lang == 'VI' ? '' : 'en/'}preorder/${id == 'package1' ? 'package2' : 'package1'}`}
+          class='text-orange underline text-center'>{change}</a
+        >
         <div class='h-6'></div>
         <div class='flex flex-col p-4 border border-blueGrey-300 rounded-lg w-full'>
           <div class='flex flex-col gap-1.5'>
             <span>{l.preorder.content}</span>
             <span id='copyCode' class='flex justify-between cursor-pointer'>
-              <strong class='text-orange'>DT G3T <span id='code'>[order_code]</span></strong>
+              <strong id='copyText' class='text-orange'>DT G3T <span id='code'>[order_code]</span></strong>
               <i class='icon-Duplicate text-orange text-base'></i>
             </span>
           </div>
-          <div class='h-2'></div>
-          <div class='flex flex-row justify-between'>
-            <span>{l.preorder.email}</span>
-            <span> </span>
-            <div class='h-6'></div>
+          <div class='flex flex-col gap-1.5'>
+            <span>{l.preorder.bank}</span>
+            <span id='copyBank' class='flex justify-between cursor-pointer'>
+              <strong>Techcombank</strong>
+              <i class='icon-Duplicate text-orange text-base'></i>
+            </span>
           </div>
-          <button class='btn orange'>{l.btn.alreadyTransfer}</button>
-          <div class='h-2'></div>
-          <button class='btn outlined'>{l.btn.back}</button>
+          <div class='flex flex-col gap-1.5'>
+            <span>{l.preorder.accountNumber}</span>
+            <span id='copyCard' class='flex justify-between cursor-pointer'>
+              <strong>19037780961051</strong>
+              <i class='icon-Duplicate text-orange text-base'></i>
+            </span>
+          </div>
+          <div class='flex flex-col gap-1.5'>
+            <span>{l.preorder.accountName}</span>
+            <span id='copyName' class='flex justify-between cursor-pointer'>
+              <strong>Công ty TNHH Kyons</strong>
+              <i class='icon-Duplicate text-orange text-base'></i>
+            </span>
+          </div>
         </div>
+        <div class='h-6'></div>
+        <button id='alreadyTransfer' class='btn orange w-full' type='button'>{l.btn.alreadyTransfer}</button>
+        <div class='h-2'></div>
+        <button id='back2' class='btn outlined w-full' type='button'>{l.btn.back}</button>
       </div>
     </form>
   </div>
@@ -96,11 +123,12 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
       <h6>{l.alreadyPreorder}</h6>
       <div class='flex flex-col gap-1' set:html={l.alreadyPreorderDesc} />
     </div>
-    <button id='confirmTransfer' class='btn orange w-full'>{l.btn.alreadyTransfer}</button>
-    <button id='back' class='btn outlined w-full'>{l.btn.back}</button>
+    <button id='confirmTransfer' class='btn orange w-full' type='button'>{l.btn.completed}</button>
+    <button id='back' class='btn outlined w-full' type='button'>{l.btn.uncompleted}</button>
   </div>
 </div>
-<script define:vars={{ l }} type='text/javascript'>
+<script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js'></script>
+<script define:vars={{ l, id, packageName }} type='text/javascript'>
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 if (params['outline']) {
@@ -114,10 +142,44 @@ const email = document.getElementById('email');
 const mobile = document.getElementById('mobile');
 const retry = document.getElementById('retry');
 const back = document.getElementById('back');
+const back2 = document.getElementById('back2');
+const form2 = document.getElementById('step2');
+const code = document.getElementById('code');
+const copyCode = document.getElementById('copyCode');
+const copyText = document.getElementById('copyText');
+const copyBank = document.getElementById('copyBank');
+const copyCard = document.getElementById('copyCard');
+const copyName = document.getElementById('copyName');
+const alreadyTransferBtn = document.getElementById('alreadyTransfer');
+const confirmTransferBtn = document.getElementById('confirmTransfer');
+const image = document.getElementById('image');
 
+confirmTransferBtn.addEventListener('click', () => {
+  window.location.href = `${l.lang == 'VI' ? '' : '/en'}/preorder-success/${id}?code=${code.innerText}`;
+});
+alreadyTransferBtn.addEventListener('click', () => {
+  document.getElementById('alreadyTransfered').classList.remove('hidden');
+  document.body.style.overflowY = 'hidden';
+});
+copyCode.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyText.innerText);
+});
+copyBank.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyBank.innerText);
+});
+copyCard.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyCard.innerText);
+});
+copyName.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyName.innerText);
+});
 back.addEventListener('click', () => {
   document.getElementById('alreadyTransfered').classList.add('hidden');
   document.body.removeAttribute('style');
+});
+back2.addEventListener('click', () => {
+  form1.classList.remove('hidden');
+  form2.classList.add('hidden');
 });
 
 retry.addEventListener('click', () => {
@@ -137,6 +199,18 @@ submit1.addEventListener('click', async (e) => {
     form1.reportValidity();
     return false;
   }
+  const elm = document.createElement('div');
+  elm.innerHTML = `<lottie-player
+          id='loading'
+          src="/loading.json"
+          background="transparent"
+          speed="1"
+          style="width: 40px; height: 40px"
+          loop
+          autoplay
+        ></lottie-player>`;
+  submit1.prepend(elm.firstChild);
+  submit1.disabled = true;
   for (let i = 0; i < form1.length; i++) {
     if (form1.elements[i].name) text[form1.elements[i].name] = form1.elements[i].value;
   }
@@ -149,12 +223,16 @@ submit1.addEventListener('click', async (e) => {
     },
   });
   console.log(response);
-  if (response.status == 200) {
+  document.getElementById('loading').remove();
+  submit1.disabled = false;
+  if (response.status == 201) {
     const order = await response.json();
-    if (order.order_code != 'created_preorder') return;
-    const form2 = document.getElementById('step2');
-    const code = document.getElementById('code');
-    code.innerHtml = order.order_code;
+    order.name = packageName;
+    window.localStorage.setItem('order', JSON.stringify(order));
+    if (order.status != 'created_preorder') return;
+    code.innerHTML = order.order_code;
+    const imageUrl = `https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=159000&addInfo=${copyCode.innerText.trim()}&accountName=Công ty TNHH Kyons`;
+    image.attributes.src.value = imageUrl;
     form2.classList.remove('hidden');
     form1.classList.add('hidden');
   } else {
@@ -172,11 +250,9 @@ submit1.addEventListener('click', async (e) => {
     } else if (response.status == 409) {
       showDialog();
     } else {
-      alert('Có lỗi xảy ra, vui lòng thử lại sau');
+      alert(l.retry);
     }
   }
   return false;
 });
-
-function showDialog() { }
 </script>

@@ -19,7 +19,7 @@ const { l } = Astro.props;
   <div class='h-3'></div>
   <p>{l.aboutUs.text2}</p>
   <div class='h-4'></div>
-  <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
+  <a href={l.lang == 'VI' ? '/pricing' : '/en/pricing'} class='btn orange w-full'>{l.btn.bookNow}</a>
 </div>
 
 <script></script>

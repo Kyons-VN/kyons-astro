@@ -6,18 +6,49 @@ export interface Props {
 }
 
 const { l, id } = Astro.props;
+const packageName = l['price'][id ?? ''];
 ---
 
-<div class='preorder'>
-  <div id='preorder' class='absolute top-[-82px]'></div>
+<div class='preorder-success'>
+  <div id='preorder-success' class='absolute top-[-82px]'></div>
   <div class='h-14'></div>
-  <h1 class='text-2xl text-white'>{id}</h1>
+  <h1 class='text-2xl text-white'>{l.orderSuccess.thank.replace('[pk]', packageName)}</h1>
+  <div class='bgOrderCode'>
+    <h2 class='text-white text-base'>{l.orderSuccess.code}</h2>
+    <h4
+      id='copy'
+      class='flex items-center justify-center gap-3 bg-primaryBlue bg-opacity-50 w-[200px] rounded-lg text-white cursor-pointer'
+    >
+      <span id='code'></span>
+      <i class='icon-Duplicate text-2xl'></i>
+    </h4>
+  </div>
+  <div class='flex flex-col gap-6 p-6 rounded-lg shadow-2 bg-white'>
+    <span class='flex flex-col gap-2' set:html={l.orderSuccess.desc} />
+    <a href={l.lang == 'VI' ? '/' : '/en'} class='btn orange w-full'>{l.btn.backToHome}</a>
+  </div>
 </div>
 
-<script define:vars={{ l }} type='text/javascript'>
+<script define:vars={{ l, packageName }} type='text/javascript'>
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 if (params['outline']) {
   window.document.body.classList.add('outline');
+}
+const codeElm = document.getElementById('code');
+if (params['code']) {
+  codeElm.innerText = params['code'];
+}
+document.getElementById('copy').addEventListener('click', () => {
+  const code = codeElm.innerText;
+  navigator.clipboard.writeText(code);
+});
+const order = JSON.parse(localStorage.getItem('order'));
+if (order) {
+  localStorage.removeItem('order');
+  const { name, order_code } = order;
+  if (name != packageName || order_code != params['code']) {
+    window.location.href = l.lang == 'VI' ? '/' : '/en';
+  }
 }
 </script>

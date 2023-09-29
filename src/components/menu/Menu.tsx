@@ -11,12 +11,13 @@ type Props = {
 export default function Menu({ l }: Props) {
   const $activeMenu = useStore(activeMenu);
   const [isHover, setIsHover] = useState(false);
+  const [isStudentHover, setIsStudentHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const menuLabel = l.menu;
   const language = l.lang;
 
   const defaultClass =
-    'absolute z-10 flex flex-col gap-2 py-[6px] px-4 rounded-lg shadow-2 bg-white text-black w-full w-screen lg:w-full left-[calc(50%_-_50vw)] lg:left-0 top-12';
+    'absolute z-10 flex flex-col gap-2 py-[6px] sm:py-[10px] px-4 sm:px-3 rounded-lg shadow-2 bg-white text-black w-[100px] lg:w-full left-[20px] lg:left-0 top-12 sm:top-16 font-bold';
 
   function setActiveMenu(index: number) {
     setActive(index, true);
@@ -62,8 +63,8 @@ export default function Menu({ l }: Props) {
       <span class='hidden lg:flex flex-1'></span>
       <div class='flex gap-10 items-center'>
         <ul className={isMenuOpen.get() ? 'menu-items show' : 'menu-items hide'}>
-          <li class='p-4'>
-            <ul>
+          <li class='p-3 flex sm:hidden'>
+            <ul class='w-full'>
               <li class='flex justify-center relative'>
                 <div className='flex justify-between w-full'>
                   <div
@@ -87,11 +88,11 @@ export default function Menu({ l }: Props) {
                       </a>
                     </div>
                   </div>
-                  <button class='lg:hidden text-[24px]' onClick={toggle}>
+                  <button class='lg:hidden text-[24px] w-14' onClick={toggle}>
                     <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
                   </button>
                 </div>
-                <div
+                {/* <div
                   className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
                   // style='bottom: calc(-100% - 30px);'
                   onClick={() => setIsHover(false)}
@@ -109,30 +110,101 @@ export default function Menu({ l }: Props) {
                   >
                     EN
                   </div>
-                </div>
+                </div> */}
               </li>
             </ul>
           </li>
-          <li class='p-6 flex flex-col gap-6'>
+          <div
+            class='hidden sm:flex flex-row relative p-3 items-center justify-between text-sm gap-3 cursor-pointer'
+            onClick={() => setIsStudentHover(!isStudentHover)}
+            tabIndex={0}
+          >
+            <span class='font-bold text-[16px]'>{l.menu.forStudents}</span>
+            <i className={isStudentHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
+            <div
+              className={isStudentHover ? `${defaultClass} sm:flex` : `${defaultClass} sm:hidden`}
+              // style='bottom: calc(-100% - 30px);'
+              // onClick={() => setIsStudentHover(false)}
+            >
+              <span
+                data-asd={isStudentHover}
+                onClick={() => {
+                  window.location.href = '/#about-us';
+                }}
+              >
+                {l.menu.aboutUs}
+              </span>
+              <hr class='text-blueGrey-300' />
+              <a
+                onClick={() => {
+                  window.location.href = '/#problem';
+                }}
+              >
+                {l.menu.problemsAndSolution}
+              </a>
+              <hr class='text-blueGrey-300' />
+              <a
+                onClick={() => {
+                  window.location.href = '/#guild';
+                }}
+              >
+                {l.menu.guild}
+              </a>
+              <hr class='text-blueGrey-300' />
+              <a
+                onClick={() => {
+                  window.location.href = '/pricing';
+                }}
+              >
+                {l.menu.price}
+              </a>
+            </div>
+          </div>
+          <div
+            className={isHover ? `${defaultClass} flex sm:hidden` : `${defaultClass} hidden`}
+            // style='bottom: calc(-100% - 30px);'
+            onClick={() => setIsStudentHover(false)}
+          >
+            <div
+              className={language == 'VI' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+              onClick={() => setLanguage('VI')}
+            >
+              VI
+            </div>
+            <hr class='text-blueGrey-300' />
+            <div
+              className={language == 'EN' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+              onClick={() => setLanguage('EN')}
+            >
+              EN
+            </div>
+          </div>
+          <li class='p-6 flex flex-col gap-6 sm:hidden'>
             <span class='font-bold text-[16px] flex gap-3 items-center'>
               <img src='/images/menu-students.svg' alt='' /> <span>{l.menu.forStudents}</span>
             </span>
             <ul class='pl-4 vertical-line flex flex-col items-start'>
               <li>
-                <a href='/#about-us'>{l.menu.aboutUs}</a>
+                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#about-us'}>
+                  {l.menu.aboutUs}
+                </a>
               </li>
               <li>
-                <a href='/#solution'>{l.menu.problemsAndSolution}</a>
+                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#problem'}>
+                  {l.menu.problemsAndSolution}
+                </a>
               </li>
               <li>
-                <a href='/#solution'>{l.menu.how}</a>
+                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
+                  {l.menu.guild}
+                </a>
               </li>
               <li>
-                <a href='/#solution'>
+                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/pricing'}>
                   {l.menu.price}
                   &nbsp;
                   <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
-                    {l.price.promotion}
+                    {l.menu.promotion}
                   </span>
                 </a>
               </li>
@@ -147,7 +219,7 @@ export default function Menu({ l }: Props) {
               }}
             >
               <span class='font-bold text-[16px] flex gap-3 items-center'>
-                <img src='/images/menu-schools.svg' alt='' /> <span>{l.menu.forSchools}</span>
+                <img class='sm:hidden' src='/images/menu-schools.svg' alt='' /> <span>{l.menu.forSchools}</span>
               </span>
             </a>
           </li>
@@ -215,13 +287,13 @@ export default function Menu({ l }: Props) {
               }}
             >
               <span class='font-bold text-[16px] flex gap-3 items-center'>
-                <img src='/images/menu-contact.svg' alt='' /> <span>{menuLabel.contact}</span>
+                <img class='sm:hidden' src='/images/menu-contact.svg' alt='' /> <span>{menuLabel.contact}</span>
               </span>
             </a>
           </li>
-          {/* <li class='flex justify-center relative'>
+          <li class='sm:flex justify-center relative hidden'>
             <div
-              class='flex flex-row relative h-10 p-6 items-center justify-between text-sm w-24 cursor-pointer'
+              class='flex flex-row relative p-6 items-center justify-between text-sm w-24 cursor-pointer'
               onClick={() => setIsHover(!isHover)}
               tabIndex={0}
             >
@@ -260,7 +332,7 @@ export default function Menu({ l }: Props) {
                 EN
               </div>
             </div>
-          </li> */}
+          </li>
         </ul>
       </div>
     </nav>

@@ -8,47 +8,47 @@ const { l } = Astro.props;
 const APP_URL = process.env.APP_URL;
 ---
 
-<div class='students'>
-  <div id='students' class='absolute top-[-82px]'></div>
+<div class='guild'>
+  <div id='guild' class='absolute top-[-82px]'></div>
   <div class='flex flex-col w-full max-w-[1122px] gap-6 lg:gap-11 items-center'>
     <div class='lg:grid lg:grid-cols-2 flex flex-col gap-6'>
       <div
         class='flex flex-col lg:px-12 lg:py-6 gap-6 w-full lg:max-w-[550px] items-center lg:items-start justify-center lg:text-left text-center'
       >
         <div class='flex flex-col gap-2 items-center lg:items-start'>
-          <strong class='title'>{l.students.forStudents}</strong>
-          <h3 class='text-2xl'>{l.students.completeLearning}</h3>
+          <strong class='title'>{l.guild.guild}</strong>
+          <h3 class='text-2xl'>{l.guild.completeLearning}</h3>
         </div>
         <a href='#contact' class='btn orange w-full'>{l.btn.trial}</a>
       </div>
     </div>
     <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-center max-w-[350px] sm:max-w-none'>
       <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-4 px-6 py-12'>
-        <img src='/images/target.svg' alt={l.students.step1} width='108px' height='108px' />
+        <img src='/images/feature.svg' alt={l.guild.step1} width='108px' height='108px' />
         <div class='flex flex-col gap-1'>
-          <h5 class='text-base font-bold'>{l.students.step1}</h5>
-          <p>{l.students.step1Desc}</p>
+          <h5 class='text-base font-bold'>{l.guild.step1}</h5>
+          <p>{l.guild.step1Desc}</p>
         </div>
       </div>
       <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-4 px-6 py-12'>
-        <img src='/images/target.svg' alt={l.students.step2} width='108px' height='108px' />
+        <img src='/images/feature-1.svg' alt={l.guild.step2} width='108px' height='108px' />
         <div class='flex flex-col gap-1'>
-          <h5 class='text-base font-bold'>{l.students.step2}</h5>
-          <p>{l.students.step1Desc}</p>
+          <h5 class='text-base font-bold'>{l.guild.step2}</h5>
+          <p>{l.guild.step2Desc}</p>
         </div>
       </div>
       <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-4 px-6 py-12'>
-        <img src='/images/target.svg' alt={l.students.step3} width='108px' height='108px' />
+        <img src='/images/feature-2.svg' alt={l.guild.step3} width='108px' height='108px' />
         <div class='flex flex-col gap-1'>
-          <h5 class='text-base font-bold'>{l.students.step3}</h5>
-          <p>{l.students.step1Desc}</p>
+          <h5 class='text-base font-bold'>{l.guild.step3}</h5>
+          <p>{l.guild.step3Desc}</p>
         </div>
       </div>
       <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-4 px-6 py-12'>
-        <img src='/images/target.svg' alt={l.students.step4} width='108px' height='108px' />
+        <img src='/images/feature-3.svg' alt={l.guild.step4} width='108px' height='108px' />
         <div class='flex flex-col gap-1'>
-          <h5 class='text-base font-bold'>{l.students.step4}</h5>
-          <p>{l.students.step1Desc}</p>
+          <h5 class='text-base font-bold'>{l.guild.step4}</h5>
+          <p>{l.guild.step4Desc}</p>
         </div>
       </div>
     </div>

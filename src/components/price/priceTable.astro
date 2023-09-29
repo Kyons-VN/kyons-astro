@@ -15,7 +15,7 @@ const { l } = Astro.props;
     <h5>{l.price.free}</h5>
   </div>
   <div class='h-3'></div>
-  <a href='https://student.kyons.vn' class='btn orange'>{l.price.useFree}</a>
+  <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.price.useFree}</a>
   <div class='h-4'></div>
   <p set:html={l.price.freeInclude} />
   <div class='h-3'></div>
@@ -56,9 +56,9 @@ const { l } = Astro.props;
       </div>
     </div>
     <div class='h-3'></div>
-    <a href='/preorder/package1' class='btn orange w-full'>{l.btn.bookNow}</a>
+    <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange w-full'>{l.btn.bookNow}</a>
     <div class='h-4'></div>
-    <p id='include1' set:html={l.price.package1Include} />
+    <p id='include1' set:html={`${l.price.package1Include}:`} />
     <div class='h-3'></div>
     <ul class='star'>
       <li class='flex items-center view1 hidden'>
@@ -113,7 +113,7 @@ const { l } = Astro.props;
     </div>
   </div>
   <div class='h-3'></div>
-  <a href='/preorder/package2' class='btn orange'>{l.btn.bookNow}</a>
+  <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange'>{l.btn.bookNow}</a>
   <div class='h-4'></div>
   <p id='include2' set:html={l.price.package2Include} />
   <div class='h-3'></div>
