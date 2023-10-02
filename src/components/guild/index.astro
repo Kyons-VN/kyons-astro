@@ -10,17 +10,20 @@ const APP_URL = process.env.APP_URL;
 
 <div class='guild'>
   <div id='guild' class='absolute top-[-82px]'></div>
-  <div class='flex flex-col w-full max-w-[1122px] gap-6 lg:gap-11 items-center'>
-    <div class='lg:grid lg:grid-cols-2 flex flex-col gap-6'>
-      <div
-        class='flex flex-col lg:px-12 lg:py-6 gap-6 w-full lg:max-w-[550px] items-center lg:items-start justify-center lg:text-left text-center'
-      >
-        <div class='flex flex-col gap-2 items-center lg:items-start'>
-          <strong class='title'>{l.guild.guild}</strong>
-          <h3 class='text-2xl'>{l.guild.completeLearning}</h3>
-        </div>
-        <a href='#contact' class='btn orange w-full'>{l.btn.trial}</a>
+  <div class='hidden sm:flex absolute right-0 top-[-200px] z-0'>
+    <img src='/images/guild-planet.svg' alt='' width='336' height='250' />
+  </div>
+  <div class='flex flex-col w-full max-w-[1122px] gap-6 lg:gap-11 items-center justify-center z-10'>
+    <div class='flex flex-col lg:px-12 lg:py-6 gap-6 w-full items-center justify-center lg:text-left text-center'>
+      <div class='flex flex-col gap-2 items-center'>
+        <strong class='title'>{l.guild.guild}</strong>
+        <h3 class='text-2xl'>{l.guild.completeLearning}</h3>
       </div>
+      <a
+        href={`${l.lang == 'VI' ? '' : '/en'}/pricing`}
+        class='flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded bg-orangeGradient shadow-orange1 w-full sm:hidden'
+        >{l.btn.bookNow}</a
+      >
     </div>
     <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-center max-w-[350px] sm:max-w-none'>
       <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-4 px-6 py-12'>
@@ -53,4 +56,10 @@ const APP_URL = process.env.APP_URL;
       </div>
     </div>
   </div>
+  <div class='h-12'></div>
+  <a
+    href={`${l.lang == 'VI' ? '' : '/en'}/pricing`}
+    class='items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded bg-orangeGradient shadow-orange1 w-[428px] hidden sm:flex'
+    >{l.btn.bookNow}</a
+  >
 </div>

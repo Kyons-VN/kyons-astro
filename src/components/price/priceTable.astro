@@ -33,6 +33,12 @@ const { l } = Astro.props;
       {l.price.free4}
     </li>
   </ul>
+  <span class='flex-1 hidden sm:flex'></span>
+  <a
+    href={`${l.lang == 'VI' ? '' : '/en'}/price`}
+    class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+    >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
+  >
 </div>
 <div class='flex flex-col rounded-lg p-4 bg-white items-start shadow-2'>
   <div class='flex flex-col w-full items-start'>
@@ -61,7 +67,7 @@ const { l } = Astro.props;
     <p id='include1' set:html={`${l.price.package1Include}:`} />
     <div class='h-3'></div>
     <ul class='star'>
-      <li class='flex items-center view1 hidden'>
+      <li class='sm:flex items-center view1 hidden'>
         {l.price.free1}
       </li>
       <li class='flex items-center view1 hidden'>
@@ -84,7 +90,7 @@ const { l } = Astro.props;
       </li>
     </ul>
     <div class='h-3'></div>
-    <button id='viewFull1' class='text-orange font-bold w-full flex justify-between'>
+    <button id='viewFull1' class='text-orange font-bold w-full flex sm:hidden justify-between'>
       <span>{l.price.full}</span>
       <i class='icon-ArrowDown'></i>
     </button>
@@ -92,6 +98,12 @@ const { l } = Astro.props;
       <span>{l.price.short}</span>
       <i class='icon-ArrowUp'></i>
     </button>
+    <span class='flex-1 hidden sm:flex'></span>
+    <a
+      href={`${l.lang == 'VI' ? '' : '/en'}/price`}
+      class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+      >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
+    >
   </div>
 </div>
 <div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
@@ -144,7 +156,7 @@ const { l } = Astro.props;
     </li>
   </ul>
   <div class='h-3'></div>
-  <button id='viewFull2' class='text-orange font-bold w-full flex justify-between'>
+  <button id='viewFull2' class='text-orange font-bold w-full flex justify-between sm:hidden'>
     <span>{l.price.full}</span>
     <i class='icon-ArrowDown'></i>
   </button>
@@ -152,18 +164,24 @@ const { l } = Astro.props;
     <span>{l.price.short}</span>
     <i class='icon-ArrowUp'></i>
   </button>
+  <span class='flex-1 hidden sm:flex'></span>
+  <a
+    href={`${l.lang == 'VI' ? '' : '/en'}/price`}
+    class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+    >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
+  >
 </div>
 <style lang='scss'>
   ul.star {
     @apply flex flex-col gap-3 pb-2;
     li {
       @apply pl-8;
-      &:nth-child(2n + 1) {
-        background: url('/images/blue-check.svg') no-repeat left 0px;
-      }
-      &:nth-child(2n) {
-        background: url('/images/green-check.svg') no-repeat left 0px;
-      }
+      // &:nth-child(2n + 1) {
+      //   background: url('/images/blue-check.svg') no-repeat left 0px;
+      // }
+      // &:nth-child(2n) {
+      background: url('/images/green-check.svg') no-repeat left 0px;
+      // }
     }
   }
 </style>

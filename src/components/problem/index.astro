@@ -14,51 +14,56 @@ const { l } = Astro.props;
     <span class='explains'>{l.problems.explain3}</span>
     <span class='explains'>{l.problems.explain4}</span>
   </div>
-  <div class='flex flex-col gap-2 items-center'>
-    <div class='title'>{l.problems.problems}</div>
-    <h3 class='text-2xl'>{l.problems.why}</h3>
-  </div>
-  <div class='flex justify-between w-full'>
-    <div class='flip-card'>
-      <div class='inner'>
-        <div class='front'><img src='/images/card-front-1.svg' class='w-full h-full' /></div>
-        <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
+  <div class='problem-wrapper'>
+    <div class='flex flex-col gap-2 items-center'>
+      <div class='title'>{l.problems.problems}</div>
+      <h3 class='text-2xl max-w-[500px]'>{l.problems.why}</h3>
+    </div>
+    <div class='flex justify-between w-full'>
+      <div class='flip-card'>
+        <div class='inner'>
+          <div class='front'><img src='/images/card-front-1.svg' class='w-full h-full' /></div>
+          <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
+        </div>
+      </div>
+      <div class='flip-card'>
+        <div class='inner'>
+          <div class='front'><img src='/images/card-front-2.svg' class='w-full h-full' /></div>
+          <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
+        </div>
+      </div>
+      <div class='flip-card'>
+        <div class='inner'>
+          <div class='front'><img src='/images/card-front-3.svg' class='w-full h-full' /></div>
+          <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
+        </div>
+      </div>
+      <div class='flip-card'>
+        <div class='inner'>
+          <div class='front'><img src='/images/card-front-4.svg' class='w-full h-full' /></div>
+          <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
+        </div>
       </div>
     </div>
-    <div class='flip-card'>
-      <div class='inner'>
-        <div class='front'><img src='/images/card-front-2.svg' class='w-full h-full' /></div>
-        <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
-      </div>
+    <a id='resolveBtn' href='#problem' class='btn blue w-full sm:w-[428px]'>
+      <img src='/images/show-cards.svg' alt='' />
+      {l.problems.explain}</a
+    >
+    <strong id='resolveTxt' class='hidden'>{l.problems.explain}</strong>
+    <div id='expalainWrapper' class='flex-col gap-4 hidden justify-center'>
+      <span class='hidden justify-center'>
+        <div class='typewriters'></div>
+      </span>
+      <span class='hidden justify-center'>
+        <div class='typewriters'></div>
+      </span>
+      <span class='hidden justify-center'>
+        <div class='typewriters'></div>
+      </span>
+      <span class='hidden justify-center'>
+        <div class='typewriters'></div>
+      </span>
     </div>
-    <div class='flip-card'>
-      <div class='inner'>
-        <div class='front'><img src='/images/card-front-3.svg' class='w-full h-full' /></div>
-        <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
-      </div>
-    </div>
-    <div class='flip-card'>
-      <div class='inner'>
-        <div class='front'><img src='/images/card-front-4.svg' class='w-full h-full' /></div>
-        <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
-      </div>
-    </div>
-  </div>
-  <a id='resolveBtn' href='#problem' class='btn blue w-full'>{l.problems.explain}</a>
-  <strong id='resolveTxt' class='hidden'>{l.problems.explain}</strong>
-  <div id='expalainWrapper' class='flex-col gap-4 hidden justify-center'>
-    <span class='hidden justify-center'>
-      <div class='typewriters'></div>
-    </span>
-    <span class='hidden justify-center'>
-      <div class='typewriters'></div>
-    </span>
-    <span class='hidden justify-center'>
-      <div class='typewriters'></div>
-    </span>
-    <span class='hidden justify-center'>
-      <div class='typewriters'></div>
-    </span>
   </div>
 </div>
 

@@ -13,7 +13,8 @@ const { l } = Astro.props;
     <div class='title'>{l.solutions.solutions}</div>
     <h3 class='text-white text-center text-2xl'>{l.solutions.letKyonsShow}</h3>
   </div>
-  <img src='/images/solutions-xs.svg' alt='' class='w-full' />
+  <img src='/images/solutions-xs.svg' alt='' class='w-full flex sm:hidden' />
+  <img src='/images/solutions.svg' alt='' class='w-full hidden sm:flex' />
 </div>
 
 <script></script>

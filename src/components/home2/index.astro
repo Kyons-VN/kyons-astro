@@ -10,12 +10,13 @@ const { l } = Astro.props;
 <div class='home'>
   <div id='home' class='absolute top-[-82px]'></div>
   <div class='h-10'></div>
+  <img src='/images/logo.svg' alt='Logo' class='w-[125px]' />
   <h1 class='text-2xl'>{l.home.whyNotSmarter}</h1>
-  <div class='relative'>
-    <img src='/images/iphone.png' />
-    <div class='absolute top-0 left-0 p-2 bg-white rounded-lg flex'>
+  <div class='relative w-full flex items-center justify-center'>
+    <img src='/images/iphone.png' class='sm:h-[40vh]' />
+    <div class='absolute top-0 sm:top-[200px] left-0 sm:left-[20%] p-2 bg-white rounded-lg flex'>
       <div class='flex gap-2'>
-        <div class='w-10 h-10 flex items-center justify-center bg-emerald-0'>
+        <div class='w-10 h-10 flex items-center justify-center bg-emerald-0 rounded-lg'>
           <i class='icon-Profile text-[24px]'></i>
         </div>
         <div class='flex flex-col text-primaryBlue font-bold items-start'>
@@ -25,7 +26,7 @@ const { l } = Astro.props;
       </div>
     </div>
   </div>
-  <div class='bg-white flex flex-col rounded-lg gap-3 w-full p-4 items-start'>
+  <div class='bg-white flex flex-col rounded-lg gap-3 w-full p-4 items-start sm:max-w-[360px]'>
     <strong class='text-primaryBlue'>{l.home.promotionEnd}</strong>
     <div class='flex gap-1 w-full items-center justify-center'>
       <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
@@ -49,7 +50,7 @@ const { l } = Astro.props;
 </div>
 
 <script>
-  const targetDate = new Date('2023-09-29T00:00:00+07:00');
+  const targetDate = new Date('2023-10-10T00:00:00+07:00');
   let countdown = setInterval(() => {
     const now = new Date();
     const diff = targetDate.getTime() - now.getTime();

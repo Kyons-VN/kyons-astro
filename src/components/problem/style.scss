@@ -1,7 +1,10 @@
 .problem {
-  @apply w-full flex flex-col justify-center lg:justify-start items-center relative text-center px-4 py-10 lg:p-11 gap-6 rounded-tl-lg rounded-tr-lg overflow-hidden;
+  @apply w-full flex flex-col justify-center lg:justify-start items-center relative text-center sm:px-11 sm:py-10 lg:p-11 gap-6 rounded-tl-lg rounded-tr-lg overflow-hidden;
   z-index: 1;
-  &::before {
+  .problem-wrapper {
+    @apply max-w-[1122px] w-full flex flex-col justify-center lg:justify-start items-center relative text-center px-4 py-10 lg:p-11 gap-6 rounded-tl-lg rounded-tr-lg sm:rounded-lg overflow-hidden;
+  }
+  .problem-wrapper::before {
     content: '';
     @apply absolute w-[835px] h-[1837px] left-0;
     background: #bcdefe;
@@ -19,13 +22,13 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
     transform: rotateY(180deg);
-    @apply w-full h-full relative rounded-[8px];
+    @apply w-full h-full relative rounded-lg sm:rounded-3xl;
     .front,
     .back {
       @apply w-full h-full absolute top-0 left-0;
     }
     .front {
-      @apply shadow-lg rounded-[8px] overflow-hidden;
+      @apply shadow-lg rounded-lg sm:rounded-3xl overflow-hidden;
       .img {
         @apply w-full h-[calc((100%_-_36px)_/_4)] rounded-t-lg;
       }
@@ -34,7 +37,7 @@
       -webkit-backface-visibility: hidden; /* Safari */
       backface-visibility: hidden;
       transform: rotateY(180deg);
-      @apply rounded-lg shadow-lg;
+      @apply rounded-lg sm:rounded-3xl shadow-lg;
       .img {
         @apply w-full h-[calc((100%_-_36px)_/_4)] rounded-t-lg;
       }

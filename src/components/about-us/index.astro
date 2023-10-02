@@ -9,17 +9,26 @@ const { l } = Astro.props;
 
 <div class='about-us'>
   <div id='about-us' class='absolute top-[-82px]'></div>
-  <div class='title'>{l.menu.aboutUs}</div>
-  <div class='h-3'></div>
-  <h2 class='text-2xl'>{l.aboutUs.kyons}</h2>
-  <div class='h-6'></div>
-  <img src='/images/student-app.png' alt='' />
-  <div class='h-6'></div>
-  <p>{l.aboutUs.text1}</p>
-  <div class='h-3'></div>
-  <p>{l.aboutUs.text2}</p>
-  <div class='h-4'></div>
-  <a href={l.lang == 'VI' ? '/pricing' : '/en/pricing'} class='btn orange w-full'>{l.btn.bookNow}</a>
+  <div class='max-w-[1122px] flex flex-col sm:flex-row'>
+    <div
+      class='flex flex-col items-center sm:items-start justify-center sm:justify-start sm:w-[60%] md:w-[40%] text-left'
+    >
+      <div class='title'>{l.menu.aboutUs}</div>
+      <div class='h-3'></div>
+      <h2 class='text-2xl'>{l.aboutUs.kyons}</h2>
+      <div class='h-6'></div>
+      <img src='/images/student-app-sm.png' alt='Student App' class='sm:hidden' />
+      <div class='h-6'></div>
+      <p>{l.aboutUs.text1}</p>
+      <div class='h-3'></div>
+      <p>{l.aboutUs.text2}</p>
+      <div class='h-4'></div>
+      <a href={l.lang == 'VI' ? '/pricing' : '/en/pricing'} class='btn orange w-full sm:w-auto'>{l.btn.bookNow}</a>
+    </div>
+    <div class='hidden sm:block sm:w-[40%] md:w-[60%]'>
+      <img src='/images/student-app.png' alt='Student App' class='ml-[70px] mr-[-70px] lg:ml-[150px] lg:mr-[-150px]' />
+    </div>
+  </div>
 </div>
 
 <script></script>

@@ -1,3 +1,6 @@
 .schools {
   @apply w-full flex flex-col justify-start items-center relative text-center lg:px-11 px-4 py-8 lg:py-10 bg-emerald-3;
 }
+.title.green {
+  @apply bg-darkEmerald;
+}

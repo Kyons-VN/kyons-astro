@@ -1,3 +1,17 @@
 .guild {
-  @apply bg-lightBlue-6 w-full flex flex-col justify-center items-center relative text-center p-4 lg:p-10 gap-2;
+  @apply w-full flex flex-col justify-center items-center relative text-center px-4 py-7 lg:p-10 gap-2;
+  background-image: url('/images/guild-circle.svg'), url('/images/guild-lines.svg'),
+    linear-gradient(210deg, #d0eeff 30.76%, #b2d1ff 82.92%);
+  background-position: left -237px top 0, left 256px top 500px, center center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: auto, auto, auto;
+}
+@media (max-width: 1024px) {
+  .guild {
+    background-image: url('/images/guild-planet.svg'), url('/images/guild-sm-circle1.svg'),
+      url('/images/guild-sm-circle2.svg'), linear-gradient(210deg, #d0eeff 30.76%, #b2d1ff 82.92%);
+    background-position: right -140px top 70px, left -237px top 515px, right -95px top 1000px, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: auto, auto, auto, auto;
+  }
 }

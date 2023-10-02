@@ -21,11 +21,18 @@ body {
   &.blue {
     @apply bg-lightBlue-1;
   }
-  &.orange {
+  &.orange.outlined {
+    @apply bg-white border border-orange text-orange shadow-none;
+  }
+  &.orange:not(.outlined) {
     @apply bg-orangeGradient shadow-orange1;
   }
   &.outlined {
     @apply bg-white border border-blueGrey-300 text-orange;
+
+    &.orange {
+      @apply bg-white border border-orange text-orange shadow-none;
+    }
   }
 }
 .indicators {
