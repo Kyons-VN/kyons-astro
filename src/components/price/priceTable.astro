@@ -46,7 +46,7 @@ const { l } = Astro.props;
     <div class='h-3'></div>
     <div class='flex flex-col p-3 bg-[#DAEFFF] rounded-lg w-full'>
       <div class='flex gap-2 items-center justify-start'>
-        <img src='/images/recommended-package.svg' alt='' />
+        <img src='/images/package1.svg' alt='' />
         <strong class='text-secondaryBlue'>{l.price.package1}</strong>
       </div>
       <div class='h-8 flex items-center gap-1.5'>
@@ -109,7 +109,7 @@ const { l } = Astro.props;
 <div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
   <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
     <div class='flex gap-2 items-center justify-start'>
-      <img src='/images/recommended-package.svg' alt='' />
+      <img src='/images/package2.svg' alt='' />
       <strong class='text-secondaryBlue'>{l.price.package2}</strong>
     </div>
     <div class='h-8 flex items-center gap-1.5'>
@@ -127,7 +127,7 @@ const { l } = Astro.props;
   <div class='h-3'></div>
   <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange'>{l.btn.bookNow}</a>
   <div class='h-4'></div>
-  <p id='include2' set:html={l.price.package2Include} />
+  <p id='include2' set:html={`${l.price.package2Include}:`} />
   <div class='h-3'></div>
   <ul class='star'>
     <li class='flex items-center view2 hidden'>

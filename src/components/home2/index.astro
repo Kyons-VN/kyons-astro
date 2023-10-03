@@ -29,23 +29,23 @@ const { l } = Astro.props;
   <div class='bg-white flex flex-col rounded-lg gap-3 w-full p-4 items-start sm:max-w-[360px]'>
     <strong class='text-primaryBlue'>{l.home.promotionEnd}</strong>
     <div class='flex gap-1 w-full items-center justify-center'>
-      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 py-[14px] rounded-lg'>
         <strong id='day' class='text-3xl'>10</strong>{l.home.days}
       </div>
       <span class='text-3xl text-primaryBlue'>:</span>
-      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 py-[14px] rounded-lg'>
         <strong id='hour' class='text-3xl'>27</strong>{l.home.hours}
       </div>
       <span class='text-3xl text-primaryBlue'>:</span>
-      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 py-[14px] rounded-lg'>
         <strong id='minute' class='text-3xl'>30</strong>{l.home.minutes}
       </div>
       <span class='text-3xl text-primaryBlue'>:</span>
-      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 px-3 py-[14px] rounded-lg'>
+      <div class='flex flex-col w-[calc((100%_-_36px)_/_4)] max-w-[70px] bg-blueGrey-800 py-[14px] rounded-lg'>
         <strong id='second' class='text-3xl'>12</strong>{l.home.seconds}
       </div>
     </div>
-    <a href='#contact' class='btn orange w-full'>{l.btn.bookNow}</a>
+    <a href={`${l.lang == 'VI' ? '' : '/en'}/pricing`} class='btn orange w-full'>{l.btn.bookNow}</a>
   </div>
 </div>
 

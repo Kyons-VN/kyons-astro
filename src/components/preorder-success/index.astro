@@ -13,19 +13,23 @@ const packageName = l['price'][id ?? ''];
   <div id='preorder-success' class='absolute top-[-82px]'></div>
   <div class='h-14'></div>
   <h1 class='text-2xl text-white'>{l.orderSuccess.thank.replace('[pk]', packageName)}</h1>
-  <div class='bgOrderCode'>
-    <h2 class='text-white text-base'>{l.orderSuccess.code}</h2>
-    <h4
-      id='copy'
-      class='flex items-center justify-center gap-3 bg-primaryBlue bg-opacity-50 w-[200px] rounded-lg text-white cursor-pointer'
-    >
-      <span id='code'></span>
-      <i class='icon-Duplicate text-2xl'></i>
-    </h4>
-  </div>
-  <div class='flex flex-col gap-6 p-6 rounded-lg shadow-2 bg-white'>
-    <span class='flex flex-col gap-2' set:html={l.orderSuccess.desc} />
-    <a href={l.lang == 'VI' ? '/' : '/en'} class='btn orange w-full'>{l.btn.backToHome}</a>
+  <div
+    class='flex flex-col gap-4 items-center sm:gap-10 w-full sm:max-w-[664px] sm:p-6 rounded-lg sm:shadow-2 sm:bg-white'
+  >
+    <div class='bgOrderCode'>
+      <h2 class='text-white text-base'>{l.orderSuccess.code}</h2>
+      <h4
+        id='copy'
+        class='flex items-center justify-center gap-3 bg-primaryBlue bg-opacity-50 w-[200px] rounded-lg text-white cursor-pointer'
+      >
+        <span id='code'></span>
+        <i class='icon-Duplicate text-2xl'></i>
+      </h4>
+    </div>
+    <div class='flex flex-col gap-6 p-6 sm:p-0 rounded-lg shadow-2 sm:shadow-none bg-white sm:bg-transparent'>
+      <span class='flex flex-col gap-2' set:html={l.orderSuccess.desc} />
+      <a href={l.lang == 'VI' ? '/' : '/en'} class='btn orange w-full'>{l.btn.backToHome}</a>
+    </div>
   </div>
 </div>
 
@@ -47,8 +51,13 @@ const order = JSON.parse(localStorage.getItem('order'));
 if (order) {
   localStorage.removeItem('order');
   const { name, order_code } = order;
+  console.log(name, packageName, order_code, params['code']);
   if (name != packageName || order_code != params['code']) {
+    alert(l.retry);
     window.location.href = l.lang == 'VI' ? '/' : '/en';
   }
+} else {
+  alert(l.retry);
+  window.location.href = l.lang == 'VI' ? '/' : '/en';
 }
 </script>
