@@ -11,164 +11,187 @@ const { l } = Astro.props;
 <div class='pricing'>
   <div id='pricing' class='absolute top-[-82px]'></div>
   <div class='h-20'></div>
-  <div class='flex flex-col gap-3 items-stretch w-full'>
+  <div class='flex flex-col gap-3 items-stretch w-full sm:max-w-[1122px]'>
     <div class='flex flex-col text-white gap-4 text-center'>
       <h1 class='text-2xl'>{l.price.more}</h1>
       <p>{l.price.canChange}</p>
     </div>
-    <PriceTable l={l} />
+    <div class='w-full hidden md:flex justify-center'>
+      <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold'>{l.price.recommended}</div>
+    </div>
+    <div class='flex flex-col md:grid grid-cols-3 gap-6'>
+      <PriceTable l={l} showAll={true} />
+    </div>
   </div>
 </div>
-<div class='flex flex-col items-stretch'>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
-    <h3 class='text-2xl text-center'>{l.price.compare}</h3>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <strong class='text-lightBlue-1 text-base'>{l.price.phoRi}</strong>
-        <strong>{l.price.free}</strong>
-      </div>
-      <div class='flex flex-col items-center'>
-        <strong class='text-lightBlue-1 text-base'>1 {l.price.month}</strong>
-        <strong>69K / 30 {l.price.days}</strong>
-      </div>
-      <div class='flex flex-col items-center'>
-        <strong class='text-lightBlue-1 text-base'>3 {l.price.months}</strong>
-        <strong>159K / 92 {l.price.days}</strong>
+<div class='w-full flex justify-center relative'>
+  <div id='compare' class='absolute top-[-82px]'></div>
+  <div class='flex flex-col items-stretch w-full sm:max-w-[1122px]'>
+    <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
+      <h3 class='text-2xl text-center'>{l.price.compare}</h3>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'></div>
+        <div class='flex flex-col items-center'>
+          <strong class='text-lightBlue-1 text-base'>{l.price.phoRi}</strong>
+          <strong>{l.price.free}</strong>
+          <div class='h-2'></div>
+          <a href='https://student.kyons.vn' target='_blank' class='btn outlined orange'>{l.btn.use}</a>
+        </div>
+        <div class='flex flex-col items-center'>
+          <strong class='text-lightBlue-1 text-base'>1 {l.price.month}</strong>
+          <strong>69K / 30 {l.price.days}</strong>
+          <div class='h-2'></div>
+          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange'>{l.btn.use}</a>
+        </div>
+        <div class='flex flex-col items-center'>
+          <strong class='text-lightBlue-1 text-base'>3 {l.price.months}</strong>
+          <strong>159K / 92 {l.price.days}</strong>
+          <div class='h-2'></div>
+          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange'>{l.btn.use}</a>
+        </div>
       </div>
     </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-white'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.free1}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.free1}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-blueGrey-100'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.free2}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.free2}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-white'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.free3}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.free3}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-blueGrey-100'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.note}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'></div>
+        <div class='flex flex-col items-center'>
+          <span class='text-blueGrey-500'>30MB</span>
+        </div>
+        <div class='flex flex-col items-center'>200MB</div>
+        <div class='flex flex-col items-center'>200MB</div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-white'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.package12}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.package12}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/grey-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-blueGrey-100'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.package13}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.package13}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/grey-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-white'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.package14}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.package14}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/grey-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='border-b-blueGrey-300 border-b p-4 sm:py-6 flex flex-col gap-2 bg-blueGrey-100'>
+      <div class='flex gap-2 sm:hidden'>
+        <h6 class='text-sm'>{l.price.newProgram}</h6>
+        <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
+      </div>
+      <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
+        <div class='hidden sm:flex'><h6 class='text-sm'>{l.price.newProgram}</h6></div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/grey-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/grey-check.svg' alt='' />
+        </div>
+        <div class='flex flex-col items-center'>
+          <img src='/images/green-check.svg' alt='' />
+        </div>
+      </div>
+    </div>
+    <div class='h-11'></div>
   </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2 bg-white'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.free1}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.free2}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2 bg-white'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.free3}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.note}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <span class='text-blueGrey-500'>30MB</span>
-      </div>
-      <div class='flex flex-col items-center'>200MB</div>
-      <div class='flex flex-col items-center'>200MB</div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2 bg-white'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.package12}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/grey-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.package13}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/grey-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2 bg-white'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.package14}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/grey-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>
-    <div class='flex gap-2'>
-      <h6 class='text-sm'>{l.price.newProgram}</h6>
-      <i class='icon-Help text-orange cursor-pointer'></i>
-    </div>
-    <div class='grid grid-cols-3 gap-2'>
-      <div class='flex flex-col items-center'>
-        <img src='/images/grey-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/grey-check.svg' alt='' />
-      </div>
-      <div class='flex flex-col items-center'>
-        <img src='/images/green-check.svg' alt='' />
-      </div>
-    </div>
-  </div>
-  <div class='h-11'></div>
 </div>
 <script></script>

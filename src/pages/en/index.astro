@@ -6,7 +6,7 @@ import Layout from '@layouts/Layout.astro';
 import '@styles/global.scss';
 ---
 
-<Layout lang='en'>
+<Layout lang='en' title={l.aboutUs.kyons}>
   <Menu l={l} client:only='preact' />
   <MainContent l={l} />
 </Layout>

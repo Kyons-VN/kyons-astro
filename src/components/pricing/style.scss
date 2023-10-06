@@ -1,5 +1,5 @@
 .pricing {
-  @apply w-full min-h-screen flex flex-col justify-center lg:justify-start items-center relative 
+  @apply w-full flex flex-col justify-center lg:justify-start items-center relative 
   lg:bg-[url('/images/home-bg.svg')]
   bg-no-repeat bg-bottom bg-cover text-left p-4 lg:p-11 gap-6;
 }

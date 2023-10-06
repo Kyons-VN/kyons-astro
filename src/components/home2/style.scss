@@ -1,5 +1,5 @@
 .home {
-  @apply w-full min-h-screen sm:h-screen flex flex-col justify-center lg:justify-start items-center relative text-white text-center p-4 lg:p-11 gap-8 lg:gap-6;
+  @apply w-full min-h-screen sm:h-screen sm:min-h-[800px] flex flex-col justify-center lg:justify-start items-center relative text-white text-center p-4 lg:p-11 gap-8 lg:gap-6;
   fill: radial-gradient(96.95% 86.24% at 50% 100%, #0f172a 18.15%, #1d44a8 55.89%, #202f65 72.19%, #101625 100%);
 
   background-image: url('/images/home-big-planet.svg'), url('/images/home2-planet-1.svg'),

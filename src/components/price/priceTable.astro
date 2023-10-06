@@ -1,13 +1,14 @@
 ---
 export interface Props {
   l: any;
+  showAll: boolean;
 }
 
-const { l } = Astro.props;
+const { l, showAll } = Astro.props;
 ---
 
 <div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
-  <div class='flex flex-col p-3 bg-[#E4E4E4] rounded-lg gap-1.5'>
+  <div class='flex flex-col p-3 bg-[#E4E4E4] rounded-lg gap-1.5 md:min-h-[102px]'>
     <div class='flex gap-2 items-center justify-start'>
       <img src='/images/free-package.svg' alt='' />
       <strong>{l.price.freePackage}</strong>
@@ -34,16 +35,21 @@ const { l } = Astro.props;
     </li>
   </ul>
   <span class='flex-1 hidden sm:flex'></span>
-  <a
-    href={`${l.lang == 'VI' ? '' : '/en'}/price`}
-    class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-    >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
-  >
+  {
+    !showAll && (
+      <a
+        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
+        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+      >
+        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
+      </a>
+    )
+  }
 </div>
 <div class='flex flex-col rounded-lg p-4 bg-white items-start shadow-2'>
   <div class='flex flex-col w-full items-start'>
-    <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold'>{l.price.recommended}</div>
-    <div class='h-3'></div>
+    <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold md:hidden'>{l.price.recommended}</div>
+    <div class='h-3 md:hidden'></div>
     <div class='flex flex-col p-3 bg-[#DAEFFF] rounded-lg w-full'>
       <div class='flex gap-2 items-center justify-start'>
         <img src='/images/package1.svg' alt='' />
@@ -67,13 +73,13 @@ const { l } = Astro.props;
     <p id='include1' set:html={`${l.price.package1Include}:`} />
     <div class='h-3'></div>
     <ul class='star'>
-      <li class='sm:flex items-center view1 hidden'>
+      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
         {l.price.free1}
       </li>
-      <li class='flex items-center view1 hidden'>
+      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
         {l.price.free2}
       </li>
-      <li class='flex items-center view1 hidden'>
+      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
         {l.price.free3}
       </li>
       <li class='flex items-center'>
@@ -90,7 +96,8 @@ const { l } = Astro.props;
       </li>
     </ul>
     <div class='h-3'></div>
-    <button id='viewFull1' class='text-orange font-bold w-full flex sm:hidden justify-between'>
+    <span class='flex-1'></span>
+    <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hidden'}`}>
       <span>{l.price.full}</span>
       <i class='icon-ArrowDown'></i>
     </button>
@@ -98,19 +105,23 @@ const { l } = Astro.props;
       <span>{l.price.short}</span>
       <i class='icon-ArrowUp'></i>
     </button>
-    <span class='flex-1 hidden sm:flex'></span>
-    <a
-      href={`${l.lang == 'VI' ? '' : '/en'}/price`}
-      class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-      >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
-    >
+    {
+      !showAll && (
+        <a
+          href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
+          class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+        >
+          {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
+        </a>
+      )
+    }
   </div>
 </div>
 <div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
   <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
     <div class='flex gap-2 items-center justify-start'>
       <img src='/images/package2.svg' alt='' />
-      <strong class='text-secondaryBlue'>{l.price.package2}</strong>
+      <strong class='text-orange'>{l.price.package2}</strong>
     </div>
     <div class='h-8 flex items-center gap-1.5'>
       <strong class='text-sm'>VND</strong>
@@ -156,7 +167,8 @@ const { l } = Astro.props;
     </li>
   </ul>
   <div class='h-3'></div>
-  <button id='viewFull2' class='text-orange font-bold w-full flex justify-between sm:hidden'>
+  <span class='flex-1'></span>
+  <button id='viewFull2' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hidden'}`}>
     <span>{l.price.full}</span>
     <i class='icon-ArrowDown'></i>
   </button>
@@ -164,12 +176,16 @@ const { l } = Astro.props;
     <span>{l.price.short}</span>
     <i class='icon-ArrowUp'></i>
   </button>
-  <span class='flex-1 hidden sm:flex'></span>
-  <a
-    href={`${l.lang == 'VI' ? '' : '/en'}/price`}
-    class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-    >{l.price.detailsAndCompare} <i class='icon-ArrowRight'></i></a
-  >
+  {
+    !showAll && (
+      <a
+        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
+        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+      >
+        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
+      </a>
+    )
+  }
 </div>
 <style lang='scss'>
   ul.star {

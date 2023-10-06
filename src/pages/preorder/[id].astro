@@ -10,9 +10,10 @@ export function getStaticPaths() {
 }
 
 const { id } = Astro.params;
+const packageName = (l as any)['price'][id ?? 'free'];
 ---
 
-<Layout lang='vi'>
+<Layout lang='vi' title=`${l.preorder.title} ${packageName}`>
   <Menu l={l} client:only='preact' />
   <Preorder1 l={l} id={id} />
   <Footer l={l} />

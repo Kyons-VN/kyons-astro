@@ -12,7 +12,9 @@
     "retry": "Thử lại",
     "completed": "Đã hoàn thành",
     "uncompleted": "Chưa nha",
-    "backToHome": "Về trang chủ"
+    "backToHome": "Về trang chủ",
+    "use": "Sử dụng",
+    "book": "Đặt trước"
   },
   "menu": {
     "lang": "VI",
@@ -97,7 +99,7 @@
     "others6": "Không có nhiều tính năng khác hỗ trợ người học"
   },
   "aboutUs": {
-    "kyons": "Kyons - Ứng dụng giúp bạn đạt được điểm số ưng ý trong thời gian ngắn nhất",
+    "kyons": "KYONS - Ứng dụng giúp bạn đạt được điểm số ưng ý trong thời gian ngắn nhất",
     "text1": "Được xây dựng từ những người học giàu nhiệt huyết nhưng cũng rất thực tế, Kyons mang sứ mệnh xây dựng một giải pháp học tập từ góc nhìn của chính người học và giải quyết vấn đề thực chất của người học.",
     "text2": "Chúng tôi tin rằng học tập là một hành trình phải đủ vui để có thể bắt đầu và đủ ngắn để giúp mỗi người đi tới giấc mơ riêng của mình một cách nhanh chóng và hiệu quả nhất.",
     "ethos": "Tăng tốc khởi nghiệp bởi Ngân hàng Thế giới và SUNY-Korea",
@@ -189,7 +191,7 @@
     "phone": "Số điện thoại của bạn",
     "phoneExp": "Vd: 0943633333333",
     "orderCode": "Mã đặt hàng",
-    "notice": "<strong class=\"text-red-0\">Lưu ý:</strong><ul class='list-disc pl-5'><li>Bạn hãy liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc và hỗ trợ kịp thời nhé!</li><li>Nếu đã có tài khoản trên Kyons, bạn hãy sử dụng <strong>email đã đăng ký</strong> với Kyons.</li><li>Nếu chưa có tài khoản, Kyons sẽ <strong>tạo tài khoản</strong> và gửi mật khẩu về địa chỉ email này. Nên hãy chắc chắn là điền đúng thông tin nhé :3</li></ul>",
+    "notice": "<strong class=\"text-red-0\">Lưu ý:</strong><ul class='list-disc pl-5'><li>Bạn hãy liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> để được giải đáp thắc mắc và hỗ trợ kịp thời nhé!</li><li>Nếu đã có tài khoản trên Kyons, bạn hãy sử dụng <strong>email đã đăng ký</strong> với Kyons.</li><li>Nếu chưa có tài khoản, Kyons sẽ <strong>tạo tài khoản</strong> và gửi mật khẩu về địa chỉ email này. Nên hãy chắc chắn là điền đúng thông tin nhé :3</li></ul>",
     "step2": "Bước 2:",
     "step2Desc": "<strong>Quét mã QR</strong> bằng ứng dụng Internet Banking hoặc <strong>sao chép thông tin chuyển khoản</strong> dưới đây",
     "amount": "Số tiền:",
@@ -203,12 +205,12 @@
   "invalidEmail": "Email không hợp lệ!",
   "invalidPhone": "Số điện thoại không hợp lệ!",
   "alreadyPreorder": "Bạn đã đăng kí gói học tập trước đó rồi",
-  "alreadyPreorderDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được giải đáp thắc mắc.",
+  "alreadyPreorderDesc": "<p>Thông tin của bạn đã được dùng để đăng ký gói học tập mất rồi.</p><p>Bạn vui lòng thử lại với thông tin khác hoặc liên hệ <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> để được giải đáp thắc mắc.",
   "alreadyTransfer": "Hoàn thành chuyển khoản",
   "alreadyTransferDesc": "Bạn đã hoàn thành bước chuyển khoản của giao dịch này chưa đó?",
   "orderSuccess": {
     "thank": "Cảm ơn bạn đã đăng ký trước [pk]!",
     "code": "Mã đặt hàng của bạn",
-    "desc": "<p>Kyons đã nhận được thông tin và đang tiến hành xử lí.</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi <strong>hình chụp giao dịch chuyển khoản</strong> đến <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> để được hỗ trợ nhé!</p>"
+    "desc": "<p>Kyons đã nhận được thông tin và đang tiến hành xử lí.</p><p>Nếu sau 24h vẫn chưa nhận được email xác nhận, bạn hãy gửi <strong>hình chụp giao dịch chuyển khoản</strong> đến <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> để được hỗ trợ nhé!</p>"
   }
 }

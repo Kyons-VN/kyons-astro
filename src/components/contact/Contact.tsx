@@ -148,13 +148,13 @@ export function Contact({ l }: Props, state: any) {
                         <div class='h-6'></div>
                         <button
                           type='button'
-                          class='btn w-full md:w-auto flex md:inline-block justify-center'
+                          class='btn orange w-full md:w-auto flex md:inline-block justify-center'
                           onClick={() => {
                             preventScroll(false);
                             setSended(0);
                           }}
                         >
-                          {l.close}
+                          {l.btn.back}
                         </button>
                       </div>
                     </>

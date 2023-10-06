@@ -12,7 +12,9 @@
     "retry": "Retry",
     "completed": "Completed",
     "uncompleted": "Not yet",
-    "backToHome": "Back to Homepage"
+    "backToHome": "Back to Homepage",
+    "use": "Use",
+    "book": "Pre-order"
   },
   "menu": {
     "lang": "EN",
@@ -97,7 +99,7 @@
     "others6": "There are not many other features to support learners"
   },
   "aboutUs": {
-    "kyons": "Kyons - Ứng dụng giúp bạn đạt được điểm số ưng ý trong thời gian ngắn nhất",
+    "kyons": "KYONS - A platform that helps you achieve academic goals in the shortest time",
     "text1": "Built by passionate yet practical learners, Kyons is on a mission to create a learning solution from learners' perspective to solve learners' problems.",
     "text2": "We believe learning is a journey that should be fun enough to be on and short enough for one to realise their ultimate dream in the quickest and most efficient way.",
     "ethos": "Accelerated by World Bank and SUNY-Korea",
@@ -189,7 +191,7 @@
     "phone": "Phone number",
     "phoneExp": "Vd: 0943633333333",
     "orderCode": "Mã đặt hàng",
-    "notice": "<strong class=\"text-red-0\">Note:</strong><ul><li>If you have any problems, please hit <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> a message with your pre-order code for support.</li><li>If you already have Kyons account, use the <strong>email that you registered</strong>.</li><li>If not, Kyons will <strong>create one</strong> for you with the above email and send a password to your email So please check your information carefully before submitting it :3</li></ul>",
+    "notice": "<strong class=\"text-red-0\">Note:</strong><ul><li>If you have any problems, please hit <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> a message with your pre-order code for support.</li><li>If you already have Kyons account, use the <strong>email that you registered</strong>.</li><li>If not, Kyons will <strong>create one</strong> for you with the above email and send a password to your email So please check your information carefully before submitting it :3</li></ul>",
     "step2": "Step 2:",
     "step2Desc": "<strong>Scan the QR code</strong> or copy <strong>banking information</strong> below to transfer",
     "amount": "Amount:",
@@ -197,20 +199,18 @@
     "content": "Message",
     "bank": "Bank name",
     "accountNumber": "Account number",
-    "accountName": "Account name",
-    "thank": "Your pre-order has been placed [pk]!",
-    "processing": "<p>Kyons has received your pre-order request. We will proceed your order and send you a confirmation email within 24 hours.</p><p>If you do not receive any email from us after that time, please send the pre-order code and your transaction receipt to <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for support!</p>"
+    "accountName": "Account name"
   },
   "retry": "Error, please try again later!",
   "invalidEmail": "Invalid email!",
   "invalidPhone": "Invalid phone number!",
   "alreadyPreorder": "You have already registered for a study plan before",
-  "alreadyPreorderDesc": "<p>Your information has been used to register for the learning package already.</p><p>Please try again with other information or contact <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for further assistance.",
+  "alreadyPreorderDesc": "<p>Your information has been used to register for the learning package already.</p><p>Please try again with other information or contact <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> for further assistance.",
   "alreadyTransfer": "Complete the bank transfer",
   "alreadyTransferDesc": "Have you completed the transfer step for this transaction?",
   "orderSuccess": {
     "thank": "Your pre-order has been placed [pk]!",
     "code": "Your order code",
-    "desc": "<p>Kyons has received the information and is currently processing it.</p><p>If you don't receive a confirmation email within 24 hours, please send a <strong>screenshot of the successful transaction</strong> to <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange\">Kyons fanpage</a> for support!</p>"
+    "desc": "<p>Kyons has received the information and is currently processing it.</p><p>If you don't receive a confirmation email within 24 hours, please send a <strong>screenshot of the successful transaction</strong> to <a href=\"https://www.facebook.com/KyonsVN\" target=\"_blank\" class=\"text-orange font-bold\">Kyons fanpage</a> for support!</p>"
   }
 }

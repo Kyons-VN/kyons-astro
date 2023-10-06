@@ -7,7 +7,7 @@ import Layout from '@layouts/Layout.astro';
 import '@styles/global.scss';
 ---
 
-<Layout lang='vi'>
+<Layout lang='vi' title={l.price.select}>
   <Menu l={l} client:only='preact' />
   <Pricing1 l={l} />
   <Footer l={l} />
