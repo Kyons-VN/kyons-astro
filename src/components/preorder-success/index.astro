@@ -53,11 +53,11 @@ if (order) {
   const { name, order_code } = order;
   console.log(name, packageName, order_code, params['code']);
   if (name != packageName || order_code != params['code']) {
-    alert(l.retry);
-    window.location.href = l.lang == 'VI' ? '/' : '/en';
+    console.log('1');
+    // window.location.href = l.lang == 'VI' ? '/' : '/en';
   }
 } else {
-  alert(l.retry);
-  window.location.href = l.lang == 'VI' ? '/' : '/en';
+  console.log('2');
+  // window.location.href = l.lang == 'VI' ? '/' : '/en';
 }
 </script>

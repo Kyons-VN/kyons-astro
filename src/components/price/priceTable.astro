@@ -34,7 +34,7 @@ const { l, showAll } = Astro.props;
       {l.price.free4}
     </li>
   </ul>
-  <span class='flex-1 hidden sm:flex'></span>
+  <span class='flex-1 sm:flex'></span>
   {
     !showAll && (
       <a
@@ -73,13 +73,13 @@ const { l, showAll } = Astro.props;
     <p id='include1' set:html={`${l.price.package1Include}:`} />
     <div class='h-3'></div>
     <ul class='star'>
-      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
+      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
         {l.price.free1}
       </li>
-      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
+      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
         {l.price.free2}
       </li>
-      <li class={`flex items-center view1 ${showAll && 'hidden'}`}>
+      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
         {l.price.free3}
       </li>
       <li class='flex items-center'>
@@ -97,11 +97,11 @@ const { l, showAll } = Astro.props;
     </ul>
     <div class='h-3'></div>
     <span class='flex-1'></span>
-    <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hidden'}`}>
+    <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
       <span>{l.price.full}</span>
       <i class='icon-ArrowDown'></i>
     </button>
-    <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hidden'>
+    <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hide'>
       <span>{l.price.short}</span>
       <i class='icon-ArrowUp'></i>
     </button>
@@ -141,25 +141,25 @@ const { l, showAll } = Astro.props;
   <p id='include2' set:html={`${l.price.package2Include}:`} />
   <div class='h-3'></div>
   <ul class='star'>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.free1}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.free2}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.free3}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.package11}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.package12}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.package13}
     </li>
-    <li class='flex items-center view2 hidden'>
+    <li class='flex items-center view2 hide'>
       {l.price.package14}
     </li>
     <li class='flex items-center'>
@@ -168,11 +168,11 @@ const { l, showAll } = Astro.props;
   </ul>
   <div class='h-3'></div>
   <span class='flex-1'></span>
-  <button id='viewFull2' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hidden'}`}>
+  <button id='viewFull2' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
     <span>{l.price.full}</span>
     <i class='icon-ArrowDown'></i>
   </button>
-  <button id='viewShort2' class='text-orange font-bold w-full flex justify-between hidden'>
+  <button id='viewShort2' class='text-orange font-bold w-full flex justify-between hide'>
     <span>{l.price.short}</span>
     <i class='icon-ArrowUp'></i>
   </button>
@@ -200,6 +200,9 @@ const { l, showAll } = Astro.props;
       // }
     }
   }
+  .hide {
+    display: none;
+  }
 </style>
 <script>
   const viewFull1 = document.getElementById('viewFull1')!;
@@ -210,11 +213,11 @@ const { l, showAll } = Astro.props;
   viewShort1.addEventListener('click', () => toggleView1());
   function toggleView1() {
     for (let i = 0; i < view1Elms.length; i++) {
-      view1Elms[i].classList.toggle('hidden');
+      view1Elms[i].classList.toggle('hide');
     }
-    include1.classList.toggle('hidden');
-    viewFull1.classList.toggle('hidden');
-    viewShort1.classList.toggle('hidden');
+    include1.classList.toggle('hide');
+    viewFull1.classList.toggle('hide');
+    viewShort1.classList.toggle('hide');
   }
 
   const viewFull2 = document.getElementById('viewFull2')!;
@@ -225,10 +228,10 @@ const { l, showAll } = Astro.props;
   viewShort2.addEventListener('click', () => toggleView2());
   function toggleView2() {
     for (let i = 0; i < view2Elms.length; i++) {
-      view2Elms[i].classList.toggle('hidden');
+      view2Elms[i].classList.toggle('hide');
     }
-    include2.classList.toggle('hidden');
-    viewFull2.classList.toggle('hidden');
-    viewShort2.classList.toggle('hidden');
+    include2.classList.toggle('hide');
+    viewFull2.classList.toggle('hide');
+    viewShort2.classList.toggle('hide');
   }
 </script>

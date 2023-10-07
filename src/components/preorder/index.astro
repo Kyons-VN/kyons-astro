@@ -43,7 +43,7 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
         />
         <button id='submit1' class='btn orange' type='button'>{l.btn.continue}</button>
       </form>
-      <form id='step2' class='flex flex-col hidden'>
+      <form id='step2' class='flex flex-col hide'>
         <h3 class='text-lightBlue-1 text-base'>{l.preorder.step2}</h3>
         <div class='h-2'></div>
         <p set:html={`${l.preorder.step2Desc}:`} />
@@ -98,8 +98,10 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
         </div>
         <div class='h-6'></div>
         <div class='flex flex-col sm:flex-row gap-2'>
-          <button id='alreadyTransfer' class='btn orange w-full' type='button'>{l.btn.alreadyTransfer}</button>
-          <button id='back2' class='btn outlined w-full' type='button'>{l.btn.back}</button>
+          <button id='alreadyTransfer' class='btn orange w-full sm:order-2' type='button'
+            >{l.btn.alreadyTransfer}</button
+          >
+          <button id='back2' class='btn outlined w-full sm:order-1' type='button'>{l.btn.back}</button>
         </div>
       </form>
     </div>
@@ -108,9 +110,9 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
 
 <div
   id='alreadyPreordered'
-  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hidden'
+  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hide'
 >
-  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[700px] items-center justify-center'>
+  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[400px] items-center justify-center'>
     <img src='/images/already-preorder.svg' alt='' />
     <div class='col w-full gap-2'>
       <h6>{l.alreadyPreorder}</h6>
@@ -121,9 +123,9 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
 </div>
 <div
   id='alreadyTransfered'
-  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hidden'
+  class='fixed z-30 top-0 left-0 p-4 w-full h-screen bg-black bg-opacity-80 flex items-center justify-center hide'
 >
-  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[700px] items-center justify-center'>
+  <div class='col rounded-2xl bg-white gap-4 p-6 w-full md:w-[400px] items-center justify-center'>
     <img src='/images/already-transfer.svg' alt='' />
     <div class='col w-full gap-2'>
       <h6>{l.alreadyTransfer}</h6>
@@ -169,7 +171,7 @@ const image = document.getElementById('image');
 
 confirmTransferBtn.addEventListener('click', async () => {
   const body = {
-    order_code: code.innerHTML,
+    order_code: code.innerText,
     current_status: 'created_preorder',
   };
   const response = await fetch('https://student-api-dev.kyons.vn/pre_order/status', {
@@ -180,14 +182,14 @@ confirmTransferBtn.addEventListener('click', async () => {
     },
   });
   if (response.status == 201) {
-    window.location.href = `${l.lang == 'VI' ? '' : '/en'}/preorder-success/${id}?code=${code.innerText}`;
+    window.location.href = `${l.lang == 'VI' ? '' : '/en'}/preorder-success/${id}?code=${body.order_code}`;
   } else {
     alert(l.retry);
   }
 });
 alreadyTransferBtn.addEventListener('click', () => {
-  document.getElementById('alreadyTransfered').classList.remove('hidden');
-  document.body.style.overflowY = 'hidden';
+  document.getElementById('alreadyTransfered').classList.remove('hide');
+  document.body.style.overflowY = 'hide';
 });
 copyCode.addEventListener('click', () => {
   navigator.clipboard.writeText(copyText.innerText);
@@ -202,16 +204,16 @@ copyName.addEventListener('click', () => {
   navigator.clipboard.writeText(copyName.innerText);
 });
 back.addEventListener('click', () => {
-  document.getElementById('alreadyTransfered').classList.add('hidden');
+  document.getElementById('alreadyTransfered').classList.add('hide');
   document.body.removeAttribute('style');
 });
 back2.addEventListener('click', () => {
-  form1.classList.remove('hidden');
-  form2.classList.add('hidden');
+  form1.classList.remove('hide');
+  form2.classList.add('hide');
 });
 
 retry.addEventListener('click', () => {
-  document.getElementById('alreadyPreordered').classList.add('hidden');
+  document.getElementById('alreadyPreordered').classList.add('hide');
   document.body.removeAttribute('style');
 });
 
@@ -259,8 +261,8 @@ submit1.addEventListener('click', async (e) => {
     window.localStorage.setItem('order', JSON.stringify(order));
     if (order.status != 'created_preorder') return;
     code.innerHTML = order.order_code;
-    form2.classList.remove('hidden');
-    form1.classList.add('hidden');
+    form2.classList.remove('hide');
+    form1.classList.add('hide');
     const imageUrl = `https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=${id == 'package1' ? 69 : 159
       }000&addInfo=${copyCode.innerText.trim()}&accountName=Công ty TNHH Kyons`;
     await loadImage(imageUrl, image);
@@ -279,8 +281,8 @@ submit1.addEventListener('click', async (e) => {
         }
       }
     } else if (response.status == 409) {
-      document.getElementById('alreadyPreordered').classList.remove('hidden');
-      document.body.style.overflowY = 'hidden';
+      document.getElementById('alreadyPreordered').classList.remove('hide');
+      document.body.style.overflowY = 'hide';
     } else {
       alert(l.retry);
     }
