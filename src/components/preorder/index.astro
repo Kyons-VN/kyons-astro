@@ -185,7 +185,7 @@ confirmTransferBtn.addEventListener('click', async () => {
     },
   });
   if (response.status == 201) {
-    window.location.href = `${l.lang == 'VI' ? '' : '/en'}/preorder-success/${id}?code=${body.order_code}`;
+    window.location.href = `${l.lang == 'VI' ? '' : '/en'}/preorder-success/${id}/?code=${body.order_code}`;
   } else {
     alert(l.retry);
   }
@@ -289,7 +289,7 @@ submit1.addEventListener('click', async (e) => {
     } else {
       alert(l.retry);
     }
-    }
-    return false;
-  });
+  }
+  return false;
+});
 </script>

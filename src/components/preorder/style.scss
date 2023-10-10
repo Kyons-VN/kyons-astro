@@ -1,9 +1,10 @@
 .preorder {
   @apply w-full min-h-screen flex flex-col justify-start sm:justify-center items-center relative text-left px-4 py-8 lg:p-11 gap-6;
-  background-image: url('/images/home-bg.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('/images/home2-planet-1.svg'), url('/images/home2-planet-2.svg'), url('/images/home-star.svg'),
+    url('/images/home-bg.svg');
+  background-position: left 62px top 150px, right -141px bottom 90px, center center, center bottom; //, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 25vh, 40vh, cover, cover;
 }
 .hide {
   display: none;

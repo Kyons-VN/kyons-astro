@@ -9,35 +9,55 @@ const { l } = Astro.props;
 <div
   class='lg:h-auto w-full bg-blueGrey-800 flex flex-col items-center text-blueGrey-200 bg-footer p-4 lg:px-14 lg:py-5 z-10'
 >
-  <div class='w-full sm:max-w-[1122px] lg:h-[124px]'>
+  <div class='w-full sm:max-w-[1122px]'>
     <div class='flex flex-col lg:flex-row justify-stretch gap-10 w-full items-stretch'>
       <div class='lg:w-auto w-full flex justify-center items-start'>
         <img src='/images/logo.svg' alt='Logo Kyons' class='w-[180px]' />
       </div>
       <div class='flex flex-col gap-2 w-auto items-center lg:items-start'>
         <div class='lg:flex flex-row gap-2 text-center lg:text-left'>
-          <i class='icon-Location'></i>
+          <i class='icon-Location hidden sm:flex'></i>
           <span class='flex flex-col gap-2'>
             <strong>{l.footer.company}</strong>
             <span set:html={l.footer.address} />
           </span>
         </div>
         <div class='lg:flex flex-row gap-2'>
-          <i class='icon-Phone'></i>
+          <i class='icon-Phone hidden sm:flex'></i>
           <span>{l.footer.phone}</span>
         </div>
       </div>
       <div class='flex flex-col gap-3 items-center lg:items-start whitespace-nowrap'>
-        <a href='#features' class='font-bold'>
+        <!-- <a href='#features' class='font-bold'>
           {l.menu.features}
-        </a>
-        <a href='#students' class='font-bold'>
+        </a> -->
+        <span class='font-bold'>
           {l.menu.forStudents}
+        </span>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#about-us`}>
+          {l.menu.aboutUs}
         </a>
-        <a href='#schools' class='font-bold'>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#problem`}>
+          {l.menu.problemsAndSolution}
+        </a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#guild`}>
+          {l.menu.guild}
+        </a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/pricing`}>
+          {l.menu.price}
+        </a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#schools`} class='font-bold sm:hidden'>
           {l.menu.forSchools}
         </a>
-        <a href='#contact' class='font-bold'>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='font-bold sm:hidden'>
+          {l.menu.contact}
+        </a>
+      </div>
+      <div class='sm:flex flex-col gap-3 items-center lg:items-start whitespace-nowrap hidden'>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#schools`} class='font-bold'>
+          {l.menu.forSchools}
+        </a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='font-bold'>
           {l.menu.contact}
         </a>
       </div>

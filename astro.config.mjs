@@ -1,11 +1,9 @@
+import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import i18n from 'astro-i18n';
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig } from 'astro/config';
-import { loadEnv } from 'vite';
-
-import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,5 +24,3 @@ export default defineConfig({
     preact({ compat: true }),
   ],
 });
-
-export const { APP_URL } = loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), 'AAA');

@@ -53,7 +53,7 @@ export default function Menu({ l }: Props) {
   return (
     <nav id='menu' className={`menu ${!isOpen ? 'hide' : 'show'}`}>
       <div className='flex flex-row items-center justify-between w-full lg:w-auto'>
-        <a href='/#home'>
+        <a href={l.lang == 'VI' ? '/' : '/en/'}>
           <img class='w-[100px] cursor-pointer' src='/images/logo.svg' alt='Logo' />
         </a>
         <button class='lg:hidden text-[24px]' onClick={toggle}>
@@ -126,36 +126,19 @@ export default function Menu({ l }: Props) {
               // style='bottom: calc(-100% - 30px);'
               // onClick={() => setIsStudentHover(false)}
             >
-              <span
-                data-asd={isStudentHover}
-                onClick={() => {
-                  window.location.href = '/#about-us';
-                }}
-              >
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#about-us'}>
                 {l.menu.aboutUs}
-              </span>
+              </a>
               <hr class='text-blueGrey-300' />
-              <a
-                onClick={() => {
-                  window.location.href = '/#problem';
-                }}
-              >
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#problem'}>
                 {l.menu.problemsAndSolution}
               </a>
               <hr class='text-blueGrey-300' />
-              <a
-                onClick={() => {
-                  window.location.href = '/#guild';
-                }}
-              >
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
                 {l.menu.guild}
               </a>
               <hr class='text-blueGrey-300' />
-              <a
-                onClick={() => {
-                  window.location.href = '/pricing';
-                }}
-              >
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/pricing'}>
                 {l.menu.price}
               </a>
             </div>
