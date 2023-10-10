@@ -57,7 +57,10 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
           />
           <div class='flex flex-col sm:flex-1 sm:items-start'>
             <div class='h-3'></div>
-            <h2 class='text-lg font-bold'>{l.preorder.amount} {id == 'package1' ? 69 : 159}.000đ</h2>
+            <h2 class='text-lg font-bold text-center sm:text-left'>
+              {l.preorder.amount}
+              {id == 'package1' ? 69 : 159}.000đ
+            </h2>
             <div class='h-3'></div>
             <a
               href={`/${l.lang == 'VI' ? '' : 'en/'}preorder/${id == 'package1' ? 'package2' : 'package1'}`}
@@ -286,7 +289,7 @@ submit1.addEventListener('click', async (e) => {
     } else {
       alert(l.retry);
     }
-  }
-  return false;
-});
+    }
+    return false;
+  });
 </script>

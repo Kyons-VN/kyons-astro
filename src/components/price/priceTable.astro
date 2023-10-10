@@ -67,55 +67,55 @@ const { l, showAll } = Astro.props;
         <span>30 {l.home.days}</span>
       </div>
     </div>
-    <div class='h-3'></div>
-    <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange w-full'>{l.btn.bookNow}</a>
-    <div class='h-4'></div>
-    <p id='include1' set:html={`${l.price.package1Include}:`} />
-    <div class='h-3'></div>
-    <ul class='star'>
-      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
-        {l.price.free1}
-      </li>
-      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
-        {l.price.free2}
-      </li>
-      <li class={`flex items-center view1 ${showAll && 'hide'}`}>
-        {l.price.free3}
-      </li>
-      <li class='flex items-center'>
-        {l.price.package11}
-      </li>
-      <li class='flex items-center'>
-        {l.price.package12}
-      </li>
-      <li class='flex items-center'>
-        {l.price.package13}
-      </li>
-      <li class='flex items-center'>
-        {l.price.package14}
-      </li>
-    </ul>
-    <div class='h-3'></div>
-    <span class='flex-1'></span>
-    <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
-      <span>{l.price.full}</span>
-      <i class='icon-ArrowDown'></i>
-    </button>
-    <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hide'>
-      <span>{l.price.short}</span>
-      <i class='icon-ArrowUp'></i>
-    </button>
-    {
-      !showAll && (
-        <a
-          href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
-          class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-        >
-          {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
-        </a>
-      )
-    }
   </div>
+  <div class='h-3'></div>
+  <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange w-full'>{l.btn.bookNow}</a>
+  <div class='h-4'></div>
+  <p id='include1' set:html={`${l.price.package1Include}:`} />
+  <div class='h-3'></div>
+  <ul class='star'>
+    <li class='flex items-center view1 hide'>
+      {l.price.free1}
+    </li>
+    <li class='flex items-center view1 hide'>
+      {l.price.free2}
+    </li>
+    <li class='flex items-center view1 hide'>
+      {l.price.free3}
+    </li>
+    <li class='flex items-center'>
+      {l.price.package11}
+    </li>
+    <li class='flex items-center'>
+      {l.price.package121}
+    </li>
+    <li class='flex items-center'>
+      {l.price.package13}
+    </li>
+    <li class='flex items-center'>
+      {l.price.package14}
+    </li>
+  </ul>
+  <div class='h-3'></div>
+  <span class='flex-1'></span>
+  <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
+    <span>{l.price.full}</span>
+    <i class='icon-ArrowDown'></i>
+  </button>
+  <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hide'>
+    <span>{l.price.short}</span>
+    <i class='icon-ArrowUp'></i>
+  </button>
+  {
+    !showAll && (
+      <a
+        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
+        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
+      >
+        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
+      </a>
+    )
+  }
 </div>
 <div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
   <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
@@ -125,14 +125,14 @@ const { l, showAll } = Astro.props;
     </div>
     <div class='h-8 flex items-center gap-1.5'>
       <strong class='text-sm'>VND</strong>
-      <strong class='text-secondaryBlue text-2xl'>69.000</strong>
-      <strong class='text-sm'>/ 30 {l.home.days}</strong>
+      <strong class='text-secondaryBlue text-2xl'>159.000</strong>
+      <strong class='text-sm'>/ 92 {l.home.days}</strong>
     </div>
     <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
       <span>VND</span>
-      <s>240.000</s>
+      <s>720.000</s>
       <span>/</span>
-      <span>30 {l.home.days}</span>
+      <span>92 {l.home.days}</span>
     </div>
   </div>
   <div class='h-3'></div>
@@ -154,7 +154,7 @@ const { l, showAll } = Astro.props;
       {l.price.package11}
     </li>
     <li class='flex items-center view2 hide'>
-      {l.price.package12}
+      {l.price.package121}
     </li>
     <li class='flex items-center view2 hide'>
       {l.price.package13}
