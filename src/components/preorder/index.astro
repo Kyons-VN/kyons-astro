@@ -134,7 +134,7 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
       <h6>{l.alreadyTransfer}</h6>
       <div class='flex flex-col gap-1' set:html={l.alreadyTransferDesc} />
     </div>
-    <button id='confirmTransfer' class='btn orange w-full' type='button'>{l.btn.completed}</button>
+    <button id='confirmTransfer' class='btn orange w-full' type='button'>{l.btn.alreadyTransfer}</button>
     <button id='back' class='btn outlined w-full' type='button'>{l.btn.uncompleted}</button>
   </div>
 </div>

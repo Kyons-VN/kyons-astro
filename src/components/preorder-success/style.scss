@@ -7,7 +7,7 @@
   background-size: 25vh, 40vh, cover, cover;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .preorder-success {
     background-image: url('/images/home2-planet-1.svg'), url('/images/home2-bg-sm.svg');
     background-position: left -22px top 93px, top;

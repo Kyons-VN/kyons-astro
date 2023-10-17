@@ -51,7 +51,7 @@ export default function Menu({ l }: Props) {
   }
 
   return (
-    <nav id='menu' className={`menu ${!isOpen ? 'hide' : 'show'}`}>
+    <nav id='menu' className={`menu ${!isOpen ? '' : 'show'}`}>
       <div className='flex flex-row items-center justify-between w-full lg:w-auto'>
         <a href={l.lang == 'VI' ? '/' : '/en/'}>
           <img class='w-[100px] cursor-pointer' src='/images/logo.svg' alt='Logo' />

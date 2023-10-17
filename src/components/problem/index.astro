@@ -23,7 +23,8 @@ const { l } = Astro.props;
       <div class='flip-card'>
         <div class='inner'>
           <div class='front'>
-            <img src='/images/card-front-1.svg' class='w-full h-full' />
+            <img src='/images/card-front-1-sm.svg' class='w-full h-full sm:hidden' />
+            <img src='/images/card-front-1.svg' class='w-full h-full hidden sm:flex' />
             <span class='hidden sm:flex absolute top-[50%] explainSms px-8'></span>
           </div>
           <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
@@ -32,7 +33,8 @@ const { l } = Astro.props;
       <div class='flip-card'>
         <div class='inner'>
           <div class='front'>
-            <img src='/images/card-front-2.svg' class='w-full h-full' />
+            <img src='/images/card-front-2-sm.svg' class='w-full h-full sm:hidden' />
+            <img src='/images/card-front-2.svg' class='w-full h-full hidden sm:flex' />
             <span class='hidden sm:flex absolute top-[50%] explainSms px-8'></span>
           </div>
           <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
@@ -41,7 +43,8 @@ const { l } = Astro.props;
       <div class='flip-card'>
         <div class='inner'>
           <div class='front'>
-            <img src='/images/card-front-3.svg' class='w-full h-full' />
+            <img src='/images/card-front-3-sm.svg' class='w-full h-full sm:hidden' />
+            <img src='/images/card-front-3.svg' class='w-full h-full hidden sm:flex' />
             <span class='hidden sm:flex absolute top-[50%] explainSms px-8'></span>
           </div>
           <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
@@ -50,7 +53,8 @@ const { l } = Astro.props;
       <div class='flip-card'>
         <div class='inner'>
           <div class='front'>
-            <img src='/images/card-front-4.svg' class='w-full h-full' />
+            <img src='/images/card-front-4-sm.svg' class='w-full h-full sm:hidden' />
+            <img src='/images/card-front-4.svg' class='w-full h-full hidden sm:flex' />
             <span class='hidden sm:flex absolute top-[50%] explainSms px-8'></span>
           </div>
           <div class='back'><img src='/images/card-back.svg' class='w-full h-full' /></div>
@@ -62,7 +66,14 @@ const { l } = Astro.props;
       href='#problem'
       class='flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white sm:text-primaryBlue font-[600] text-center h-10 rounded bg-lightBlue-1 sm:bg-transparent w-full sm:w-[428px]'
     >
-      <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        class='hidden sm:flex'
+      >
         <mask id='mask0_2615_640' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'>
           <rect width='24' height='24' fill='#D9D9D9'></rect>
         </mask>

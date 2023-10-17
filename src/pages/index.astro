@@ -10,3 +10,23 @@ import '@styles/global.scss';
   <Menu l={l} client:only='preact' />
   <MainContent l={l} />
 </Layout>
+<!-- Fixing browser bug -->
+<script>
+  if (window.addEventListener) {
+    window.addEventListener(
+      'load',
+      () => {
+        console.log('RUN');
+        if (location.hash && location.hash !== '#') {
+          const anchorLocation = decodeURIComponent(location.hash);
+          const anchorElement: HTMLElement | null = document.querySelector(anchorLocation);
+          if (anchorElement == null) return;
+          setTimeout(() => {
+            anchorElement.scrollIntoView();
+          }, 100);
+        }
+      },
+      false
+    );
+  }
+</script>
