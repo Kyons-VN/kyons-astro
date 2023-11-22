@@ -1,0 +1,14 @@
+---
+import Footer from '@components/Footer.astro';
+import SchoolMenu from '@components/menu/SchoolMenu';
+import Schools from '@components/schools/Schools.astro';
+import l from '@data/vi.json';
+import Layout from '@layouts/Layout.astro';
+import '@styles/global.scss';
+---
+
+<Layout lang='vi' title={l.price.select}>
+  <SchoolMenu l={l} client:only='preact' />
+  <Schools l={l} />
+  <Footer l={l} />
+</Layout>

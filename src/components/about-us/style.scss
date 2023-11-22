@@ -2,7 +2,7 @@
   background: url('/images/logo-bg.svg') no-repeat left 0 top -57px;
   @apply w-full flex flex-col sm:flex-row justify-center items-center sm:items-start relative text-center p-4 sm:px-11 sm:py-20 overflow-hidden;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .about-us {
     background: url('/images/logo-bg.svg') no-repeat left -66px top -57px;
   }

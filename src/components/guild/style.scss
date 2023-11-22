@@ -6,7 +6,7 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto, auto, auto;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .guild {
     background-image: url('/images/guild-planet.svg'), url('/images/guild-sm-circle1.svg'),
       url('/images/guild-sm-circle2.svg'), linear-gradient(210deg, #d0eeff 30.76%, #b2d1ff 82.92%);

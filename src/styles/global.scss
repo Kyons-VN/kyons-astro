@@ -10,7 +10,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .btn {
-  @apply flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-10 rounded;
+  @apply flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-12 rounded;
 
   &.large {
     @apply h-12;

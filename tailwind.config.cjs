@@ -63,6 +63,12 @@ module.exports = {
           1: '#EDAB03',
           2: '#BD8000',
         },
+        darkTeal: '#007E86',
+        teal: {
+          0: '#00C4D0',
+          1: '#62EDF5',
+          2: '#C8FCFF',
+        },
       },
       boxShadow: {
         1: '0px 3px 5px rgba(0, 0, 0, 0.1)',
@@ -75,7 +81,7 @@ module.exports = {
       },
       backgroundImage: {
         orangeGradient: 'radial-gradient(184.96% 124.02% at 33.08% -22.92%, #FDBA74 0%, #FB7200 67.30%)',
-        greenGradient: 'radial-gradient(184.96% 124.02% at 33.08% -22.92%, #34D399 0%, #109867 67.30%)',
+        greenGradient: 'radial-gradient(184.96% 124.02% at 33.08% -22.92%, #4CE1EA 0%, #1FA1A9 67.3%)',
       },
     },
   },

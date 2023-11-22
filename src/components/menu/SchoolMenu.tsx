@@ -62,7 +62,7 @@ export default function Menu({ l }: Props) {
       <nav id='menu' className={`menu ${!isOpen ? '' : 'show'}`}>
         <div className='flex flex-row items-center justify-between w-full lg:w-auto z-10'>
           <a href={l.lang == 'VI' ? '/' : '/en/'}>
-            <img class='w-[100px] cursor-pointer' src='/images/logo.svg' alt='Logo' />
+            <img class='w-[241px] cursor-pointer' src='/images/kyonsxcerebry.svg' alt='Logo' />
           </a>
           <button class='lg:hidden text-[24px]' onClick={toggle}>
             <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
@@ -101,28 +101,28 @@ export default function Menu({ l }: Props) {
                     </button>
                   </div>
                   {/* <div
-                  className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
-                  // style='bottom: calc(-100% - 30px);'
-                  onClick={() => setIsHover(false)}
-                >
-                  <div
-                    className={language == 'VI' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
-                    onClick={() => setLanguage('VI')}
+                    className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
+                    // style='bottom: calc(-100% - 30px);'
+                    onClick={() => setIsHover(false)}
                   >
-                    VI
-                  </div>
-                  <hr class='text-blueGrey-300' />
-                  <div
-                    className={language == 'EN' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
-                    onClick={() => setLanguage('EN')}
-                  >
-                    EN
-                  </div>
-                </div> */}
+                    <div
+                      className={language == 'VI' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+                      onClick={() => setLanguage('VI')}
+                    >
+                      VI
+                    </div>
+                    <hr class='text-blueGrey-300' />
+                    <div
+                      className={language == 'EN' ? 'text-orange cursor-pointer' : 'cursor-pointer'}
+                      onClick={() => setLanguage('EN')}
+                    >
+                      EN
+                    </div>
+                  </div> */}
                 </li>
               </ul>
             </li>
-            <div
+            {/* <div
               class='hidden sm:flex flex-row relative p-3 items-center justify-between text-sm gap-3 cursor-pointer'
               onClick={() => setIsStudentHover(!isStudentHover)}
               tabIndex={0}
@@ -153,7 +153,7 @@ export default function Menu({ l }: Props) {
                   </span>
                 </a>
               </div>
-            </div>
+            </div> */}
             <div
               className={isHover ? `${defaultClass} flex sm:hidden` : `${defaultClass} hidden`}
               // style='bottom: calc(-100% - 30px);'
@@ -173,7 +173,7 @@ export default function Menu({ l }: Props) {
                 EN
               </div>
             </div>
-            <li class='p-6 flex flex-col gap-6 sm:hidden'>
+            {/* <li class='p-6 flex flex-col gap-6 sm:hidden'>
               <span class='font-bold text-[16px] flex gap-3 items-center'>
                 <img src='/images/menu-students.svg' alt='' /> <span>{l.menu.forStudents}</span>
               </span>
@@ -207,7 +207,7 @@ export default function Menu({ l }: Props) {
             <li className={$activeMenu == 4 ? 'active' : ''}>
               <a
                 class='close-menu'
-                href='/danh-cho-nha-truong'
+                href='#schools'
                 onClick={() => {
                   setActiveMenu(4);
                 }}
@@ -216,63 +216,8 @@ export default function Menu({ l }: Props) {
                   <img class='sm:hidden' src='/images/menu-schools.svg' alt='' /> <span>{l.menu.forSchools}</span>
                 </span>
               </a>
-            </li>
-            {/* <li className={$activeMenu == 1 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href='#about-us'
-              onClick={() => {
-                setActiveMenu(1);
-              }}
-            >
-              {menuLabel.aboutUs}
-            </a>
-          </li>
-          <li className={$activeMenu == 2 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href='#problem'
-              onClick={() => {
-                setActiveMenu(1);
-              }}
-            >
-              {menuLabel.problems}
-            </a>
-          </li>
-          <li className={$activeMenu == 3 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href='#solutions'
-              onClick={() => {
-                setActiveMenu(2);
-              }}
-            >
-              {menuLabel.solutions}
-            </a>
-          </li>
-          <li className={$activeMenu == 3 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href='#students'
-              onClick={() => {
-                setActiveMenu(3);
-              }}
-            >
-              {menuLabel.forStudents}
-            </a>
-          </li>
-          <li className={$activeMenu == 5 ? 'active' : ''}>
-            <a
-              class='close-menu'
-              href={language == 'VI' ? '/pricing' : '/en/pricing'}
-              onClick={() => {
-                setActiveMenu(5);
-              }}
-            >
-              {menuLabel.price}
-            </a>
-          </li> */}
-            <li className={$activeMenu == 6 ? 'active' : ''}>
+            </li> */}
+            {/* <li className={$activeMenu == 6 ? 'active' : ''}>
               <a
                 class='close-menu'
                 href='#contact'
@@ -284,7 +229,7 @@ export default function Menu({ l }: Props) {
                   <img class='sm:hidden' src='/images/menu-contact.svg' alt='' /> <span>{menuLabel.contact}</span>
                 </span>
               </a>
-            </li>
+            </li> */}
             <li class='sm:flex justify-center relative hidden'>
               <div
                 class='flex flex-row relative p-6 items-center justify-between text-sm w-24 cursor-pointer'
@@ -326,6 +271,11 @@ export default function Menu({ l }: Props) {
                   EN
                 </div>
               </div>
+            </li>
+            <li class='flex items-center w-[248px]'>
+              <a href='/#contact' class='btn green !h-12 !font-normal !text-sm !justify-center'>
+                {l.btn.trial}
+              </a>
             </li>
           </ul>
         </div>

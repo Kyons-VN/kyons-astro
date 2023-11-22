@@ -35,19 +35,19 @@ const { l } = Astro.props;
           <strong class='text-lightBlue-1 text-base'>{l.price.phoRi}</strong>
           <strong>{l.price.free}</strong>
           <div class='h-2'></div>
-          <a href='https://student.kyons.vn' target='_blank' class='btn outlined orange'>{l.btn.use}</a>
+          <a href='https://student.kyons.vn' target='_blank' class='btn outlined orange w-full'>{l.btn.use}</a>
         </div>
         <div class='flex flex-col items-center'>
           <strong class='text-lightBlue-1 text-base'>1 {l.price.month}</strong>
           <strong>69K / 30 {l.price.days}</strong>
           <div class='h-2'></div>
-          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange'>{l.btn.book}</a>
+          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange w-full'>{l.btn.book}</a>
         </div>
         <div class='flex flex-col items-center'>
           <strong class='text-lightBlue-1 text-base'>3 {l.price.months}</strong>
           <strong>159K / 92 {l.price.days}</strong>
           <div class='h-2'></div>
-          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange'>{l.btn.book}</a>
+          <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange w-full'>{l.btn.book}</a>
         </div>
       </div>
     </div>
@@ -111,7 +111,7 @@ const { l } = Astro.props;
         <!-- <i class='icon-Help text-orange cursor-pointer'></i> -->
       </div>
       <div class='grid grid-cols-3 sm:grid-cols-4 gap-2'>
-        <div class='hidden sm:flex'></div>
+        <strong class='hidden sm:flex'>{l.price.note}</strong>
         <div class='flex flex-col items-center'>
           <span class='text-blueGrey-500'>30MB</span>
         </div>

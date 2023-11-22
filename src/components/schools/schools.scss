@@ -1,4 +1,33 @@
 .schools {
-  @apply w-full flex flex-col justify-start items-center relative text-center lg:px-11 p-4 lg:py-10;
-  background: url('/images/galaxy-3.svg') no-repeat bottom -400px left 0;
+  @apply w-full h-screen flex flex-col justify-center items-center overflow-hidden relative;
+}
+.schools-bg {
+  @apply flex flex-col min-h-screen justify-start items-center py-9 px-6 overflow-hidden relative;
+}
+.schools-bg {
+  @apply w-full lg:w-[1280px] h-full;
+  // background-image: url('/images/school-top-bg.svg');
+  // background-size: contain;
+  // background-position: bottom 26px right 0;
+  // background-repeat: no-repeat;
+}
+.schools-laptop {
+  @apply absolute w-full md:w-auto md:h-[calc(100vh_-_120px)] md:right-0 bottom-0 z-0;
+  // background-image: url('/images/schools-laptop.svg');
+  // background-size: contain;
+  // background-position: center;
+  // background-repeat: no-repeat;
+}
+.schools-gradient {
+  @apply absolute bottom-0 right-[-185px] h-[421px] w-[421px] rounded-full z-0;
+  background: rgba(0, 196, 208, 0.31);
+  filter: blur(150px);
+}
+@media (min-width: 1024px) {
+  .schools-bg {
+    // background-image: url('/images/school-top-bg-md.svg');
+    // background-position: top 157px right -30px bottom 0;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+  }
 }

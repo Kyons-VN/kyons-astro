@@ -9,51 +9,19 @@ const APP_URL = process.env.APP_URL;
 ---
 
 <div class='schools'>
-  <div id='schools' class='absolute top-[-82px]'></div>
-  <div class='flex flex-col w-full max-w-[1122px] gap-6 lg:gap-11 items-center'>
-    <div class='lg:grid lg:grid-cols-2 flex flex-col gap-6'>
-      <div
-        class='flex flex-col lg:px-12 lg:py-6 gap-6 w-full lg:max-w-[550px] items-center lg:items-start justify-center lg:text-left text-center'
-      >
-        <div class='flex flex-col gap-2 items-center lg:items-start'>
-          <strong class='text-lightBlue-1'>{l.schools.forSchools}</strong>
-          <h3>{l.schools.usefulTool}</h3>
-        </div>
-        <p>{l.schools.kyonsSchool}</p>
-        <a href='#contact' class='btn large w-full'>{l.btn.trial}</a>
-      </div>
-      <img src='/images/school-2.png' alt={l.schools.usefulTool} />
-    </div>
-    <h3 class='w-full text-3xl'>{l.schools.whatKyonsHave}</h3>
-    <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-white text-left max-w-[350px] sm:max-w-none'>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-lightBlue-1 rounded-lg gap-9 px-6 py-12'>
-        <img src='/images/AIPractice.svg' alt={l.schools.have1} width='108px' height='108px' />
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have1}</h5>
-          <p>{l.schools.have1Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-blueGrey-800 rounded-lg gap-9 px-6 py-12'>
-        <img src='/images/AIQuestions.svg' alt={l.schools.have2} width='108px' height='108px' />
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have2}</h5>
-          <p>{l.schools.have2Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-secondaryBlue rounded-lg gap-9 px-6 py-12'>
-        <img src='/images/HomeworkMana.svg' alt={l.schools.have3} width='108px' height='108px' />
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have3}</h5>
-          <p>{l.schools.have3Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-lightBlue-1 rounded-lg gap-9 px-6 py-12'>
-        <img src='/images/AssessMana.svg' alt={l.schools.have4} width='108px' height='108px' />
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have4}</h5>
-          <p>{l.schools.have4Desc}</p>
-        </div>
-      </div>
+  <div class='h-[82px] text-darkTeal'></div>
+  <div class='schools-gradient'></div>
+  <img class='schools-laptop hidden md:flex' src='/images/school-top-bg-md.svg' alt='' />
+  <img class='schools-laptop md:hidden' src='/images/school-top-bg.svg' alt='' />
+  <div class='flex w-full max-w-[1280px] h-full relative'>
+    <div
+      class='flex flex-col text-center gap-4 relative md:absolute md:left-[24px] xl:left-0 md:top-[126px] md:w-[459px] px-6 py-10'
+    >
+      <h1 class='text-2xl' set:html={l.schools.usefulTool} />
+      <span>{l.schools.kyonsSchool}</span>
+      <a href='/#contact' class='btn green'>
+        {l.btn.trial}
+      </a>
     </div>
   </div>
 </div>

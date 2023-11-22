@@ -15,7 +15,7 @@
   z-index: 0;
   filter: brightness(50%);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .home {
     background-image: url('/images/home2-planet-1.svg'), url('/images/home2-planet-2.svg'),
       url('/images/home2-bg-sm.svg');

@@ -9,8 +9,7 @@ const { l } = Astro.props;
 
 <div class='home'>
   <div id='home' class='absolute top-[-82px]'></div>
-  <div class='h-10'></div>
-  <img src='/images/logo.svg' alt='Logo' class='w-[125px] hidden sm:flex' />
+  <div class='h-[82px]'></div>
   <h1 class='text-2xl'>{l.home.whyNotSmarter}</h1>
   <div class='relative w-full flex items-center justify-center'>
     <img src='/images/iphone.png' class='sm:h-[40vh]' />
@@ -50,7 +49,7 @@ const { l } = Astro.props;
 </div>
 
 <script>
-  const targetDate = new Date('2023-10-20T00:00:00+07:00');
+  const targetDate = new Date('2023-10-31T00:00:00+07:00');
   let countdown = setInterval(() => {
     const now = new Date();
     const diff = targetDate.getTime() - now.getTime();

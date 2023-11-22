@@ -83,5 +83,7 @@ export function setScrolling(active: boolean) {
 }
 
 export function toggleMenu() {
+  console.log('run?');
+
   isMenuOpen.set(!isMenuOpen.get());
 }

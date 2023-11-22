@@ -51,7 +51,7 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
         <div class='flex flex-col sm:flex-row items-center sm:items-start'>
           <img
             id='image'
-            src='https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=<AMOUNT>&addInfo=<DESCRIPTION>&accountName=Công ty TNHH Kyons'
+            src='https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=<AMOUNT>&addInfo=<DESCRIPTION>&accountName=KYONS LLC'
             alt={`${l.preorder.title} ${packageName}`}
             class='blur sm:w-[50%]'
           />
@@ -92,8 +92,8 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
               <div class='flex flex-col gap-1.5'>
                 <span>{l.preorder.accountName}</span>
                 <span id='copyName' class='flex justify-between cursor-pointer'>
-                  <strong>Công ty TNHH Kyons</strong>
-                  <i class='icon-Duplicate text-orange text-base'></i>
+                  <strong>KYONS LLC</strong>
+                  <!-- <i class='icon-Duplicate text-orange text-base'></i> -->
                 </span>
               </div>
             </div>
@@ -267,7 +267,7 @@ submit1.addEventListener('click', async (e) => {
     form2.classList.remove('hide');
     form1.classList.add('hide');
     const imageUrl = `https://img.vietqr.io/image/TCB-19037780961051-compact2.png?amount=${id == 'package1' ? 69 : 159
-      }000&addInfo=${copyCode.innerText.trim()}&accountName=Công ty TNHH Kyons`;
+      }000&addInfo=${copyCode.innerText.trim()}&accountName=KYONS LLC`;
     await loadImage(imageUrl, image);
     image.attributes.src.value = imageUrl;
     image.classList.remove('blur');
