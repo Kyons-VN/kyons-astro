@@ -10,53 +10,20 @@ const APP_URL = process.env.APP_URL;
 
 <div class='schools'>
   <div id='schools' class='absolute top-[-82px]'></div>
-  <div class='flex flex-col w-full max-w-[1122px] gap-6 lg:gap-11 items-center'>
-    <div class='flex flex-col gap-6'>
-      <div class='flex flex-col lg:px-12 lg:py-6 gap-6 w-full items-center justify-center text-center'>
-        <div class='flex flex-col gap-2 items-center justify-center'>
-          <strong class='title green'>{l.schools.forSchools}</strong>
-          <h3 class='text-2xl'>{l.schools.usefulTool}</h3>
+  <div class='flex flex-col lg:flex-row w-full max-w-[1280px] gap-6 lg:gap-11 items-center lg:items-stretch'>
+    <div class='flex flex-col items-center lg:items-start gap-6 px-4 py-8'>
+      <div class='flex flex-col gap-6 w-full items-center lg:items-start justify-center'>
+        <div class='flex flex-col gap-2 items-center lg:items-start justify-center'>
+          <strong class='title bg-darkEmerald'>{l.schools.forSchools}</strong>
+          <h3 class='text-2xl'>{l.schools.complete}</h3>
+          <span>{l.schools.with}</span>
         </div>
-        <a href='#contact' class='btn green w-full sm:max-w-[428px]'>{l.btn.trial}</a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='btn green w-full lg:w-[245px] z-10'
+          >{l.btn.contact}</a
+        >
       </div>
     </div>
-    <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-center max-w-[350px] sm:max-w-none'>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-9 px-6 py-12'>
-        <div class='w-16 h-16 bg-emerald-0 shadow-green1 flex items-center justify-center rounded-full'>
-          <img src='/images/AIPractice.svg' alt={l.schools.have1} width='42px' height='42px' />
-        </div>
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have1}</h5>
-          <p>{l.schools.have1Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-9 px-6 py-12'>
-        <div class='w-16 h-16 bg-emerald-0 shadow-green1 flex items-center justify-center rounded-full'>
-          <img src='/images/AIQuestions.svg' alt={l.schools.have1} width='42px' height='42px' />
-        </div>
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have2}</h5>
-          <p>{l.schools.have2Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-9 px-6 py-12'>
-        <div class='w-16 h-16 bg-emerald-0 shadow-green1 flex items-center justify-center rounded-full'>
-          <img src='/images/HomeworkMana.svg' alt={l.schools.have1} width='42px' height='42px' />
-        </div>
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have3}</h5>
-          <p>{l.schools.have3Desc}</p>
-        </div>
-      </div>
-      <div class='flex flex-col items-center pt-12 pb-9 bg-white rounded-lg gap-9 px-6 py-12'>
-        <div class='w-16 h-16 bg-emerald-0 shadow-green1 flex items-center justify-center rounded-full'>
-          <img src='/images/AssessMana.svg' alt={l.schools.have1} width='42px' height='42px' />
-        </div>
-        <div class='flex flex-col gap-2'>
-          <h5 class='leading-8'>{l.schools.have4}</h5>
-          <p>{l.schools.have4Desc}</p>
-        </div>
-      </div>
-    </div>
+    <img src={`/images/${l.lang == 'VI' ? 'vi' : '/en'}/for-schools-md.png`} alt='' class='hidden lg:flex' />
+    <img src='/images/for-schools.png' alt='' class='lg:hidden w-full' />
   </div>
 </div>

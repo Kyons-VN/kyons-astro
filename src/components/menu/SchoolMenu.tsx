@@ -272,10 +272,15 @@ export default function Menu({ l }: Props) {
                 </div>
               </div>
             </li>
-            <li class='flex items-center w-[248px]'>
-              <a href='/#contact' class='btn green !h-12 !font-normal !text-sm !justify-center'>
-                {l.btn.trial}
-              </a>
+            <li className='flex justify-center'>
+              <div class='flex items-center w-[248px]'>
+                <a
+                  href={`${l.lang == 'VI' ? '' : '/en'}/#contact`}
+                  class='btn green !h-12 !font-normal !text-sm !justify-center'
+                >
+                  {l.btn.trial}
+                </a>
+              </div>
             </li>
           </ul>
         </div>

@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  @apply m-0 p-0 text-sm text-primaryBlue bg-blueGrey-50 flex flex-col;
+  @apply m-0 p-0 text-sm lg:text-base text-primaryBlue bg-blueGrey-50 flex flex-col;
   scroll-behavior: smooth;
 
   font-family: 'Montserrat', sans-serif;
@@ -62,7 +62,7 @@ body {
   }
 }
 h1 {
-  @apply text-[40px] text-center;
+  @apply text-[40px];
   &.extra-large {
     @apply text-2xl md:text-4xl;
   }
@@ -248,5 +248,5 @@ body.outline * {
 }
 
 .title {
-  @apply px-3 py-[2px] bg-lightBlue-1 rounded-3xl text-white whitespace-nowrap;
+  @apply px-3 py-[2px] rounded-3xl text-white whitespace-nowrap;
 }

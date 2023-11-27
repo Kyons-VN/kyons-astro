@@ -1,6 +1,5 @@
 .schools {
-  @apply w-full flex flex-col justify-start items-center relative text-center lg:px-11 px-4 py-8 lg:py-10 bg-emerald-3;
-}
-.title.green {
-  @apply bg-darkEmerald;
+  @apply w-full max-h-[609px] flex flex-col justify-start items-center relative text-center lg:text-left overflow-hidden;
+  background: url('/images/schools-bg.svg') no-repeat center center;
+  background-size: cover;
 }
