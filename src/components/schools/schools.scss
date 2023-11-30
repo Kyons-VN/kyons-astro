@@ -29,7 +29,6 @@
   &::after {
     @apply absolute top-[60%] left-[calc(50%_-_60px)] w-[120px] h-full;
     content: '';
-    z-index: -1;
     background: url('/images/under.svg') no-repeat center center;
     background-size: contain;
   }
@@ -63,5 +62,25 @@
   }
   .circle-gradient {
     border-radius: 541px;
+  }
+
+  .right-arrow {
+    @apply relative;
+    &::after {
+      @apply absolute bottom-0 right-[-140px] w-[106px] h-[100px];
+      content: '';
+      background: url('/images/right-arrow.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  .green-underline {
+    @apply relative z-0;
+    &::after {
+      @apply absolute bottom-0 left-0 h-[9px] w-full z-[-1];
+      content: '';
+      background: url('/images/underline.svg') no-repeat center center;
+      background-size: contain;
+    }
   }
 }

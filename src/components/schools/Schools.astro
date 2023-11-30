@@ -53,7 +53,7 @@ const APP_URL = process.env.APP_URL;
   <div class='flex flex-col w-full max-w-[1280px] gap-6 md:gap-14 text-center lg:px-8'>
     <div class='flex flex-col w-full items-center gap-2'>
       <span class='title bg-darkTeal'>{l.solutions.solutions}</span>
-      <h2 class='text-[1.375rem] md:text-[1.75rem]'>{l.solutions.features}</h2>
+      <h2 class='text-[1.375rem] md:text-[1.75rem] right-arrow' set:html={l.solutions.features} />
     </div>
     <div class='col items-stretch gap-9 md:gap-[6.25rem]'>
       <!-- #1 -->
@@ -75,13 +75,13 @@ const APP_URL = process.env.APP_URL;
       </div>
       <!-- #2 -->
       <div class='flex flex-col md:flex-row-reverse items-stretch gap-6 md:gap-24'>
-        <div class='col items-center md:items-start gap-4 md:flex-1'>
+        <div class='col items-center md:items-start gap-4'>
           <div class='flex items-center justify-center w-20 h-20 rounded-full bg-teal-2'>
             <img src='/images/local_library.svg' alt='' />
           </div>
           <div class='col items-center md:items-start gap-3 text-center md:text-left'>
             <h3 class='text-[1.125rem] md:text-[1.5rem]'>{l.solutions.feature2}</h3>
-            <span>{l.solutions.feature1desc}</span>
+            <span>{l.solutions.feature2desc}</span>
           </div>
         </div>
         <div class='relative w-full lg:w-[60%] xl:w-[729px] lg:shrink-0'>
@@ -92,7 +92,7 @@ const APP_URL = process.env.APP_URL;
       </div>
       <!-- #3 -->
       <div class='flex flex-col md:flex-row items-stretch gap-6 md:gap-24'>
-        <div class='col items-center md:items-start gap-4 md:flex-1'>
+        <div class='col items-center md:items-start gap-4'>
           <div class='flex items-center justify-center w-20 h-20 rounded-full bg-teal-2'>
             <img src='/images/article.svg' alt='' />
           </div>
@@ -109,7 +109,7 @@ const APP_URL = process.env.APP_URL;
       </div>
       <!-- #4 -->
       <div class='flex flex-col md:flex-row-reverse items-stretch gap-6 md:gap-24'>
-        <div class='col items-center md:items-start gap-4 md:flex-1'>
+        <div class='col items-center md:items-start gap-4'>
           <div class='flex items-center justify-center w-20 h-20 rounded-full bg-teal-2'>
             <img src='/images/award_star.svg' alt='' />
           </div>
@@ -130,25 +130,31 @@ const APP_URL = process.env.APP_URL;
 
 <div class='w-full flex justify-center'>
   <div
-    class='col items-center gap-6 px-4 py-20 bg-[#E0F9FB] w-full max-w-[1280px] rounded-tl-2xl rounded-tr-2xl lg:rounded-3xl'
+    class='col items-center gap-6 px-4 py-10 md:py-20 bg-[#E0F9FB] w-full max-w-[1280px] rounded-tl-2xl rounded-tr-2xl xl:rounded-3xl relative'
   >
-    <h3 class='text-[1.125rem] md:text-[1.5rem] sparkle px-[24px] text-center' set:html={l.solutions.use} />
-    <img src={`/images/${l.languageCode}/5-steps.svg`} alt='' class='w-full shadow-3 rounded-2xl md:hidden' />
+    <img src='/images/5-steps-bg-md.svg' alt='' class='hidden md:flex absolute right-8 top-7 w-[621px] h-[527px]' />
+    <img src='/images/5-steps-bg.svg' alt='' class='absolute left-10 top-10 w-[422px] h-[358px] md:hidden' />
+    <h3 class='text-[1.125rem] md:text-[1.5rem] sparkle px-[24px] text-center relative' set:html={l.solutions.use} />
+    <img
+      src={`/images/${l.languageCode}/5-steps.svg`}
+      alt={l.solutions.use}
+      class='w-full shadow-3 rounded-2xl md:hidden relative'
+    />
     <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`}
       ><img
         src={`/images/${l.languageCode}/5-steps-md.svg`}
         alt=''
-        class='w-full max-w-[910px] shadow-3 rounded-2xl hidden md:flex'
+        class='w-full max-w-[910px] shadow-3 rounded-2xl hidden md:flex relative'
       /></a
     >
     <a
       href={`${l.lang == 'VI' ? '' : '/en'}/#contact`}
-      class='flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-12 rounded bg-greenGradient shadow-green1 md:hidden w-full'
+      class='flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer text-white font-[600] text-center h-12 rounded bg-greenGradient shadow-green1 md:hidden w-full relative'
       >{l.btn.contact}</a
     >
   </div>
 </div>
-<div class='h-[108px]'></div>
+<div class='h-[108px] hidden xl:flex'></div>
 <div class='w-full h-screen min-h-[800px] flex justify-center bg-[#D7F5F6] overflow-hidden'>
   <div
     class='flex flex-col w-full max-w-[1280px] justify-stretch px-4 py-6 gap-8 lg:px-20 lg:pt-[5.5rem] lg:pb-36 relative'
@@ -168,8 +174,8 @@ const APP_URL = process.env.APP_URL;
       style='background: linear-gradient(241deg, rgba(255, 255, 255, 0.79) 15.19%, rgba(255, 255, 255, 0.31) 87.53%);'
     >
       <div class='col gap-2 items-center lg:items-start'>
-        <div class='title bg-darkEmerald'>{l.solutions.testimonials}</div>
-        <h2 class='text-[1.375rem] lg:text-[1.75rem]'>{l.solutions.prove}</h2>
+        <div class='title bg-darkTeal'>{l.solutions.testimonials}</div>
+        <h2 class='text-[1.375rem] lg:text-[1.75rem] text-center lg:text-left'>{l.solutions.prove}</h2>
       </div>
       <div class='w-full grid grid-cols-2 gap-x-6 gap-y-4 lf:gap-10'>
         <div class='col items-center lg:items-start text-center lg:text-left lg:gap-4'>

@@ -127,7 +127,7 @@
   "solutions": {
     "solutions": "Giải pháp",
     "letKyonsShow": "Hãy để Kyons đưa cho bạn lời giải đáp",
-    "features": "Các tính năng chính",
+    "features": "Các <span class='green-underline'>tính năng chính</span>",
     "feature1": "Tạo câu hỏi bằng AI",
     "feature1desc": "Với cùng 1 dạng bài, AI sẽ tạo ra các đề bài khác nhau cho từng học sinh để các bạn có thể tự lực làm bài của mình.",
     "feature2": "Chế độ luyện tập",
@@ -148,7 +148,7 @@
     "result1": "Số câu bài tập hoàn thành so với cách truyền thống (mỗi tháng)",
     "result2": "Kết quả trước và sau bài kiểm tra",
     "result3": "Câu hỏi trong mỗi phiên học",
-    "result4": "khái niệm sai được xử lý tự động bởi nền tảng trong mỗi phiên học"
+    "result4": "Khái niệm sai được xử lý tự động bởi nền tảng trong mỗi phiên học"
   },
   "contact": {
     "contact": "Liên hệ",

@@ -25,9 +25,17 @@
   aspect-ratio: 77/121;
   @apply w-[calc((100%_-_36px)_/_4)] relative transform;
   .inner {
-    transition: transform 0.8s;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
     @apply w-full h-full relative rounded-lg sm:rounded-2xl cursor-pointer;
     .front,
     .back {
@@ -41,7 +49,12 @@
     }
     .back {
       -webkit-backface-visibility: hidden; /* Safari */
+      -moz-backface-visibility: hidden; /* Firefox */
       backface-visibility: hidden;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
       transform: rotateY(180deg);
       @apply rounded-lg sm:rounded-2xl shadow-lg;
       .img {
@@ -52,6 +65,10 @@
 }
 .flip-card.flipped .inner {
   @apply shadow-blue1;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
   transform: rotateY(0);
 }
 .blinking-cursor {
