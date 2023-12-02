@@ -68,11 +68,11 @@
     "step4Desc": "Every question is tailor-made to match your ability. Kyons has your back with detailed solutions, topic breakdowns to identify knowledge gaps, and one-on-one support to help you whenever you get stuck."
   },
   "schools": {
-    "forSchools": "For Schools",
-    "usefulTool": "An <span class='text-darkTeal'>effective tool</span> to <span class='text-darkTeal'>monitor</span> student's learning progress",
+    "forSchools": "Kyons school",
     "complete": "An all-in-one platform to monitor students' learning progress",
     "with": "We provide teachers with a smart classroom management solution to closely monitor students' learning progress and refine teaching methods when necessary",
-    "kyonsSchool": "Welcome to Kyons School,  a unique collaboration between Kyons and Cerebry - an education partner from Singapore. This platform provides teachers with a smart classroom management solution to closely monitor student's learning progress and refine teaching methods when necessary as soon as possible.",
+    "usefulTool": "An <span class='text-darkTeal'>effective tool</span> to <span class='text-darkTeal highlight'>monitor</span> student's learning progress",
+    "kyonsSchool": "Kyons School is a generative self-learning platform for Math, provide teachers with solutions to effectively assigning and tracking student's progress in order to timely modify teaching methods.",
     "whatKyonsHave": "Features",
     "have1": "AI-Driven Adaptive Practice Platform",
     "have1Desc": "Personalised learning path that matches competencies and receptive abilities of every student.",
@@ -111,7 +111,7 @@
     "bssc": "Incubated by BSSC"
   },
   "problems": {
-    "problems": "Problems",
+    "problems": "Common problems",
     "why": "Study not effectively? See the universe’s messages",
     "explain": "Interpretation",
     "explain1": "Costly when studying with a tutor to have tailor-made lessons",
@@ -121,13 +121,13 @@
     "viewSolutions": "See solutions from Kyons",
     "b2bWhy": "Why your teaching approach is not effective?",
     "b2b1": "Assigned homework does not match an individual's ability",
-    "b2b2": "Assigned homework does not match an individual's ability",
-    "b2b3": "Assigned homework does not match an individual's ability"
+    "b2b2": "Hard to detect knowledge gaps of passive students",
+    "b2b3": "Homework amount is too large for weaker students"
   },
   "solutions": {
     "solutions": "Solutions",
     "letKyonsShow": "Kyons will provide you solutions to those problems",
-    "features": "Features",
+    "features": "<span class='green-underline'>Features</span>",
     "feature1": "AI-generated questions",
     "feature1desc": "Each student will have different questions with the same theory to complete on their own.",
     "feature2": "Practice mode",
@@ -210,7 +210,7 @@
     "short": "Less",
     "title": "Limited-time promotion for “Back to school” season 2023",
     "useFree": "Use free version now",
-    "only": "(Only 52.000 / 30 days)"
+    "only": "(Only 33.000 / 30 days)"
   },
   "preorder": {
     "title": "You are registering",

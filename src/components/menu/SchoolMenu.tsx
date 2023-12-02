@@ -58,7 +58,7 @@ export default function Menu({ l }: Props) {
   }
 
   return (
-    <div class='w-full bg-[#0F172A] fixed z-20 flex justify-center'>
+    <div class='w-full bg-[#09222D] fixed z-20 flex justify-center'>
       <nav id='menu' className={`menu ${!isOpen ? '' : 'show'}`}>
         <div className='flex flex-row items-center justify-between w-full lg:w-auto z-10'>
           <a href={l.lang == 'VI' ? '/' : '/en/'}>
@@ -274,10 +274,7 @@ export default function Menu({ l }: Props) {
             </li>
             <li className='flex justify-center'>
               <div class='flex items-center w-[248px]'>
-                <a
-                  href={`${l.lang == 'VI' ? '' : '/en'}/#contact`}
-                  class='btn green !h-12 !font-normal !text-sm !justify-center'
-                >
+                <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='btn green !h-12 !text-sm !justify-center'>
                   {l.btn.trial}
                 </a>
               </div>

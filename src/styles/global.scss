@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  @apply m-0 p-0 text-sm lg:text-base text-primaryBlue bg-blueGrey-50 flex flex-col;
+  @apply m-0 p-0 text-sm lg:text-base text-primaryBlue bg-blueGrey-50 flex flex-col overflow-x-hidden;
   scroll-behavior: smooth;
 
   font-family: 'Montserrat', sans-serif;

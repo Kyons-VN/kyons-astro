@@ -207,7 +207,7 @@ export default function Menu({ l }: Props) {
             <li className={$activeMenu == 4 ? 'active' : ''}>
               <a
                 class='close-menu'
-                href='/danh-cho-nha-truong'
+                href={(l.lang == 'VI' ? '' : '/en') + '/#schools'}
                 onClick={() => {
                   setActiveMenu(4);
                 }}

@@ -10,7 +10,8 @@ const APP_URL = process.env.APP_URL;
 
 <div class='schools'>
   <div class='h-[82px] text-darkTeal'></div>
-  <div class='schools-gradient'></div>
+  <div class='schools-gradient top-[19px] left-[-154px] h-[427px] w-[427px] hidden md:flex'></div>
+  <div class='schools-gradient bottom-0 right-[-185px] h-[421px] w-[421px]'></div>
   <img class='schools-laptop hidden md:flex max-w-[60%]' src='/images/school-top-bg-md.svg' alt='' />
   <img class='schools-laptop md:hidden' src='/images/school-top-bg.svg' alt='' />
   <div class='flex w-full max-w-[1280px] h-full relative'>
@@ -32,15 +33,15 @@ const APP_URL = process.env.APP_URL;
       <h2 class='text-[1.375rem] md:text-[1.75rem]'>{l.problems.b2bWhy}</h2>
     </div>
     <div class='grid grid-cols-1 md:grid-cols-3'>
-      <div class='flex flex-col items-center gap-4'>
+      <div class='flex flex-col items-center gap-4 border-r-darkTeal border-r-0 md:border-r md:px-6 lg:px-0'>
         <img src='/images/school-problem-1.png' alt='' />
         <span class='md:max-w-[240px] text-base'>{l.problems.b2b1}</span>
       </div>
-      <div class='flex flex-col items-center gap-4'>
+      <div class='flex flex-col items-center gap-4 border-r-darkTeal border-r-0 md:border-r md:px-6 lg:px-0'>
         <img src='/images/school-problem-2.png' alt='' />
         <span class='md:max-w-[240px] text-base'>{l.problems.b2b2}</span>
       </div>
-      <div class='flex flex-col items-center gap-4'>
+      <div class='flex flex-col items-center gap-4 md:px-6 lg:px-0'>
         <img src='/images/school-problem-3.png' alt='' />
         <span class='md:max-w-[240px] text-base'>{l.problems.b2b3}</span>
       </div>
@@ -48,7 +49,7 @@ const APP_URL = process.env.APP_URL;
   </div>
 </div>
 <div
-  class='flex justify-center px-6 pt-12 md:pt-[5.5rem] pb-14 md:pb-[6.75rem] md:py-[6.75rem] solution-bg relative bg-blueGrey-50 overflow-hidden'
+  class='flex justify-center px-6 pt-12 md:pt-[5.5rem] pb-14 md:pb-[6.75rem] md:py-[6.75rem] solution-bg relative bg-blueGrey-50'
 >
   <div class='flex flex-col w-full max-w-[1280px] gap-6 md:gap-14 text-center lg:px-8'>
     <div class='flex flex-col w-full items-center gap-2'>
@@ -165,7 +166,7 @@ const APP_URL = process.env.APP_URL;
       alt=''
     />
     <img
-      class='absolute bottom-0 left-0 right-0 m-auto z-0 lg:hidden w-auto h-auto max-h-[50%]'
+      class='absolute bottom-0 left-0 right-0 m-auto z-0 lg:hidden w-auto h-auto max-h-[47%]'
       src='/images/Testimonials.png'
       alt=''
     />
@@ -191,7 +192,7 @@ const APP_URL = process.env.APP_URL;
           <span class='lg:font-[600]'>{l.solutions.result3}</span>
         </div>
         <div class='col items-center lg:items-start text-center lg:text-left lg:gap-4'>
-          <span class='text-4xl md:text-5xl text-darkTeal font-bold'>2-3</span>
+          <span class='text-4xl md:text-5xl text-darkTeal font-bold'>2 - 3</span>
           <span class='lg:font-[600]'>{l.solutions.result4}</span>
         </div>
       </div>

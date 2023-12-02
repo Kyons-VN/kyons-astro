@@ -6,10 +6,8 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<div
-  class='lg:h-auto w-full bg-blueGrey-800 flex flex-col items-center text-blueGrey-200 bg-footer p-4 lg:px-14 lg:py-5 z-10'
->
-  <div class='w-full max-w-[1280px]'>
+<div class='lg:h-auto w-full bg-blueGrey-800 flex flex-col items-center text-blueGrey-200 bg-footer z-10'>
+  <div class='w-full max-w-[1280px] p-4 lg:px-14 lg:py-5'>
     <div class='flex flex-col lg:flex-row justify-stretch gap-10 w-full items-stretch'>
       <div class='lg:w-auto w-full flex justify-center items-start'>
         <img src='/images/logo.svg' alt='Logo Kyons' class='w-[160px]' />
@@ -79,6 +77,6 @@ const { l } = Astro.props;
     </div>
   </div>
 </div>
-<div class='gap-2 w-full pt-6 px-14 py-5 bg-blueGrey-900 text-white flex items-center justify-center sm:text-left'>
-  <div class='lg:w-[1280px]'>{l.footer.copy}</div>
+<div class='gap-2 w-full bg-blueGrey-900 text-white flex items-center justify-center sm:text-left'>
+  <div class='lg:w-[1280px] text-center sm:text-left pt-6 px-14 py-5'>{l.footer.copy}</div>
 </div>

@@ -18,12 +18,12 @@ const APP_URL = process.env.APP_URL;
           <h3 class='text-2xl'>{l.schools.complete}</h3>
           <span>{l.schools.with}</span>
         </div>
-        <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='btn green w-full lg:w-[245px] z-10'
-          >{l.btn.contact}</a
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/danh-cho-nha-truong`} class='btn green w-full lg:w-[245px] z-10'
+          >{l.btn.details}</a
         >
       </div>
     </div>
-    <img src={`/images/${l.lang == 'VI' ? 'vi' : '/en'}/for-schools-md.png`} alt='' class='hidden lg:flex' />
+    <img src={`/images/${l.lang == 'VI' ? 'vi' : 'en'}/for-schools-md.png`} alt='' class='hidden lg:flex' />
     <img src='/images/for-schools.png' alt='' class='lg:hidden w-full' />
   </div>
 </div>
