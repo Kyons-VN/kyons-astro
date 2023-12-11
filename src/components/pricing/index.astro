@@ -8,7 +8,7 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<div class='pricing'>
+<!-- <div class='pricing'>
   <div id='pricing' class='absolute top-[-82px]'></div>
   <div class='h-20'></div>
   <div class='flex flex-col gap-3 items-stretch w-full sm:max-w-[1122px]'>
@@ -23,8 +23,9 @@ const { l } = Astro.props;
       <PriceTable l={l} showAll={true} />
     </div>
   </div>
-</div>
-<div class='w-full flex justify-center relative'>
+</div> -->
+<div class='w-full flex flex-col items-center relative'>
+  <div class='h-20'></div>
   <div id='compare' class='absolute top-[-82px]'></div>
   <div class='flex flex-col items-stretch w-full sm:max-w-[1122px]'>
     <div class='border-b-blueGrey-300 border-b p-4 flex flex-col gap-2'>

@@ -145,13 +145,13 @@ export default function Menu({ l }: Props) {
                 <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
                   {l.menu.guild}
                 </a>
-                <hr class='text-blueGrey-300' />
+                {/* <hr class='text-blueGrey-300' />
                 <a class='close-menu flex' href={(l.lang == 'VI' ? '' : '/en') + '/pricing'}>
                   {l.menu.price}&nbsp;
                   <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
                     {l.menu.promotion}
                   </span>
-                </a>
+                </a> */}
               </div>
             </div>
             <div

@@ -4,7 +4,6 @@ import AboutUs from '@components/about-us/index.astro';
 import { Contact } from '@components/contact/Contact';
 import Guild from '@components/guild/index.astro';
 import Home from '@components/home2/index.astro';
-import Price from '@components/price/index.astro';
 import Problem from '@components/problem/index.astro';
 import Schools from '@components/schools2/index.astro';
 import Solutions from '@components/solutions/index.astro';
@@ -20,7 +19,7 @@ const { l } = Astro.props;
 <Problem l={l} />
 <Solutions l={l} />
 <Guild l={l} />
-<Price l={l} />
+<!-- <Price l={l} /> -->
 <Schools l={l} />
 <Contact l={l} client:only='preact' />
 <Footer l={l} />
