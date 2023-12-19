@@ -80,11 +80,7 @@ export function Contact({ l }: Props, state: any) {
           ></h5>
         </div>
         <div class='w-full lg:flex-1 flex flex-col gap-6 items-center justify-center'>
-          <form
-            id='form'
-            onSubmit={handleSubmit}
-            class='w-full lg:w-[600px] flex flex-col gap-6 z-10'
-          >
+          <form id='form' onSubmit={handleSubmit} class='w-full lg:w-[600px] flex flex-col gap-6 z-10'>
             <div class='flex flex-col gap-2'>
               <select
                 class='control custom-transition delay-2'
@@ -100,16 +96,10 @@ export function Contact({ l }: Props, state: any) {
                 </option>
                 <option value={l.contact.parents}>{l.contact.parents}</option>
                 <option value={l.contact.teachers}>{l.contact.teachers}</option>
-                <option value={l.contact.educators}>
-                  {l.contact.educators}
-                </option>
-                <option value={l.contact.investors}>
-                  {l.contact.investors}
-                </option>
+                <option value={l.contact.educators}>{l.contact.educators}</option>
+                <option value={l.contact.investors}>{l.contact.investors}</option>
                 <option value={l.contact.presses}>{l.contact.presses}</option>
-                <option value={l.contact.potentialTeamates}>
-                  {l.contact.potentialTeamates}
-                </option>
+                <option value={l.contact.potentialTeamates}>{l.contact.potentialTeamates}</option>
               </select>
               <input
                 name='email'
@@ -129,7 +119,6 @@ export function Contact({ l }: Props, state: any) {
                 value={phone}
                 onChange={(event) => setPhone(event.currentTarget.value)}
                 class='custom-transition delay-3'
-                // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
               />
               <input
                 name='name'
@@ -191,10 +180,7 @@ export function Contact({ l }: Props, state: any) {
               class='w-full flex justify-start items-center custom-transition delay-6'
               // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
             >
-              <button
-                class='btn orange large w-full lg:w-[230px] flex  justify-center'
-                type='submit'
-              >
+              <button class='btn orange large w-full lg:w-[230px] flex  justify-center' type='submit'>
                 {l.btn.send}
               </button>
             </div>
