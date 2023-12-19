@@ -12,6 +12,7 @@ export function Contact({ l }: Props, state: any) {
   const [type, setType] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
 
   function handleSubmit(event: any) {
@@ -21,7 +22,7 @@ export function Contact({ l }: Props, state: any) {
 
     const htmlMessage = message.replace(/\n/g, '<br />');
     // const url = `http://127.0.0.1:5001/kyonsvn/us-central1/smtpMail?type=${type}&email=${email}&name=${name}&message=${htmlMessage}`
-    const url = `https://us-central1-kyonsvn.cloudfunctions.net/smtpMail?type=${type}&email=${email}&name=${name}&message=${htmlMessage}`;
+    const url = `https://us-central1-kyonsvn.cloudfunctions.net/smtpMail?type=${type}&email=${email}&phone=${phone}&name=${name}&message=${htmlMessage}`;
 
     fetch(encodeURI(url))
       // .then((res) => res.json())
@@ -48,6 +49,7 @@ export function Contact({ l }: Props, state: any) {
 
   function clearInput() {
     setEmail('');
+    setPhone('');
     setType('');
     setName('');
     setMessage('');
@@ -108,6 +110,15 @@ export function Contact({ l }: Props, state: any) {
                 onChange={(event) => setEmail(event.currentTarget.value)}
                 class='custom-transition delay-3'
                 // style={$activeMenu != 4 ? 'opacity: 0;transform: translateY(80px);' : ''}
+              />
+              <input
+                name='phone'
+                type='text'
+                placeholder={l.contact.phone}
+                required
+                value={phone}
+                onChange={(event) => setPhone(event.currentTarget.value)}
+                class='custom-transition delay-3'
               />
               <input
                 name='name'
