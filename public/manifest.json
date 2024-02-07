@@ -1,11 +1,11 @@
 {
-  "name": "KYONS",
+  "name": "KYONS Blogs",
   "short_name": "KYONS",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#0175C2",
+  "background_color": "#F1F5F9",
   "theme_color": "#0175C2",
-  "description": "KYONS Student App.",
+  "description": "KYONS Blogs.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

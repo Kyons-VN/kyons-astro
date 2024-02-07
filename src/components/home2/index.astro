@@ -49,24 +49,24 @@ const { l } = Astro.props;
 </div>
 
 <script>
-  const targetDate = new Date('2023-11-30T24:00:00+00:00');
-  let countdown = setInterval(() => {
-    const now = new Date();
-    const diff = targetDate.getTime() - now.getTime();
-    const day = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const second = Math.floor((diff % (1000 * 60)) / 1000);
-    document.getElementById('day')!.innerText = day.toString().padStart(2, '0');
-    document.getElementById('hour')!.innerText = hour.toString().padStart(2, '0');
-    document.getElementById('minute')!.innerText = minute.toString().padStart(2, '0');
-    document.getElementById('second')!.innerText = second.toString().padStart(2, '0');
-    if (diff < 0) {
-      clearInterval(countdown);
-      document.getElementById('day')!.innerText = '00';
-      document.getElementById('hour')!.innerText = '00';
-      document.getElementById('minute')!.innerText = '00';
-      document.getElementById('second')!.innerText = '00';
-    }
-  }, 1000);
+  // const targetDate = new Date('2023-11-30T24:00:00+00:00');
+  // let countdown = setInterval(() => {
+  //   const now = new Date();
+  //   const diff = targetDate.getTime() - now.getTime();
+  //   const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+  //   const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //   const minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  //   const second = Math.floor((diff % (1000 * 60)) / 1000);
+  //   document.getElementById('day')!.innerText = day.toString().padStart(2, '0');
+  //   document.getElementById('hour')!.innerText = hour.toString().padStart(2, '0');
+  //   document.getElementById('minute')!.innerText = minute.toString().padStart(2, '0');
+  //   document.getElementById('second')!.innerText = second.toString().padStart(2, '0');
+  //   if (diff < 0) {
+  //     clearInterval(countdown);
+  //     document.getElementById('day')!.innerText = '00';
+  //     document.getElementById('hour')!.innerText = '00';
+  //     document.getElementById('minute')!.innerText = '00';
+  //     document.getElementById('second')!.innerText = '00';
+  //   }
+  // }, 1000);
 </script>
