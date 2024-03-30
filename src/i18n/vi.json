@@ -2,6 +2,9 @@
   "lang": "VI",
   "languageCode": "vi",
   "btn": {
+    "finalizeOrder": "Chốt đơn",
+    "discoverNow": "Khám phá ngay",
+
     "studyNow": "Học ngay thôi",
     "trial": "Liên hệ dùng thử",
     "send": "Gửi tin nhắn",
@@ -34,6 +37,10 @@
     "promotion": "KM!"
   },
   "home": {
+    "title0": "Học Toán cực chill cùng Kyons - ứng dụng AI giúp bạn <span class='text-lightBlue-3'>cải thiện điểm toán với lộ trình học cá nhân hoá</span>",
+    "title1": "Thăng hạng điểm Toán, khởi động sớm với ưu đãi cực hời <span class='text-lightBlue-3'>chỉ từ 19k</span>",
+    "title2": "<span class='text-lightBlue-3'>Xin vía giỏi Toán</span> từ các “đồng math” đã dùng Kyons nhé",
+
     "whyNotSmarter": "Tại sao không học thông minh hơn?",
     "kyons": "Kyons, nền tảng giáo dục hiện đại sử dụng trí tuệ nhân tạo (AI), là trợ thủ đắc lực giúp học sinh đạt điểm số mong muốn trong thời gian ngắn nhất với lộ trình học được cá nhân hóa",
     "scrollToView": "Kéo xuống để bắt đầu khám phá",

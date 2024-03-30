@@ -16,7 +16,6 @@ import '@styles/global.scss';
     window.addEventListener(
       'load',
       () => {
-        console.log('RUN');
         if (location.hash && location.hash !== '#') {
           const anchorLocation = decodeURIComponent(location.hash);
           const anchorElement: HTMLElement | null = document.querySelector(anchorLocation);

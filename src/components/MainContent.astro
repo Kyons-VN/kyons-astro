@@ -4,7 +4,7 @@ import AboutUs from '@components/about-us/index.astro';
 import Chat from '@components/chat/index.astro';
 import { Contact } from '@components/contact/Contact';
 import Guild from '@components/guild/index.astro';
-import Home from '@components/home2/index.astro';
+import { Home } from '@components/home/Home';
 import Problem from '@components/problem/index.astro';
 import Schools from '@components/schools2/index.astro';
 import Solutions from '@components/solutions/index.astro';
@@ -15,7 +15,7 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<Home l={l} />
+<Home l={l} client:only='preact' />
 <Chat l={l} />
 <AboutUs l={l} />
 <Problem l={l} />

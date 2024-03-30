@@ -194,7 +194,6 @@ let change = l.preorder.change.replace('[pk]', id == 'package1' ? l.price.packag
     document.getElementById('alreadyTransfered').classList.remove('hide');
     document.body.style.overflowY = 'hide';
   });
-  console.log('run');
   copyCode.addEventListener('click', () => {
     console.log('click');
     navigator.clipboard.writeText(copyText.innerText);
