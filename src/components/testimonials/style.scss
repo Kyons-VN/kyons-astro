@@ -1,0 +1,25 @@
+.testimonials {
+  @apply px-6 py-12 md:px-8 md:py-16 lg:py-20 relative flex justify-center;
+  background: linear-gradient(180deg, rgba(204, 242, 255, 0) 1.55%, rgba(152, 214, 250, 0.25) 45.6%, #98d6fa 88.77%);
+}
+.card {
+  @apply flex flex-col p-8 rounded-lg gap-6 pl-16 bg-white relative shadow-1;
+  img {
+    @apply absolute left-8;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    @apply h-fit;
+  }
+  .card:nth-child(1),
+  .card:nth-child(3),
+  .card:nth-child(4),
+  .card:nth-child(5) {
+    @apply w-[calc(33%_-_0.8rem)];
+  }
+  .card:nth-child(2) {
+    @apply w-1/2;
+  }
+}

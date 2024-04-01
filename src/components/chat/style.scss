@@ -2,7 +2,7 @@
   background: url('/images/Big Planet.svg') no-repeat right 0 bottom 0,
     url('/images/chat-bg.svg') no-repeat bottom right;
   background-size: auto, cover;
-  @apply w-full h-screen flex flex-col sm:flex-row justify-center items-center sm:items-start relative text-center p-4 sm:px-11 sm:py-20 overflow-hidden text-white;
+  @apply w-full h-screen flex flex-col justify-center items-center relative text-center p-4 sm:px-11 sm:py-20 pb-20 overflow-hidden text-white gap-12;
 }
 .chatbox {
   background: rgba(0, 0, 0, 0.3);
@@ -47,7 +47,7 @@
       @apply w-[34px] h-[34px] rounded-full flex-shrink-0 self-end;
     }
     &.left {
-      @apply self-start justify-end text-left;
+      @apply self-start justify-start text-left;
       .box {
         background: linear-gradient(181deg, rgba(37, 138, 194, 0.2) 1.23%, rgba(44, 61, 91, 0.2) 104.04%);
       }
@@ -138,6 +138,7 @@
 }
 @media (max-width: 1023px) {
   .chat {
-    background: url('/images/chat-bg.svg') no-repeat left -66px top -57px;
+    background: url('/images/chat-bg.svg') no-repeat center center;
+    background-size: cover;
   }
 }

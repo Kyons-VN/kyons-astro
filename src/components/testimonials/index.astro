@@ -1,0 +1,43 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='testimonials'>
+  <div id='testimonials' class='absolute top-[-82px]'></div>
+  <img src='/images/testimonials.svg' alt='' class='absolute w-full left-0 top-0' />
+  <div class='flex flex-col gap-12 w-full max-w-[1122px]'>
+    <div class='relative w-full'>
+      <img src='/images/Quote.svg' alt='quote' class='absolute top-[-56px] left-0 w-[104px]' />
+      <h4 class='text-2xl md:text-3xl relative pl-7'>{l.testimonials.feedbacks}</h4>
+    </div>
+    <div class='flex flex-col lg:flex-row gap-4 md:gap-6 lg:flex-wrap'>
+      {
+        [1, 2, 3, 4, 5].map((index) => (
+          <div class='card'>
+            <img src='/images/Quote mark.svg' alt='quote' class='' />
+            <span class='text-lg'>{l.testimonials[`feedback${index}`]}</span>
+            <div class='flex flex-col'>
+              <b>{l.testimonials[`author${index}`]}</b>
+              <span>{l.testimonials[`authorDesc${index}`]}</span>
+            </div>
+          </div>
+        ))
+      }
+      <!-- <div class='flex flex-col p-8 rounded-lg gap-6 pl-16 bg-white relative shadow-1'>
+        <img src='/images/Quote mark.svg' alt='quote' class='absolute left-8' />
+        <span class='text-lg'>{l.testimonials.feedback1}</span>
+        <div class='flex flex-col'>
+          <b>{l.testimonials.author1}</b>
+          <span>{l.testimonials.author1Desc}</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<script></script>

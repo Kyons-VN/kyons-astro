@@ -1,0 +1,12 @@
+.achievements {
+  @apply flex flex-col lg:px-11 lg:py-20 py-11 md:px-8 md:py-16 px-6 gap-12 lg:min-h-[1000px] min-h-[674px] md:min-h-[800px] sm:min-h-[800px] relative justify-start;
+}
+//   background: url('/images/achievements-lg.svg') no-repeat center bottom;
+//   background-size: contain;
+// }
+// @media (min-width: 1280px) {
+//   .achievements {
+//     background: url('/images/achievements-lg.svg') no-repeat center bottom;
+//     background-size: cover;
+//   }
+// }

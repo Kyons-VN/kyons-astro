@@ -71,7 +71,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        1: '0px 3px 5px rgba(0, 0, 0, 0.1)',
+        1: '0px 3px 5px 0px rgba(0, 0, 0, 0.1)',
         2: '0px 5px 10px 0px rgba(0, 0, 0, 0.15)',
         3: '0px 15px 15px rgba(0, 0, 0, 0.3)',
         4: '0px 15px 15px 0px rgba(30, 41, 59, 0.08)',

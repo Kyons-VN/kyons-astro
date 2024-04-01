@@ -204,7 +204,7 @@ export default function Menu({ l }: Props) {
                 </li>
               </ul>
             </li>
-            <li className={$activeMenu == 4 ? 'active' : ''}>
+            {/* <li className={$activeMenu == 4 ? 'active' : ''}>
               <a
                 class='close-menu'
                 href={(l.lang == 'VI' ? '' : '/en') + '/#schools'}
@@ -216,7 +216,7 @@ export default function Menu({ l }: Props) {
                   <img class='sm:hidden' src='/images/menu-schools.svg' alt='' /> <span>{l.menu.forSchools}</span>
                 </span>
               </a>
-            </li>
+            </li> */}
             {/* <li className={$activeMenu == 1 ? 'active' : ''}>
             <a
               class='close-menu'
@@ -277,7 +277,8 @@ export default function Menu({ l }: Props) {
                 class='close-menu'
                 href='#contact'
                 onClick={() => {
-                  setActiveMenu(6);
+                  document.body.classList.remove('overflow-hidden');
+                  // smoothScrollToDiv(document.getElementById('contact')!);
                 }}
               >
                 <span class='font-bold text-[16px] flex gap-3 items-center'>

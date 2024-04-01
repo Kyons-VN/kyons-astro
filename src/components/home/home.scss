@@ -1,12 +1,12 @@
 .home {
-  @apply w-full min-h-screen sm:h-screen sm:min-h-[800px] relative text-white;
+  @apply w-full min-h-screen sm:h-screen sm:min-h-[800px] relative text-white flex justify-center;
   fill: radial-gradient(96.95% 86.24% at 50% 100%, #0f172a 18.15%, #1d44a8 55.89%, #202f65 72.19%, #0f172a 100%);
 
-  background-image: url('/images/home-big-planet.svg'), url('/images/home2-planet-1.svg'),
-    url('/images/home2-planet-2.svg'), url('/images/home-star.svg'), url('/images/home-bg.svg');
-  background-position: top 35vh center, left 62px top 150px, right -141px bottom 90px, center center, center bottom; //, center;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 80vh, 25vh, 40vh, cover, cover;
+  background-image: url('/images/home2-planet-1.svg'), url('/images/home2-planet-2.svg'), url('/images/home-star.svg'),
+    url('/images/home-bg.svg');
+  background-position: left 62px top 150px, right -141px bottom 90px, center center, center bottom; //, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 25vh, 40vh, cover, cover;
 }
 .imgShow {
   z-index: 1;
@@ -15,25 +15,63 @@
   z-index: 0;
   filter: brightness(50%);
 }
-.slider {
+.slider-wrapper {
   height: calc(100% - 82px);
-  @apply absolute w-full;
-  .slider-item {
-    @apply h-full w-full absolute top-0 left-0 flex items-start justify-between;
+  @apply absolute top-[82px] w-full max-w-[1352px];
+  .slider {
+    @apply h-full w-full flex lg:flex-row flex-col lg:items-center justify-between;
   }
 }
 .text-slider {
-  @apply absolute top-1/4 h-1/2 w-1/2 left-10;
+  z-index: 2;
+  @apply flex h-[50vh] lg:w-1/2 md:h-[50vh] sm:h-1/3 relative items-center;
+  .text-slider-item {
+    @apply h-full w-full absolute top-0 left-0 flex flex-col items-center justify-around md:justify-between px-4 lg:px-14;
+    h1,
+    h2 {
+      @apply text-[1.75rem] md:text-[2rem] lg:text-4xl sm:mt-12 leading-10 text-center lg:text-left;
+    }
+  }
 }
 .indicators {
-  @apply absolute top-3/4 left-10;
+  @apply absolute lg:bottom-[-60px] bottom-[-120%] w-full lg:w-auto list-none flex flex-row justify-center lg:justify-start gap-2 md:gap-8 px-4 lg:px-14;
+  > li {
+    @apply bg-blueGrey-400 cursor-pointer;
+
+    width: 18px;
+    height: 5px;
+    border-radius: 10px;
+    &.active {
+      @apply bg-white w-[36px];
+    }
+  }
+}
+.image-slider {
+  z-index: 0;
+  // background-image: url('/images/home-big-planet.svg');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  @apply lg:absolute lg:left-[50%] flex h-4/5 right-0 w-full lg:w-3/5 top-0 items-center justify-center relative;
+  .image-slider-item {
+    @apply h-full w-full absolute top-0 right-0 flex items-center justify-center;
+    img {
+      @apply select-none;
+    }
+  }
 }
 @media (max-width: 1023px) {
   .home {
-    background-image: url('/images/home2-planet-1.svg'), url('/images/home2-planet-2.svg'),
-      url('/images/home2-bg-sm.svg');
-    background-position: left -22px top 93px, right -93px bottom 28px, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 25%, 40%, cover;
+    background-image: url('/images/home2-planet-1.svg'), url('/images/home2-planet-2.svg'), url('/images/home-star.svg'),
+      url('/images/home-sm.png');
+    background-position: left -22px top 93px, right -93px bottom 28px, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 25%, 40%, cover, cover;
   }
+  .image-slider {
+    background-size: 120%;
+  }
+}
+.highlight {
+  @apply text-lightBlue-1;
 }

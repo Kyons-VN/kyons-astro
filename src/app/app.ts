@@ -64,7 +64,8 @@ export function setActive(index: number, force: boolean = false) {
 }
 
 export function setNextSlider() {
-  if (activeSlider.get() > 2) return;
+  console.log(activeSlider.get());
+  if (activeSlider.get() > 1) return;
   activeSlider.set(activeSlider.get() + 1);
 }
 
@@ -78,8 +79,6 @@ export function setActiveSlider(index: number) {
   activeSlider.set(index);
 }
 export function setInSlider(value: boolean) {
-  console.log('RUN');
-
   isInSlider.set(value);
 }
 
@@ -98,25 +97,31 @@ export function toTopFunction() {
 }
 
 export function smoothScrollToDiv(element: HTMLElement, duration = 500) {
-  if (element) {
-    const startingY = window.scrollY;
-    const targetY = element.offsetTop;
-    const distance = targetY - startingY;
-    let startTime: number | null = null;
+  document.body.classList.remove('overflow-hidden');
+  setTimeout(() => {
+    if (element) {
+      console.log('element:', element.id);
 
-    const animationStep = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / duration;
-      const easedProgress = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * (progress - 1), 2) / 2;
-      const newY = startingY + distance * easedProgress;
-      window.scrollTo(0, newY);
-      if (progress < 1) {
-        window.requestAnimationFrame(animationStep);
-      }
-    };
+      const startingY = window.scrollY;
+      const targetY = element.offsetTop;
+      const distance = targetY - startingY;
+      let startTime: number | null = null;
 
-    window.requestAnimationFrame(animationStep);
-  } else {
-    console.error('Element with id', element, 'not found.');
-  }
+      const animationStep = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = (timestamp - startTime) / duration;
+        const easedProgress = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * (progress - 1), 2) / 2;
+        const newY = startingY + distance * easedProgress;
+        window.scrollTo(0, newY);
+        if (progress < 1) {
+          window.requestAnimationFrame(animationStep);
+        }
+      };
+
+      window.requestAnimationFrame(animationStep);
+    } else {
+      console.error('Element with id', element, 'not found.');
+    }
+  }, 100);
+
 }

@@ -1,0 +1,43 @@
+---
+import './style.scss';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='faq'>
+  <div id='faq' class='absolute top-[-82px]'></div>
+  <img src='/images/FAQ.svg' alt='' class='absolute left-0 top-[267px]' />
+  <div class='flex flex-col gap-2.5 text-center items-center'>
+    <h5 class='text-teal-0 text-base'>FAQ</h5>
+    <h4 class='text-xl md:text-2xl lg:text-3xl'>{l.faq.faq}</h4>
+  </div>
+  <div class='flex flex-col w-full max-w-[667px]'>
+    {
+      l.faq.questions.map((q: any, i: number) => (
+        <div class='flex-col py-6 gap-4 border-t border-b border-white'>
+          <b class='text-lg'>{q.question}</b>
+          <p>{q.answer}</p>
+        </div>
+      ))
+    }
+    <!-- <div class='flex-col py-6 gap-4 border-t border-b border-white'>
+      <b class='text-lg'>When can I officially start using Kyons?</b>
+      <p>
+        Kyons will officially launch its upgraded version on April 22, 2024. You can purchase the pre-order package now
+        to enjoy a special price during this period!
+      </p>
+    </div>
+    <div class='flex-col py-6 gap-4 border-t border-b border-white'>
+      <b class='text-lg'>When can I officially start using Kyons?</b>
+      <p>
+        Kyons will officially launch its upgraded version on April 22, 2024. You can purchase the pre-order package now
+        to enjoy a special price during this period!
+      </p>
+    </div> -->
+  </div>
+</div>
+
+<script></script>

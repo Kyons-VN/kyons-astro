@@ -7,234 +7,89 @@ export interface Props {
 const { l, showAll } = Astro.props;
 ---
 
-<div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
-  <div class='flex flex-col p-3 bg-[#E4E4E4] rounded-lg gap-1.5 md:min-h-[102px]'>
-    <div class='flex gap-2 items-center justify-start'>
-      <img src='/images/free-package.svg' alt='' />
-      <strong>{l.price.freePackage}</strong>
-    </div>
-    <h5>{l.price.free}</h5>
-  </div>
-  <div class='h-3'></div>
-  <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.price.useFree}</a>
-  <div class='h-4'></div>
-  <p set:html={l.price.freeInclude} />
-  <div class='h-3'></div>
-  <ul class='star'>
-    <li class='flex items-center'>
-      {l.price.free1}
-    </li>
-    <li class='flex items-center'>
-      {l.price.free2}
-    </li>
-    <li class='flex items-center'>
-      {l.price.free3}
-    </li>
-    <li class='flex items-center'>
-      {l.price.free4}
-    </li>
-  </ul>
-  <span class='flex-1 sm:flex'></span>
-  {
-    !showAll && (
-      <a
-        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
-        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-      >
-        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
-      </a>
-    )
-  }
-</div>
-<div class='flex flex-col rounded-lg p-4 bg-white items-start shadow-2'>
-  <div class='flex flex-col w-full items-start'>
-    <div class='px-3 py-1 rounded-full bg-yellow-1 font-bold md:hidden'>{l.price.recommended}</div>
-    <div class='h-3 md:hidden'></div>
-    <div class='flex flex-col p-3 bg-[#DAEFFF] rounded-lg w-full'>
+<div class='flex flex-col rounded-lg p-4 bg-white shadow-2 h-[650px] justify-start'>
+  <div class='h-[37px]'></div>
+  <div class='flex flex-col gap-8'>
+    <div class='flex flex-row items-start justify-between p-3 rounded-lg gap-1.5 md:min-h-[102px]'>
       <div class='flex gap-2 items-center justify-start'>
-        <img src='/images/package1.svg' alt='' />
-        <strong class='text-secondaryBlue'>{l.price.package1}</strong>
+        <img src='/images/free-package.svg' alt='' />
+        <h6 class='text-base'>{l.price.package1}</h6>
       </div>
-      <div class='h-8 flex items-center gap-1.5'>
-        <strong class='text-sm'>VND</strong>
-        <strong class='text-secondaryBlue text-2xl'>39.000</strong>
-        <strong class='text-sm'>/ 30 {l.home.days}</strong>
+      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
+        {`${l.lang == 'VI' ? l.price.discount + ' 60%' : '60% ' + l.price.discount}`}
       </div>
-      <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
-        <span>VND</span>
-        <s>240.000</s>
-        <span>/</span>
-        <span>30 {l.home.days}</span>
-      </div>
+    </div>
+    <div class='flex gap-2.5 items-end'>
+      <b class='text-blueGrey-400 text-3xl'>57,5K</b>
+      <b class='text-6xl'>19K</b>
+    </div>
+    <div class='flex flex-col gap-4'>
+      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <p set:html={l.price.package1Include} />
+      <ul class='star'>
+        <li>
+          {l.price.package11}
+        </li>
+        <li set:html={l.price.package12} />
+      </ul>
     </div>
   </div>
-  <div class='h-3'></div>
-  <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package1`} class='btn orange w-full'>{l.btn.bookNow}</a>
-  <div class='h-4'></div>
-  <p id='include1' set:html={`${l.price.package1Include}:`} />
-  <div class='h-3'></div>
-  <ul class='star'>
-    <li class='flex items-center view1 hide'>
-      {l.price.free1}
-    </li>
-    <li class='flex items-center view1 hide'>
-      {l.price.free2}
-    </li>
-    <li class='flex items-center view1 hide'>
-      {l.price.free3}
-    </li>
-    <li class='flex items-center'>
-      {l.price.package11}
-    </li>
-    <li class='flex items-center'>
-      {l.price.package121}
-    </li>
-    <li class='flex items-center'>
-      {l.price.package13}
-    </li>
-    <li class='flex items-center'>
-      {l.price.package14}
-    </li>
-  </ul>
-  <div class='h-3'></div>
-  <span class='flex-1'></span>
-  <button id='viewFull1' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
-    <span>{l.price.full}</span>
-    <i class='icon-ArrowDownStop'></i>
-  </button>
-  <button id='viewShort1' class='text-orange font-bold w-full flex justify-between hide'>
-    <span>{l.price.short}</span>
-    <i class='icon-ArrowUpStop'></i>
-  </button>
-  {
-    !showAll && (
-      <a
-        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
-        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-      >
-        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
-      </a>
-    )
-  }
 </div>
-<div class='flex flex-col rounded-lg p-4 bg-white shadow-2'>
-  <div class='flex flex-col p-3 bg-[#FFE3C2] rounded-lg w-full'>
-    <div class='flex gap-2 items-center justify-start'>
-      <img src='/images/package2.svg' alt='' />
-      <strong class='text-orange'>{l.price.package2}</strong>
+<!-- <div class='h-[37px] px-4 py-2 bg-yellow-1'>{l.price.recommended}</div> -->
+<div
+  class='flex flex-col rounded-lg p-4 bg-white shadow-orange h-[650px] justify-start items-center border-orange border-8'
+>
+  <div class='h-[37px] px-4 py-2 bg-yellow-1 rounded-2xl'>{l.price.recommended}</div>
+  <div class='flex flex-col gap-8'>
+    <div class='flex flex-row items-start justify-between p-3 rounded-2xl gap-1.5 md:min-h-[102px]'>
+      <div class='flex gap-2 items-center justify-start'>
+        <img src='/images/free-package.svg' alt='' />
+        <h6 class='text-base'>{l.price.package2}</h6>
+      </div>
+      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
+        {`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}
+      </div>
     </div>
-    <div class='h-8 flex items-center gap-1.5'>
-      <strong class='text-sm'>VND</strong>
-      <strong class='text-secondaryBlue text-2xl'>99.000</strong>
-      <strong class='text-sm'>/ 92 {l.home.days}</strong>
+    <div class='flex gap-2.5 items-end'>
+      <b class='text-blueGrey-400 text-3xl'>57,5K</b>
+      <b class='text-6xl'>19K</b>
     </div>
-    <div class='flex text-blueGrey-500 gap-1.5 font-bold text-xs'>
-      {l.price.only}
-    </div>
-    <div class='flex text-blueGrey-400 gap-1.5 font-bold text-xs'>
-      <span>VND</span>
-      <s>720.000</s>
-      <span>/</span>
-      <span>92 {l.home.days}</span>
+    <div class='flex flex-col gap-4'>
+      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <p set:html={l.price.package1Include} />
+      <ul class='star'>
+        <li set:html={l.price.package21} />
+        <li set:html={l.price.package22} />
+        <li set:html={l.price.package23} />
+      </ul>
     </div>
   </div>
-  <div class='h-3'></div>
-  <a href={`${l.lang == 'VI' ? '' : '/en'}/preorder/package2`} class='btn orange'>{l.btn.bookNow}</a>
-  <div class='h-4'></div>
-  <p id='include2' set:html={`${l.price.package2Include}:`} />
-  <div class='h-3'></div>
-  <ul class='star'>
-    <li class='flex items-center view2 hide'>
-      {l.price.free1}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.free2}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.free3}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.package11}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.package121}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.package13}
-    </li>
-    <li class='flex items-center view2 hide'>
-      {l.price.package14}
-    </li>
-    <li class='flex items-center'>
-      {l.price.package21}
-    </li>
-  </ul>
-  <div class='h-3'></div>
-  <span class='flex-1'></span>
-  <button id='viewFull2' class={`text-orange font-bold w-full flex justify-between ${!showAll && 'hide'}`}>
-    <span>{l.price.full}</span>
-    <i class='icon-ArrowDownStop'></i>
-  </button>
-  <button id='viewShort2' class='text-orange font-bold w-full flex justify-between hide'>
-    <span>{l.price.short}</span>
-    <i class='icon-ArrowUpStop'></i>
-  </button>
-  {
-    !showAll && (
-      <a
-        href={`${l.lang == 'VI' ? '' : '/en'}/pricing#compare`}
-        class='sm:flex items-center justify-center gap-4 px-[16px] py-[6px] cursor-pointer font-[600] text-center h-10 rounded bg-white border border-orange text-orange shadow-none hidden w-full'
-      >
-        {l.price.detailsAndCompare} <i class='icon-ArrowRight' />
-      </a>
-    )
-  }
 </div>
-<style lang='scss'>
-  ul.star {
-    @apply flex flex-col gap-3 pb-2;
-    li {
-      @apply pl-8;
-      // &:nth-child(2n + 1) {
-      //   background: url('/images/blue-check.svg') no-repeat left 0px;
-      // }
-      // &:nth-child(2n) {
-      background: url('/images/green-check.svg') no-repeat left 0px;
-      // }
-    }
-  }
-  .hide {
-    display: none;
-  }
-</style>
-<script>
-  const viewFull1 = document.getElementById('viewFull1')!;
-  const viewShort1 = document.getElementById('viewShort1')!;
-  const view1Elms = document.getElementsByClassName('view1');
-  const include1 = document.getElementById('include1')!;
-  viewFull1.addEventListener('click', () => toggleView1());
-  viewShort1.addEventListener('click', () => toggleView1());
-  function toggleView1() {
-    for (let i = 0; i < view1Elms.length; i++) {
-      view1Elms[i].classList.toggle('hide');
-    }
-    include1.classList.toggle('hide');
-    viewFull1.classList.toggle('hide');
-    viewShort1.classList.toggle('hide');
-  }
-
-  const viewFull2 = document.getElementById('viewFull2')!;
-  const viewShort2 = document.getElementById('viewShort2')!;
-  const view2Elms = document.getElementsByClassName('view2');
-  const include2 = document.getElementById('include2')!;
-  viewFull2.addEventListener('click', () => toggleView2());
-  viewShort2.addEventListener('click', () => toggleView2());
-  function toggleView2() {
-    for (let i = 0; i < view2Elms.length; i++) {
-      view2Elms[i].classList.toggle('hide');
-    }
-    include2.classList.toggle('hide');
-    viewFull2.classList.toggle('hide');
-    viewShort2.classList.toggle('hide');
-  }
-</script>
+<div class='flex flex-col rounded-lg p-4 shadow-orange h-[650px] justify-start items-center bg-white'>
+  <div class='h-[37px]'></div>
+  <div class='flex flex-col gap-8'>
+    <div class='flex flex-row items-start justify-between p-3 rounded-2xl gap-1.5 md:min-h-[102px]'>
+      <div class='flex gap-2 items-center justify-start'>
+        <img src='/images/free-package.svg' alt='' />
+        <h6 class='text-base'>{l.price.package3}</h6>
+      </div>
+      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
+        {`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}
+      </div>
+    </div>
+    <div class='flex gap-2.5 items-end'>
+      <b class='text-blueGrey-400 text-3xl'>845K</b>
+      <b class='text-6xl'>279K</b>
+    </div>
+    <div class='flex flex-col gap-4'>
+      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <p set:html={l.price.package1Include} />
+      <ul class='star'>
+        <li set:html={l.price.package31} />
+        <li set:html={l.price.package32} />
+        <li set:html={l.price.package33} />
+        <li set:html={l.price.package34} />
+      </ul>
+    </div>
+  </div>
+</div>
