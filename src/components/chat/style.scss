@@ -2,14 +2,19 @@
   background: url('/images/Big Planet.svg') no-repeat right 0 bottom 0,
     url('/images/chat-bg.svg') no-repeat bottom right;
   background-size: auto, cover;
-  @apply w-full h-screen flex flex-col justify-center items-center relative text-center p-4 sm:px-11 sm:py-20 pb-20 overflow-hidden text-white gap-12;
+  transition: all ease 200ms;
+  @apply w-full h-[calc(100vh_-_82px)] flex flex-col lg:justify-center items-center justify-start relative text-center p-4 sm:px-11 sm:py-20 pb-20 overflow-hidden text-white lg:gap-12 gap-4;
+  .collapse {
+    padding: 0;
+    height: 0;
+  }
 }
 .chatbox {
   background: rgba(0, 0, 0, 0.3);
   @apply relative w-full max-w-[669px] flex flex-col border-teal-0;
 }
 .head {
-  @apply flex justify-between items-center px-4 py-3;
+  @apply flex justify-between items-center px-4 py-[12px];
   h3 {
     @apply text-teal-0 text-xl font-bold  leading-8;
     /* Learning block/Teal */
@@ -17,7 +22,7 @@
   }
 }
 .head-divider {
-  @apply border-r border-teal-0;
+  @apply border-r border-teal-0 h-[40px];
 }
 .chat-divider {
   background: var(--Orange-Light-Orange-1, #fb923c);
@@ -40,7 +45,7 @@
 }
 .body {
   @apply flex flex-col items-end px-11 py-9 gap-20 overflow-auto;
-  height: calc(100vh - 284px);
+  height: calc(100vh - 400px);
   .message {
     @apply flex gap-2.5 max-w-[482px] w-full;
     .avatar {
@@ -134,11 +139,5 @@
         }
       }
     }
-  }
-}
-@media (max-width: 1023px) {
-  .chat {
-    background: url('/images/chat-bg.svg') no-repeat center center;
-    background-size: cover;
   }
 }

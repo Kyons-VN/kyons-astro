@@ -122,7 +122,17 @@ export default function Menu({ l }: Props) {
                 </li>
               </ul>
             </li>
-            <div
+            <li>
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#features'}>
+                {l.menu.features}
+              </a>
+            </li>
+            <li>
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                {l.menu.price}
+              </a>
+            </li>
+            {/* <div
               class='hidden sm:flex flex-row relative p-3 items-center justify-between text-sm gap-3 cursor-pointer'
               onClick={() => setIsStudentHover(!isStudentHover)}
               tabIndex={0}
@@ -145,15 +155,8 @@ export default function Menu({ l }: Props) {
                 <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
                   {l.menu.guild}
                 </a>
-                {/* <hr class='text-blueGrey-300' />
-                <a class='close-menu flex' href={(l.lang == 'VI' ? '' : '/en') + '/pricing'}>
-                  {l.menu.price}&nbsp;
-                  <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
-                    {l.menu.promotion}
-                  </span>
-                </a> */}
               </div>
-            </div>
+            </div> */}
             <div
               className={isHover ? `${defaultClass} flex sm:hidden` : `${defaultClass} hidden`}
               // style='bottom: calc(-100% - 30px);'
@@ -173,7 +176,7 @@ export default function Menu({ l }: Props) {
                 EN
               </div>
             </div>
-            <li class='p-6 flex flex-col gap-6 sm:hidden'>
+            {/* <li class='p-6 flex flex-col gap-6 sm:hidden'>
               <span class='font-bold text-[16px] flex gap-3 items-center'>
                 <img src='/images/menu-students.svg' alt='' /> <span>{l.menu.forStudents}</span>
               </span>
@@ -204,7 +207,7 @@ export default function Menu({ l }: Props) {
                 </li>
               </ul>
             </li>
-            {/* <li className={$activeMenu == 4 ? 'active' : ''}>
+            <li className={$activeMenu == 4 ? 'active' : ''}>
               <a
                 class='close-menu'
                 href={(l.lang == 'VI' ? '' : '/en') + '/#schools'}

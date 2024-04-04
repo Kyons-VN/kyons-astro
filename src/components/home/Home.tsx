@@ -51,34 +51,29 @@ export class Home extends Component<Props> {
       }, 500);
     }
 
-    if (scrollTop > window.screen.height / 2) return;
+    if (scrollTop > window.screen.height * 2) return;
     if (e.deltaY > 0) {
       if (isInSlider.value) {
-        if (activeSlider.value == 2) {
-          setInSlider(false);
-          smoothScrollToDiv(this.chat);
-          setTimeout(() => {
-            this.body.classList.remove('overflow-hidden');
-          }, 500);
-        } else {
-        }
-        setNextSlider();
+        // if (activeSlider.value == 2) {
+        setInSlider(false);
+        smoothScrollToDiv(this.chat);
+        // } else {
+        // }
+        // setNextSlider();
       } else {
         // Normal scroll
       }
     } else {
+      console.log(scrollTop);
+
       if (!isInSlider.value) {
-        const scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
-        if (scrollTop < window.screen.height - 100) {
+        if (scrollTop < window.screen.height - 400) {
           console.log('to top');
           smoothScrollToDiv(this.home);
           setInSlider(true);
-          setTimeout(() => {
-            if (!this.isMobile) this.body.classList.add('overflow-hidden');
-          }, 500);
         }
       } else {
-        setPreviousSlider();
+        // setPreviousSlider();
       }
     }
   };
@@ -96,9 +91,6 @@ export class Home extends Component<Props> {
     console.log(scrollTop);
     if (scrollTop < window.screen.height / 2) {
       smoothScrollToDiv(this.home);
-      setTimeout(() => {
-        if (!this.isMobile) body.classList.add('overflow-hidden');
-      }, 500);
     } else if (scrollTop > window.screen.height / 2 && scrollTop < window.screen.height * 1.5) {
       smoothScrollToDiv(this.chat);
     }
@@ -169,22 +161,34 @@ export class Home extends Component<Props> {
                   dangerouslySetInnerHTML={{ __html: l.home.title0 }}
                 ></h1>
                 <div class='flex gap-4 w-full'>
-                  <a class='btn outlined flex-1 lg:flex-initial'>{l.btn.exploreNow}</a>
-                  <a class='btn orange gap4 flex-1 lg:flex-initial'>{l.btn.getTheDeal}</a>
+                  <a class='btn outlined flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#chat'}>
+                    {l.btn.exploreNow}
+                  </a>
+                  <a class='btn orange gap4 flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                    {l.btn.getTheDeal}
+                  </a>
                 </div>
               </div>
               <div class='t1 text-slider-item' style='animation: fadeOutRight 1s forwards'>
                 <h2 class='text-2xl custom-transition delay-2' dangerouslySetInnerHTML={{ __html: l.home.title1 }}></h2>
                 <div class='flex gap-4 w-full'>
-                  <a class='btn outlined flex-1 lg:flex-initial'>{l.btn.exploreNow}</a>
-                  <a class='btn orange gap4 flex-1 lg:flex-initial'>{l.btn.getTheDeal}</a>
+                  <a class='btn outlined flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#chat'}>
+                    {l.btn.exploreNow}
+                  </a>
+                  <a class='btn orange gap4 flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                    {l.btn.getTheDeal}
+                  </a>
                 </div>
               </div>
               <div class='t2 text-slider-item' style='animation: fadeOutRight 1s forwards'>
                 <h2 class='text-2xl custom-transition delay-2' dangerouslySetInnerHTML={{ __html: l.home.title2 }}></h2>
                 <div class='flex gap-4 w-full'>
-                  <a class='btn outlined flex-1 lg:flex-initial'>{l.btn.exploreNow}</a>
-                  <a class='btn orange gap4 flex-1 lg:flex-initial'>{l.btn.getTheDeal}</a>
+                  <a class='btn outlined flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#chat'}>
+                    {l.btn.exploreNow}
+                  </a>
+                  <a class='btn orange gap4 flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                    {l.btn.getTheDeal}
+                  </a>
                 </div>
               </div>
               <ul class='indicators'>

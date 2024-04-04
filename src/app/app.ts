@@ -103,7 +103,10 @@ export function smoothScrollToDiv(element: HTMLElement, duration = 500) {
       console.log('element:', element.id);
 
       const startingY = window.scrollY;
-      const targetY = element.offsetTop;
+      const parentOffsetTop = element.parentElement!.offsetTop;
+      const targetY = element.offsetTop + parentOffsetTop;
+      console.log('targetY:', targetY);
+
       const distance = targetY - startingY;
       let startTime: number | null = null;
 

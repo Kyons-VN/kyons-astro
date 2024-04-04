@@ -67,7 +67,7 @@
     "desc": "On Kyons's journey, we're grateful for all the valued partners who've believed in our product"
   },
   "achievements": {
-    "up": "Switch on, Level Up – Join the ranks of math wizards advancing with Kyons!",
+    "up": "Switch on, Level Up – Join the ranks of “Math wizards advancing” with Kyons!",
     "teacher": "of teachers agree that Kyons helps students engage more actively in learning Math..",
     "student1": "of students feel more confident with Math when experiencing it with Kyons.",
     "student2": "of students notice an improvement in their Math scores when studying with Kyons."
@@ -218,16 +218,16 @@
     "more": "More features, more experiences, more chances to get high scores!",
     "newProgram": "Early access to upcoming features",
     "note": "Note storage",
-    "package1": "Starter: 1 Month",
+    "package1": "Starter: 1-Month",
     "discount": "off",
     "package1Include": "What’s included:",
-    "package11": "1-month access to Kyons Starter subscription",
-    "package12": "Exclusive <b>Kyons First</b> badge to show off on your profile",
+    "monthAccess": "-month access to Kyons Starter subscription",
+    "monthsAccess": "-months access to Kyons Starter subscription",
+    "package11": "Exclusive <b>Kyons First</b> badge to show off on your profile",
     "package2": "Gói Starter: 3 tháng",
-    "package2Include": "Included Starter: 1-Month Package, and:",
-    "package21": "<b>3-month access</b> to Kyons Starter subscription",
-    "package22": "<b>Lifetime 10% discount</b> on all purchases on Kyons",
-    "package23": "<b>A complete set of study tips</b> from Kyons",
+    "package2Include": "Included <b>Starter: 1-Month Package</b>, and:",
+    "package21": "<b>Lifetime 10% discount</b> on all purchases on Kyons",
+    "package22": "<b>A complete set of study tips</b> from Kyons",
     "priceTable": "Pricing",
     "promotion": "Promotion",
     "recommended": "Recommended",
@@ -235,11 +235,10 @@
     "useFree": "Use free version now",
     "only": "(Only 33.000 / 30 days)",
     "package3": "Starter: 12-month",
-    "package3Include": "Included Starter: 3-Month Package, and:",
-    "package31": "<b>12-month access</b> to Kyons Starter subscription",
-    "package32": "Priority access to Kyons new features",
-    "package33": "Priority rights to experience new features of Kyons",
-    "package34": "X2 usage limit of Kyons AI Chatbot"
+    "package3Include": "Included <b>Starter: 3-Month Package</b>, and:",
+    "package31": "Join <b>“Math wizards advancing”</b> Kyons community",
+    "package32": "Priority rights to experience <b>new features</b> of Kyons",
+    "package33": "<b>X2 usage limit</b> of Kyons AI Chatbot"
   },
   "faq": {
     "faq": "Frequent Asked Questions",

@@ -8,20 +8,29 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<div class='chat' id='chat'>
+<div class='w-full relative'>
+  <div id='chat' class='absolute top-[-82px]'></div>
+</div>
+<div class='chat'>
   <img src='/images/bottom-line.svg' alt='' class='absolute bottom-0 w-full' />
-  <div class='absolute right-[84px] top-[84px] w-[228px] h-[100px]'>
+  <div class='absolute right-[84px] top-[84px] w-[228px] h-[100px] hidden xl:flex'>
     <img src='/images/Battery.svg' alt='' />
-    <div class='absolute w-[16px] h-[11px] bg-[#00C4D0] top-[40px] left-[31px]' id='battery'></div>
-    <div class='absolute top-[33px] left-[159px] text-[17px] text-[#00C4D0] w-[30px] text-right' id='batteryLife'>
-      100
-    </div>
   </div>
-  <img src='/images/HUD.svg' alt='' class='absolute left-[84px] top-[84px]' />
+  <img src='/images/HUD.svg' alt='' class='absolute left-[84px] top-[84px] hidden xl:flex' />
   <div class='chatbox'>
     <div class='head'>
       <h3>Chat: KYONS</h3>
-      <div class='flex gap-4'>
+      <div class='flex gap-4 items-center'>
+        <div class='w-[170pxpx] h-[40px] relative'>
+          <img src='/images/Mana.svg' alt='' class='h-[40px]' />
+          <div class='absolute w-[16px] h-[11px] bg-[#00C4D0] top-[15px] left-[12px]' id='battery'></div>
+          <div
+            class='absolute top-[8px] left-[121px] text-[17px] leading-[24px] text-[#00C4D0] w-[30px] text-right'
+            id='batteryLife'
+          >
+            100
+          </div>
+        </div>
         <div class='head-divider'></div>
         <button class='close'><i class='icon-Close'></i></button>
       </div>
@@ -43,7 +52,7 @@ const { l } = Astro.props;
           </div>
         </div>
       </div>
-      <div class='right message selection'>
+      <!-- <div class='right message selection'>
         <div class='content'>
           <div class='select selected'>
             <div class='box'>
@@ -61,7 +70,7 @@ const { l } = Astro.props;
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class='chat-divider'></div>
     <form id='askForm' class='ask' novalidate>
@@ -81,7 +90,7 @@ const { l } = Astro.props;
 
 <script define:vars={{ l }} type='text/javascript'>
   console.log(l);
-  const manaWidth = 28;
+  const manaWidth = 26;
   const battery = document.getElementById('battery');
   const batteryLife = document.getElementById('batteryLife');
   const input = document.getElementById('ask');

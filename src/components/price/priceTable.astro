@@ -7,88 +7,87 @@ export interface Props {
 const { l, showAll } = Astro.props;
 ---
 
-<div class='flex flex-col rounded-lg p-4 bg-white shadow-2 h-[650px] justify-start'>
-  <div class='h-[37px]'></div>
+<div
+  class='flex flex-col rounded-lg p-4 bg-white hover:shadow-orange shadow-2 min-h-[560px] max-w-[400px] justify-start'
+>
   <div class='flex flex-col gap-8'>
-    <div class='flex flex-row items-start justify-between p-3 rounded-lg gap-1.5 md:min-h-[102px]'>
-      <div class='flex gap-2 items-center justify-start'>
-        <img src='/images/free-package.svg' alt='' />
-        <h6 class='text-base'>{l.price.package1}</h6>
-      </div>
-      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
-        {`${l.lang == 'VI' ? l.price.discount + ' 60%' : '60% ' + l.price.discount}`}
-      </div>
+    <div class='flex gap-1 items-center justify-center'>
+      <img src='/images/free-package.svg' alt='' />
+      <h6 class='text-lg'>{l.price.package1}</h6>
     </div>
-    <div class='flex gap-2.5 items-end'>
-      <b class='text-blueGrey-400 text-3xl'>57,5K</b>
-      <b class='text-6xl'>19K</b>
+    <div class='flex gap-2.5 justify-center items-center'>
+      <div class='flex flex-col justify-end'>
+        <b class='text-blueGrey-400 text-3xl text-right'>69K</b>
+        <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
+          >{`${l.lang == 'VI' ? l.price.discount + ' 60%' : '60% ' + l.price.discount}`}</b
+        >
+      </div>
+      <span class='text-7xl font-semibold'>19K</span>
     </div>
+    <i class='text-center'>1{l.price.monthAccess}</i>
     <div class='flex flex-col gap-4'>
       <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
       <p set:html={l.price.package1Include} />
       <ul class='star'>
-        <li>
-          {l.price.package11}
-        </li>
-        <li set:html={l.price.package12} />
+        <li set:html={l.price.package11} />
       </ul>
     </div>
   </div>
 </div>
-<!-- <div class='h-[37px] px-4 py-2 bg-yellow-1'>{l.price.recommended}</div> -->
 <div
-  class='flex flex-col rounded-lg p-4 bg-white shadow-orange h-[650px] justify-start items-center border-orange border-8'
+  class='flex flex-col rounded-lg p-4 gap-4 bg-white hover:shadow-orange shadow-2 min-h-[682px] max-w-[450px] justify-start items-center border-orange border-8'
 >
-  <div class='h-[37px] px-4 py-2 bg-yellow-1 rounded-2xl'>{l.price.recommended}</div>
+  <div class='h-[37px] bg-yellow-1 px-4 py-2 rounded-2xl'>{l.price.recommended}</div>
   <div class='flex flex-col gap-8'>
-    <div class='flex flex-row items-start justify-between p-3 rounded-2xl gap-1.5 md:min-h-[102px]'>
-      <div class='flex gap-2 items-center justify-start'>
-        <img src='/images/free-package.svg' alt='' />
-        <h6 class='text-base'>{l.price.package2}</h6>
-      </div>
-      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
-        {`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}
-      </div>
+    <div class='flex gap-1 items-center justify-center'>
+      <img src='/images/free-package.svg' alt='' />
+      <h6 class='text-lg'>{l.price.package1}</h6>
     </div>
-    <div class='flex gap-2.5 items-end'>
-      <b class='text-blueGrey-400 text-3xl'>57,5K</b>
-      <b class='text-6xl'>19K</b>
+    <div class='flex gap-2.5 justify-center items-center'>
+      <div class='flex flex-col justify-end'>
+        <b class='text-blueGrey-400 text-3xl text-right'>207K</b>
+        <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
+          >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
+        >
+      </div>
+      <span class='text-7xl font-semibold'>69K</span>
     </div>
+    <i class='text-center'>3{l.price.monthsAccess}</i>
     <div class='flex flex-col gap-4'>
       <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
-      <p set:html={l.price.package1Include} />
+      <p set:html={l.price.package2Include} />
       <ul class='star'>
         <li set:html={l.price.package21} />
         <li set:html={l.price.package22} />
-        <li set:html={l.price.package23} />
       </ul>
     </div>
   </div>
 </div>
-<div class='flex flex-col rounded-lg p-4 shadow-orange h-[650px] justify-start items-center bg-white'>
-  <div class='h-[37px]'></div>
+<div
+  class='flex flex-col rounded-lg p-4 bg-white hover:shadow-orange shadow-2 min-h-[560px] max-w-[400px] justify-start'
+>
   <div class='flex flex-col gap-8'>
-    <div class='flex flex-row items-start justify-between p-3 rounded-2xl gap-1.5 md:min-h-[102px]'>
-      <div class='flex gap-2 items-center justify-start'>
-        <img src='/images/free-package.svg' alt='' />
-        <h6 class='text-base'>{l.price.package3}</h6>
-      </div>
-      <div class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 rounded-3xl'>
-        {`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}
-      </div>
+    <div class='flex gap-1 items-center justify-center'>
+      <img src='/images/free-package.svg' alt='' />
+      <h6 class='text-lg'>{l.price.package3}</h6>
     </div>
-    <div class='flex gap-2.5 items-end'>
-      <b class='text-blueGrey-400 text-3xl'>845K</b>
-      <b class='text-6xl'>279K</b>
+    <div class='flex gap-2.5 justify-center items-center'>
+      <div class='flex flex-col justify-end'>
+        <b class='text-blueGrey-400 text-3xl text-right'>828K</b>
+        <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
+          >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
+        >
+      </div>
+      <span class='text-7xl font-semibold'>279K</span>
     </div>
+    <i class='text-center'>1{l.price.monthAccess}</i>
     <div class='flex flex-col gap-4'>
       <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
-      <p set:html={l.price.package1Include} />
+      <p set:html={l.price.package3Include} />
       <ul class='star'>
         <li set:html={l.price.package31} />
         <li set:html={l.price.package32} />
         <li set:html={l.price.package33} />
-        <li set:html={l.price.package34} />
       </ul>
     </div>
   </div>
