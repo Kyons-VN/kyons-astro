@@ -1,3 +1,4 @@
 .contact {
-  @apply bg-[url('/images/contact-bg.svg')] bg-no-repeat bg-bottom bg-cover w-full  flex justify-center p-6 lg:px-24 lg:py-28 overflow-hidden relative;
+  @apply w-full  flex justify-center p-6 lg:px-24 lg:py-28 relative;
+  background: var(--Main-colors-Secondary-Blue, #315d93);
 }

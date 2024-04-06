@@ -29,7 +29,7 @@ const { l } = Astro.props;
         <!-- <a href='#features' class='font-bold'>
           {l.menu.features}
         </a> -->
-        <span class='font-bold'>
+        <!-- <span class='font-bold'>
           {l.menu.forStudents}
         </span>
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#about-us`}>
@@ -41,19 +41,24 @@ const { l } = Astro.props;
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#guild`}>
           {l.menu.guild}
         </a>
-        <a href={`${l.lang == 'VI' ? '' : '/en'}/pricing`}>
-          {l.menu.price}
-        </a>
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#schools`} class='font-bold sm:hidden'>
           {l.menu.forSchools}
         </a>
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='font-bold sm:hidden'>
           {l.menu.contact}
-        </a>
+        </a> -->
       </div>
-      <div class='sm:flex flex-col gap-3 items-center lg:items-start whitespace-nowrap hidden'>
+      <!-- <div class='sm:flex flex-col gap-3 items-center lg:items-start whitespace-nowrap hidden'>
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#schools`} class='font-bold'>
           {l.menu.forSchools}
+        </a>
+      </div> -->
+      <div class='sm:flex flex-col gap-3 items-center lg:items-start whitespace-nowrap hidden'>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#features`} class='font-bold'>
+          {l.menu.features}
+        </a>
+        <a href={`${l.lang == 'VI' ? '' : '/en'}/#price`} class='font-bold'>
+          {l.menu.price}
         </a>
         <a href={`${l.lang == 'VI' ? '' : '/en'}/#contact`} class='font-bold'>
           {l.menu.contact}
@@ -76,7 +81,8 @@ const { l } = Astro.props;
       </div>
     </div>
   </div>
-</div>
-<div class='gap-2 w-full bg-blueGrey-900 text-white flex items-center justify-center sm:text-left'>
-  <div class='lg:w-[1280px] text-center sm:text-left pt-6 px-14 py-5'>{l.footer.copy}</div>
+
+  <div class='gap-2 w-full bg-blueGrey-900 text-white flex items-center justify-center sm:text-left'>
+    <div class='lg:w-[1280px] text-center sm:text-left pt-6 px-14 py-5'>{l.footer.copy}</div>
+  </div>
 </div>

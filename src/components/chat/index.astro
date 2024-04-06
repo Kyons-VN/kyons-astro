@@ -1,0 +1,198 @@
+---
+import './style.scss';
+import battery from '/public/images/Battery.svg';
+export interface Props {
+  l: any;
+}
+
+const { l } = Astro.props;
+---
+
+<div class='w-full relative'>
+  <div id='chat' class='absolute top-[-82px]'></div>
+</div>
+<div class='chat'>
+  <img src='/images/bottom-line.svg' alt='' class='absolute bottom-0 w-full' />
+  <div class='absolute right-[84px] top-[84px] w-[228px] h-[100px] hidden xl:flex'>
+    <img src='/images/Battery.svg' alt='' />
+  </div>
+  <img src='/images/HUD.svg' alt='' class='absolute left-[84px] top-[84px] hidden xl:flex' />
+  <div class='chatbox'>
+    <div class='head'>
+      <h3>Chat: KYONS</h3>
+      <div class='flex gap-4 items-center'>
+        <div class='w-[170pxpx] h-[40px] relative'>
+          <img src='/images/Mana.svg' alt='' class='h-[40px]' />
+          <div class='absolute w-[16px] h-[11px] bg-[#00C4D0] top-[15px] left-[12px]' id='battery'></div>
+          <div
+            class='absolute top-[8px] left-[121px] text-[17px] leading-[24px] text-[#00C4D0] w-[30px] text-right'
+            id='batteryLife'
+          >
+            100
+          </div>
+        </div>
+        <div class='head-divider'></div>
+        <button class='close'><i class='icon-Close'></i></button>
+      </div>
+    </div>
+    <div class='chat-divider'></div>
+    <div class='body' id='body'>
+      <div class='left message'>
+        <div class='avatar'>
+          <img src='/images/avatar.svg' alt='' />
+        </div>
+        <div class='content'>
+          <div class='box'>
+            <p>{l.chat.title}</p>
+          </div>
+          <div class='box'>
+            <p>
+              {l.chat.desc}
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class='right message selection'>
+        <div class='content'>
+          <div class='select selected'>
+            <div class='box'>
+              <p>Lorem ipsum dolor sit amet consectetur. Viverra metus auctor sed netus id tortor non erat sit.</p>
+            </div>
+          </div>
+          <div class='select'>
+            <div class='box'>
+              <p>Lorem ipsum dolor sit amet consectetur. Viverra metus auctor sed netus id tortor non erat sit.</p>
+            </div>
+          </div>
+          <div class='select'>
+            <div class='box'>
+              <p>Lorem ipsum dolor sit amet consectetur. Viverra metus auctor sed netus id tortor non erat sit.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class='chat-divider'></div>
+    <form id='askForm' class='ask' novalidate>
+      <input type='text' placeholder={l.chat.ask} id='ask' />
+      <button type='button' class='send' onclick='ask()'><i class='icon-Send'></i></button>
+    </form>
+  </div>
+  <div class='w-full flex flex-col sm:flex-row text-teal-0 gap-4 justify-center'>
+    <span>{l.chat.powerBy}</span>
+    <div class='flex items-center justify-center gap-4'>
+      <img src='/images/kyons-teal.svg' alt='Logo Kyons' />
+      <span>{l.chat.and}</span>
+      <img src='/images/Gemini.png' alt='Google Generative AI' />
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ l }} type='text/javascript'>
+  console.log(l);
+  const manaWidth = 26;
+  const battery = document.getElementById('battery');
+  const batteryLife = document.getElementById('batteryLife');
+  const input = document.getElementById('ask');
+  const form = document.getElementById('askForm');
+  const chat = document.getElementById('body');
+
+  function renderBattery(cunsumedMana) {
+    console.log(l);
+    const mana = parseFloat(window.localStorage.getItem('mana') || '1000') - cunsumedMana;
+    battery.style.width = `${manaWidth * (Math.max(mana, 0) / 1000)}px`;
+    const batteryPercent = Math.round((mana / 1000) * 100);
+    batteryLife.innerText = `${batteryPercent}`;
+    window.localStorage.setItem('mana', `${mana}`);
+  }
+  if (window.localStorage.getItem('mana') === null) {
+    window.localStorage.setItem('mana', '1000');
+  }
+  renderBattery(0);
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ask();
+  });
+  input.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ask();
+  });
+  function ask() {
+    const isEmptyMana = parseFloat(window.localStorage.getItem('mana') || '1000') <= 0;
+    if (isEmptyMana) {
+      const emptyManaMessage = document.createElement('div');
+      emptyManaMessage.classList.add('left', 'message', 'typing');
+      emptyManaMessage.innerHTML = `
+        <div class='avatar'>
+          <img src='/images/avatar.svg' alt='' />
+        </div>
+        <div class='content'>
+          <div class='box'>
+            <p>${l.chat.orderNow}</p>
+          </div>
+        </div>
+      `;
+      chat.appendChild(emptyManaMessage);
+      return;
+    }
+    const value = input.value;
+    if (value) {
+      const chat = document.querySelector('.chat .body');
+      const message = document.createElement('div');
+      message.classList.add('right', 'message');
+      message.innerHTML = `
+        <div class='content'>
+          <div class='box'>
+            <p>${value}</p>
+          </div>
+        </div>
+      `;
+      chat.appendChild(message);
+      input.value = '';
+      // Create a "typing" message effect
+      const typingMessage = document.createElement('div');
+      typingMessage.classList.add('left', 'message', 'typing');
+      typingMessage.innerHTML = `
+        <div class='avatar'>
+          <img src='/images/avatar.svg' alt='' />
+        </div>
+        <div class='content'>
+          <div class='box'>
+            <p>...</p>
+          </div>
+        </div>
+      `;
+      chat.appendChild(typingMessage);
+      scrollChatToBottom();
+
+      fetch(`https://us-central1-kyonsvn.cloudfunctions.net/chat/ask?prompt=${encodeURIComponent(value)}`)
+        .then((response) => response.json())
+        .then((data) => {
+          chat.removeChild(typingMessage);
+          const responseMessage = document.createElement('div');
+          responseMessage.classList.add('left', 'message');
+          responseMessage.innerHTML = `
+            <div class='avatar'>
+              <img src='/images/avatar.svg' alt='' />
+            </div>
+            <div class='content'>
+              <div class='box'>
+                <p>${data.data.text}</p>
+              </div>
+            </div>
+          `;
+          chat.appendChild(responseMessage);
+          scrollChatToBottom();
+          const cunsumedMana = data.data.token;
+          renderBattery(cunsumedMana);
+        })
+        .catch((error) => console.error('Error:', error));
+    }
+  }
+  function scrollChatToBottom() {
+    setTimeout(() => {
+      chat.scrollTop = chat.scrollHeight;
+    }, 100);
+  }
+</script>

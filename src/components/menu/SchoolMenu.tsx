@@ -81,7 +81,7 @@ export default function Menu({ l }: Props) {
                       tabIndex={0}
                     >
                       <span class='font-bold text-[16px]'>{language}</span>
-                      <i className={isHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
+                      <i className={isHover ? 'icon-ArrowUpStop' : 'icon-ArrowDownStop'}></i>
                       <div
                         className={isHover ? `${defaultClass} hidden md:flex` : `${defaultClass} hidden`}
                         // style='bottom: calc(-100% - 30px);'
@@ -128,7 +128,7 @@ export default function Menu({ l }: Props) {
               tabIndex={0}
             >
               <span class='font-bold text-[16px]'>{l.menu.forStudents}</span>
-              <i className={isStudentHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
+              <i className={isStudentHover ? 'icon-ArrowUpStop' : 'icon-ArrowDownStop'}></i>
               <div
                 className={isStudentHover ? `${defaultClass} sm:flex` : `${defaultClass} sm:hidden`}
                 // style='bottom: calc(-100% - 30px);'
@@ -237,7 +237,7 @@ export default function Menu({ l }: Props) {
                 tabIndex={0}
               >
                 <span class='font-bold text-[16px]'>{language}</span>
-                <i className={isHover ? 'icon-ArrowUp' : 'icon-ArrowDown'}></i>
+                <i className={isHover ? 'icon-ArrowUpStop' : 'icon-ArrowDownStop'}></i>
                 <div
                   className={isHover ? `${defaultClass} hidden md:flex` : `${defaultClass} hidden`}
                   // style='bottom: calc(-100% - 30px);'

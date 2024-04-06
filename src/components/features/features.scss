@@ -1,9 +1,10 @@
 .features {
-  @apply w-full min-h-[calc(100vh_-_82px)] flex flex-col justify-center items-center relative text-center p-4 py-10 lg:p-10 gap-6 lg:gap-11;
-  background: url('/images/galaxy-1.svg') no-repeat 757px -110px, url('/images/galaxy-2.svg') no-repeat -289px 338px;
+  @apply w-full min-h-[calc(100vh_-_82px)] flex flex-col justify-start items-center relative text-center p-4 md:pt-20 md:pb-[450px] pb-[368px] gap-6 lg:gap-11 overflow-hidden lg:bg-[url('/images/features-lg.svg')] sm:bg-[url('/images/features-md.svg')] bg-[url('/images/features-xs.svg')] xl:bg-cover bg-cover bg-no-repeat bg-bottom;
 }
-@media (max-width: 1023px) {
-  .features {
-    background: url('/images/galaxy-1.svg') no-repeat 140% 0px / 60%, url('/images/galaxy-2.svg') no-repeat 100% 100%;
-  }
+#features {
+  background: linear-gradient(0, rgba(0, 0, 0, 0), #315d93 125.33%);
+  @apply absolute top-[-82px] w-full h-[calc(25vh_-_20px)] z-0;
+}
+.highlight {
+  @apply text-lightBlue-3;
 }

@@ -60,11 +60,12 @@ export function Contact({ l }: Props, state: any) {
   return (
     <div class='contact'>
       <div id='contact' class='absolute top-[-82px]'></div>
+      <img src='/images/contact.svg' alt='Planet' class='absolute left-0 right-0 top-[-100px]' />
       <div class='w-full max-w-[1122px] flex flex-col lg:flex-row justify-start items-start relative gap-10'>
         <img
           src='/images/Planet 3.svg'
           alt='Planet'
-          class='absolute lg:left-0 right-0 lg:top-[10vh] z-0 w-[215px] lg:w-[332px]'
+          class='absolute lg:left-[200px] right-0 lg:top-[15vh] z-0 w-[237px]'
         />
         <div
           class='flex flex-col lg:flex-1 gap-2 lg:max-w-[420px] relative z-10'

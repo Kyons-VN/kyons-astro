@@ -1,4 +1,4 @@
-import { activeSolution, setActiveSolution, setNextSolution, setPreviousSolution } from '@app/app';
+import { activeSlider, setInSlider, setNextSlider, setPreviousSlider } from '@app/app';
 import { useStore } from '@nanostores/preact';
 import { Component } from 'preact';
 import { useSwipeable } from 'react-swipeable';
@@ -36,14 +36,14 @@ export class Students extends Component<Props> {
   render(props: any) {
     const l = props.l;
     // state === this.state
-    const $activeSolution = useStore(activeSolution);
+    const $activeSolution = useStore(activeSlider);
     const handlers = useSwipeable({
       // onSwipedLeft: () => setActiveMenu($activeMenu + 1),
       // onSwipedRight: () => setActiveMenu($activeMenu - 1),
       // onSwipedDown: () => setActiveMenu($activeMenu-1),
       // onSwipedUp: () => setActiveMenu($activeMenu+1),
-      onSwipedLeft: () => setNextSolution(),
-      onSwipedRight: () => setPreviousSolution(),
+      onSwipedLeft: () => setNextSlider(),
+      onSwipedRight: () => setPreviousSlider(),
       swipeDuration: 500,
       preventScrollOnSwipe: true,
       trackMouse: true,
@@ -62,7 +62,7 @@ export class Students extends Component<Props> {
           </div>
           <div>
             <img
-              onClick={() => setActiveSolution(0)}
+              onClick={() => setInSlider(0)}
               src={'/images/' + ($activeSolution == 0 ? 'location' : 'dot') + '.svg'}
               alt='location'
               class='dot-shadow'
@@ -70,7 +70,7 @@ export class Students extends Component<Props> {
           </div>
           <div>
             <img
-              onClick={() => setActiveSolution(1)}
+              onClick={() => setInSlider(1)}
               src={'/images/' + ($activeSolution == 1 ? 'location' : 'dot') + '.svg'}
               alt='location'
               class='dot-shadow'
@@ -78,7 +78,7 @@ export class Students extends Component<Props> {
           </div>
           <div>
             <img
-              onClick={() => setActiveSolution(2)}
+              onClick={() => setInSlider(2)}
               src={'/images/' + ($activeSolution == 2 ? 'location' : 'dot') + '.svg'}
               alt='dot'
               class='dot-shadow'
@@ -86,7 +86,7 @@ export class Students extends Component<Props> {
           </div>
           <div>
             <img
-              onClick={() => setActiveSolution(3)}
+              onClick={() => setInSlider(3)}
               src={'/images/' + ($activeSolution == 3 ? 'location' : 'dot') + '.svg'}
               alt='dot'
               class='dot-shadow'
@@ -96,7 +96,7 @@ export class Students extends Component<Props> {
         <div class='flex flex-col-reverse lg:flex-row w-full max-w-[870px] lg:max-h-[60vh] gap-6 items-center'>
           <div class='flex-1 relative flex flex-col gap-4 lg:h-full'>
             <img
-              onClick={() => setPreviousSolution()}
+              onClick={() => setPreviousSlider()}
               src='/images/arrow-left.svg'
               alt='Trước'
               class={
@@ -118,7 +118,7 @@ export class Students extends Component<Props> {
           </div>
           <div class='flex flex-col items-center w-full max-w-[435px] p-0 lg:py-10 lg:px-6 text-left lg:items-start justify-start gap-6 relative'>
             <img
-              onClick={() => setNextSolution()}
+              onClick={() => setNextSlider()}
               src='/images/arrow-right.svg'
               alt='Sau'
               class={

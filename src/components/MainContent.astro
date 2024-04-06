@@ -1,12 +1,14 @@
 ---
-import Footer from '@components/Footer.astro';
-import AboutUs from '@components/about-us/index.astro';
+import Achievements from '@components/achievements/index.astro';
+import Chat from '@components/chat/index.astro';
 import { Contact } from '@components/contact/Contact';
-import Guild from '@components/guild/index.astro';
-import Home from '@components/home2/index.astro';
-import Problem from '@components/problem/index.astro';
-import Schools from '@components/schools2/index.astro';
-import Solutions from '@components/solutions/index.astro';
+import Footer from '@components/Footer.astro';
+import { Home } from '@components/home/Home';
+import Testimonials from '@components/testimonials/index.astro';
+import FAQ from './faq/index.astro';
+import Features from './features/Features.astro';
+import Partners from './partners/index.astro';
+import Price from './price/index.astro';
 export interface Props {
   l: any;
 }
@@ -14,12 +16,17 @@ export interface Props {
 const { l } = Astro.props;
 ---
 
-<Home l={l} />
-<AboutUs l={l} />
+<Home l={l} client:only='preact' />
+<Chat l={l} />
+<Features l={l} />
+<Partners l={l} />
+<Achievements l={l} />
+<Testimonials l={l} />
+<!-- <AboutUs l={l} />
 <Problem l={l} />
 <Solutions l={l} />
-<Guild l={l} />
-<!-- <Price l={l} /> -->
-<Schools l={l} />
+<Guild l={l} /> -->
+<Price l={l} />
+<FAQ l={l} />
 <Contact l={l} client:only='preact' />
 <Footer l={l} />

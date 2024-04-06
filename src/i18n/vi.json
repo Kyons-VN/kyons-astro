@@ -2,6 +2,10 @@
   "lang": "VI",
   "languageCode": "vi",
   "btn": {
+    "getTheDeal": "Chốt đơn",
+    "exploreNow": "Khám phá ngay",
+    "preorder": "Đặt trước",
+
     "studyNow": "Học ngay thôi",
     "trial": "Liên hệ dùng thử",
     "send": "Gửi tin nhắn",
@@ -29,43 +33,63 @@
     "guild": "Hướng dẫn",
     "forStudents": "Dành cho người học",
     "forSchools": "Dành cho trường học",
-    "price": "Bảng giá",
+    "price": "Các gói học",
     "contact": "Liên hệ",
     "promotion": "KM!"
   },
   "home": {
-    "whyNotSmarter": "Tại sao không học thông minh hơn?",
-    "kyons": "Kyons, nền tảng giáo dục hiện đại sử dụng trí tuệ nhân tạo (AI), là trợ thủ đắc lực giúp học sinh đạt điểm số mong muốn trong thời gian ngắn nhất với lộ trình học được cá nhân hóa",
-    "scrollToView": "Kéo xuống để bắt đầu khám phá",
-    "fourty": "40,000+",
-    "users": "người dùng",
-    "promotionEnd": "Ưu đãi kết thúc trong",
-    "days": "ngày",
-    "hours": "giờ",
-    "minutes": "phút",
-    "seconds": "giây"
+    "title0": "Học Toán cực chill cùng Kyons - ứng dụng AI giúp bạn <span class='highlight'>cải thiện điểm toán với lộ trình học cá nhân hoá</span>",
+    "title1": "Thăng hạng điểm Toán, khởi động sớm với ưu đãi cực hời <span class='highlight'>chỉ từ 19k</span>",
+    "title2": "<span class='highlight'>Xin vía giỏi Toán</span> từ các “đồng math” đã dùng Kyons nhé",
+    "scrollDown": "Cuộn xuống"
+  },
+  "chat": {
+    "title": "Bạn cần Kyo giúp gì không?",
+    "desc": " Để Kyons flex ngay Kyo - AI siêu nhân đồng hành tháo gỡ mọi thắc mắc của bạn về Kyons và vô vàn thứ khác. Kyo ngoan xinh yêu đâu rồiii 🚀",
+    "orderNow": "Mana của bạn đã hết. Bạn hãy đặt trước ngay gói học tập Kyons để trải nghiệm thêm về Kyons AI nhé!",
+    "powerBy": "Công nghệ AI chatbot được phát triển bởi",
+    "and": "và",
+    "ask": "Hỏi Kyo"
   },
   "features": {
-    "ourFeatures": "Các tính năng nổi bật",
-    "youDontKnow": "Không biết ôn luyện như thế nào?<br />Hãy để AI giúp bạn!",
-    "detectKnowledgeHoles": "Xác định lỗ hổng kiến thức nhanh chóng",
-    "detectKnowledgeHolesDesc": "Bài kiểm tra thử thông minh đầu vào giúp bạn phát hiện những kiến thức chưa vững và tập trung ôn tập.",
-    "learningPath": "Ôn luyện với lộ trình học cá nhân hoá",
-    "learningPathDesc": "Các bài học được thiết kế tương thích với mục tiêu và trình độ của bạn nhằm tối đa hiệu quả ôn tập",
-    "practiceWith": "Thực hành cùng kho bài tập không giới hạn",
-    "practiceWithDesc": "Vô số bài tập với đa dạng độ khó được tạo bởi AI đảm bảo bạn sẽ không gặp 1 câu hỏi 2 lần tại Kyons"
+    "features": "TÍNH NĂNG NỔI BẬT",
+    "title": "Học Toán rất chill cùng Kyons với <span class='highlight'>nhiều vũ khí thú dzị!</span>",
+    "desc": "Muốn vượt chốt, săn điểm Toán phải có vũ khí trong tay. Khám phá ngay “hàng khủng” sẽ đồng hành cùng bạn nha",
+    "feature1": "Lộ trình cá nhân hóa",
+    "feature1Desc": "Học cùng Kyons là học cùng chân ái với ứng dụng AI giúp bạn thiết kế lộ trình học riêng biệt phù hợp với năng lực và tiến độ học của riêng bạn!.",
+    "feature2": "Kho nội dung xịn xò",
+    "feature2Desc": "Kho bài giảng và video chất lượng, thú vị và dễ hiểu giúp bạn hiểu bài và ghi nhớ tốt hơn.",
+    "feature3": "Chân ái AI Kyo hỗ trợ mọi lúc",
+    "feature3Desc": "Không cô đơn khi học Toán vì bạn có AI Kyo siêu thông minh đồng hành. Tháo gỡ mọi thắc mắc trong quá trình học nhanh chóng và rõ ràng.",
+    "andMore": "...cùng nhiều tính năng mới sắp cập nhật!"
   },
-  "guild": {
-    "guild": "Hướng dẫn",
-    "completeLearning": "Hoàn thành mục tiêu học tập trong 4 bước với Kyons",
-    "step1": "Bước 1: Chọn mục tiêu học tập",
-    "step1Desc": "Bắt đầu hành trình bằng việc xác định mục tiêu ôn tập (môn học, khối lớp và kỳ kiểm tra) của riêng bạn.",
-    "step2": "Bước 2: Làm bài kiểm tra thử thông minh",
-    "step2Desc": "Bước tiếp theo là thực hiện bài kiểm tra đầu vào, giúp bạn hiểu rõ hơn về trình độ hiện tại. Kết quả sẽ được hệ thống ghi nhận và phân tích năng lực của bạn.",
-    "step3": "Bước 3: Luyện tập theo lộ trình học được tạo bởi AI",
-    "step3Desc": "Dựa vào kết quả bài kiểm tra thử, AI sẽ tạo ra một lộ trình được cập nhật liên tục để bám sát năng lực và tiến độ của bạn. Mọi thứ cứ để Kyons lo!",
-    "step4": "Bước 4: Luyện tập cá nhân hóa với hỗ trợ xuyên suốt để nắm chắc bài",
-    "step4Desc": "Mỗi câu hỏi được tạo riêng bám sát với tiến độ của bạn. Lỡ không biết làm? Kyons sẽ có lời giải chi tiết, chế độ phân nhỏ kiến thức để tìm lỗ hổng, kèm hỗ trợ 1-1 để đảm bảo bạn vượt qua mọi điều chưa hiểu!"
+  "partners": {
+    "title": "Thế giới ngoài kia nói gì về Kyons?",
+    "desc": "Trong hành trình của Kyons, chúng mình may mắn có được các đối tác đã trân trọng và tin tưởng vào sản phẩm của Kyons"
+  },
+  "achievements": {
+    "up": "Bật máy là lên điểm - Rất nhiều “chiến thần Toán học” đang tiến bộ cùng Kyons",
+    "teacher": "Thầy cô đồng ý rằng Kyons giúp học sinh học Toán tích cực hơn.",
+    "student1": "Học sinh tự tin hơn với môn Toán khi trải nghiệm cùng Kyons.",
+    "student2": "Học sinh nhận thấy điểm số Toán cải thiện hơn khi học Toán với Kyons."
+  },
+  "testimonials": {
+    "feedbacks": "Cùng rất nhiều phản hồi tích cực sau khi đã đồng hành với Kyons...",
+    "feedback1": "Kyons đã phát hiện ra mình không biết làm mấy bài tập dạng đạo hàm. Sau khi luyện thi theo lộ trình của Kyons dành cho mình thì điểm số của mình đã cải thiện rất là rõ.",
+    "author1": "Hamid",
+    "authorDesc1": "Tiktoker Triệu View",
+    "feedback2": "Nhờ Kyons em đã cải thiện điểm toán từ 7 lên 10. Ở trên lớp thầy cô giảng rất nhanh nên em không theo kịp, còn ở trên Kyons khi em làm bài xong thì sẽ có lời giải chi tiết để em có thể sửa sai và ghi nhớ tốt hơn. Nhờ vậy, trong các kỳ thi em làm bài tốt hơn rất nhiều.",
+    "author2": "Tống Phạm Phương Nghi",
+    "authorDesc2": "Lớp 10.5 - Trung Học Thực Hành - Đại Học Sư Phạm TPHCM",
+    "feedback3": "“Kyons có điểm đặc biệt mà em rất thích đó chính là các level từ dễ đến khó giống như lên rank game vậy. Điều đó khiến em hứng thú hơn trong việc giải bài tập. Và sau khi mỗi lần em làm bài tập sai thì Kyons sẽ đưa ra lời giải chi tiết cụ thể cùng với việc đưa ra 1 câu hỏi dạng tương tự để em có thể giải được.\nNếu em giải sai bao nhiêu lần đi chăng nữa thì Kyons vẫn sẽ đưa ra câu hỏi để em trả lời tới khi đúng thì thôi. Điều đó rèn luyện cho em sự kiên nhẫn và tỉ mỉ hơn trong học tập”.",
+    "author3": "Bảo Ngọc",
+    "authorDesc3": "Lớp 10A2 - Trường THPT Bắc Mê",
+    "feedback4": "Gần 1 học kỳ sử dụng Kyons, các học sinh đã có những tiến bộ rất tích cực trong môn Toán. Các em làm bài tập chủ động hơn, biết phân biệt các dạng bài và cô có thể theo dõi sự tiến bộ của các em trên Kyons dễ dàng hơn. Kyons giúp học sinh hiểu được lỗi sai trong bài tập và tạo động lực cho các em hứng thú hơn trong việc học Toán. Cảm ơn Kyons rất nhiều!",
+    "author4": "Cô Thu Ngân",
+    "authorDesc4": "Giáo viên Trung Học Thực Hành - Đại Học Sư Phạm TPHCM",
+    "feedback5": "Việc giao bài và làm bài tập về nhà đã nhẹ nhàng hơn với cả cô và trò nhờ có Kyons. Qua một thời gian được trải nghiệm cùng Kyons, các em đã hứng thú và tích cực, chủ động hơn trong việc tự học. Nhờ hệ  thống bài tập thích ứng đa dạng, các em học sinh có thể được làm những bài tập phù hợp với năng lực của mình. Các cô giáo cũng có thể theo dõi sát sao hơn tiến độ học tập của các em. Từ đó, có thể điều chỉnh phương pháp giảng dạy nhằm đem lại hiệu quả tốt nhất.",
+    "author5": "Cô Thuỳ Trang",
+    "authorDesc5": "Giáo viên Trường THPT Bắc Mê"
   },
   "schools": {
     "forSchools": "Dành cho trường học",
@@ -175,8 +199,10 @@
     "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
   },
   "price": {
-    "canChange": "Bạn có thể đổi giữa các gói dễ dàng sau khi mua",
-    "compare": "So sánh các gói",
+    "title": "CÁC GÓI ĐẶT TRƯỚC",
+    "promo": "Đặt trước nhận ngay các ưu đãi hờiii",
+    "discover": "Khám phá các gói luyện toán cùng Kyons",
+    "select": "(Bạn có thể lựa chọn giữa các gói)",
     "day": "ngày",
     "days": "ngày",
     "detailsAndCompare": "Xem chi tiết và so sánh",
@@ -193,25 +219,56 @@
     "more": "Thêm tính năng, thêm trải nghiệm, thêm khả năng đạt điểm cao!",
     "newProgram": "Truy cập sớm các chương trình sắp ra mắt",
     "note": "Ghi chú",
-    "package1": "Gói đặt trước ưu đãi (1 tháng)",
-    "package11": "Ghi chú (giới hạn 200MB)",
-    "package121": "Chia nhiệm vụ học tập hàng ngày",
-    "package122": "Tự động chia nhiệm vụ học tập hàng ngày",
-    "package13": "Trợ giảng AI và đội ngũ gia sư từ Kyons",
-    "package14": "Kyons Pioneer (Giảm giá 10% vĩnh viễn)",
-    "package1Include": "Bao gồm <strong>Tính năng của gói Miễn phí, và</strong>",
-    "package2": "Gói đặt trước ưu đãi (3 tháng)",
-    "package21": "Quyền truy cập sớm Chương trình tiếng Anh/TOEIC sắp ra mắt vào cuối năm 2023 (Miễn phí 1 tháng)",
-    "package2Include": "Bao gồm <strong>Tính năng của gói 1 tháng, và</strong>",
-    "phoRi": "Phờ ri",
+    "package1": "Gói Starter: 1 Tháng",
+    "discount": "giảm",
+    "package1Include": "Bao gồm các&nbsp;<b>tính năng:</b>",
+    "monthAccess": " tháng truy cập Kyons",
+    "monthsAccess": " tháng truy cập Kyons",
+    "package11": "Huy hiệu <strong>Kyons First</strong> độc quyền gắn trên hồ sơ truy cập",
+    "package2": "Gói Starter: 3 tháng",
+    "package2Include": "Bao gồm các tính năng của <b>Gói Starter 1 tháng</b> và:",
+    "package21": "<b>Vĩnh viễn giảm 10%</b> cho các đơn hàng tiếp theo trên Kyons",
+    "package22": "<b>Truy cập công cụ “Học Tốt”</b> độc quyền của Kyons",
     "priceTable": "Bảng giá",
     "promotion": "Khuyến mãi",
     "recommended": "Khuyên dùng",
-    "select": "(Bạn có thể thay đổi giữa các gói sau)",
     "short": "Thu gọn",
-    "title": "Khuyến mãi đặc biệt mùa tựu trường 2023",
     "useFree": "Sử dụng miễn phí ngay",
-    "only": "(Tương đương 33.000 / 30 ngày)"
+    "only": "(Tương đương 33.000 / 30 ngày)",
+    "package3": "Gói Starter: 12 tháng",
+    "package3Include": "Bao gồm các tính năng của <b>Gói Starter 3 tháng</b> và:",
+    "package31": "Tham gia cộng đồng <b>“Chiến thần Toán Học”</b> của Kyons",
+    "package32": "Quyền ưu tiên được trải nghiệm các <b>tính năng mới</b> của Kyons",
+    "package33": "<b>Gấp đôi thời gian sử dụng</b> công cụ AI trong Kyons"
+  },
+  "faq": {
+    "faq": "Các câu hỏi giải đáp thêm",
+    "questions": [
+      {
+        "question": "Khi nào mình có thể chính thức sử dụng được Kyons?",
+        "answer": "Kyons sẽ chính thức ra mắt phiên bản nâng cấp vào ngày 22/04/2024. Bạn có thể mua ngay gói đặt trước để nhận được giá ưu đãi trong thời gian này nhen!"
+      },
+      {
+        "question": "Kyons có tương thích với thiết bị của mình không? (Laptop vs Điện thoại)",
+        "answer": "Bạn có thể sử dụng Kyons trên cả máy tính lẫn điện thoại. Việc này tạo điều kiện thuận lợi cho bạn có thể học Toán mọi lúc mọi nơi và linh hoạt thời gian học."
+      },
+      {
+        "question": "Mình có thể sử dụng Kyons để học Toán ở những lớp nào?",
+        "answer": "Kyons chủ yếu dành cho học sinh cấp 3, giúp bạn cải thiện điểm Toán thông qua lộ trình học cá nhân hoá với sự hỗ trợ của AI. "
+      },
+      {
+        "question": "Mình có thể dùng thử Kyons trước khi quyết định mua không?",
+        "answer": "Bạn có thể <b>đặt trước gói 19k của Kyons</b> để dùng thử trong 1 tháng và đặt mua với các gói dài hạn hơn để cùng luyện tập môn Toán với Kyons nha."
+      },
+      {
+        "question": "Ngoài môn Toán ra Kyons còn môn nào nữa không?",
+        "answer": "Hiện tại, Kyons chủ yếu tập trung vào môn Toán. Trong tương lai gần, Kyons sẽ sớm phát triển thêm các môn học khác như Tiếng Anh… Hãy tiếp tục theo dõi và cùng chờ đón thông báo mới nhất từ Kyons nha!"
+      },
+      {
+        "question": "Mình có thể chia sẻ tài khoản Kyons cho bạn bè không?",
+        "answer": "Học với Kyons bạn sẽ được thiết kế một lộ trình phù hợp với năng lực hiện tại và mục tiêu của bạn. Bạn sẽ theo dõi được quá trình tiến bộ và cố gắng của mình với Kyons hàng ngày. Vì vậy, Kyons không khuyến khích bạn chia sẻ tài khoản với bạn bè vì sẽ làm gián đoạn và sai lệch thông tin kết quả của bạn đó!"
+      }
+    ]
   },
   "preorder": {
     "title": "Bạn đang đăng ký",

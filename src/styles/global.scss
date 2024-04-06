@@ -6,7 +6,7 @@ html {
 body {
   @apply m-0 p-0 text-sm lg:text-base text-primaryBlue bg-blueGrey-50 flex flex-col overflow-x-hidden;
   scroll-behavior: smooth;
-
+  touch-action: pan-y;
   font-family: 'Montserrat', sans-serif;
 }
 .btn {
@@ -35,19 +35,19 @@ body {
     }
   }
 }
-.indicators {
-  @apply list-none flex flex-row justify-center md:justify-start gap-2 md:gap-8 mb-14 p-6;
-  > li {
-    @apply bg-blueGrey-400 cursor-pointer;
+// .indicators {
+//   @apply list-none flex flex-row justify-center md:justify-start gap-2 md:gap-8 mb-14 p-6;
+//   > li {
+//     @apply bg-blueGrey-400 cursor-pointer;
 
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    &.active {
-      @apply bg-orange;
-    }
-  }
-}
+//     width: 9px;
+//     height: 9px;
+//     border-radius: 50%;
+//     &.active {
+//       @apply bg-orange;
+//     }
+//   }
+// }
 .inner {
   @apply w-full h-full relative;
   > li {
