@@ -74,7 +74,7 @@ const { l } = Astro.props;
     </div>
     <div class='chat-divider'></div>
     <form id='askForm' class='ask' novalidate>
-      <input type='text' placeholder='Ask a question' id='ask' />
+      <input type='text' placeholder={l.chat.ask} id='ask' />
       <button type='button' class='send' onclick='ask()'><i class='icon-Send'></i></button>
     </form>
   </div>

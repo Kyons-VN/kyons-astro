@@ -6,7 +6,7 @@ html {
 body {
   @apply m-0 p-0 text-sm lg:text-base text-primaryBlue bg-blueGrey-50 flex flex-col overflow-x-hidden;
   scroll-behavior: smooth;
-
+  touch-action: pan-y;
   font-family: 'Montserrat', sans-serif;
 }
 .btn {

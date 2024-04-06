@@ -48,19 +48,20 @@
     "desc": "Meet Kyo, your AI sidekick to answer all Kyons-related questions and beyond!  Let’s dive in! 🚀",
     "orderNow": "Your mana is out. Please pre-order the Kyons learning package to experience more about Kyons AI!",
     "powerBy": "AI Chatbot is developed by",
-    "and": "and"
+    "and": "and",
+    "ask": "Ask me anything"
   },
   "features": {
-    "features": "TÍNH NĂNG NỔI BẬT",
-    "title": "Học Toán rất chill cùng Kyons với <span class='highlight'>nhiều vũ khí thú dzị!</span>",
-    "desc": "Muốn vượt chốt, săn điểm Toán phải có vũ khí trong tay. Khám phá ngay “hàng khủng” sẽ đồng hành cùng bạn nha",
-    "feature1": "Lộ trình cá nhân hóa",
-    "feature1Desc": "Học cùng Kyons là học cùng chân ái với ứng dụng AI giúp bạn thiết kế lộ trình học riêng biệt phù hợp với năng lực và tiến độ học của riêng bạn!.",
-    "feature2": "Kho nội dung xịn xò",
-    "feature2Desc": "Kho bài giảng và video chất lượng, thú vị và dễ hiểu giúp bạn hiểu bài và ghi nhớ tốt hơn.",
-    "feature3": "Chân ái AI Kyo hỗ trợ mọi lúc",
-    "feature3Desc": "Không cô đơn khi học Toán vì bạn có AI Kyo siêu thông minh đồng hành. Tháo gỡ mọi thắc mắc trong quá trình học nhanh chóng và rõ ràng.",
-    "andMore": "...cùng nhiều tính năng mới sắp cập nhật!"
+    "features": "HIGHLIGHT FEATURES",
+    "title": "Math's never been cooler than with Kyons and its stash of awesome tools!",
+    "desc": "Gear up with our “power-ups” to tackle those tricky problems and ace your math journey.",
+    "feature1": "Personalised Learning Path",
+    "feature1Desc": "Studying with Kyons is like hanging out with your bestie, an AI app that helps you design a study path tailored to your abilities and learning pace!",
+    "feature2": "Top-notch content",
+    "feature2Desc": "Unlock a vault of top-tier notes and videos that make learning and retaining math not just easy, but downright enjoyable.",
+    "feature3": "Kyo - the AI sidekick, always there for you",
+    "feature3Desc": "Never feel alone in your Math study with the brainy AI buddy Kyo by your side. Quickly and clearly resolve any doubts during your study sessions.",
+    "andMore": "...and many more to come!"
   },
   "partners": {
     "title": "What's the buzz about Kyons out there in the world?",
