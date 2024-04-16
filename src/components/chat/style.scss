@@ -48,6 +48,9 @@
   height: calc(100vh - 400px);
   .message {
     @apply flex gap-2.5 max-w-[482px] w-full;
+    .box {
+      width: fit-content;
+    }
     .avatar {
       @apply w-[34px] h-[34px] rounded-full flex-shrink-0 self-end;
     }
