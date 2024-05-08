@@ -8,7 +8,7 @@ const { l, showAll } = Astro.props;
 ---
 
 <div
-  class='flex flex-col rounded-lg p-4 bg-white hover:shadow-orange shadow-2 min-h-[560px] max-w-[400px] justify-start'
+  class='flex flex-col rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start'
 >
   <div class='flex flex-col gap-8'>
     <div class='flex gap-1 items-center justify-center'>
@@ -16,17 +16,25 @@ const { l, showAll } = Astro.props;
       <h6 class='text-lg'>{l.price.package1}</h6>
     </div>
     <div class='flex gap-2.5 justify-center items-center'>
-      <div class='flex flex-col justify-end'>
+      <!-- <div class='flex flex-col justify-end'>
         <b class='text-blueGrey-400 text-3xl text-right'>69K</b>
         <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
           >{`${l.lang == 'VI' ? l.price.discount + ' 60%' : '60% ' + l.price.discount}`}</b
         >
-      </div>
-      <span class='text-7xl font-semibold'>19K</span>
+      </div> -->
+      <span class='text-7xl font-semibold'>69K</span>
     </div>
-    <i class='text-center'>1{l.price.monthAccess}</i>
     <div class='flex flex-col gap-4'>
-      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <span class='text-center'>{l.price.monthAccess}</span>
+      <strong class='text-center'>{l.price.buyMonthAccess}</strong>
+    </div>
+    <div class='flex flex-col gap-4'>
+      <a
+        href='https://student.kyons.vn/sign-up?packageLevel=1'
+        target='_blank'
+        class='btn orange'
+        title={l.btn.preorder + ' ' + l.price.package1}>{l.btn.buyNow}</a
+      >
       <p set:html={l.price.package1Include} />
       <ul class='star'>
         <li set:html={l.price.package11} />
@@ -35,7 +43,7 @@ const { l, showAll } = Astro.props;
   </div>
 </div>
 <div
-  class='flex flex-col rounded-lg p-4 gap-4 bg-white hover:shadow-orange shadow-2 min-h-[682px] max-w-[450px] justify-start items-center border-orange border-8'
+  class='flex flex-col rounded-2xl p-4 gap-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[450px] justify-start items-center border-orange border-2'
 >
   <div class='h-[37px] bg-yellow-1 px-4 py-2 rounded-2xl'>{l.price.recommended}</div>
   <div class='flex flex-col gap-8'>
@@ -44,17 +52,25 @@ const { l, showAll } = Astro.props;
       <h6 class='text-lg'>{l.price.package2}</h6>
     </div>
     <div class='flex gap-2.5 justify-center items-center'>
-      <div class='flex flex-col justify-end'>
+      <!-- <div class='flex flex-col justify-end'>
         <b class='text-blueGrey-400 text-3xl text-right'>207K</b>
         <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
           >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
         >
-      </div>
-      <span class='text-7xl font-semibold'>69K</span>
+      </div> -->
+      <span class='text-7xl font-semibold'>207K</span>
     </div>
-    <i class='text-center'>3{l.price.monthsAccess}</i>
     <div class='flex flex-col gap-4'>
-      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <span class='text-center'>{l.price.monthsAccess.replace('[number]', 3)}</span>
+      <strong class='text-center'>{l.price.buyMonthsAccess.replace(/\[number\]/g, 3)}</strong>
+    </div>
+    <div class='flex flex-col gap-4'>
+      <a
+        href='https://student.kyons.vn/sign-up?packageLevel=2'
+        target='_blank'
+        class='btn orange'
+        title={l.btn.preorder + ' ' + l.price.package2}>{l.btn.buyNow}</a
+      >
       <p set:html={l.price.package2Include} />
       <ul class='star'>
         <li set:html={l.price.package21} />
@@ -64,7 +80,7 @@ const { l, showAll } = Astro.props;
   </div>
 </div>
 <div
-  class='flex flex-col rounded-lg p-4 bg-white hover:shadow-orange shadow-2 min-h-[560px] max-w-[400px] justify-start'
+  class='flex flex-col rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start'
 >
   <div class='flex flex-col gap-8'>
     <div class='flex gap-1 items-center justify-center'>
@@ -72,17 +88,25 @@ const { l, showAll } = Astro.props;
       <h6 class='text-lg'>{l.price.package3}</h6>
     </div>
     <div class='flex gap-2.5 justify-center items-center'>
-      <div class='flex flex-col justify-end'>
+      <!-- <div class='flex flex-col justify-end'>
         <b class='text-blueGrey-400 text-3xl text-right'>828K</b>
         <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
           >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
         >
-      </div>
-      <span class='text-7xl font-semibold'>279K</span>
+      </div> -->
+      <span class='text-7xl font-semibold'>828K</span>
     </div>
-    <i class='text-center'>1{l.price.monthAccess}</i>
     <div class='flex flex-col gap-4'>
-      <a href='https://student.kyons.vn' target='_blank' class='btn orange'>{l.btn.preorder}</a>
+      <span class='text-center'>{l.price.monthsAccess.replace('[number]', 12)}</span>
+      <strong class='text-center'>{l.price.buyMonthsAccess.replace(/\[number\]/g, 12)}</strong>
+    </div>
+    <div class='flex flex-col gap-4'>
+      <a
+        href='https://student.kyons.vn/sign-up?packageLevel=3'
+        target='_blank'
+        class='btn orange'
+        title={l.btn.preorder + ' ' + l.price.package2}>{l.btn.buyNow}</a
+      >
       <p set:html={l.price.package3Include} />
       <ul class='star'>
         <li set:html={l.price.package31} />

@@ -20,7 +20,8 @@
     "use": "Use",
     "book": "Pre-order",
     "contact": "Contact for trial",
-    "details": "More details"
+    "details": "More details",
+    "buyNow": "Buy now"
   },
   "menu": {
     "lang": "EN",
@@ -199,7 +200,7 @@
     "copy": "Copyrighted © by Kyons LLC."
   },
   "price": {
-    "title": "PRE-ORDER PACKAGE",
+    "title": "ORDER PACKAGE",
     "promo": "Pre-order now to receive great deals",
     "discover": "Explore different Math learning packages with Kyons",
     "select": "(You can choose between the following packages)",
@@ -222,10 +223,12 @@
     "package1": "Starter: 1-Month",
     "discount": "off",
     "package1Include": "What’s included:",
-    "monthAccess": "-month access to Kyons Starter subscription",
-    "monthsAccess": "-months access to Kyons Starter subscription",
+    "monthAccess": "1-month access to Kyons Starter subscription",
+    "monthsAccess": "[number]-months access to Kyons Starter subscription",
+    "buyMonthAccess": "Buy 1 month free [number] month",
+    "buyMonthsAccess": "Buy [number] months free [number] months",
     "package11": "Exclusive <b>Kyons First</b> badge to show off on your profile",
-    "package2": "Gói Starter: 3 tháng",
+    "package2": "Starter: 3 tháng",
     "package2Include": "Included <b>Starter: 1-Month Package</b>, and:",
     "package21": "<b>Lifetime 10% discount</b> on all purchases on Kyons",
     "package22": "<b>A complete set of study tips</b> from Kyons",
@@ -245,10 +248,6 @@
     "faq": "Frequent Asked Questions",
     "questions": [
       {
-        "question": "When can I officially start using Kyons?",
-        "answer": "Kyons will officially launch its upgraded version on April 22, 2024. You can purchase the pre-order package now to enjoy a special price during this period!"
-      },
-      {
         "question": "Is Kyons compatible with my devices? (Laptop and phone)",
         "answer": "You can use Kyons on both computers and smartphones, making it convenient for you to study Math anytime, anywhere, and flexibly manage your study time."
       },
@@ -258,7 +257,7 @@
       },
       {
         "question": "Can I try Kyons before deciding to purchase?",
-        "answer": "You can <b>pre-order the 19k Kyons package</b> to try it for one month and opt for longer-term packages to continue practicing Math with Kyons."
+        "answer": "You can <b>try Kyons' 1-month package for 69k</b> and extend longer with 3 or 12-month packages when you want to use it longer."
       },
       {
         "question": "Besides Math, what other subjects does Kyons cover?",

@@ -20,7 +20,8 @@
     "use": "Sử dụng",
     "book": "Đặt trước",
     "contact": "Liên hệ dùng thử",
-    "details": "Xem chi tiết"
+    "details": "Xem chi tiết",
+    "buyNow": "Mua ngay"
   },
   "menu": {
     "lang": "VI",
@@ -199,7 +200,7 @@
     "copy": "© Bản quyền trang web thuộc về công ty TNHH Kyons."
   },
   "price": {
-    "title": "CÁC GÓI ĐẶT TRƯỚC",
+    "title": "CÁC GÓI HỌC",
     "promo": "Đặt trước nhận ngay các ưu đãi hờiii",
     "discover": "Khám phá các gói luyện toán cùng Kyons",
     "select": "(Bạn có thể lựa chọn giữa các gói)",
@@ -222,8 +223,10 @@
     "package1": "Gói Starter: 1 Tháng",
     "discount": "giảm",
     "package1Include": "Bao gồm các&nbsp;<b>tính năng:</b>",
-    "monthAccess": " tháng truy cập Kyons",
-    "monthsAccess": " tháng truy cập Kyons",
+    "monthAccess": "1 tháng truy cập Kyons",
+    "monthsAccess": "[number] tháng truy cập Kyons",
+    "buyMonthAccess": "Mua 1 tháng tặng 1 tháng",
+    "buyMonthsAccess": "Mua [number] tháng tặng [number] tháng",
     "package11": "Huy hiệu <strong>Kyons First</strong> độc quyền gắn trên hồ sơ truy cập",
     "package2": "Gói Starter: 3 tháng",
     "package2Include": "Bao gồm các tính năng của <b>Gói Starter 1 tháng</b> và:",
@@ -245,10 +248,6 @@
     "faq": "Các câu hỏi giải đáp thêm",
     "questions": [
       {
-        "question": "Khi nào mình có thể chính thức sử dụng được Kyons?",
-        "answer": "Kyons sẽ chính thức ra mắt phiên bản nâng cấp vào ngày 22/04/2024. Bạn có thể mua ngay gói đặt trước để nhận được giá ưu đãi trong thời gian này nhen!"
-      },
-      {
         "question": "Kyons có tương thích với thiết bị của mình không? (Laptop vs Điện thoại)",
         "answer": "Bạn có thể sử dụng Kyons trên cả máy tính lẫn điện thoại. Việc này tạo điều kiện thuận lợi cho bạn có thể học Toán mọi lúc mọi nơi và linh hoạt thời gian học."
       },
@@ -258,7 +257,7 @@
       },
       {
         "question": "Mình có thể dùng thử Kyons trước khi quyết định mua không?",
-        "answer": "Bạn có thể <b>đặt trước gói 19k của Kyons</b> để dùng thử trong 1 tháng và đặt mua với các gói dài hạn hơn để cùng luyện tập môn Toán với Kyons nha."
+        "answer": "Bạn có thể <b>dùng thử gói 1 tháng của Kyons với giá 69k</b> à gia hạn dài hơn với các gói thời lượng 3 hoặc 12 tháng khi muốn sử dụng lâu hơn."
       },
       {
         "question": "Ngoài môn Toán ra Kyons còn môn nào nữa không?",

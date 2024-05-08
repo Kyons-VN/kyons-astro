@@ -14,12 +14,12 @@ const { l } = Astro.props;
     <h5 class='text-teal-0 text-base'>FAQ</h5>
     <h4 class='text-xl md:text-2xl lg:text-3xl'>{l.faq.faq}</h4>
   </div>
-  <div class='flex flex-col w-full max-w-[667px]'>
+  <div class='flex flex-col w-full max-w-[667px] relative'>
     {
       l.faq.questions.map((q: any, i: number) => (
         <div class='flex-col py-6 gap-4 border-t border-b border-white'>
           <b class='text-lg'>{q.question}</b>
-          <p>{q.answer}</p>
+          <p set:html={q.answer} />
         </div>
       ))
     }

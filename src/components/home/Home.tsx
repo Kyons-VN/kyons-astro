@@ -155,8 +155,9 @@ export class Home extends Component<Props> {
           <div className='slider'>
             <div class='text-slider'>
               <div class='t0 text-slider-item'>
+                <span class='sneak-show'>Sneak Show</span>
                 <h1
-                  class='text-2xl custom-transition delay-2'
+                  class='text-xl md:text-[2rem] lg:text-4xl custom-transition delay-2'
                   style={!this.$isInSlider ? 'opacity: 0;transform: translateY(80px);' : ''}
                   dangerouslySetInnerHTML={{ __html: l.home.title0 }}
                 ></h1>
@@ -170,7 +171,10 @@ export class Home extends Component<Props> {
                 </div>
               </div>
               <div class='t1 text-slider-item' style='animation: fadeOutRight 1s forwards'>
-                <h2 class='text-2xl custom-transition delay-2' dangerouslySetInnerHTML={{ __html: l.home.title1 }}></h2>
+                <h2
+                  class='text-xl md:text-[2rem] lg:text-4xl custom-transition delay-2'
+                  dangerouslySetInnerHTML={{ __html: l.home.title1 }}
+                ></h2>
                 <div class='flex gap-4 w-full'>
                   <a class='btn outlined flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#chat'}>
                     {l.btn.exploreNow}
@@ -181,7 +185,10 @@ export class Home extends Component<Props> {
                 </div>
               </div>
               <div class='t2 text-slider-item' style='animation: fadeOutRight 1s forwards'>
-                <h2 class='text-2xl custom-transition delay-2' dangerouslySetInnerHTML={{ __html: l.home.title2 }}></h2>
+                <h2
+                  class='text-xl md:text-[2rem] lg:text-4xl custom-transition delay-2'
+                  dangerouslySetInnerHTML={{ __html: l.home.title2 }}
+                ></h2>
                 <div class='flex gap-4 w-full'>
                   <a class='btn outlined flex-1 lg:flex-initial' href={(l.lang == 'VI' ? '' : '/en') + '/#chat'}>
                     {l.btn.exploreNow}
@@ -281,7 +288,9 @@ export class Home extends Component<Props> {
         </div> */}
         <div class='lg:flex w-full items-center justify-center self-end hidden'>
           <div class='pb-10 flex flex-col items-center justify-center gap-2'>
-            <div class='w-[18px] h-[32px] rounded-[18px] border-2 border-white'></div>
+            <div class='w-[18px] h-[32px] rounded-[18px] border-2 border-white relative'>
+              <div class='scroll-animation'></div>
+            </div>
             <div class='text-whit font-bold'>{l.home.scrollDown}</div>
           </div>
         </div>
