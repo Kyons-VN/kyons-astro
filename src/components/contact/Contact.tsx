@@ -21,19 +21,21 @@ export function Contact({ l }: Props, state: any) {
     preventScroll(true);
 
     const htmlMessage = message.replace(/\n/g, '<br />');
-    // const url = `http://127.0.0.1:5001/kyonsvn/us-central1/smtpMail?type=${type}&email=${email}&name=${name}&message=${htmlMessage}`
+    // const url = `http://127.0.0.1:5001/kyonsvn/us-central1/smtpMail?type=${type}&email=${email}&name=${name}&message=${htmlMessage}`;
     const url = `https://us-central1-kyonsvn.cloudfunctions.net/smtpMail?type=${type}&email=${email}&phone=${phone}&name=${name}&message=${htmlMessage}`;
 
     fetch(encodeURI(url))
       // .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((res) => {
+        console.log(res);
         // setTimeout(() => {
         //   setSended(0);
         //   preventScroll(false);
         // }, 5000);
         clearInput();
-        setSended(data.status == 200 ? 2 : 3);
+        console.log(res);
+
+        setSended(res.status == 200 ? 2 : res.status == 400 ? 4 : 3);
       })
       .catch((err) => {
         clearInput();
@@ -149,7 +151,7 @@ export function Contact({ l }: Props, state: any) {
                   : 'hidden'
               }
             >
-              {(sended == 2 || sended == 3) && (
+              {(sended == 2 || sended == 3 || sended == 4) && (
                 <div class='w-[333px] bg-white p-8 rounded-lg'>
                   {sended == 2 ? (
                     <>
@@ -171,7 +173,39 @@ export function Contact({ l }: Props, state: any) {
                       </div>
                     </>
                   ) : sended == 3 ? (
-                    l.contact.error
+                    <>
+                      <div class='flex flex-col gap-4'>
+                        <h4>{l.contact.error}</h4>
+                        <p>{l.retry}</p>
+                        <button
+                          type='button'
+                          class='btn orange w-full md:w-auto flex md:inline-block justify-center'
+                          onClick={() => {
+                            preventScroll(false);
+                            setSended(0);
+                          }}
+                        >
+                          {l.btn.back}
+                        </button>
+                      </div>
+                    </>
+                  ) : sended == 4 ? (
+                    <>
+                      <div class='flex flex-col gap-4'>
+                        <h4>{l.contact.error}</h4>
+                        <p>{l.contact.emailError}</p>
+                        <button
+                          type='button'
+                          class='btn orange w-full md:w-auto flex md:inline-block justify-center'
+                          onClick={() => {
+                            preventScroll(false);
+                            setSended(0);
+                          }}
+                        >
+                          {l.btn.back}
+                        </button>
+                      </div>
+                    </>
                   ) : null}
                 </div>
               )}

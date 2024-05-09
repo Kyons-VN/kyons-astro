@@ -191,6 +191,7 @@
     "message": "Lời nhắn *",
     "success": "Kyons đã ghi nhận lời nhắn của bạn và sẽ liên hệ lại trong thời gian sớm nhất.",
     "error": "Có lỗi",
+    "emailError": "Email chưa đúng",
     "thankYou": "Cảm ơn bạn rất nhiều!"
   },
   "footer": {
