@@ -291,7 +291,7 @@ export class Home extends Component<Props> {
             <div class='w-[18px] h-[32px] rounded-[18px] border-2 border-white relative'>
               <div class='scroll-animation'></div>
             </div>
-            <div class='text-whit font-bold'>{l.home.scrollDown}</div>
+            <div class='font-bold'>{l.home.scrollDown}</div>
           </div>
         </div>
       </div>
