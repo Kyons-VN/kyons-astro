@@ -21,7 +21,10 @@
     "book": "Đặt trước",
     "contact": "Liên hệ dùng thử",
     "details": "Xem chi tiết",
-    "buyNow": "Mua ngay"
+    "buyNow": "Mua ngay",
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký",
+    "signUpFree": "Đăng ký miễn phí để trải nghiệm"
   },
   "menu": {
     "lang": "VI",

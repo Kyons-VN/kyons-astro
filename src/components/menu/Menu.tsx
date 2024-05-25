@@ -71,7 +71,7 @@ export default function Menu({ l }: Props) {
         <span class='hidden lg:flex flex-1'></span>
         <div class='flex gap-10 items-center z-10'>
           <ul className={isMenuOpen.get() ? 'menu-items show' : 'menu-items hide'}>
-            <li class='p-3 flex sm:hidden'>
+            <li class='p-3 flex lg:hidden'>
               <ul class='w-full'>
                 <li class='flex justify-center relative'>
                   <div className='flex justify-between w-full'>
@@ -122,7 +122,7 @@ export default function Menu({ l }: Props) {
                 </li>
               </ul>
             </li>
-            <li>
+            {/* <li>
               <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#features'}>
                 {l.menu.features}
               </a>
@@ -131,34 +131,71 @@ export default function Menu({ l }: Props) {
               <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
                 {l.menu.price}
               </a>
-            </li>
-            {/* <div
-              class='hidden sm:flex flex-row relative p-3 items-center justify-between text-sm gap-3 cursor-pointer'
+            </li> */}
+            <div
+              class='flex lg:flex-row flex-col relative p-4 lg:items-center items-start justify-between text-sm gap-3 cursor-pointer'
               onClick={() => setIsStudentHover(!isStudentHover)}
               tabIndex={0}
             >
-              <span class='font-bold text-[16px]'>{l.menu.forStudents}</span>
-              <i className={isStudentHover ? 'icon-ArrowUpStop' : 'icon-ArrowDownStop'}></i>
+              <span className='flex items-center justify-center gap-2'>
+                <img class='lg:hidden' src='/images/menu-students.svg' alt='' />
+                <span class='font-bold text-[16px]'>{l.menu.forStudents}</span>
+              </span>
+              <i
+                className={isStudentHover ? 'icon-ArrowUpStop lg:flex hidden' : 'icon-ArrowDownStop lg:flex hidden'}
+              ></i>
               <div
-                className={isStudentHover ? `${defaultClass} sm:flex` : `${defaultClass} sm:hidden`}
+                className={isStudentHover ? `${defaultClass} lg:flex hidden` : `${defaultClass} hidden`}
                 // style='bottom: calc(-100% - 30px);'
                 // onClick={() => setIsStudentHover(false)}
               >
-                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#about-us'}>
+                {/* <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#about-us'}>
                   {l.menu.aboutUs}
                 </a>
-                <hr class='text-blueGrey-300' />
-                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#problem'}>
-                  {l.menu.problemsAndSolution}
+                <hr class='text-blueGrey-300' /> */}
+                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#features'}>
+                  {l.menu.features}
                 </a>
                 <hr class='text-blueGrey-300' />
-                <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
+                {/* <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#guild'}>
                   {l.menu.guild}
                 </a>
+                <hr class='text-blueGrey-300' /> */}
+                <a class='close-menu flex items-center' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                  {l.menu.price}
+                  &nbsp;
+                  <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
+                    {l.menu.promotion}
+                  </span>
+                </a>
               </div>
-            </div> */}
+              <ul class='lg:hidden pl-4 vertical-line flex flex-col items-start'>
+                <li>
+                  <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#features'}>
+                    {l.menu.features}
+                  </a>
+                </li>
+                <li>
+                  <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/#price'}>
+                    {l.menu.price}
+                    &nbsp;
+                    <span class='text-[10px] h-4 px-1 rounded-full flex items-center justify-center bg-darkEmerald text-white'>
+                      {l.menu.promotion}
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <li>
+              <a class='close-menu' href={(l.lang == 'VI' ? '' : '/en') + '/danh-cho-nha-truong'}>
+                <span className='flex items-center justify-center gap-2'>
+                  <img class='lg:hidden' src='/images/menu-schools.svg' alt='' />
+                  <span class='font-bold text-[16px]'>{l.menu.forSchools}</span>
+                </span>
+              </a>
+            </li>
             <div
-              className={isHover ? `${defaultClass} flex sm:hidden` : `${defaultClass} hidden`}
+              className={isHover ? `${defaultClass} flex md:hidden` : `${defaultClass} hidden`}
               // style='bottom: calc(-100% - 30px);'
               onClick={() => setIsStudentHover(false)}
             >
@@ -275,7 +312,7 @@ export default function Menu({ l }: Props) {
               {menuLabel.price}
             </a>
           </li> */}
-            <li className={$activeMenu == 6 ? 'active' : ''}>
+            {/* <li className={$activeMenu == 6 ? 'active' : ''}>
               <a
                 class='close-menu'
                 href='#contact'
@@ -330,8 +367,17 @@ export default function Menu({ l }: Props) {
                   EN
                 </div>
               </div>
-            </li>
+            </li> */}
           </ul>
+        </div>
+        <span class='hidden lg:flex flex-1'></span>
+        <div class='hidden lg:flex items-center gap-4'>
+          <a href={`${APP_URL}/sign-in`} target='_blank' class='btn' title={l.btn.signIn}>
+            {l.btn.signIn}
+          </a>
+          <a href={`${APP_URL}/sign-up`} target='_blank' class='btn orange' title={l.btn.signUp}>
+            {l.btn.signUp}
+          </a>
         </div>
         <div
           className={`fixed w-full h-screen top-0 left-0 z-0 ${isOpen || isHover || isStudentHover ? '' : 'hidden'}`}

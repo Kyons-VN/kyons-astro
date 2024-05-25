@@ -2,9 +2,9 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?33ai21') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?33ai21') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?33ai21##{$icomoon-font-family}') format('svg');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1gtl4y') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1gtl4y') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1gtl4y##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,79 +14,31 @@
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  line-height: 1;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Add {
+.icon {
+  @apply text-2xl;
+}
+
+.icon-Visa {
   &:before {
-    content: $icon-Add;
+    content: $icon-Visa;
+    color: #2c3d5b;
   }
 }
-.icon-AddFriend {
+.icon-ATM {
   &:before {
-    content: $icon-AddFriend;
-  }
-}
-.icon-AddPhoto {
-  &:before {
-    content: $icon-AddPhoto;
-  }
-}
-.icon-Alarm {
-  &:before {
-    content: $icon-Alarm;
-  }
-}
-.icon-AlignCenter {
-  &:before {
-    content: $icon-AlignCenter;
-  }
-}
-.icon-AlignLeft {
-  &:before {
-    content: $icon-AlignLeft;
-  }
-}
-.icon-AlignRight {
-  &:before {
-    content: $icon-AlignRight;
-  }
-}
-.icon-ArrowDownStop {
-  &:before {
-    content: $icon-ArrowDownStop;
-  }
-}
-.icon-ArrowForward {
-  &:before {
-    content: $icon-ArrowForward;
-  }
-}
-.icon-ArrowLeftStop {
-  &:before {
-    content: $icon-ArrowLeftStop;
-  }
-}
-.icon-ArrowRightStop {
-  &:before {
-    content: $icon-ArrowRightStop;
-  }
-}
-.icon-ArrowSelector {
-  &:before {
-    content: $icon-ArrowSelector;
-  }
-}
-.icon-ArrowUpStop {
-  &:before {
-    content: $icon-ArrowUpStop;
+    content: $icon-ATM;
   }
 }
 .icon-BankTransfer {
@@ -94,319 +46,24 @@
     content: $icon-BankTransfer;
   }
 }
-.icon-Birthday {
-  &:before {
-    content: $icon-Birthday;
-  }
-}
-.icon-Bookmark {
-  &:before {
-    content: $icon-Bookmark;
-  }
-}
-.icon-BookmarkAdd {
-  &:before {
-    content: $icon-BookmarkAdd;
-  }
-}
-.icon-BookmarkRemove {
-  &:before {
-    content: $icon-BookmarkRemove;
-  }
-}
-.icon-BulletList {
-  &:before {
-    content: $icon-BulletList;
-  }
-}
-.icon-BulletPoint {
-  &:before {
-    content: $icon-BulletPoint;
-  }
-}
-.icon-Calendar {
-  &:before {
-    content: $icon-Calendar;
-  }
-}
-.icon-CalendarViewDay {
-  &:before {
-    content: $icon-CalendarViewDay;
-  }
-}
-.icon-CalendarViewMonth {
-  &:before {
-    content: $icon-CalendarViewMonth;
-  }
-}
-.icon-CalendarViewWeek {
-  &:before {
-    content: $icon-CalendarViewWeek;
-  }
-}
-.icon-Call {
-  &:before {
-    content: $icon-Call;
-  }
-}
-.icon-CallTutor {
-  &:before {
-    content: $icon-CallTutor;
-  }
-}
-.icon-Cancel {
-  &:before {
-    content: $icon-Cancel;
-  }
-}
-.icon-Card {
-  &:before {
-    content: $icon-Card;
-  }
-}
-.icon-Carousel {
-  &:before {
-    content: $icon-Carousel;
-  }
-}
 .icon-Cash {
   &:before {
     content: $icon-Cash;
   }
 }
-.icon-Chart {
+.icon-Momo {
   &:before {
-    content: $icon-Chart;
+    content: $icon-Momo;
   }
 }
-.icon-Chat {
+.icon-Paypal {
   &:before {
-    content: $icon-Chat;
+    content: $icon-Paypal;
   }
 }
-.icon-Check {
+.icon-ZaloPay {
   &:before {
-    content: $icon-Check;
-  }
-}
-.icon-ChevronDown {
-  &:before {
-    content: $icon-ChevronDown;
-  }
-}
-.icon-ChevronLeft {
-  &:before {
-    content: $icon-ChevronLeft;
-  }
-}
-.icon-ChevronRight {
-  &:before {
-    content: $icon-ChevronRight;
-  }
-}
-.icon-ChevronUp {
-  &:before {
-    content: $icon-ChevronUp;
-  }
-}
-.icon-Close {
-  &:before {
-    content: $icon-Close;
-  }
-}
-.icon-Crop {
-  &:before {
-    content: $icon-Crop;
-  }
-}
-.icon-Delete {
-  &:before {
-    content: $icon-Delete;
-  }
-}
-.icon-Document {
-  &:before {
-    content: $icon-Document;
-  }
-}
-.icon-Done {
-  &:before {
-    content: $icon-Done;
-  }
-}
-.icon-Draw {
-  &:before {
-    content: $icon-Draw;
-  }
-}
-.icon-Duplicate {
-  &:before {
-    content: $icon-Duplicate;
-  }
-}
-.icon-Edit {
-  &:before {
-    content: $icon-Edit;
-  }
-}
-.icon-EditText {
-  &:before {
-    content: $icon-EditText;
-  }
-}
-.icon-Education {
-  &:before {
-    content: $icon-Education;
-  }
-}
-.icon-Email {
-  &:before {
-    content: $icon-Email;
-  }
-}
-.icon-Eraser {
-  &:before {
-    content: $icon-Eraser;
-  }
-}
-.icon-Error {
-  &:before {
-    content: $icon-Error;
-  }
-}
-.icon-Facebook {
-  &:before {
-    content: $icon-Facebook;
-  }
-}
-.icon-Filter {
-  &:before {
-    content: $icon-Filter;
-  }
-}
-.icon-Folder {
-  &:before {
-    content: $icon-Folder;
-  }
-}
-.icon-FolderOpen {
-  &:before {
-    content: $icon-FolderOpen;
-  }
-}
-.icon-Google {
-  &:before {
-    content: $icon-Google;
-  }
-}
-.icon-Hanbook {
-  &:before {
-    content: $icon-Hanbook;
-  }
-}
-.icon-Hanbook-1 {
-  &:before {
-    content: $icon-Hanbook-1;
-  }
-}
-.icon-Help {
-  &:before {
-    content: $icon-Help;
-  }
-}
-.icon-HintDocument {
-  &:before {
-    content: $icon-HintDocument;
-  }
-}
-.icon-HintTutor {
-  &:before {
-    content: $icon-HintTutor;
-  }
-}
-.icon-History {
-  &:before {
-    content: $icon-History;
-  }
-}
-.icon-Home {
-  &:before {
-    content: $icon-Home;
-  }
-}
-.icon-Info {
-  &:before {
-    content: $icon-Info;
-  }
-}
-.icon-insertText {
-  &:before {
-    content: $icon-insertText;
-  }
-}
-.icon-Inventory {
-  &:before {
-    content: $icon-Inventory;
-  }
-}
-.icon-Keyboard {
-  &:before {
-    content: $icon-Keyboard;
-  }
-}
-.icon-KeyboardHide {
-  &:before {
-    content: $icon-KeyboardHide;
-  }
-}
-.icon-Label {
-  &:before {
-    content: $icon-Label;
-  }
-}
-.icon-LessonContent {
-  &:before {
-    content: $icon-LessonContent;
-  }
-}
-.icon-Lightbulb {
-  &:before {
-    content: $icon-Lightbulb;
-  }
-}
-.icon-LineWeight {
-  &:before {
-    content: $icon-LineWeight;
-  }
-}
-.icon-Link {
-  &:before {
-    content: $icon-Link;
-  }
-}
-.icon-Linkedin {
-  &:before {
-    content: $icon-Linkedin;
-  }
-}
-.icon-Location {
-  &:before {
-    content: $icon-Location;
-  }
-}
-.icon-Lock {
-  &:before {
-    content: $icon-Lock;
-  }
-}
-.icon-Map {
-  &:before {
-    content: $icon-Map;
-  }
-}
-.icon-MenuHamburger {
-  &:before {
-    content: $icon-MenuHamburger;
+    content: $icon-ZaloPay;
   }
 }
 .icon-MicOff {
@@ -424,11 +81,6 @@
     content: $icon-Minimize;
   }
 }
-.icon-Momo {
-  &:before {
-    content: $icon-Momo;
-  }
-}
 .icon-More {
   &:before {
     content: $icon-More;
@@ -444,11 +96,6 @@
     content: $icon-NewLabel;
   }
 }
-.icon-NewMeeting {
-  &:before {
-    content: $icon-NewMeeting;
-  }
-}
 .icon-NoteManagement {
   &:before {
     content: $icon-NoteManagement;
@@ -462,11 +109,6 @@
 .icon-OpenNew {
   &:before {
     content: $icon-OpenNew;
-  }
-}
-.icon-Paypal {
-  &:before {
-    content: $icon-Paypal;
   }
 }
 .icon-Phone {
@@ -639,8 +281,363 @@
     content: $icon-Work;
   }
 }
-.icon-ZaloPay {
+.icon-KeyboardHide {
   &:before {
-    content: $icon-ZaloPay;
+    content: $icon-KeyboardHide;
+  }
+}
+.icon-Label {
+  &:before {
+    content: $icon-Label;
+  }
+}
+.icon-LessonContent {
+  &:before {
+    content: $icon-LessonContent;
+  }
+}
+.icon-Lightbulb {
+  &:before {
+    content: $icon-Lightbulb;
+  }
+}
+.icon-LineWeight {
+  &:before {
+    content: $icon-LineWeight;
+  }
+}
+.icon-Link {
+  &:before {
+    content: $icon-Link;
+  }
+}
+.icon-Location {
+  &:before {
+    content: $icon-Location;
+  }
+}
+.icon-Lock {
+  &:before {
+    content: $icon-Lock;
+  }
+}
+.icon-Map {
+  &:before {
+    content: $icon-Map;
+  }
+}
+.icon-MenuHamburger {
+  &:before {
+    content: $icon-MenuHamburger;
+  }
+}
+.icon-HintDocument {
+  &:before {
+    content: $icon-HintDocument;
+  }
+}
+.icon-HintTutor {
+  &:before {
+    content: $icon-HintTutor;
+  }
+}
+.icon-History {
+  &:before {
+    content: $icon-History;
+  }
+}
+.icon-Home {
+  &:before {
+    content: $icon-Home;
+  }
+}
+.icon-Info {
+  &:before {
+    content: $icon-Info;
+  }
+}
+.icon-InsertText {
+  &:before {
+    content: $icon-InsertText;
+  }
+}
+.icon-Inventory {
+  &:before {
+    content: $icon-Inventory;
+  }
+}
+.icon-Keyboard {
+  &:before {
+    content: $icon-Keyboard;
+  }
+}
+.icon-Help {
+  &:before {
+    content: $icon-Help;
+  }
+}
+.icon-Hanbook {
+  &:before {
+    content: $icon-Hanbook;
+  }
+}
+.icon-Google {
+  &:before {
+    content: $icon-Google;
+  }
+}
+.icon-FolderOpen {
+  &:before {
+    content: $icon-FolderOpen;
+  }
+}
+.icon-Folder {
+  &:before {
+    content: $icon-Folder;
+  }
+}
+.icon-Filter {
+  &:before {
+    content: $icon-Filter;
+  }
+}
+.icon-Facebook {
+  &:before {
+    content: $icon-Facebook;
+  }
+}
+.icon-Error {
+  &:before {
+    content: $icon-Error;
+  }
+}
+.icon-Eraser {
+  &:before {
+    content: $icon-Eraser;
+  }
+}
+.icon-Email {
+  &:before {
+    content: $icon-Email;
+  }
+}
+.icon-Delete {
+  &:before {
+    content: $icon-Delete;
+  }
+}
+.icon-Document {
+  &:before {
+    content: $icon-Document;
+  }
+}
+.icon-Done {
+  &:before {
+    content: $icon-Done;
+  }
+}
+.icon-Draw {
+  &:before {
+    content: $icon-Draw;
+  }
+}
+.icon-Duplicate {
+  &:before {
+    content: $icon-Duplicate;
+  }
+}
+.icon-Edit {
+  &:before {
+    content: $icon-Edit;
+  }
+}
+.icon-EditText {
+  &:before {
+    content: $icon-EditText;
+  }
+}
+.icon-Education {
+  &:before {
+    content: $icon-Education;
+  }
+}
+.icon-Chart {
+  &:before {
+    content: $icon-Chart;
+  }
+}
+.icon-Chat {
+  &:before {
+    content: $icon-Chat;
+  }
+}
+.icon-Check {
+  &:before {
+    content: $icon-Check;
+  }
+}
+.icon-ChevronDown {
+  &:before {
+    content: $icon-ChevronDown;
+  }
+}
+.icon-ChevronLeft {
+  &:before {
+    content: $icon-ChevronLeft;
+  }
+}
+.icon-ChevronRight {
+  &:before {
+    content: $icon-ChevronRight;
+  }
+}
+.icon-ChevronUp {
+  &:before {
+    content: $icon-ChevronUp;
+  }
+}
+.icon-Close {
+  &:before {
+    content: $icon-Close;
+  }
+}
+.icon-Crop {
+  &:before {
+    content: $icon-Crop;
+  }
+}
+.icon-Crown {
+  &:before {
+    content: $icon-Crown;
+  }
+}
+.icon-Calendar {
+  &:before {
+    content: $icon-Calendar;
+  }
+}
+.icon-CalendarViewDay {
+  &:before {
+    content: $icon-CalendarViewDay;
+  }
+}
+.icon-CalendarViewMonth {
+  &:before {
+    content: $icon-CalendarViewMonth;
+  }
+}
+.icon-CalendarViewWeek {
+  &:before {
+    content: $icon-CalendarViewWeek;
+  }
+}
+.icon-Call {
+  &:before {
+    content: $icon-Call;
+  }
+}
+.icon-CallTutor {
+  &:before {
+    content: $icon-CallTutor;
+  }
+}
+.icon-Cancel {
+  &:before {
+    content: $icon-Cancel;
+  }
+}
+.icon-Carousel {
+  &:before {
+    content: $icon-Carousel;
+  }
+}
+.icon-Add {
+  &:before {
+    content: $icon-Add;
+  }
+}
+.icon-AddFriend {
+  &:before {
+    content: $icon-AddFriend;
+  }
+}
+.icon-AddPhoto {
+  &:before {
+    content: $icon-AddPhoto;
+  }
+}
+.icon-Alarm {
+  &:before {
+    content: $icon-Alarm;
+  }
+}
+.icon-AlignCenter {
+  &:before {
+    content: $icon-AlignCenter;
+  }
+}
+.icon-AlignLeft {
+  &:before {
+    content: $icon-AlignLeft;
+  }
+}
+.icon-AlignRight {
+  &:before {
+    content: $icon-AlignRight;
+  }
+}
+.icon-ArrowDownStop {
+  &:before {
+    content: $icon-ArrowDownStop;
+  }
+}
+.icon-ArrowForward {
+  &:before {
+    content: $icon-ArrowForward;
+  }
+}
+.icon-ArrowLeftStop {
+  &:before {
+    content: $icon-ArrowLeftStop;
+  }
+}
+.icon-ArrowRightStop {
+  &:before {
+    content: $icon-ArrowRightStop;
+  }
+}
+.icon-ArrowSelector {
+  &:before {
+    content: $icon-ArrowSelector;
+  }
+}
+.icon-ArrowUpStop {
+  &:before {
+    content: $icon-ArrowUpStop;
+  }
+}
+.icon-Bookmark {
+  &:before {
+    content: $icon-Bookmark;
+  }
+}
+.icon-BookmarkAdd {
+  &:before {
+    content: $icon-BookmarkAdd;
+  }
+}
+.icon-BookmarkRemove {
+  &:before {
+    content: $icon-BookmarkRemove;
+  }
+}
+.icon-BulletList {
+  &:before {
+    content: $icon-BulletList;
+  }
+}
+.icon-BulletPoint {
+  &:before {
+    content: $icon-BulletPoint;
   }
 }

@@ -52,7 +52,7 @@ export class Home extends Component<Props> {
     }
 
     if (scrollTop > window.screen.height * 2) return;
-    if (e.deltaY > 0) {
+    if (e.deltaY > 0 && e.deltaY < window.screen.height * 2) {
       if (isInSlider.value) {
         // if (activeSlider.value == 2) {
         setInSlider(false);

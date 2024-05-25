@@ -21,7 +21,10 @@
     "book": "Pre-order",
     "contact": "Contact for trial",
     "details": "More details",
-    "buyNow": "Buy now"
+    "buyNow": "Buy now",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signUpFree": "Sign up for free"
   },
   "menu": {
     "lang": "EN",

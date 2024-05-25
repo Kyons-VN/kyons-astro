@@ -8,8 +8,9 @@ const { l, showAll } = Astro.props;
 ---
 
 <div
-  class='flex flex-col rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start'
+  class='flex flex-col gap-4 rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start lg:h-full'
 >
+  <div class='h-[37px]'></div>
   <div class='flex flex-col gap-8'>
     <div class='flex gap-1 items-center justify-center'>
       <img src='/images/free-package.svg' alt='' />
@@ -22,7 +23,7 @@ const { l, showAll } = Astro.props;
           >{`${l.lang == 'VI' ? l.price.discount + ' 60%' : '60% ' + l.price.discount}`}</b
         >
       </div> -->
-      <span class='text-7xl font-semibold'>69K</span>
+      <span class='text-6xl font-semibold'>69K</span>
     </div>
     <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthAccess}</span>
@@ -32,7 +33,7 @@ const { l, showAll } = Astro.props;
       <a
         href='https://student.kyons.vn/sign-up?packageLevel=1'
         target='_blank'
-        class='btn orange'
+        class='btn outlined'
         title={l.btn.preorder + ' ' + l.price.package1}>{l.btn.buyNow}</a
       >
       <p set:html={l.price.package1Include} />
@@ -43,9 +44,9 @@ const { l, showAll } = Astro.props;
   </div>
 </div>
 <div
-  class='flex flex-col rounded-2xl p-4 gap-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[450px] justify-start items-center border-orange border-2'
+  class='flex flex-col rounded-2xl p-4 gap-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[450px] justify-start items-center border-orange border-2 lg:h-full'
 >
-  <div class='h-[37px] bg-yellow-1 px-4 py-2 rounded-2xl'>{l.price.recommended}</div>
+  <div class='h-[37px] bg-yellow-1 px-4 py-2 rounded-2xl flex items-center'>{l.price.recommended}</div>
   <div class='flex flex-col gap-8'>
     <div class='flex gap-1 items-center justify-center'>
       <img src='/images/free-package.svg' alt='' />
@@ -58,7 +59,7 @@ const { l, showAll } = Astro.props;
           >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
         >
       </div> -->
-      <span class='text-7xl font-semibold'>207K</span>
+      <span class='text-6xl font-semibold'>207K</span>
     </div>
     <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthsAccess.replace('[number]', 3)}</span>
@@ -80,8 +81,9 @@ const { l, showAll } = Astro.props;
   </div>
 </div>
 <div
-  class='flex flex-col rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start'
+  class='flex flex-col gap-4 rounded-2xl p-4 bg-white hover:shadow-orange shadow-2 min-h-[600px] max-w-[400px] justify-start lg:h-full'
 >
+  <div class='h-[37px]'></div>
   <div class='flex flex-col gap-8'>
     <div class='flex gap-1 items-center justify-center'>
       <img src='/images/free-package.svg' alt='' />
@@ -94,7 +96,7 @@ const { l, showAll } = Astro.props;
           >{`${l.lang == 'VI' ? l.price.discount + ' 67%' : '67% ' + l.price.discount}`}</b
         >
       </div> -->
-      <span class='text-7xl font-semibold'>828K</span>
+      <span class='text-6xl font-semibold'>828K</span>
     </div>
     <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthsAccess.replace('[number]', 12)}</span>
@@ -104,7 +106,7 @@ const { l, showAll } = Astro.props;
       <a
         href='https://student.kyons.vn/sign-up?packageLevel=3'
         target='_blank'
-        class='btn orange'
+        class='btn outlined'
         title={l.btn.preorder + ' ' + l.price.package2}>{l.btn.buyNow}</a
       >
       <p set:html={l.price.package3Include} />
