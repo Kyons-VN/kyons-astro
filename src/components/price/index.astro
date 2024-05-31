@@ -10,8 +10,8 @@ const { l } = Astro.props;
 
 <div class='price'>
   <div id='price' class='absolute top-[-82px]'></div>
-  <img src='/images/price.svg' alt='' class='absolute w-full left-0 top-0' />
-  <div class='flex flex-col gap-6 items-center px-4 py-6 relative'>
+  <img src='/images/price.svg' alt='' class='absolute w-full left-0 top-0 z-10' />
+  <div class='flex flex-col gap-6 items-center px-4 py-6 relative z-20'>
     <div class='flex flex-col gap-4 items-center text-center'>
       <h5 class='text-darkTeal'>{l.price.title}</h5>
       <div class='flex flex-col gap2'>
@@ -28,12 +28,10 @@ const { l } = Astro.props;
       > -->
     </div>
     <div class='flex justify-center text-orange'>
-      <a href='https://student.kyons.vn/sign-up' target='_blank' class='flex gap-2 items-center p-4'
+      <a href='https://student.kyons.vn/sign-up?packageLevel=0' target='_blank' class='flex gap-2 items-center p-4'
         >{l.btn.signUpFree}
         <i class='icon-ChevronRight text-lg'></i></a
       >
     </div>
   </div>
 </div>
-
-<script></script>

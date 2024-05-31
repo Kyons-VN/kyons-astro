@@ -58,12 +58,35 @@ export default function Menu({ l }: Props) {
   }
 
   return (
-    <div class='w-full bg-[#0F172A] fixed z-20 flex justify-center'>
+    <div class='w-full bg-[#0F172A] fixed z-40 flex justify-center'>
       <nav id='menu' className={`menu ${!isOpen ? '' : 'show'}`}>
-        <div className='flex flex-row items-center justify-between w-full lg:w-auto z-10'>
-          <a href={l.lang == 'VI' ? '/' : '/en/'}>
-            <img class='w-[100px] cursor-pointer' src='/images/logo.svg' alt='Logo' />
+        <div className='flex flex-row gap-4 items-center justify-between w-full lg:max-w-[20%] z-10'>
+          <a href={l.lang == 'VI' ? '/' : '/en/'} class='min-w-[125px] text-center'>
+            <img class='h-[40px] cursor-pointer' src='/images/logo.svg' alt='Logo' />
           </a>
+          <div className='flex justify-between w-full'>
+            <div
+              class='hidden lg:flex flex-row relative h-10 p-6 items-center justify-between text-sm w-24 cursor-pointer'
+              onClick={() => setIsHover(!isHover)}
+              tabIndex={0}
+            >
+              <span class='font-bold text-[16px]'>{language}</span>
+              <i className={isHover ? 'icon-ArrowUpStop' : 'icon-ArrowDownStop'}></i>
+              <div
+                className={isHover ? `${defaultClass} hidden md:flex` : `${defaultClass} hidden`}
+                // style='bottom: calc(-100% - 30px);'
+                onClick={() => setIsHover(false)}
+              >
+                <a className={language == 'VI' ? 'text-orange' : ''} onClick={() => setLanguage('VI')}>
+                  VI
+                </a>
+                <hr class='text-blueGrey-300' />
+                <a className={language == 'EN' ? 'text-orange' : ''} onClick={() => setLanguage('EN')}>
+                  EN
+                </a>
+              </div>
+            </div>
+          </div>
           <button class='lg:hidden text-[24px]' onClick={toggle}>
             <i className={isMenuOpen.get() ? 'icon-Close' : 'icon-MenuHamburger'}></i>
           </button>
