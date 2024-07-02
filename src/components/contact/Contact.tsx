@@ -21,10 +21,24 @@ export function Contact({ l }: Props, state: any) {
     preventScroll(true);
 
     const htmlMessage = message.replace(/\n/g, '<br />');
-    // const url = `http://127.0.0.1:5001/kyonsvn/us-central1/smtpMail?type=${type}&email=${email}&name=${name}&message=${htmlMessage}`;
-    const url = `https://us-central1-kyonsvn.cloudfunctions.net/smtpMail?type=${type}&email=${email}&phone=${phone}&name=${name}&message=${htmlMessage}`;
+    // const url = `http://127.0.0.1:5001/kyonsvn-dev/asia-east1/mail/contact`;
+    const url = `https://mail-kdgkcj7kga-de.a.run.app/contact`;
+    // const url = `https://us-central1-kyonsvn.cloudfunctions.net/smtpMail?type=${type}&email=${email}&phone=${phone}&name=${name}&message=${htmlMessage}`;
 
-    fetch(encodeURI(url))
+    fetch(encodeURI(url), {
+      method: 'post',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type,
+        email,
+        phone,
+        name,
+        message: htmlMessage,
+      }),
+    })
       // .then((res) => res.json())
       .then((res) => {
         console.log(res);
