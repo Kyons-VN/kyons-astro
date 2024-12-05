@@ -1,7 +1,7 @@
 .menu {
   @apply flex flex-row w-full text-white px-4 lg:px-14 h-[82px] max-w-[1352px];
   .menu-items {
-    @apply flex flex-col lg:flex-row flex-1 gap-0 lg:gap-8 fixed top-0 left-0 w-full lg:static;
+    @apply flex flex-col lg:flex-row flex-1 gap-0 lg:gap-4 fixed top-0 left-0 w-full lg:static;
     li {
       // @apply flex flex-row items-center justify-center;
       a {

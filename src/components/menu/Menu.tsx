@@ -155,6 +155,13 @@ export default function Menu({ l }: Props) {
                 {l.menu.price}
               </a>
             </li> */}
+            <li>
+              <a class='close-menu' href='https://kyo.kyons.vn' target='_blank'>
+                <span className='flex items-center justify-center gap-2'>
+                  <span class='font-bold text-[16px]'>KyoAI</span>
+                </span>
+              </a>
+            </li>
             <div
               class='flex lg:flex-row flex-col relative p-4 lg:items-center items-start justify-between text-sm gap-3 cursor-pointer'
               onClick={() => setIsStudentHover(!isStudentHover)}

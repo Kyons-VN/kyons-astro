@@ -25,9 +25,9 @@ const { l, showAll } = Astro.props;
       </div> -->
       <span class='text-7xl font-bold'>69K</span>
     </div>
-    <div class='flex flex-col gap-4'>
+    <!-- <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthAccess}</span>
-    </div>
+    </div> -->
     <div class='flex flex-col gap-4'>
       <a
         href='https://student.kyons.vn/sign-up?packageLevel=1'
@@ -35,10 +35,8 @@ const { l, showAll } = Astro.props;
         class='btn outlined'
         title={l.btn.preorder + ' ' + l.price.package1}>{l.btn.buyNow}</a
       >
-      <!-- <p set:html={l.price.package1Include} />
-      <ul class='star'>
-        <li set:html={l.price.package11} />
-      </ul> -->
+      <p set:html={l.price.package1Include} />
+      <ul class='star' set:html={l.price.package1Desc} />
     </div>
   </div>
 </div>
@@ -52,17 +50,17 @@ const { l, showAll } = Astro.props;
       <h6 class='text-lg'>{l.price.package2}</h6>
     </div>
     <div class='flex gap-2.5 justify-center items-center'>
-      <div class='flex flex-col justify-end'>
+      <!-- <div class='flex flex-col justify-end'>
         <b class='text-blueGrey-400 text-3xl text-right line-through'>207K</b>
         <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
           >{`${l.lang == 'VI' ? l.price.discount + ' 15%' : '15% ' + l.price.discount}`}</b
         >
-      </div>
-      <span class='text-7xl font-bold'>175K</span>
+      </div> -->
+      <span class='text-7xl font-bold'>207K</span>
     </div>
-    <div class='flex flex-col gap-4'>
+    <!-- <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthsAccess.replace('[number]', 3)}</span>
-    </div>
+    </div> -->
     <div class='flex flex-col gap-4'>
       <a
         href='https://student.kyons.vn/sign-up?packageLevel=2'
@@ -70,11 +68,8 @@ const { l, showAll } = Astro.props;
         class='btn orange'
         title={l.btn.preorder + ' ' + l.price.package2}>{l.btn.buyNow}</a
       >
-      <!-- <p set:html={l.price.package2Include} />
-      <ul class='star'>
-        <li set:html={l.price.package21} />
-        <li set:html={l.price.package22} />
-      </ul> -->
+      <!-- <p set:html={l.price.package2Include} /> -->
+      <ul class='star' set:html={l.price.package2Desc} />
     </div>
   </div>
 </div>
@@ -88,17 +83,17 @@ const { l, showAll } = Astro.props;
       <h6 class='text-lg'>{l.price.package3}</h6>
     </div>
     <div class='flex gap-2.5 justify-center items-center'>
-      <div class='flex flex-col justify-end'>
+      <!-- <div class='flex flex-col justify-end'>
         <b class='text-blueGrey-400 text-3xl text-right line-through'>828K</b>
         <b class='px-2.5 py-1 w-[96px] text-sm bg-emerald-3 text-darkEmerald rounded-3xl text-center'
           >{`${l.lang == 'VI' ? l.price.discount + ' 20%' : '20% ' + l.price.discount}`}</b
         >
-      </div>
-      <span class='text-7xl font-bold'>659K</span>
+      </div> -->
+      <span class='text-7xl font-bold'>828K</span>
     </div>
-    <div class='flex flex-col gap-4'>
+    <!-- <div class='flex flex-col gap-4'>
       <span class='text-center'>{l.price.monthsAccess.replace('[number]', 12)}</span>
-    </div>
+    </div> -->
     <div class='flex flex-col gap-4'>
       <a
         href='https://student.kyons.vn/sign-up?packageLevel=3'
@@ -107,11 +102,7 @@ const { l, showAll } = Astro.props;
         title={l.btn.preorder + ' ' + l.price.package2}>{l.btn.buyNow}</a
       >
       <p set:html={l.price.package1Include} />
-      <ul class='star'>
-        <!-- <li set:html={l.price.package31} /> -->
-        <li set:html={l.price.package32} />
-        <li set:html={l.price.package33} />
-      </ul>
+      <ul class='star' set:html={l.price.package3Desc} />
     </div>
   </div>
 </div>
